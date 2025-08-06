@@ -1,5 +1,14 @@
 # libra-core
 
+## 1.0.3
+
+### Patch Changes
+
+- update deps
+- Updated dependencies
+  - @libra/better-auth-cloudflare@1.0.2
+  - @libra/email@1.0.2
+
 ## 1.0.2
 
 ### Patch Changes
