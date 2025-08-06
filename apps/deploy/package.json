@@ -27,7 +27,7 @@
     "drizzle-orm": "^0.44.4"
   },
   "devDependencies": {
-    "wrangler": "^4.28.0",
+    "wrangler": "4.27.0",
     "@types/node": "^24.2.0",
     "typescript": "^5.9.2",
     "vitest": "^3.2.4",

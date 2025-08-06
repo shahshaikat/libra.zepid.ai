@@ -70,7 +70,7 @@
     "typescript": "^5.9.2",
     "vite": "^6.3.5",
     "@cloudflare/vite-plugin": "^1.11.1",
-    "wrangler": "^4.28.0",
+    "wrangler": "4.27.0",
     "@cloudflare/workers-types": "^4.20250806.0"
   }
 }
