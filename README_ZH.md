@@ -159,6 +159,8 @@ Libra 完全构建于 Cloudflare 上。你需要对以下产品熟悉：
 | [Queues](https://developers.cloudflare.com/queues/?utm_source=libra.dev) | 消息队列服务 | 异步任务处理和批量部署管理 |
 | [AI Gateway](https://developers.cloudflare.com/ai-gateway/?utm_source=libra.dev) | AI 模型网关 | 监控和控制你的 AI 应用|
 | [Images](https://developers.cloudflare.com/images/?utm_source=libra.dev) | 图像处理优化 | 动态图像变换和 CDN 分发 |
+| [Workers Builds](https://developers.cloudflare.com/workers/ci-cd/?utm_source=libra.dev) | Built-in CI/CD for Workers | Use Cloudflare’s native Workers Builds to continuously build and deploy from your repo, or integrate external CI providers (e.g., GitHub Actions) to run tests, build, and deploy via Wrangler.|
+
 
 Libra 采用 **Turborepo** Monorepo 架构设计：
 
