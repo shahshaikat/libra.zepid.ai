@@ -41,7 +41,7 @@
     },
     "apps/builder": {
       "name": "vite-shadcn-builder-libra",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "dependencies": {
         "@hookform/resolvers": "^5.2.1",
         "@radix-ui/react-accordion": "^1.2.11",
@@ -109,7 +109,7 @@
     },
     "apps/cdn": {
       "name": "@libra/cdn",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "dependencies": {
         "@hono/zod-openapi": "^0.19.10",
         "@libra/auth": "*",
@@ -125,7 +125,7 @@
     },
     "apps/deploy": {
       "name": "@libra/deploy",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "dependencies": {
         "@hono/zod-openapi": "^0.19.10",
         "@libra/auth": "*",
@@ -150,7 +150,7 @@
     },
     "apps/deploy-workflow": {
       "name": "@libra/deploy-workflow",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "dependencies": {
         "@hono/zod-openapi": "^0.19.10",
         "@libra/auth": "*",
@@ -169,7 +169,7 @@
     },
     "apps/dispatcher": {
       "name": "@libra/dispatcher",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "dependencies": {
         "@hono/zod-openapi": "^0.19.10",
         "@libra/common": "*",
@@ -192,7 +192,7 @@
     },
     "apps/docs": {
       "name": "@libra/docs",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "dependencies": {
         "@orama/orama": "^3.1.11",
         "@orama/tokenizers": "^3.1.11",
@@ -209,7 +209,7 @@
     },
     "apps/email": {
       "name": "email",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "dependencies": {
         "@libra/email": "*",
         "react-email": "^4.2.8",
@@ -233,7 +233,7 @@
     },
     "apps/screenshot": {
       "name": "@libra/screenshot",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "dependencies": {
         "@hono/zod-openapi": "^0.19.10",
         "@libra/auth": "*",
@@ -327,7 +327,7 @@
     },
     "apps/web": {
       "name": "libra-core",
-      "version": "1.0.2",
+      "version": "1.0.3",
       "dependencies": {
         "@ai-sdk/anthropic": "^2.0.1",
         "@ai-sdk/azure": "^2.0.3",
@@ -421,7 +421,7 @@
     },
     "packages/better-auth-cloudflare": {
       "name": "@libra/better-auth-cloudflare",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "dependencies": {
         "better-auth": "^1.3.4",
       },
@@ -473,7 +473,7 @@
     },
     "packages/email": {
       "name": "@libra/email",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "dependencies": {
         "@react-email/components": "^0.3.3",
         "@react-email/tailwind": "^1.2.2",
