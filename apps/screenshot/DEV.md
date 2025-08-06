@@ -133,7 +133,7 @@ Last Updated: 2025-07-30
 
 // API Layer
 ├── @hono/zod-openapi v0.19.10    // OpenAPI integration
-├── Zod v4.0.14         // Runtime validation
+├── Zod v4.0.15         // Runtime validation
 ├── @scalar/hono-api-reference v0.9.11 // API documentation UI
 └── @libra/middleware    // Middleware library
 

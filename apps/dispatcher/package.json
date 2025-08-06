@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "wrangler dev --port 3007 --persist-to=../web/.wrangler/state",
     "deploy": "bun with-env wrangler  deploy --minify",
-    "cf-typegen": "wrangler types --env-interface CloudflareBindings",
+    "cf-typegen": "wrangler types --env-interface CloudflareBindings || echo 'Types generation failed, continuing...'",
     "typecheck": "tsc --noEmit",
     "with-env": "dotenv -e .env --",
     "update": "bun update"
@@ -17,7 +17,7 @@
     "@libra/middleware": "*",
     "hono": "^4.8.12",
     "pg": "^8.16.3",
-    "zod": "4.0.14",
+    "zod": "^4.0.15",
     "@hono/zod-openapi": "^0.19.10",
     "@scalar/hono-api-reference": "^0.9.13"
   },

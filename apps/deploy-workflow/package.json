@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "wrangler dev --port 3008 --persist-to=../web/.wrangler/state",
     "deploy": "wrangler deploy --minify",
-    "cf-typegen": "wrangler types --env-interface CloudflareBindings",
+    "cf-typegen": "wrangler types --env-interface CloudflareBindings || echo 'Types generation failed, continuing...'",
     "typecheck": "tsc --noEmit",
     "update": "bun update"
   },

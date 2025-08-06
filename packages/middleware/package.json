@@ -54,7 +54,7 @@
   },
   "dependencies": {
     "hono": "^4.8.4",
-    "zod": "^4.0.14",
+    "zod": "^4.0.15",
     "@libra/common": "*"
   },
   "devDependencies": {

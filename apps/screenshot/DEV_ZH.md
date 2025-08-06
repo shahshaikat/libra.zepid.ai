@@ -81,7 +81,7 @@
 
 // API 层
 ├── @hono/zod-openapi v0.19.10    // OpenAPI 集成
-├── Zod v4.0.14         // 运行时验证
+├── Zod v4.0.15       // 运行时验证
 ├── @scalar/hono-api-reference v0.9.11 // API 文档 UI
 └── @libra/middleware    // 中间件库
 

@@ -17,7 +17,7 @@
     "migrate": "PAYLOAD_CONFIG_PATH=./payload.config.ts bun with-env payload migrate",
     "db:update": "PAYLOAD_CONFIG_PATH=./payload.config.ts bun with-env payload generate:db-schema && PAYLOAD_CONFIG_PATH=./payload.config.ts bun with-env payload migrate:create && PAYLOAD_CONFIG_PATH=./payload.config.ts bun with-env payload migrate",
     "generate:importmap": "PAYLOAD_CONFIG_PATH=./payload.config.ts bun with-env payload generate:importmap",
-    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts || echo 'Types generation failed, continuing...'",
     "fix": "bun knif",
     "deploy": "paraglide-js compile --project ./project.inlang --outdir ./paraglide && opennextjs-cloudflare build && opennextjs-cloudflare deploy -- --keep-vars",
     "machine-translate": "inlang machine translate --project project.inlang",

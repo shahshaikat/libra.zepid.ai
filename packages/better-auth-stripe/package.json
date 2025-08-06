@@ -43,6 +43,6 @@
   },
   "devDependencies": {
     "@libra/typescript-config": "*",
-    "better-call": "^1.0.12"
+    "better-call": "^1.0.13"
   }
 }
