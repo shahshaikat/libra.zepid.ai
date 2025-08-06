@@ -9,10 +9,10 @@
   },
   "dependencies": {
     "@libra/email": "*",
-    "react-email": "^4.2.7"
+    "react-email": "^4.2.8"
   },
   "devDependencies": {
     "@libra/typescript-config": "*",
-    "@react-email/preview-server": "^4.2.7"
+    "@react-email/preview-server": "^4.2.8"
   }
 }
