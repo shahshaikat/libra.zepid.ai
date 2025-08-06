@@ -161,6 +161,7 @@ Libra is built entirely on Cloudflare. You need to be familiar with the followin
 | [Queues](https://developers.cloudflare.com/queues/?utm_source=libra.dev) | Message queue service | Asynchronous task processing and batch deployment management |
 | [AI Gateway](https://developers.cloudflare.com/ai-gateway/?utm_source=libra.dev) | AI model gateway | Monitor and control your AI applications |
 | [Images](https://developers.cloudflare.com/images/?utm_source=libra.dev) | Image processing optimization | Dynamic image transformation and CDN distribution |
+| [Workers Builds](https://developers.cloudflare.com/workers/ci-cd/?utm_source=libra.dev) | Built-in CI/CD for Workers | Use Cloudflare’s native Workers Builds to continuously build and deploy from your repo, or integrate external CI providers (e.g., GitHub Actions) to run tests, build, and deploy via Wrangler.|
 
 Libra adopts **Turborepo** Monorepo architecture design:
 

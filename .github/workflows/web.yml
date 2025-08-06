@@ -1,47 +1,60 @@
+# DISABLED: Using Cloudflare Workers build instead of GitHub Actions
+# This workflow has been disabled as the project now uses Cloudflare Workers for deployment
+# To re-enable, uncomment the push and pull_request triggers below
+
 name: 'Libra Web Core Deploy'
 
 on:
+  # Manual trigger only - automatic deployment is handled by Cloudflare Workers
   workflow_dispatch:
-  push:
-    branches: [ main ]
-    paths:
-      - 'apps/web/**'
-      - 'packages/api/**'
-      - 'packages/auth/**'
-      - 'packages/better-auth-cloudflare/**'
-      - 'packages/better-auth-stripe/**'
-      - 'packages/common/**'
-      - 'packages/db/**'
-      - 'packages/email/**'
-      - 'packages/templates/**'
-      - 'packages/ui/**'
-      - 'packages/shikicode/**'
-      - 'packages/sandbox/**'
-      - 'tooling/**'
-      - 'package.json'
-      - 'turbo.json'
-      - '.github/workflows/web.yml'
-      - 'bun.lock'
-  pull_request:
-    branches: [ main ]
-    paths:
-      - 'apps/web/**'
-      - 'packages/api/**'
-      - 'packages/auth/**'
-      - 'packages/better-auth-cloudflare/**'
-      - 'packages/better-auth-stripe/**'
-      - 'packages/common/**'
-      - 'packages/db/**'
-      - 'packages/email/**'
-      - 'packages/templates/**'
-      - 'packages/ui/**'
-      - 'packages/shikicode/**'
-      - 'packages/sandbox/**'
-      - 'tooling/**'
-      - 'package.json'
-      - 'turbo.json'
-      - '.github/workflows/web.yml'
-      - 'bun.lock'
+    inputs:
+      force_deploy:
+        description: 'Force manual deployment (emergency only)'
+        required: false
+        default: false
+        type: boolean
+
+  # Disabled automatic triggers - uncomment if needed
+  # push:
+  #   branches: [ main ]
+  #   paths:
+  #     - 'apps/web/**'
+  #     - 'packages/api/**'
+  #     - 'packages/auth/**'
+  #     - 'packages/better-auth-cloudflare/**'
+  #     - 'packages/better-auth-stripe/**'
+  #     - 'packages/common/**'
+  #     - 'packages/db/**'
+  #     - 'packages/email/**'
+  #     - 'packages/templates/**'
+  #     - 'packages/ui/**'
+  #     - 'packages/shikicode/**'
+  #     - 'packages/sandbox/**'
+  #     - 'tooling/**'
+  #     - 'package.json'
+  #     - 'turbo.json'
+  #     - '.github/workflows/web.yml'
+  #     - 'bun.lock'
+  # pull_request:
+  #   branches: [ main ]
+  #   paths:
+  #     - 'apps/web/**'
+  #     - 'packages/api/**'
+  #     - 'packages/auth/**'
+  #     - 'packages/better-auth-cloudflare/**'
+  #     - 'packages/better-auth-stripe/**'
+  #     - 'packages/common/**'
+  #     - 'packages/db/**'
+  #     - 'packages/email/**'
+  #     - 'packages/templates/**'
+  #     - 'packages/ui/**'
+  #     - 'packages/shikicode/**'
+  #     - 'packages/sandbox/**'
+  #     - 'tooling/**'
+  #     - 'package.json'
+  #     - 'turbo.json'
+  #     - '.github/workflows/web.yml'
+  #     - 'bun.lock'
 
 # Limit concurrent workflow runs
 concurrency:
