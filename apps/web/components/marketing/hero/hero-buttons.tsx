@@ -62,8 +62,12 @@ export const HeroButtons = ({ buttons = getDefaultButtons() }: HeroButtonsGroupP
   return (
     <div className='animate-appear relative flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 mt-6 sm:mt-8 opacity-0 delay-400 z-[5] w-full px-4 sm:px-0'>
       {buttons.map((button, index) => (
-        <Button key={index} variant={button.variant || 'default'} size='lg' asChild className='w-full sm:w-auto'>
-          <a href={button.href} className='relative'>
+        <Button key={`${button.text}-${button.href}-${index}`} variant={button.variant || 'default'} size='lg' asChild className='w-full sm:w-auto'>
+          <a
+            href={button.href}
+            className='relative'
+            data-attr={button.href?.includes('github.com') ? 'github' : undefined}
+          >
             {button.icon}
             {button.text}
             {button.iconRight}

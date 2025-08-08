@@ -167,12 +167,20 @@ export function PricingColumn({
           </div>
         )}
         {cta.onClick ? (
-          <Button variant={cta.variant} size='lg' onClick={cta.onClick} className='cursor-pointer'>
+          <Button
+            variant={cta.variant}
+            size='lg'
+            onClick={cta.onClick}
+            className='cursor-pointer'
+            data-attr='upgrade'
+          >
             {cta.label}
           </Button>
         ) : (
           <Button variant={cta.variant} size='lg' asChild className='cursor-pointer'>
-            <Link href={cta.href || '#'}>{cta.label}</Link>
+            <Link href={cta.href || '#'} data-attr='upgrade'>
+              {cta.label}
+            </Link>
           </Button>
         )}
         <p className='text-muted-foreground min-h-[40px] max-w-[220px] text-sm'>
@@ -255,7 +263,7 @@ export function EnterpriseHorizontal({
                 asChild
                 className='flex items-center gap-2 cursor-pointer'
               >
-                <Link href={cta.href || '#'}>
+                <Link href={cta.href || '#'} data-attr='upgrade'>
                   {cta.label}
                   <ArrowRight className='size-4' />
                 </Link>

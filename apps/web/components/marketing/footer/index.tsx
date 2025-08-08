@@ -93,7 +93,12 @@ export default function FooterSection({
               <FooterColumn key={column.id}>
                 <h3 className='text-sm sm:text-md pt-1 font-semibold'>{column.title}</h3>
                 {column.links.map((link) => (
-                  <a key={link.id} href={link.href} className='text-muted-foreground text-sm'>
+                  <a
+                    key={link.id}
+                    href={link.href}
+                    className='text-muted-foreground text-sm'
+                    data-attr={link.id === 'github' || link.href?.includes('github.com') ? 'github' : undefined}
+                  >
                     {link.text}
                   </a>
                 ))}

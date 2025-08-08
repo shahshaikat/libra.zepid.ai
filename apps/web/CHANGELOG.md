@@ -1,5 +1,11 @@
 # libra-core
 
+## 1.0.6
+
+### Patch Changes
+
+- minor fix
+
 ## 1.0.5
 
 ### Patch Changes

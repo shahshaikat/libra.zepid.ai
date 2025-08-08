@@ -65,8 +65,8 @@ export default function CTA({
         {buttons !== false && buttons.length > 0 && (
           <div className='flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 w-full sm:w-auto'>
             {buttons.map((button, index) => (
-              <Button key={index} variant={button.variant || 'default'} size='lg' asChild className='w-full sm:w-auto'>
-                <a href={button.href}>
+              <Button key={`${button.text}-${button.href}-${index}`} variant={button.variant || 'default'} size='lg' asChild className='w-full sm:w-auto'>
+                <a href={button.href} data-attr={button.href?.includes('#price') ? 'upgrade' : undefined}>
                   {button.icon}
                   {button.text}
                   {button.iconRight}

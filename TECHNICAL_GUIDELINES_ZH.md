@@ -144,7 +144,7 @@ version: "1.0"
       - [Bun 特有功能](#bun-特有功能)
       - [迁移指南](#迁移指南)
     - [13.2 开发环境配置](#132-开发环境配置)
-      - [环境变量管理](#环境变量管理)
+      - [环境变量与 Secrets 管理](#环境变量与-secrets-管理)
     - [13.3 代码质量工具](#133-代码质量工具)
       - [Biome 配置](#biome-配置)
     - [13.4 构建与部署](#134-构建与部署)
@@ -155,7 +155,7 @@ version: "1.0"
       - [Wrangler 配置](#wrangler-配置)
       - [部署流程](#部署流程)
       - [CI/CD 配置](#cicd-配置)
-      - [环境变量管理](#环境变量管理-1)
+      - [环境变量与 Secrets 管理](#环境变量与-secrets-管理)
       - [自定义域名配置](#自定义域名配置)
       - [性能优化配置](#性能优化配置)
     - [13.6 GitHub API 集成](#136-github-api-集成)
@@ -216,13 +216,13 @@ libra/
 │   ├── auth-studio/         # better-auth 管理界面
 │   ├── builder/             # Vite 构建工具 (独立构建环境)
 │   ├── cdn/                 # Hono CDN 服务 (文件上传/图片处理)
-│   ├── db/                  # Drizzle ORM + PostgreSQL 数据库层
 │   ├── deploy/              # 部署服务 (Cloudflare Workers)
 │   ├── deploy-workflow/     # 部署工作流服务  (deprecated)
 │   ├── dispatcher/          # 请求路由服务 (认证中间件)
-│   ├── docs/                # 文档站点 (Next.js + MDX)
+│   ├── docs/                # 文档站点 (Next.js + FumaDocs)
 │   ├── email/               # React Email 开发环境
 │   ├── opennext-cache/      # OpenNext 缓存服务
+│   ├── proxy/               # 代理与容器 (WIP)
 │   ├── screenshot/          # 截图生成服务
 │   ├── vite-shadcn-template/# Vite 项目模板
 │   └── web/                 # Next.js 15 主应用 (React 19)
@@ -232,6 +232,7 @@ libra/
 │   ├── better-auth-cloudflare/ # Cloudflare 适配器
 │   ├── better-auth-stripe/  # Stripe 集成
 │   ├── common/              # 通用工具和类型
+│   ├── db/                  # 业务数据库层 (Drizzle ORM + Neon/Hyperdrive)
 │   ├── email/               # React Email 模板
 │   ├── middleware/          # Cloudflare Workers 中间件
 │   ├── sandbox/             # E2B 沙盒集成
@@ -341,6 +342,7 @@ apps/auth-studio/
 ```
 
 **功能特点：**
+
 - 提供认证数据库的可视化管理界面
 - 支持数据表的 CRUD 操作
 - 集成 Drizzle ORM 的 Studio 工具
@@ -373,6 +375,7 @@ apps/docs/
 ```
 
 **技术特点：**
+
 - 基于 Fumadocs 的现代文档框架
 - 支持 MDX 格式的文档编写
 - 内置多语言支持（中英文）
@@ -396,6 +399,7 @@ apps/email/
 ```
 
 **功能特点：**
+
 - 提供邮件模板的实时预览环境
 - 支持 React 组件化的邮件开发
 - 集成 @libra/email 包的模板
@@ -420,6 +424,7 @@ apps/vite-shadcn-template/
 ```
 
 **技术特点：**
+
 - 预配置的 Vite + React + TypeScript 环境
 - 集成自定义 UI 组件库
 - 支持 E2B、Daytona 沙盒环境部署
@@ -440,6 +445,7 @@ apps/deploy/
 ```
 
 **功能特点：**
+
 - 处理项目的自动化部署
 - 管理 Cloudflare Pages 部署
 - 处理构建产物上传
@@ -459,6 +465,7 @@ apps/deploy-workflow/
 ```
 
 **功能特点：**
+
 - 异步处理长时间部署任务
 - 支持多步骤部署流程
 - 集成 E2B 沙盒环境
@@ -478,6 +485,7 @@ apps/screenshot/
 ```
 
 **功能特点：**
+
 - 生成项目预览截图
 - 支持不同设备尺寸
 - 自动等待页面加载
@@ -521,6 +529,7 @@ export interface ButtonProps
     VariantProps<typeof buttonVariants> {
   asChild?: boolean
 }
+
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, ...props }, ref) => {
@@ -1975,18 +1984,21 @@ interface LogContext {
 项目采用 **双数据库架构** 来优化性能和功能分离：
 
 #### 业务数据库 - PostgreSQL (Hyperdrive)
+
 - **用途**：存储核心业务数据（项目、文件、AI 对话等）
 - **连接方式**：通过 Cloudflare Hyperdrive 连接池
 - **优势**：高性能、复杂查询支持、事务完整性
 - **访问函数**：`getDbAsync()`, `getDbForHono()`
 
 #### 认证数据库 - SQLite (Cloudflare D1)
+
 - **用途**：存储用户认证、会话、组织权限数据
 - **连接方式**：直接连接 Cloudflare D1
 - **优势**：低延迟、边缘计算友好、better-auth 原生支持
 - **访问函数**：`getAuthDb()`
 
 #### 数据库选择指南
+
 ```typescript
 // 业务数据操作 - 使用 PostgreSQL
 const db = await getDbAsync()
@@ -2002,7 +2014,7 @@ const user = await authDb.query.user.findFirst()
 项目使用 **Cloudflare Hyperdrive** 进行 PostgreSQL 连接池管理，优化连接性能：
 
 ```typescript
-// apps/db/index.ts
+// packages/db/index.ts
 import { getCloudflareContext } from '@opennextjs/cloudflare'
 import { drizzle as drizzleNode } from 'drizzle-orm/node-postgres'
 import pg from 'pg'
@@ -2812,7 +2824,7 @@ FROM oven/bun:slim
 WORKDIR /app
 
 # 安装依赖
-COPY package.json bun.lockb ./
+COPY package.json bun.lock ./
 RUN bun install --frozen-lockfile
 
 # 复制项目文件
@@ -3775,11 +3787,13 @@ const installation = await app.octokit.request('GET /app/installations/{installa
 项目支持两种 GitHub 认证方式：
 
 #### GitHub App 安装认证
+
 - **用途**：组织级别的仓库管理
 - **权限**：读写仓库、管理 Issues、Webhooks
 - **令牌类型**：Installation Access Token（1小时有效期）
 
 #### OAuth 用户认证
+
 - **用途**：个人账户的仓库创建
 - **权限**：用户授权的个人仓库访问
 - **令牌类型**：User Access Token（可刷新）
@@ -3986,7 +4000,7 @@ const apiKey = Bun.env.API_KEY
 
 ### 13.2 开发环境配置
 
-#### 环境变量管理
+#### 环境变量与 Secrets 管理
 
 ```typescript
 // apps/web/env.mjs - 使用 @t3-oss/env-nextjs 进行类型安全的环境变量验证

@@ -79,7 +79,7 @@ export function transformApiPlanToPlan(
     ...basePlan,
     cta: {
       ...ctaConfig,
-      href: isFree ? '/docs/getting-started/introduction' : '/login',
+      href: isFree ? '/login' : '/login',
     }
   }
 }

@@ -184,11 +184,11 @@ libra/
 │   ├── auth-studio/         # better-auth management interface
 │   ├── builder/             # Vite build tool (independent build environment)
 │   ├── cdn/                 # Hono CDN service (file upload/image processing)
-│   ├── db/                  # Drizzle ORM + PostgreSQL database layer
+│   ├── proxy/               # Proxy & container (WIP)
 │   ├── deploy/              # Deployment service (Cloudflare Workers)
 │   ├── deploy-workflow/     # Deployment workflow service (deprecated)
 │   ├── dispatcher/          # Request routing service (authentication middleware)
-│   ├── docs/                # Documentation site (Next.js + MDX)
+│   ├── docs/                # Documentation site (Next.js + FumaDocs)
 │   ├── email/               # React Email development environment
 │   ├── opennext-cache/      # OpenNext cache service
 │   ├── screenshot/          # Screenshot generation service
@@ -205,6 +205,7 @@ libra/
 │   ├── sandbox/             # E2B sandbox integration
 │   ├── shikicode/           # Code highlighting components
 │   ├── templates/           # Project scaffolding templates
+│   ├── db/                  # Business database layer (Drizzle ORM + Neon/Hyperdrive)
 │   └── ui/                  # Design system (based on Radix UI + Tailwind CSS v4)
 ├── scripts/                 # Build scripts and tools
 ├── tooling/                 # Development tool configuration
@@ -309,6 +310,7 @@ apps/auth-studio/
 ```
 
 **Features:**
+
 - Provides visual management interface for authentication database
 - Supports CRUD operations on data tables
 - Integrates Drizzle ORM Studio tools
@@ -341,6 +343,7 @@ apps/docs/
 ```
 
 **Technical Features:**
+
 - Modern documentation framework based on Fumadocs
 - Supports MDX format documentation writing
 - Built-in multi-language support (Chinese and English)
@@ -364,6 +367,7 @@ apps/email/
 ```
 
 **Features:**
+
 - Provides real-time preview environment for email templates
 - Supports React component-based email development
 - Integrates @libra/email package templates
@@ -388,6 +392,7 @@ apps/vite-shadcn-template/
 ```
 
 **Technical Features:**
+
 - Pre-configured Vite + React + TypeScript environment
 - Integrated custom UI component library
 - Supports E2B, Daytona sandbox environment deployment
@@ -408,6 +413,7 @@ apps/deploy/
 ```
 
 **Features:**
+
 - Handles automated project deployment
 - Manages Cloudflare Pages deployment
 - Handles build artifact uploads
@@ -427,6 +433,7 @@ apps/deploy-workflow/
 ```
 
 **Features:**
+
 - Asynchronously processes long-running deployment tasks
 - Supports multi-step deployment processes
 - Integrates E2B sandbox environment
@@ -446,6 +453,7 @@ apps/screenshot/
 ```
 
 **Features:**
+
 - Generates project preview screenshots
 - Supports different device sizes
 - Automatically waits for page loading
@@ -1507,18 +1515,21 @@ export async function getDbAsync() {
 ### 6.3 Schema Design Guidelines
 
 **Naming Conventions:**
+
 - Table names: snake_case (e.g., `project_ai_usage`)
 - Column names: snake_case (e.g., `created_at`)
 - Primary keys: Always use `id` with CUID2
 - Foreign keys: `{table}_id` format (e.g., `project_id`)
 
 **Data Types:**
+
 - IDs: `text` with CUID2 generation
 - Timestamps: `timestamp` with timezone
 - Enums: `varchar` with enum constraints
 - JSON data: `text` with JSON validation
 
 **Constraints:**
+
 - All tables must have `created_at` and `updated_at`
 - Foreign keys with appropriate cascade rules
 - Unique constraints for business logic enforcement
@@ -2762,7 +2773,7 @@ const apiKey = Bun.env.API_KEY
 
 ### 14.2 Development Environment Configuration
 
-#### Environment Variable Management
+#### Environment Variables & Secrets
 
 ```typescript
 // env.mjs - Environment variable validation
@@ -3354,33 +3365,6 @@ function processChunk(chunk: string): string {
 }
 ```
 
----
-
-## Conclusion
-
-This comprehensive technical guidelines document provides a complete reference for developing with the Libra AI platform. It covers:
-
-- **Modern Architecture**: Monorepo structure with clear separation of concerns
-- **Type Safety**: End-to-end TypeScript coverage with runtime validation
-- **Performance**: Optimized patterns for frontend, backend, and AI operations
-- **Developer Experience**: Modern tooling with Bun, Biome, and Turborepo
-- **Scalability**: Cloud-native deployment with Cloudflare Workers
-- **Best Practices**: Proven patterns for authentication, error handling, and internationalization
-
-The document serves as both a learning resource for new developers and a reference guide for experienced team members, ensuring consistency and quality across the entire Libra AI codebase.
-
-For the most up-to-date information and additional implementation details, please refer to the project's GitHub repository and internal documentation.
-            console.error('Failed to parse streaming data:', error)
-          }
-        }
-      }
-    }
-  } finally {
-    reader.releaseLock()
-  }
-}
-```
-
 ## 8. Stripe Payment Integration
 
 ### 8.1 Stripe Plugin Configuration
@@ -3615,7 +3599,7 @@ FROM oven/bun:slim
 WORKDIR /app
 
 # Install dependencies
-COPY package.json bun.lockb ./
+COPY package.json bun.lock ./
 RUN bun install --frozen-lockfile
 
 # Copy project files
@@ -4607,7 +4591,7 @@ export class ProjectSyncService {
       '.git/',
       '.env',
       '.env.local',
-      'bun.lockb',
+      'bun.lock',
       'package-lock.json',
       'yarn.lock',
     ]
@@ -4631,38 +4615,45 @@ export class ProjectSyncService {
 This comprehensive technical guidelines document provides a complete reference for developing with the Libra AI platform. It covers:
 
 ### 🏗️ Architecture & Design
+
 - **Modern Monorepo Structure**: Turborepo-based organization with clear separation of concerns
 - **Type-Safe Development**: End-to-end TypeScript coverage with runtime validation using Zod
 - **Component-Driven Design**: Radix UI + Tailwind CSS v4 design system with CVA variants
 
 ### 🚀 Performance & Scalability
+
 - **React Server Components**: Optimized rendering with streaming and suspense
 - **Edge Computing**: Complete Cloudflare Workers deployment with global distribution
 - **Database Optimization**: Dual database architecture with PostgreSQL + SQLite for optimal performance
 
 ### 🤖 AI Integration
+
 - **Multi-Provider Support**: Anthropic Claude, Azure AI, OpenRouter, and xAI integration
 - **Secure Execution**: E2B sandbox environments with Docker containerization
 - **Streaming Responses**: Real-time AI interactions with optimized token streaming
 
 ### 🔐 Security & Authentication
+
 - **Modern Auth Stack**: better-auth with Cloudflare D1 and GitHub OAuth
 - **Payment Processing**: Stripe integration with subscription management
 - **Sandbox Security**: Comprehensive security controls for code execution environments
 
 ### 🌍 Developer Experience
+
 - **Modern Tooling**: Bun package manager, Biome formatting, and Turborepo builds
 - **Type Safety**: Complete type coverage from database to frontend with automatic inference
 - **Internationalization**: Paraglide.js integration with type-safe translations
 - **Error Handling**: Comprehensive error boundaries and structured logging
 
 ### 📊 Key Technical Metrics
+
 - **15+ Core Technology Domains**: Comprehensive coverage of modern web development
 - **50+ Code Examples**: Production-ready implementation patterns
 - **3,900+ Lines**: Detailed technical specifications and best practices
 - **End-to-End Coverage**: From database schema to deployment configuration
 
 ### 🎯 Best Practices Covered
+
 - **API Development**: tRPC with end-to-end type safety and validation
 - **State Management**: Zustand + TanStack Query for optimal data flow
 - **Database Design**: Drizzle ORM with proper indexing and transaction patterns
@@ -4674,6 +4665,7 @@ This document serves as both a learning resource for new developers and a refere
 ### 📚 Additional Resources
 
 For the most up-to-date information and additional implementation details:
+
 - **GitHub Repository**: [libra-ai/libra](https://github.com/libra-ai/libra)
 - **Documentation Site**: [docs.libra.dev](https://docs.libra.dev)
 - **API Reference**: [api.libra.dev](https://api.libra.dev)
@@ -4681,4 +4673,4 @@ For the most up-to-date information and additional implementation details:
 
 ---
 
-*Last updated: July 2025 | Version 1.0*
+Last updated: July 2025 | Version 1.0
