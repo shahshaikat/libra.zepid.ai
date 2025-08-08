@@ -1,6 +1,6 @@
 {
   "name": "@libra/dispatcher",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "scripts": {
     "dev": "wrangler dev --port 3007 --persist-to=../web/.wrangler/state",
@@ -15,7 +15,7 @@
     "@libra/db": "*",
     "@libra/common": "*",
     "@libra/middleware": "*",
-    "hono": "^4.8.12",
+    "hono": "^4.9.0",
     "pg": "^8.16.3",
     "zod": "^4.0.15",
     "@hono/zod-openapi": "^0.19.10",

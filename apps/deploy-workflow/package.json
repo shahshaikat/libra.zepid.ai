@@ -1,6 +1,6 @@
 {
   "name": "@libra/deploy-workflow",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "dev": "wrangler dev --port 3008 --persist-to=../web/.wrangler/state",
     "deploy": "wrangler deploy --minify",
@@ -16,7 +16,7 @@
     "@libra/sandbox": "*",
     "@libra/templates": "*",
     "@libra/typescript-config": "*",
-    "hono": "^4.8.12",
+    "hono": "^4.9.0",
     "@scalar/hono-api-reference": "^0.9.13",
     "@hono/zod-openapi": "^0.19.10"
   },
