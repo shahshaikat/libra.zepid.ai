@@ -31,11 +31,11 @@
     "@babel/runtime": "^8.0.0-beta.1",
     "@biomejs/biome": "2.0.6",
     "@changesets/cli": "^2.29.5",
-    "@cloudflare/workers-types": "^4.20250807.0",
+    "@cloudflare/workers-types": "^4.20250809.0",
     "@t3-oss/env-nextjs": "^0.13.8",
     "@turbo/gen": "^2.5.5",
     "turbo": "^2.5.5",
-    "@types/node": "^24.2.0",
+    "@types/node": "^24.2.1",
     "@types/react": "^19.1.9",
     "@types/react-dom": "^19.1.7",
     "babel-plugin-react-compiler": "^19.1.0-rc.2",
@@ -56,7 +56,7 @@
     "drizzle-orm": "^0.44.4",
     "e2b": "1.2.0-beta.5",
     "next-themes": "^0.4.6",
-    "zod": "^4.0.15"
+    "zod": "^4.0.16"
   },
   "engines": {
     "node": ">=24",

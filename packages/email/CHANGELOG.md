@@ -1,5 +1,11 @@
 # @libra/email
 
+## 1.0.2
+
+### Patch Changes
+
+- mini update & fix
+
 ## 1.0.1
 
 ### Patch Changes

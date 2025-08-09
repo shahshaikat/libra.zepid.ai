@@ -1,5 +1,11 @@
 # @libra/dispatcher
 
+## 1.0.3
+
+### Patch Changes
+
+- mini update & fix
+
 ## 1.0.2
 
 ### Patch Changes
