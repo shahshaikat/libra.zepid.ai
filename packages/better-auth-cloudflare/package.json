@@ -1,6 +1,6 @@
 {
   "name": "@libra/better-auth-cloudflare",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Cloudflare integration plugin for Better Auth",
   "keywords": [
     "cloudflare",
@@ -37,7 +37,7 @@
     "@libra/typescript-config": "*"
   },
   "peerDependencies": {
-    "@cloudflare/workers-types": "^4.20250809.0",
+    "@cloudflare/workers-types": "^4.20250810.0",
     "@opennextjs/cloudflare": "^1.6.5"
   }
 }
