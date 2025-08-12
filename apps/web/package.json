@@ -1,6 +1,6 @@
 {
   "name": "libra-core",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "private": true,
   "type": "module",
   "scripts": {
@@ -26,8 +26,8 @@
   },
   "dependencies": {
     "@ai-sdk/anthropic": "^2.0.1",
-    "@ai-sdk/azure": "^2.0.8",
-    "@ai-sdk/xai": "^2.0.4",
+    "@ai-sdk/azure": "^2.0.10",
+    "@ai-sdk/xai": "^2.0.5",
     "@git-diff-view/file": "^0.0.30",
     "@git-diff-view/react": "^0.0.30",
     "@hookform/resolvers": "^5.2.1",
@@ -51,7 +51,7 @@
     "@tsparticles/engine": "^3.9.1",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.9.1",
-    "ai": "^5.0.9",
+    "ai": "^5.0.10",
     "date-fns": "^4.1.0",
     "diff": "^8.0.2",
     "fast-xml-parser": "^5.2.5",
