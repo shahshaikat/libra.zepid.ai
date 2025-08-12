@@ -1,7 +1,7 @@
 {
   "name": "vite-shadcn-builder-libra",
   "private": true,
-  "version": "1.0.4",
+  "version": "1.0.5",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -57,7 +57,7 @@
   },
   "devDependencies": {
     "@types/node": "^22.17.1",
-    "@types/react": "^19.1.9",
+    "@types/react": "^19.1.10",
     "@types/react-dom": "^19.1.7",
     "@tailwindcss/vite": "^4.1.11",
     "@vitejs/plugin-react-swc": "^3.11.0",
@@ -71,6 +71,6 @@
     "vite": "^6.3.5",
     "@cloudflare/vite-plugin": "^1.11.2",
     "wrangler": "4.27.0",
-    "@cloudflare/workers-types": "^4.20250810.0"
+    "@cloudflare/workers-types": "^4.20250812.0"
   }
 }
