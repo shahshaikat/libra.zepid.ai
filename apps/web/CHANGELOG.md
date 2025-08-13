@@ -1,5 +1,11 @@
 # libra-core
 
+## 1.0.11
+
+### Patch Changes
+
+- update deps
+
 ## 1.0.10
 
 ### Patch Changes
