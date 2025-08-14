@@ -1,6 +1,6 @@
 {
   "name": "@libra/dispatcher",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "type": "module",
   "scripts": {
     "dev": "wrangler dev --port 3007 --persist-to=../web/.wrangler/state",

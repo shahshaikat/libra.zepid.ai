@@ -1,6 +1,6 @@
 {
   "name": "@libra/better-auth-stripe",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "./src/index.ts",
   "private": true,
   "description": "Stripe plugin for Better Auth",
