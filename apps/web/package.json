@@ -1,6 +1,6 @@
 {
   "name": "libra-core",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "private": true,
   "type": "module",
   "scripts": {
@@ -25,9 +25,9 @@
     "analyze": "ANALYZE=true bun run build"
   },
   "dependencies": {
-    "@ai-sdk/anthropic": "^2.0.2",
-    "@ai-sdk/azure": "^2.0.11",
-    "@ai-sdk/xai": "^2.0.6",
+    "@ai-sdk/anthropic": "^2.0.3",
+    "@ai-sdk/azure": "^2.0.12",
+    "@ai-sdk/xai": "^2.0.7",
     "@git-diff-view/file": "^0.0.30",
     "@git-diff-view/react": "^0.0.30",
     "@hookform/resolvers": "^5.2.1",
@@ -51,7 +51,7 @@
     "@tsparticles/engine": "^3.9.1",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.9.1",
-    "ai": "^5.0.11",
+    "ai": "^5.0.12",
     "date-fns": "^4.1.0",
     "diff": "^8.0.2",
     "fast-xml-parser": "^5.2.5",
@@ -60,7 +60,7 @@
     "motion": "^12.23.12",
     "next": "^15.4.6",
     "nextjs-toploader": "^3.8.16",
-    "posthog-js": "^1.259.0",
+    "posthog-js": "^1.260.1",
     "posthog-node": "^5.6.0",
     "react": "^19.1.1",
     "react-error-boundary": "^5.0.0",
