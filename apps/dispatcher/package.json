@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "wrangler": "4.27.0",
-    "@cloudflare/workers-types": "^4.20250812.0",
+    "@cloudflare/workers-types": "^4.20250813.0",
     "typescript": "^5.9.2",
     "dotenv": "^17.2.1",
     "dotenv-cli": "^10.0.0",
