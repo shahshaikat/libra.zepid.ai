@@ -1,5 +1,11 @@
 # vite-shadcn-builder-libra
 
+## 1.0.8
+
+### Patch Changes
+
+- update deps
+
 ## 1.0.7
 
 ### Patch Changes

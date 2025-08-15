@@ -1,5 +1,13 @@
 # libra-core
 
+## 1.0.13
+
+### Patch Changes
+
+- update deps
+- Updated dependencies
+  - @libra/ui@1.0.2
+
 ## 1.0.12
 
 ### Patch Changes
