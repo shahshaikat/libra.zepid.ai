@@ -17,18 +17,18 @@ import { readFileSync, writeFileSync } from 'node:fs'
 function replaceConfigPlaceholders(templatePath: string, outputPath: string): void {
   // Read template
   let content = readFileSync(templatePath, 'utf-8')
-  
+
   // Get all environment variables
   const env = process.env
-  
+
   // Default values for missing environment variables
   const defaults: Record<string, string> = {
     // Environment
     ENVIRONMENT: 'production',
 
     // Application URLs
-    NEXT_PUBLIC_APP_URL: 'https://libra.dev',
-    NEXT_PUBLIC_CDN_URL: 'https://cdn.libra.dev',
+    NEXT_PUBLIC_APP_URL: 'https://zapid.dev',
+    NEXT_PUBLIC_CDN_URL: 'https://cdn.zapid.dev',
 
     // Cloudflare
     CLOUDFLARE_AIGATEWAY_NAME: 'azure-ai',
@@ -103,7 +103,7 @@ function replaceConfigPlaceholders(templatePath: string, outputPath: string): vo
     // Database placeholder (for type generation)
     POSTGRES_URL: 'postgresql://user:password@localhost:5432/placeholder_db',
   }
-  
+
   // Replace all {{KEY}} placeholders
   content = content.replace(/\{\{([^}]+)\}\}/g, (match, key) => {
     const value = env[key] || defaults[key]
@@ -113,7 +113,7 @@ function replaceConfigPlaceholders(templatePath: string, outputPath: string): vo
     }
     return value
   })
-  
+
   // Write output
   writeFileSync(outputPath, content, 'utf-8')
 }

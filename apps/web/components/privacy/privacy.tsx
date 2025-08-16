@@ -157,11 +157,13 @@ export default function PrivacyPage() {
               <div className='flex items-start space-x-3'>
                 <div className='w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0' />
                 <p>
-                  {m["privacy.about.usageScenarios.website"]({ websiteUrl: (
-                    <a href='https://libra.dev' className='text-primary hover:text-primary/80 transition-colors font-medium'>
-                      https://libra.dev
-                    </a>
-                  )})}
+                  {m["privacy.about.usageScenarios.website"]({
+                    websiteUrl: (
+                      <a href='https://zapid.dev' className='text-primary hover:text-primary/80 transition-colors font-medium'>
+                        https://libra.dev
+                      </a>
+                    )
+                  })}
                 </p>
               </div>
               <div className='flex items-start space-x-3'>
@@ -182,20 +184,22 @@ export default function PrivacyPage() {
             {m["privacy.concerns.title"]()}
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            {m["privacy.concerns.description"]({ contactEmail: (
-              <a
-                href="mailto:contact@libra.dev"
-                className="text-primary hover:text-primary/80 transition-colors font-medium"
-              >
-                contact@libra.dev
-              </a>
-            )})}
+            {m["privacy.concerns.description"]({
+              contactEmail: (
+                <a
+                  href="mailto:contact@libra.dev"
+                  className="text-primary hover:text-primary/80 transition-colors font-medium"
+                >
+                  contact@libra.dev
+                </a>
+              )
+            })}
           </p>
         </div>
 
         {/* Table of Contents */}
         <Section title={m["privacy.tableOfContents.title"]()} className="mb-12">
-          <TableOfContents/>
+          <TableOfContents />
         </Section>
 
         {/* Main Content Sections */}
@@ -337,14 +341,16 @@ export default function PrivacyPage() {
         <div className="space-y-8">
           <Section title={m["privacy.contact.title"]()}>
             <p className="text-muted-foreground leading-relaxed">
-              {m["privacy.contact.description"]({ contactEmail: (
-                <a
-                  href="mailto:contact@libra.dev"
-                  className="text-primary hover:text-primary/80 transition-colors font-medium"
-                >
-                  contact@libra.dev
-                </a>
-              )})}
+              {m["privacy.contact.description"]({
+                contactEmail: (
+                  <a
+                    href="mailto:contact@libra.dev"
+                    className="text-primary hover:text-primary/80 transition-colors font-medium"
+                  >
+                    contact@libra.dev
+                  </a>
+                )
+              })}
             </p>
           </Section>
 

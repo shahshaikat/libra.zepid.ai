@@ -1,51 +1,51 @@
-name: 'Libra CDN Deploy'
+name: "Libra CDN Deploy"
 
 on:
   workflow_dispatch:
     inputs:
       environment:
-        description: 'Deployment environment'
+        description: "Deployment environment"
         required: true
-        default: 'production'
+        default: "production"
         type: choice
         options:
           - production
           - staging
       force_deploy:
-        description: 'Force deployment even if no changes detected'
+        description: "Force deployment even if no changes detected"
         required: false
         default: false
         type: boolean
   push:
-    branches: [ main ]
+    branches: [main]
     tags:
-      - 'cdn-v*'
+      - "cdn-v*"
     paths:
-      - 'apps/cdn/**'
-      - 'packages/auth/**'
-      - 'packages/db/**'
-      - 'packages/middleware/**'
-      - 'packages/common/**'
-      - 'packages/better-auth-cloudflare/**'
-      - 'packages/better-auth-stripe/**'
-      - 'package.json'
-      - 'turbo.json'
-      - 'bun.lock'
-      - '.github/workflows/cdn.yml'
+      - "apps/cdn/**"
+      - "packages/auth/**"
+      - "packages/db/**"
+      - "packages/middleware/**"
+      - "packages/common/**"
+      - "packages/better-auth-cloudflare/**"
+      - "packages/better-auth-stripe/**"
+      - "package.json"
+      - "turbo.json"
+      - "bun.lock"
+      - ".github/workflows/cdn.yml"
   pull_request:
     types: [opened, synchronize, reopened]
     paths:
-      - 'apps/cdn/**'
-      - 'packages/auth/**'
-      - 'packages/db/**'
-      - 'packages/middleware/**'
-      - 'packages/common/**'
-      - 'packages/better-auth-cloudflare/**'
-      - 'packages/better-auth-stripe/**'
-      - 'package.json'
-      - 'turbo.json'
-      - 'bun.lock'
-      - '.github/workflows/cdn.yml'
+      - "apps/cdn/**"
+      - "packages/auth/**"
+      - "packages/db/**"
+      - "packages/middleware/**"
+      - "packages/common/**"
+      - "packages/better-auth-cloudflare/**"
+      - "packages/better-auth-stripe/**"
+      - "package.json"
+      - "turbo.json"
+      - "bun.lock"
+      - ".github/workflows/cdn.yml"
 
 # Limit concurrent workflow runs
 concurrency:
@@ -71,7 +71,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version-file: '.nvmrc'
+          node-version-file: ".nvmrc"
 
       - name: Setup Bun
         uses: oven-sh/setup-bun@v1
@@ -135,7 +135,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version-file: '.nvmrc'
+          node-version-file: ".nvmrc"
 
       - name: Setup Bun
         uses: oven-sh/setup-bun@v1
@@ -268,7 +268,7 @@ jobs:
           export HYPERDRIVE_ID="${{ secrets.HYPERDRIVE_ID }}"
 
           # Application URLs
-          export NEXT_PUBLIC_APP_URL="${{ secrets.NEXT_PUBLIC_APP_URL || 'https://libra.dev' }}"
+          export NEXT_PUBLIC_APP_URL="${{ secrets.NEXT_PUBLIC_APP_URL || 'https://zapid.dev' }}"
           export NEXT_PUBLIC_CDN_URL="https://cdn.libra.dev"
 
           # Database
@@ -329,7 +329,5 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           environment: ${{ github.event.inputs.environment || 'production' }}
           environment-url: ${{ steps.deploy.outputs.deployment-url }}
-          description: 'CDN service deployed - version ${{ steps.version.outputs.version }}'
+          description: "CDN service deployed - version ${{ steps.version.outputs.version }}"
           ref: ${{ github.sha }}
-
-

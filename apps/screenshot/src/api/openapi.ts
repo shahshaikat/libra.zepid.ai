@@ -281,7 +281,7 @@ const screenshotHandler = async (c: any) => {
 
   } catch (error) {
     const errorMessage = error instanceof Error ? error.message : String(error)
-    
+
     logger.error('Screenshot request failed', {
       requestId,
       error: errorMessage
@@ -412,8 +412,8 @@ openApiApp.doc('/openapi.json', {
     description: 'API for capturing screenshots using Cloudflare Workers and Queues',
     contact: {
       name: 'Libra Team',
-      url: 'https://libra.dev',
-      email: 'support@libra.dev',
+      url: 'https://zapid.dev',
+      email: 'support@zapid.dev',
     },
     license: {
       name: 'AGPL-3.0',
@@ -422,7 +422,7 @@ openApiApp.doc('/openapi.json', {
   },
   servers: [
     {
-      url: 'https://screenshot.libra.dev',
+      url: 'https://screenshot.zapid.dev',
       description: 'Production server',
     },
     {

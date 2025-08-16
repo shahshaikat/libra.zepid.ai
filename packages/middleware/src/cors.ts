@@ -39,7 +39,7 @@ const DEFAULT_CORS_CONFIG: CorsConfig = {
  */
 function getEnvironmentOrigins(environment: string): string[] {
   const isDevelopment = environment === 'development'
-  
+
   if (isDevelopment) {
     // Development: Allow localhost and common development ports
     return [
@@ -63,23 +63,23 @@ function getEnvironmentOrigins(environment: string): string[] {
       'http://127.0.0.1:3008',
     ]
   }
-  
+
   // Production: Allow specific Libra domains
   return [
-    'https://libra.dev',
-    'https://www.libra.dev',
-    'https://app.libra.dev',
-    'https://cdn.libra.dev',
-    'https://docs.libra.dev',
-    'https://auth.libra.dev',
-    'https://api.libra.dev',
-    'https://dispatcher.libra.dev',
-    'https://builder.libra.dev',
-    'https://email.libra.dev',
-    'https://web.libra.dev',
-    'https://deploy.libra.dev',
-    'https://auth-studio.libra.dev',
-    'https://vite-shadcn-template.libra.dev',
+    'https://zapid.dev',
+    'https://www.zapid.dev',
+    'https://app.zapid.dev',
+    'https://cdn.zapid.dev',
+    'https://docs.zapid.dev',
+    'https://auth.zapid.dev',
+    'https://api.zapid.dev',
+    'https://dispatcher.zapid.dev',
+    'https://builder.zapid.dev',
+    'https://email.zapid.dev',
+    'https://web.zapid.dev',
+    'https://deploy.zapid.dev',
+    'https://auth-studio.zapid.dev',
+    'https://vite-shadcn-template.zapid.dev',
   ]
 }
 
@@ -95,7 +95,7 @@ export function createCorsMiddleware(
 ): MiddlewareHandler {
   const environment = envConfig?.ENVIRONMENT || process.env.ENVIRONMENT || 'development'
   const isDevelopment = environment === 'development'
-  
+
   const finalConfig: CorsConfig = {
     ...DEFAULT_CORS_CONFIG,
     allowedOrigins: getEnvironmentOrigins(environment),

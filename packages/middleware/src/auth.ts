@@ -37,8 +37,8 @@ const DEFAULT_AUTH_CONFIG: AuthConfig = {
  * Check if path should skip authentication
  */
 function shouldSkipAuth(
-  path: string, 
-  method: string, 
+  path: string,
+  method: string,
   config: AuthConfig
 ): boolean {
   // Skip specific methods
@@ -214,7 +214,7 @@ export function createRoleAuthMiddleware(
     // First run authentication
     await authMiddleware(c, async () => {
       const userSession = c.get('userSession')
-      
+
       if (!userSession) {
         throw CommonErrors.unauthorized('Authentication required for role check')
       }
@@ -248,7 +248,7 @@ export function createOrgAuthMiddleware(
     // First run authentication
     await authMiddleware(c, async () => {
       const userSession = c.get('userSession')
-      
+
       if (!userSession?.activeOrganizationId) {
         throw CommonErrors.forbidden('Organization membership required')
       }
@@ -288,7 +288,7 @@ export function createApiKeyAuthMiddleware(
     // Set a service session
     c.set('userSession', {
       userId: 'service',
-      email: 'service@libra.dev',
+      email: 'service@zapid.dev',
     })
 
     await next()

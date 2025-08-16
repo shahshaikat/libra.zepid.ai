@@ -4453,7 +4453,7 @@ const nextConfig = {
             },
             {
                 protocol: 'https',
-                hostname: 'cdn.libra.dev',
+                hostname: 'cdn.zapid.dev',
                 pathname: '/image/**',
             }
         ],
@@ -4468,7 +4468,7 @@ const nextConfig = {
                 strategy: ["cookie", "baseLocale"],
                 experimentalMiddlewareLocaleSplitting: false,
                 // Cookie 域名配置
-                cookieDomain: process.env.NODE_ENV === 'production' ? '.libra.dev' : 'localhost'
+                cookieDomain: process.env.NODE_ENV === 'production' ? '.zapid.dev' : 'localhost'
             })
         );
         return config;

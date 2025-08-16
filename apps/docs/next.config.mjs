@@ -18,8 +18,8 @@
  *
  */
 
-import {createMDX} from "fumadocs-mdx/next";
-import {initOpenNextCloudflareForDev} from "@opennextjs/cloudflare";
+import { createMDX } from "fumadocs-mdx/next";
+import { initOpenNextCloudflareForDev } from "@opennextjs/cloudflare";
 
 const withMDX = createMDX();
 
@@ -39,7 +39,7 @@ const nextConfig = {
         remotePatterns: [
             {
                 protocol: 'https',
-                hostname: 'media.libra.dev',
+                hostname: 'media.zapid.dev',
                 pathname: '/**',
             },
         ],

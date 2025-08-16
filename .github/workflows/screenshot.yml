@@ -1,51 +1,51 @@
-name: 'Libra Screenshot Service Deploy'
+name: "Libra Screenshot Service Deploy"
 
 on:
   workflow_dispatch:
     inputs:
       environment:
-        description: 'Deployment environment'
+        description: "Deployment environment"
         required: true
-        default: 'production'
+        default: "production"
         type: choice
         options:
           - production
           - staging
       force_deploy:
-        description: 'Force deployment even if no changes detected'
+        description: "Force deployment even if no changes detected"
         required: false
         default: false
         type: boolean
   push:
-    branches: [ main ]
+    branches: [main]
     tags:
-      - 'screenshot-v*'
+      - "screenshot-v*"
     paths:
-      - 'apps/screenshot/**'
-      - 'packages/auth/**'
-      - 'packages/db/**'
-      - 'packages/common/**'
-      - 'packages/middleware/**'
-      - 'packages/sandbox/**'
-      - 'packages/better-auth-cloudflare/**'
-      - 'package.json'
-      - 'turbo.json'
-      - 'bun.lock'
-      - '.github/workflows/screenshot.yml'
+      - "apps/screenshot/**"
+      - "packages/auth/**"
+      - "packages/db/**"
+      - "packages/common/**"
+      - "packages/middleware/**"
+      - "packages/sandbox/**"
+      - "packages/better-auth-cloudflare/**"
+      - "package.json"
+      - "turbo.json"
+      - "bun.lock"
+      - ".github/workflows/screenshot.yml"
   pull_request:
     types: [opened, synchronize, reopened]
     paths:
-      - 'apps/screenshot/**'
-      - 'packages/auth/**'
-      - 'packages/db/**'
-      - 'packages/common/**'
-      - 'packages/middleware/**'
-      - 'packages/sandbox/**'
-      - 'packages/better-auth-cloudflare/**'
-      - 'package.json'
-      - 'turbo.json'
-      - 'bun.lock'
-      - '.github/workflows/screenshot.yml'
+      - "apps/screenshot/**"
+      - "packages/auth/**"
+      - "packages/db/**"
+      - "packages/common/**"
+      - "packages/middleware/**"
+      - "packages/sandbox/**"
+      - "packages/better-auth-cloudflare/**"
+      - "package.json"
+      - "turbo.json"
+      - "bun.lock"
+      - ".github/workflows/screenshot.yml"
 
 # Limit concurrent workflow runs
 concurrency:
@@ -71,7 +71,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version-file: '.nvmrc'
+          node-version-file: ".nvmrc"
 
       - name: Setup Bun
         uses: oven-sh/setup-bun@v1
@@ -135,7 +135,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version-file: '.nvmrc'
+          node-version-file: ".nvmrc"
 
       - name: Setup Bun
         uses: oven-sh/setup-bun@v1
@@ -265,7 +265,7 @@ jobs:
           export HYPERDRIVE_ID="${{ secrets.HYPERDRIVE_ID }}"
 
           # Application URLs
-          export NEXT_PUBLIC_APP_URL="${{ secrets.NEXT_PUBLIC_APP_URL || 'https://libra.dev' }}"
+          export NEXT_PUBLIC_APP_URL="${{ secrets.NEXT_PUBLIC_APP_URL || 'https://zapid.dev' }}"
           export NEXT_PUBLIC_CDN_URL="https://cdn.libra.dev"
 
           # Database
@@ -332,5 +332,5 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           environment: ${{ github.event.inputs.environment || 'production' }}
           environment-url: ${{ steps.deploy.outputs.deployment-url }}
-          description: 'Screenshot service deployed - version ${{ steps.version.outputs.version }}'
+          description: "Screenshot service deployed - version ${{ steps.version.outputs.version }}"
           ref: ${{ github.sha }}

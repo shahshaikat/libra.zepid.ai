@@ -1,5 +1,5 @@
-import {z} from 'zod'
-import type {AppContext} from '../types'
+import { z } from 'zod'
+import type { AppContext } from '../types'
 
 /**
  * Environment configuration schema
@@ -54,8 +54,8 @@ export const corsConfig = {
 
         // Production origins
         origins.push(
-            'https://libra.dev',
-            'https://cdn.libra.dev',
+            'https://zapid.dev',
+            'https://cdn.zapid.dev',
             "https://libra.sh"
         )
 
@@ -159,7 +159,7 @@ export function isDevelopment(env: EnvConfig): boolean {
  */
 export function getApiBaseUrl(env: EnvConfig): string {
     if (isProduction(env)) {
-        return 'https://cdn.libra.dev'
+        return 'https://cdn.zapid.dev'
     }
     return 'http://localhost:8787'
 }

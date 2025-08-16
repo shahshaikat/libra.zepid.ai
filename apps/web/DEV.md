@@ -1050,7 +1050,7 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'cdn.libra.dev',
+        hostname: 'cdn.zapid.dev',
         pathname: '/image/**',
       }
     ],

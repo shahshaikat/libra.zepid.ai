@@ -349,7 +349,7 @@ export async function configureDomainDNS(
   _workerName?: string
 ): Promise<DNSConfigurationResult> {
   const cloudflareApiToken = env.CLOUDFLARE_API_TOKEN
-  
+
   if (!cloudflareApiToken) {
     return {
       success: false,
@@ -440,7 +440,7 @@ async function getZoneId(domain: string, apiToken: string): Promise<{
     }
 
     const data = await response.json() as CloudflareResponse
-    
+
     if (!data.success || data.result.length === 0) {
       throw new Error('Domain not found in Cloudflare account')
     }
@@ -506,7 +506,7 @@ export function validateDomainFormat(domain: string): {
 
   // Basic domain format validation
   const domainRegex = /^[a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(\.[a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
-  
+
   if (!domainRegex.test(cleanDomain)) {
     return { valid: false, error: 'Invalid domain name format' }
   }
@@ -515,11 +515,11 @@ export function validateDomainFormat(domain: string): {
   const reservedDomains = [
     'localhost',
     'libra.sh',
-    'libra.dev',
+    'zapid.dev',
     'workers.dev',
   ]
 
-  if (reservedDomains.some(reserved => 
+  if (reservedDomains.some(reserved =>
     cleanDomain === reserved || cleanDomain.endsWith(`.${reserved}`)
   )) {
     return { valid: false, error: 'This domain is reserved and cannot be used' }

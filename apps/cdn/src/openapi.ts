@@ -140,8 +140,8 @@ openApiApp.doc('/openapi.json', {
     description: 'API for uploading and retrieving images from Libra CDN service',
     contact: {
       name: 'Libra Team',
-      url: 'https://libra.dev',
-      email: 'support@libra.dev',
+      url: 'https://zapid.dev',
+      email: 'support@zapid.dev',
     },
     license: {
       name: 'MIT',
@@ -150,7 +150,7 @@ openApiApp.doc('/openapi.json', {
   },
   servers: [
     {
-      url: 'https://cdn.libra.dev',
+      url: 'https://cdn.zapid.dev',
       description: 'Production server',
     },
     {

@@ -45,7 +45,7 @@ export const openApiApp = new OpenAPIHono<{ Bindings: CloudflareBindings; Variab
 // Health check endpoint
 openApiApp.get('/health', async (c) => {
   const requestId = c.get('requestId') || crypto.randomUUID()
-  
+
   try {
     // Basic health checks
     const checks = {
@@ -54,9 +54,9 @@ openApiApp.get('/health', async (c) => {
       database: !!c.env.DATABASE,
       postgres: !!c.env.POSTGRES_URL,
     }
-    
+
     const allHealthy = Object.values(checks).every(Boolean)
-    
+
     return c.json({
       status: allHealthy ? 'healthy' : 'unhealthy',
       timestamp: new Date().toISOString(),
@@ -90,8 +90,8 @@ openApiApp.doc('/openapi.json', {
     description: 'API for dispatching requests to Cloudflare Workers using subdomain routing',
     contact: {
       name: 'Libra Team',
-      url: 'https://libra.dev',
-      email: 'support@libra.dev',
+      url: 'https://zapid.dev',
+      email: 'support@zapid.dev',
     },
     license: {
       name: 'AGPL-3.0',
@@ -100,7 +100,7 @@ openApiApp.doc('/openapi.json', {
   },
   servers: [
     {
-      url: 'https://dispatcher.libra.dev',
+      url: 'https://dispatcher.zapid.dev',
       description: 'Production server',
     },
     {

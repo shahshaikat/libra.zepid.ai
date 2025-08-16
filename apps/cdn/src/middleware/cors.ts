@@ -14,20 +14,20 @@ export function createCorsMiddleware() {
     try {
       const config = getConfig(c)
       const allowedOrigins = corsConfig.getAllowedOrigins(config)
-      
+
       // Get request origin (unused in current implementation but kept for potential future use)
       // const origin = c.req.header('origin')
-      
+
       // Apply CORS middleware with dynamic configuration
       return cors({
         origin: (requestOrigin) => {
           if (!requestOrigin) return null
-          
+
           // Check exact match first
           if (allowedOrigins.includes(requestOrigin)) {
             return requestOrigin
           }
-          
+
           // Check pattern match for development
           if (config.ENVIRONMENT === 'development') {
             // Allow any localhost port in development
@@ -39,7 +39,7 @@ export function createCorsMiddleware() {
               return requestOrigin
             }
           }
-          
+
           // Check for subdomain match in production
           if (config.ENVIRONMENT === 'production') {
             // Allow any subdomain of libra.dev
@@ -47,12 +47,12 @@ export function createCorsMiddleware() {
               return requestOrigin
             }
           }
-          
+
           // Log rejected origin for debugging
           if (config.LOG_LEVEL === 'debug') {
             console.log(`CORS: Rejected origin ${requestOrigin}`)
           }
-          
+
           return null
         },
         allowMethods: [...corsConfig.allowMethods],
@@ -64,9 +64,9 @@ export function createCorsMiddleware() {
     } catch (error) {
       // Fallback to restrictive CORS on error
       console.error('CORS middleware error:', error)
-      
+
       return cors({
-        origin: 'https://libra.dev',
+        origin: 'https://zapid.dev',
         allowMethods: ['GET', 'POST'],
         allowHeaders: ['Content-Type'],
         credentials: false,

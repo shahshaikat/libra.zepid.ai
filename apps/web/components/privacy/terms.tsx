@@ -174,11 +174,13 @@ export default function TermsPage() {
               {m["terms.agreement.description"]()}
             </p>
             <p>
-              {m["terms.agreement.serviceDescription"]({ websiteUrl: (
-                <a href='https://libra.dev' className='text-primary hover:text-primary/80 transition-colors font-medium'>
-                  https://libra.dev
-                </a>
-              )})}
+              {m["terms.agreement.serviceDescription"]({
+                websiteUrl: (
+                  <a href='https://zapid.dev' className='text-primary hover:text-primary/80 transition-colors font-medium'>
+                    https://libra.dev
+                  </a>
+                )
+              })}
             </p>
             <div className='glass-3 rounded-lg p-4 mt-4'>
               <p className='font-semibold text-foreground'>
@@ -581,7 +583,7 @@ export default function TermsPage() {
               <p className='font-bold text-foreground'>{m["terms.contact.companyName"]()}</p>
               <p className='mt-2'>
                 <a
-                  href='mailto:contact@libra.dev'
+                  href='mailto:contact@zapid.dev'
                   className='text-primary hover:text-primary/80 transition-colors font-medium'
                 >
                   contact@libra.dev

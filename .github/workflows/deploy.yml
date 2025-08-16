@@ -1,59 +1,59 @@
-name: 'Libra Deploy Service Deploy'
+name: "Libra Deploy Service Deploy"
 
 on:
   workflow_dispatch:
     inputs:
       environment:
-        description: 'Deployment environment'
+        description: "Deployment environment"
         required: true
-        default: 'production'
+        default: "production"
         type: choice
         options:
           - production
           - staging
       force_deploy:
-        description: 'Force deployment even if no changes detected'
+        description: "Force deployment even if no changes detected"
         required: false
         default: false
         type: boolean
   push:
-    branches: [ main ]
+    branches: [main]
     tags:
-      - 'deploy-v*'
+      - "deploy-v*"
     paths:
-      - 'apps/deploy/**'
-      - 'packages/auth/**'
-      - 'packages/db/**'
-      - 'packages/common/**'
-      - 'packages/middleware/**'
-      - 'packages/sandbox/**'
-      - 'packages/templates/**'
-      - 'packages/better-auth-cloudflare/**'
-      - 'packages/better-auth-stripe/**'
-      - 'packages/email/**'
-      - 'tooling/**'
-      - 'package.json'
-      - 'turbo.json'
-      - 'bun.lock'
-      - '.github/workflows/deploy.yml'
+      - "apps/deploy/**"
+      - "packages/auth/**"
+      - "packages/db/**"
+      - "packages/common/**"
+      - "packages/middleware/**"
+      - "packages/sandbox/**"
+      - "packages/templates/**"
+      - "packages/better-auth-cloudflare/**"
+      - "packages/better-auth-stripe/**"
+      - "packages/email/**"
+      - "tooling/**"
+      - "package.json"
+      - "turbo.json"
+      - "bun.lock"
+      - ".github/workflows/deploy.yml"
   pull_request:
-    branches: [ main ]
+    branches: [main]
     paths:
-      - 'apps/deploy/**'
-      - 'packages/auth/**'
-      - 'packages/db/**'
-      - 'packages/common/**'
-      - 'packages/middleware/**'
-      - 'packages/sandbox/**'
-      - 'packages/templates/**'
-      - 'packages/better-auth-cloudflare/**'
-      - 'packages/better-auth-stripe/**'
-      - 'packages/email/**'
-      - 'tooling/**'
-      - 'package.json'
-      - 'turbo.json'
-      - 'bun.lock'
-      - '.github/workflows/deploy.yml'
+      - "apps/deploy/**"
+      - "packages/auth/**"
+      - "packages/db/**"
+      - "packages/common/**"
+      - "packages/middleware/**"
+      - "packages/sandbox/**"
+      - "packages/templates/**"
+      - "packages/better-auth-cloudflare/**"
+      - "packages/better-auth-stripe/**"
+      - "packages/email/**"
+      - "tooling/**"
+      - "package.json"
+      - "turbo.json"
+      - "bun.lock"
+      - ".github/workflows/deploy.yml"
 
 # Limit concurrent workflow runs
 concurrency:
@@ -79,7 +79,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version-file: '.nvmrc'
+          node-version-file: ".nvmrc"
 
       - name: Setup Bun
         uses: oven-sh/setup-bun@v1
@@ -143,7 +143,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version-file: '.nvmrc'
+          node-version-file: ".nvmrc"
 
       - name: Setup Bun
         uses: oven-sh/setup-bun@v1
@@ -189,7 +189,6 @@ jobs:
 
       - name: Generate Cloudflare Workers types
         env:
-
           NEXT_PUBLIC_APP_URL: ${{ secrets.NEXT_PUBLIC_APP_URL }}
           NEXT_PUBLIC_CDN_URL: ${{ secrets.NEXT_PUBLIC_CDN_URL }}
           NEXT_PUBLIC_DEPLOY_URL: ${{ secrets.NEXT_PUBLIC_DEPLOY_URL }}
@@ -279,7 +278,7 @@ jobs:
           export HYPERDRIVE_ID="${{ secrets.HYPERDRIVE_ID }}"
 
           # Application URLs
-          export NEXT_PUBLIC_APP_URL="${{ secrets.NEXT_PUBLIC_APP_URL || 'https://libra.dev' }}"
+          export NEXT_PUBLIC_APP_URL="${{ secrets.NEXT_PUBLIC_APP_URL || 'https://zapid.dev' }}"
           export NEXT_PUBLIC_CDN_URL="https://cdn.libra.dev"
 
           # Database
@@ -346,5 +345,5 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           environment: ${{ github.event.inputs.environment || 'production' }}
           environment-url: ${{ steps.deploy.outputs.deployment-url }}
-          description: 'Deploy service deployed - version ${{ steps.version.outputs.version }}'
+          description: "Deploy service deployed - version ${{ steps.version.outputs.version }}"
           ref: ${{ github.sha }}

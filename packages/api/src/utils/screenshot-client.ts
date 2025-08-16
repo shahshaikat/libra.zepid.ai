@@ -47,9 +47,9 @@ function getScreenshotServiceUrl(): string {
   if (process.env.NODE_ENV === 'development') {
     return 'http://localhost:3009'
   }
-  
+
   // In production, use the deployed service
-  return 'https://screenshot.libra.dev'
+  return 'https://screenshot.zapid.dev'
 }
 
 /**
@@ -151,7 +151,7 @@ export async function submitScreenshotRequest(
     }
 
     const responseData = await response.json() as ScreenshotResponse
-    
+
     log.project('info', 'Screenshot request submitted successfully', {
       projectId,
       planId,
@@ -188,7 +188,7 @@ export async function getScreenshotStatus(
   screenshotId: string
 ): Promise<any> {
   const screenshotServiceUrl = getScreenshotServiceUrl()
-  
+
   log.project('info', 'Getting screenshot status from service', {
     screenshotId,
     screenshotServiceUrl,
@@ -233,7 +233,7 @@ export async function getScreenshotStatus(
  */
 export async function checkScreenshotServiceHealth(): Promise<boolean> {
   const screenshotServiceUrl = getScreenshotServiceUrl()
-  
+
   const [result, error] = await tryCatch(async () => {
     const response = await fetch(`${screenshotServiceUrl}/health`, {
       method: 'GET',

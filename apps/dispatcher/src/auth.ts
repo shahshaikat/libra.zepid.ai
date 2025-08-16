@@ -58,19 +58,19 @@ async function authBuilder(c: any) {
             advanced: {
                 crossSubDomainCookies: {
                     enabled: true,
-                    domain: '.libra.dev',
+                    domain: '.zapid.dev',
                 },
             },
             // Configure trusted origins for cross-subdomain authentication
             trustedOrigins: [
-                'https://libra.dev',
-                'https://cdn.libra.dev',
-                'https://deploy.libra.dev',
-                'https://dispatcher.libra.dev',
-                'https://auth.libra.dev',
-                'https://api.libra.dev',
-                'https://docs.libra.dev',
-                'https://web.libra.dev',
+                'https://zapid.dev',
+                'https://cdn.zapid.dev',
+                'https://deploy.zapid.dev',
+                'https://dispatcher.zapid.dev',
+                'https://auth.zapid.dev',
+                'https://api.zapid.dev',
+                'https://docs.zapid.dev',
+                'https://web.zapid.dev',
                 // Development origins
                 'http://localhost:3000',
                 'http://localhost:3004',
@@ -84,7 +84,7 @@ async function authBuilder(c: any) {
             ]
         }
     );
-    
+
     return betterAuth(authOptions);
 }
 
@@ -121,7 +121,7 @@ export async function hasDispatchPermission(session: Session | null): Promise<bo
     if (!session) {
         return false;
     }
-    
+
     // For now, all authenticated users have dispatch permission
     // This can be extended with role-based access control
     return true;

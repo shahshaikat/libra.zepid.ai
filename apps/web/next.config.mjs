@@ -19,7 +19,7 @@
  */
 
 import { paraglideWebpackPlugin } from "@inlang/paraglide-js";
-import {initOpenNextCloudflareForDev} from "@opennextjs/cloudflare";
+import { initOpenNextCloudflareForDev } from "@opennextjs/cloudflare";
 
 // added by create cloudflare to enable calling `getCloudflareContext()` in `next dev`
 initOpenNextCloudflareForDev();
@@ -34,8 +34,8 @@ const withBundleAnalyzer = (await import('@next/bundle-analyzer')).default({
 const nextConfig = {
     reactStrictMode: true,
     transpilePackages: ["@libra/ui", "@libra/auth", "@libra/db", "@libra/api", "@libra/common"
-        , "@libra/better-auth-cloudflare", "@libra/email","@libra/better-auth-stripe","@libra/shikicode"
-    ,"@libra/sandbox"],
+        , "@libra/better-auth-cloudflare", "@libra/email", "@libra/better-auth-stripe", "@libra/shikicode"
+        , "@libra/sandbox"],
     pageExtensions: ['ts', 'tsx'],
     experimental: {
         reactCompiler: true,
@@ -43,21 +43,21 @@ const nextConfig = {
         // ppr: true,
     },
     images: {
-      loader: 'custom',
-      loaderFile: './imageLoader.ts',
-      remotePatterns: [
-        {
-          protocol: 'http',
-          hostname: 'localhost',
-          port: '3004',
-          pathname: '/image/**',
-        },
-        {
-            protocol: 'https',
-            hostname: 'cdn.libra.dev',
-            pathname: '/image/**',
-        }
-      ],
+        loader: 'custom',
+        loaderFile: './imageLoader.ts',
+        remotePatterns: [
+            {
+                protocol: 'http',
+                hostname: 'localhost',
+                port: '3004',
+                pathname: '/image/**',
+            },
+            {
+                protocol: 'https',
+                hostname: 'cdn.zapid.dev',
+                pathname: '/image/**',
+            }
+        ],
     },
     webpack: (config) => {
         config.plugins.push(
@@ -67,10 +67,10 @@ const nextConfig = {
                 strategy: ["cookie", "baseLocale"],
                 experimentalMiddlewareLocaleSplitting: false,
                 // Set cookie domain for subdomain sharing in staging/production
-                cookieDomain: process.env.NODE_ENV === 'production' ? '.libra.dev' : 'localhost'
+                cookieDomain: process.env.NODE_ENV === 'production' ? '.zapid.dev' : 'localhost'
             })
-    		);
-    		return config;
+        );
+        return config;
     },
     serverExternalPackages: ["@prisma/client", ".prisma/client", "postgres", "@libsql/isomorphic-ws", "jose"],
 }

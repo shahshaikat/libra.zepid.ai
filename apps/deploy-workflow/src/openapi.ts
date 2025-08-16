@@ -85,8 +85,8 @@ openApiApp.doc('/openapi.json', {
     description: 'API for deploying projects using Cloudflare Workflows',
     contact: {
       name: 'Libra Team',
-      url: 'https://libra.dev',
-      email: 'support@libra.dev',
+      url: 'https://zapid.dev',
+      email: 'support@zapid.dev',
     },
     license: {
       name: 'AGPL-3.0',
@@ -95,7 +95,7 @@ openApiApp.doc('/openapi.json', {
   },
   servers: [
     {
-      url: 'https://deploy.libra.dev',
+      url: 'https://deploy.zapid.dev',
       description: 'Production server',
     },
     {
