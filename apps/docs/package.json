@@ -1,6 +1,6 @@
 {
   "name": "@libra/docs",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "private": true,
   "scripts": {
     "build": "next build",
@@ -9,9 +9,9 @@
     "update": "bun update"
   },
   "dependencies": {
-    "fumadocs-core": "^15.6.10",
+    "fumadocs-core": "^15.6.11",
     "fumadocs-mdx": "^11.7.5",
-    "fumadocs-ui": "^15.6.10",
+    "fumadocs-ui": "^15.6.11",
     "motion": "^12.23.12",
     "octokit": "^5.0.3",
     "@orama/tokenizers": "^3.1.11",
