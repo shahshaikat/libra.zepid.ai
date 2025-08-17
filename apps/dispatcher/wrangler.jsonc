@@ -1,0 +1,116 @@
+{
+  "$schema": "../../node_modules/wrangler/config-schema.json",
+  "name": "libra-dispatcher",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-08-03",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "assets": {
+    "binding": "ASSETS",
+    "directory": "public"
+  },
+  "minify": true,
+  "placement": { "mode": "smart" },
+  "hyperdrive": [
+    {
+      "binding": "HYPERDRIVE",
+      "id": "{{HYPERDRIVE_ID}}",
+      "localConnectionString": "postgresql://postgres:postgres@libra:5432/libra"
+    }
+  ],
+  "dispatch_namespaces": [
+    {
+      "binding": "dispatcher",
+      "namespace": "{{DISPATCH_NAMESPACE_NAME}}"
+    }
+  ],
+
+  // Wildcard subdomain routing (SaaS mode)
+  "routes": [
+    {
+      "pattern": "*/*",
+      "zone_name": "libra.sh"
+    }
+  ],
+
+  // Deployment Configuration Instructions:
+  // 1. ✅ Routing Configuration: Configured *.libra.sh/* (including zone_name) in the routes above.
+  // 2. 📋 DNS Configuration: *.libra.sh CNAME libra-dispatcher.<account>.workers.dev (Orange Cloud enabled)
+  // 3. 🗄️ Database Configuration:
+  //    - Create Hyperdrive configuration: `wrangler hyperdrive create <name> --connection-string="<postgres-url>"`
+  //    - Update hyperdrive_bindings[0].id with the returned Hyperdrive ID
+  //    - Update POSTGRES_URL with actual database connection string
+  // 4. 🚀 User Worker Deployment: wrangler deploy --name <subdomain> --dispatch-namespace libra-dispatcher
+  // 5. 🎯 Example: vite-shadcn-template.libra.sh → Worker name "vite-shadcn-template"
+  // 6. 📝 Note: Use zone_name instead of zone_id to avoid hardcoding sensitive information
+
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1
+  },
+
+  "vars": {
+    // Environment configuration
+    "ENVIRONMENT": "{{ENVIRONMENT}}",
+    "DISPATCH_NAMESPACE_NAME": "{{DISPATCH_NAMESPACE_NAME}}",
+
+    // Application URLs
+    "NEXT_PUBLIC_APP_URL": "{{NEXT_PUBLIC_APP_URL}}",
+    "NEXT_PUBLIC_CDN_URL": "{{NEXT_PUBLIC_CDN_URL}}",
+
+    // Authentication configuration
+    "BETTER_AUTH_SECRET": "{{BETTER_AUTH_SECRET}}",
+    "BETTER_GITHUB_CLIENT_ID": "{{BETTER_GITHUB_CLIENT_ID}}",
+    "BETTER_GITHUB_CLIENT_SECRET": "{{BETTER_GITHUB_CLIENT_SECRET}}",
+    "GITHUB_OAUTH_CLIENT_ID": "{{GITHUB_OAUTH_CLIENT_ID}}",
+    "GITHUB_OAUTH_CLIENT_SECRET": "{{GITHUB_OAUTH_CLIENT_SECRET}}",
+
+    // Database configuration
+    "POSTGRES_URL": "{{POSTGRES_URL}}",
+
+    // Cloudflare configuration
+    "CLOUDFLARE_ACCOUNT_ID": "{{CLOUDFLARE_ACCOUNT_ID}}",
+    "DATABASE_ID": "{{DATABASE_ID}}",
+    "CLOUDFLARE_API_TOKEN": "{{CLOUDFLARE_API_TOKEN}}",
+    "CLOUDFLARE_AIGATEWAY_NAME": "{{CLOUDFLARE_AIGATEWAY_NAME}}",
+    "CLOUDFLARE_ZONE_ID": "{{CLOUDFLARE_ZONE_ID}}",
+
+    // AI API Keys
+    "ANTHROPIC_API_KEY": "{{ANTHROPIC_API_KEY}}",
+    "OPENAI_API_KEY": "{{OPENAI_API_KEY}}",
+    "GEMINI_API_KEY": "{{GEMINI_API_KEY}}",
+    "XAI_API_KEY": "{{XAI_API_KEY}}",
+    "DEEPSEEK_API_KEY": "{{DEEPSEEK_API_KEY}}",
+    "OPENROUTER_API_KEY": "{{OPENROUTER_API_KEY}}",
+    "CUSTOM_API_KEY": "{{CUSTOM_API_KEY}}",
+
+    // Azure AI configuration
+    "AZURE_DEPLOYMENT_NAME": "{{AZURE_DEPLOYMENT_NAME}}",
+    "AZURE_RESOURCE_NAME": "{{AZURE_RESOURCE_NAME}}",
+    "AZURE_API_KEY": "{{AZURE_API_KEY}}",
+    "AZURE_BASE_URL": "{{AZURE_BASE_URL}}",
+
+    // Additional services
+    "E2B_API_KEY": "{{E2B_API_KEY}}",
+    "LIBRA_GITHUB_TOKEN": "{{LIBRA_GITHUB_TOKEN}}",
+
+    // Security configuration
+    "TURNSTILE_SECRET_KEY": "{{TURNSTILE_SECRET_KEY}}",
+    "NEXT_PUBLIC_TURNSTILE_SITE_KEY": "{{NEXT_PUBLIC_TURNSTILE_SITE_KEY}}",
+
+    // Feature flags
+    "REASONING_ENABLED": "{{REASONING_ENABLED}}",
+    "ENHANCED_PROMPT": "{{ENHANCED_PROMPT}}",
+    "NEXT_PUBLIC_SCAN": "{{NEXT_PUBLIC_SCAN}}",
+
+    // GitHub configuration
+    "LIBRA_GITHUB_OWNER": "{{LIBRA_GITHUB_OWNER}}",
+    "LIBRA_GITHUB_REPO": "{{LIBRA_GITHUB_REPO}}",
+
+    // Analytics
+    "NEXT_PUBLIC_POSTHOG_KEY": "{{NEXT_PUBLIC_POSTHOG_KEY}}",
+    "NEXT_PUBLIC_POSTHOG_HOST": "{{NEXT_PUBLIC_POSTHOG_HOST}}",
+
+    // Logging and monitoring
+    "LOG_LEVEL": "{{LOG_LEVEL}}"
+  }
+}

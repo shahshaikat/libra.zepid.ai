@@ -1,0 +1,95 @@
+{
+  "$schema": "../../node_modules/wrangler/config-schema.json",
+  "name": "libra-deploy",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-07-17",
+  "compatibility_flags": [
+    "nodejs_compat",
+    "global_fetch_strictly_public"
+  ],
+  "limits": {
+    "cpu_ms": 300000
+  },
+  "assets": {
+    "binding": "ASSETS",
+    "directory": "public"
+  },
+  "routes": [
+    {
+      "pattern": "deploy.libra.dev",
+      "custom_domain": true
+    }
+  ],
+  "minify": true,
+  "placement": {
+    "mode": "smart"
+  },
+  "hyperdrive": [
+    {
+      "binding": "HYPERDRIVE",
+      "id": "{{HYPERDRIVE_ID}}"
+    }
+  ],
+  "d1_databases": [
+    {
+      "binding": "DATABASE",
+      "database_name": "libra",
+      "database_id": "{{DATABASE_ID}}"
+    }
+  ],
+  "kv_namespaces": [
+    {
+      "binding": "KV",
+      "id": "{{KV_NAMESPACE_ID}}"
+    }
+  ],
+  "workflows": [
+    {
+      "binding": "DEPLOY_WORKFLOW",
+      "name": "deployment-workflow",
+      "class_name": "DeploymentWorkflow"
+    }
+  ],
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1
+  },
+  "vars": {
+    // Environment configuration
+    "ENVIRONMENT": "{{ENVIRONMENT}}",
+    // Core application configuration
+    "NEXT_PUBLIC_APP_URL": "{{NEXT_PUBLIC_APP_URL}}",
+    "NEXT_PUBLIC_CDN_URL": "{{NEXT_PUBLIC_CDN_URL}}",
+    // Authentication configuration
+    "BETTER_AUTH_SECRET": "{{BETTER_AUTH_SECRET}}",
+    "BETTER_GITHUB_CLIENT_ID": "{{BETTER_GITHUB_CLIENT_ID}}",
+    "BETTER_GITHUB_CLIENT_SECRET": "{{BETTER_GITHUB_CLIENT_SECRET}}",
+    // Security configuration
+    "TURNSTILE_SECRET_KEY": "{{TURNSTILE_SECRET_KEY}}",
+    // Payment configuration (optional)
+    "STRIPE_SECRET_KEY": "{{STRIPE_SECRET_KEY}}",
+    "STRIPE_WEBHOOK_SECRET": "{{STRIPE_WEBHOOK_SECRET}}",
+    // Admin configuration (optional)
+    "ADMIN_USER_IDS": "{{ADMIN_USER_IDS}}",
+    // Database configuration
+    "POSTGRES_URL": "{{POSTGRES_URL}}",
+    "DATABASE_ID": "{{DATABASE_ID}}",
+    // Cloudflare configuration
+    "CLOUDFLARE_ACCOUNT_ID": "{{CLOUDFLARE_ACCOUNT_ID}}",
+    "CLOUDFLARE_API_TOKEN": "{{CLOUDFLARE_API_TOKEN}}",
+    "CLOUDFLARE_ZONE_ID": "{{CLOUDFLARE_ZONE_ID}}",
+    "CLOUDFLARE_AIGATEWAY_NAME": "{{CLOUDFLARE_AIGATEWAY_NAME}}",
+    // Email service (optional)
+    "RESEND_API_KEY": "{{RESEND_API_KEY}}",
+    "RESEND_FROM": "{{RESEND_FROM}}",
+    "LOG_LEVEL": "{{LOG_LEVEL}}",
+    // Sandbox provider configuration
+    "E2B_API_KEY": "{{E2B_API_KEY}}",
+    "DAYTONA_API_KEY": "{{DAYTONA_API_KEY}}",
+    "SANDBOX_BUILDER_DEFAULT_PROVIDER": "{{SANDBOX_BUILDER_DEFAULT_PROVIDER}}",
+    // Application URLs
+    "NEXT_PUBLIC_DISPATCHER_URL": "{{NEXT_PUBLIC_DISPATCHER_URL}}",
+    // Dispatch namespace configuration
+    "DISPATCH_NAMESPACE_NAME": "{{DISPATCH_NAMESPACE_NAME}}"
+  }
+}

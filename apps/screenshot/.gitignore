@@ -34,4 +34,3 @@ lerna-debug.log*
 
 .cache
 public/inspect.src.js
-wrangler.jsonc
