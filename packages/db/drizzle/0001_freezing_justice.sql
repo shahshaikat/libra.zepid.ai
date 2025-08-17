@@ -1,0 +1,1 @@
+ALTER TABLE "project" ALTER COLUMN "deployment_status" SET DEFAULT 'idle';
