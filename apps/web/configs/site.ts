@@ -20,16 +20,16 @@
 
 export const siteConfig = {
   name: 'Libra AI',
-  url: process.env.NEXT_PUBLIC_APP_URL || 'https://zapid.dev',
-  getStartedUrl: 'https://zapid.dev',
+  url: process.env.NEXT_PUBLIC_APP_URL || 'https://zepid.dev',
+  getStartedUrl: 'https://zepid.dev',
   ogImage: 'https://libra.dev/opengraph-image.png',
   description:
     'Libra is a platform for building AI-powered applications.',
   links: {
     twitter: 'https://twitter.com/nextify2024',
     github: 'https://github.com/nextify-limited/libra',
-    email: 'mailto:contact@zapid.dev',
-    forum: 'https://forum.zapid.dev',
+    email: 'mailto:contact@zepid.dev',
+    forum: 'https://forum.zepid.dev',
   },
 }
 

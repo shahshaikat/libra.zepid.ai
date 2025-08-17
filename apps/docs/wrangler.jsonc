@@ -58,28 +58,28 @@
   ],
 
   // DO Queue and DO Sharded Tag Cache
-  "durable_objects": {
-    "bindings": [
-      {
-        "name": "NEXT_CACHE_DO_QUEUE",
-        "class_name": "DOQueueHandler"
-      },
-      // This is only required if you use On-demand revalidation
-      {
-        "name": "NEXT_TAG_CACHE_DO_SHARDED",
-        "class_name": "DOShardedTagCache"
-      }
-    ]
-  },
+  // "durable_objects": {
+  //   "bindings": [
+  //     {
+  //       "name": "NEXT_CACHE_DO_QUEUE",
+  //       "class_name": "DOQueueHandler"
+  //     },
+  //     // This is only required if you use On-demand revalidation
+  //     {
+  //       "name": "NEXT_TAG_CACHE_DO_SHARDED",
+  //       "class_name": "DOShardedTagCache"
+  //     }
+  //   ]
+  // },
 
-  "migrations": [
-    {
-      "tag": "v1",
-      "new_sqlite_classes": [
-        "DOQueueHandler",
-        // This is only required if you use On-demand revalidation
-        "DOShardedTagCache"
-      ]
-    }
-  ]
+  // "migrations": [
+  //   {
+  //     "tag": "v1",
+  //     "new_sqlite_classes": [
+  //       "DOQueueHandler",
+  //       // This is only required if you use On-demand revalidation
+  //       "DOShardedTagCache"
+  //     ]
+  //   }
+  // ]
 }

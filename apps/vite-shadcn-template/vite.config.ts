@@ -21,7 +21,7 @@ export default defineConfig(({ mode }) => {
     // }
 
     // Default to cdn.libra.dev for production and other environments
-    return 'https://cdn.zapid.dev';
+    return 'https://cdn.zepid.dev';
   };
 
   return {

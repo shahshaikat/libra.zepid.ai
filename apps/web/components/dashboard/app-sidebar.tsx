@@ -165,7 +165,7 @@ const getNavMainItems = (userRole?: string) => {
 const getNavSecondaryItems = () => [
   {
     title: m['dashboard.sidebar.navigation.docs'](),
-    url: 'https://docs.zapid.dev',
+    url: 'https://docs.zepid.dev',
     icon: FileIcon,
   },
   {
@@ -175,7 +175,7 @@ const getNavSecondaryItems = () => [
   },
   {
     title: m['dashboard.sidebar.navigation.support'](),
-    url: 'https://forum.zapid.dev',
+    url: 'https://forum.zepid.dev',
     icon: MdForum,
   },
   {

@@ -90,8 +90,8 @@ openApiApp.doc('/openapi.json', {
     description: 'API for dispatching requests to Cloudflare Workers using subdomain routing',
     contact: {
       name: 'Libra Team',
-      url: 'https://zapid.dev',
-      email: 'support@zapid.dev',
+      url: 'https://zepid.dev',
+      email: 'support@zepid.dev',
     },
     license: {
       name: 'AGPL-3.0',
@@ -100,7 +100,7 @@ openApiApp.doc('/openapi.json', {
   },
   servers: [
     {
-      url: 'https://dispatcher.zapid.dev',
+      url: 'https://dispatcher.zepid.dev',
       description: 'Production server',
     },
     {

@@ -288,7 +288,7 @@ export function createApiKeyAuthMiddleware(
     // Set a service session
     c.set('userSession', {
       userId: 'service',
-      email: 'service@zapid.dev',
+      email: 'service@zepid.dev',
     })
 
     await next()

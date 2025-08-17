@@ -54,8 +54,8 @@ export const corsConfig = {
 
         // Production origins
         origins.push(
-            'https://zapid.dev',
-            'https://cdn.zapid.dev',
+            'https://zepid.dev',
+            'https://cdn.zepid.dev',
             "https://libra.sh"
         )
 
@@ -159,7 +159,7 @@ export function isDevelopment(env: EnvConfig): boolean {
  */
 export function getApiBaseUrl(env: EnvConfig): string {
     if (isProduction(env)) {
-        return 'https://cdn.zapid.dev'
+        return 'https://cdn.zepid.dev'
     }
     return 'http://localhost:8787'
 }

@@ -278,7 +278,7 @@ jobs:
           export HYPERDRIVE_ID="${{ secrets.HYPERDRIVE_ID }}"
 
           # Application URLs
-          export NEXT_PUBLIC_APP_URL="${{ secrets.NEXT_PUBLIC_APP_URL || 'https://zapid.dev' }}"
+          export NEXT_PUBLIC_APP_URL="${{ secrets.NEXT_PUBLIC_APP_URL || 'https://zepid.dev' }}"
           export NEXT_PUBLIC_CDN_URL="https://cdn.libra.dev"
 
           # Database

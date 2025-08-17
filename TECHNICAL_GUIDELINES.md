@@ -4166,7 +4166,7 @@ const REQUIRED_SECRETS = [
 
 const REQUIRED_VARS = [
   'NODE_ENV=production',
-  'NEXT_PUBLIC_APP_URL=https://zapid.dev',
+  'NEXT_PUBLIC_APP_URL=https://zepid.dev',
   'NEXT_PUBLIC_POSTHOG_KEY=your-posthog-key',
 ]
 

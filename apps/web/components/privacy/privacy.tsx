@@ -159,7 +159,7 @@ export default function PrivacyPage() {
                 <p>
                   {m["privacy.about.usageScenarios.website"]({
                     websiteUrl: (
-                      <a href='https://zapid.dev' className='text-primary hover:text-primary/80 transition-colors font-medium'>
+                      <a href='https://zepid.dev' className='text-primary hover:text-primary/80 transition-colors font-medium'>
                         https://libra.dev
                       </a>
                     )

@@ -67,19 +67,19 @@ async function authBuilder(c: any) {
             advanced: {
                 crossSubDomainCookies: {
                     enabled: true,
-                    domain: '.zapid.dev',
+                    domain: '.zepid.dev',
                 },
             },
             // Configure trusted origins for cross-subdomain authentication
             trustedOrigins: [
-                'https://zapid.dev',
-                'https://cdn.zapid.dev',
-                'https://deploy.zapid.dev',
-                'https://dispatcher.zapid.dev',
-                'https://auth.zapid.dev',
-                'https://api.zapid.dev',
-                'https://docs.zapid.dev',
-                'https://web.zapid.dev',
+                'https://zepid.dev',
+                'https://cdn.zepid.dev',
+                'https://deploy.zepid.dev',
+                'https://dispatcher.zepid.dev',
+                'https://auth.zepid.dev',
+                'https://api.zepid.dev',
+                'https://docs.zepid.dev',
+                'https://web.zepid.dev',
                 // Development origins
                 'http://localhost:3000',
                 'http://localhost:3004',

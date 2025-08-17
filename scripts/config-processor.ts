@@ -27,8 +27,8 @@ function replaceConfigPlaceholders(templatePath: string, outputPath: string): vo
     ENVIRONMENT: 'production',
 
     // Application URLs
-    NEXT_PUBLIC_APP_URL: 'https://zapid.dev',
-    NEXT_PUBLIC_CDN_URL: 'https://cdn.zapid.dev',
+    NEXT_PUBLIC_APP_URL: 'https://zepid.dev',
+    NEXT_PUBLIC_CDN_URL: 'https://cdn.zepid.dev',
 
     // Cloudflare
     CLOUDFLARE_AIGATEWAY_NAME: 'azure-ai',

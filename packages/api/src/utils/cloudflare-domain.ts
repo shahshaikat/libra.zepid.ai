@@ -515,7 +515,7 @@ export function validateDomainFormat(domain: string): {
   const reservedDomains = [
     'localhost',
     'libra.sh',
-    'zapid.dev',
+    'zepid.dev',
     'workers.dev',
   ]
 

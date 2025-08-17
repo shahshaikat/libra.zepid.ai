@@ -176,7 +176,7 @@ export default function TermsPage() {
             <p>
               {m["terms.agreement.serviceDescription"]({
                 websiteUrl: (
-                  <a href='https://zapid.dev' className='text-primary hover:text-primary/80 transition-colors font-medium'>
+                  <a href='https://zepid.dev' className='text-primary hover:text-primary/80 transition-colors font-medium'>
                     https://libra.dev
                   </a>
                 )
@@ -583,7 +583,7 @@ export default function TermsPage() {
               <p className='font-bold text-foreground'>{m["terms.contact.companyName"]()}</p>
               <p className='mt-2'>
                 <a
-                  href='mailto:contact@zapid.dev'
+                  href='mailto:contact@zepid.dev'
                   className='text-primary hover:text-primary/80 transition-colors font-medium'
                 >
                   contact@libra.dev

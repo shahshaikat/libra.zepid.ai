@@ -66,7 +66,7 @@ export function createCorsMiddleware() {
       console.error('CORS middleware error:', error)
 
       return cors({
-        origin: 'https://zapid.dev',
+        origin: 'https://zepid.dev',
         allowMethods: ['GET', 'POST'],
         allowHeaders: ['Content-Type'],
         credentials: false,

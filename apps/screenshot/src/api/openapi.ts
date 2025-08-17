@@ -412,8 +412,8 @@ openApiApp.doc('/openapi.json', {
     description: 'API for capturing screenshots using Cloudflare Workers and Queues',
     contact: {
       name: 'Libra Team',
-      url: 'https://zapid.dev',
-      email: 'support@zapid.dev',
+      url: 'https://zepid.dev',
+      email: 'support@zepid.dev',
     },
     license: {
       name: 'AGPL-3.0',
@@ -422,7 +422,7 @@ openApiApp.doc('/openapi.json', {
   },
   servers: [
     {
-      url: 'https://screenshot.zapid.dev',
+      url: 'https://screenshot.zepid.dev',
       description: 'Production server',
     },
     {

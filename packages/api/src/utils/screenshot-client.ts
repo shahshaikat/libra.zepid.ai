@@ -49,7 +49,7 @@ function getScreenshotServiceUrl(): string {
   }
 
   // In production, use the deployed service
-  return 'https://screenshot.zapid.dev'
+  return 'https://screenshot.zepid.dev'
 }
 
 /**

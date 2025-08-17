@@ -96,7 +96,7 @@ export function createEnterprisePlan(): Plan {
     cta: {
       variant: 'glow' as const,
       label: 'Contact Us',
-      href: 'mailto:contact@zapid.dev'
+      href: 'mailto:contact@zepid.dev'
     },
     features: [
       'All Premium features',

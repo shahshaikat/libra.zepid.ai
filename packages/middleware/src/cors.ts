@@ -66,20 +66,20 @@ function getEnvironmentOrigins(environment: string): string[] {
 
   // Production: Allow specific Libra domains
   return [
-    'https://zapid.dev',
-    'https://www.zapid.dev',
-    'https://app.zapid.dev',
-    'https://cdn.zapid.dev',
-    'https://docs.zapid.dev',
-    'https://auth.zapid.dev',
-    'https://api.zapid.dev',
-    'https://dispatcher.zapid.dev',
-    'https://builder.zapid.dev',
-    'https://email.zapid.dev',
-    'https://web.zapid.dev',
-    'https://deploy.zapid.dev',
-    'https://auth-studio.zapid.dev',
-    'https://vite-shadcn-template.zapid.dev',
+    'https://zepid.dev',
+    'https://www.zepid.dev',
+    'https://app.zepid.dev',
+    'https://cdn.zepid.dev',
+    'https://docs.zepid.dev',
+    'https://auth.zepid.dev',
+    'https://api.zepid.dev',
+    'https://dispatcher.zepid.dev',
+    'https://builder.zepid.dev',
+    'https://email.zepid.dev',
+    'https://web.zepid.dev',
+    'https://deploy.zepid.dev',
+    'https://auth-studio.zepid.dev',
+    'https://vite-shadcn-template.zepid.dev',
   ]
 }
 
