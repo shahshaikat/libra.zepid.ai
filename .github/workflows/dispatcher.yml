@@ -331,7 +331,7 @@ jobs:
         uses: chrnorm/deployment-action@v2
         if: success()
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.LIBRA_GITHUB_TOKEN }}
           environment: ${{ github.event.inputs.environment || 'production' }}
           environment-url: ${{ steps.deploy.outputs.deployment-url }}
           description: "Dispatcher service deployed - version ${{ steps.version.outputs.version }}"
