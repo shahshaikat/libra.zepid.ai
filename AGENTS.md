@@ -23,6 +23,7 @@
 - Prefer feature-oriented folders; test files near code or under `__tests__/`.
 - Zod v4 only: `import { z } from 'zod/v4'`.
 
+
 ## Testing Guidelines
 - Framework: Vitest. Typical locations: `__tests__/` or `*.test.ts` adjacent to source.
 - Run all: `turbo test`; per package: `bun test` (from that workspace) or package-specific scripts.
