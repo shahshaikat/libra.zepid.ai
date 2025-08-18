@@ -588,7 +588,7 @@ GET /screenshot-status?id=<screenshotId>
   "success": true,
   "status": "completed",
   "message": "Screenshot completed successfully",
-  "previewImageUrl": "https://cdn.libra.dev/screenshots/screenshot_1721649600000_abc123def.png"
+  "previewImageUrl": "https://cdn.zepid.dev/screenshots/screenshot_1721649600000_abc123def.png"
 }
 ```
 
@@ -705,7 +705,7 @@ bun run deploy:prod
 
 ```bash
 # Add custom domain route
-wrangler route add "screenshot.libra.dev" libra-screenshot
+wrangler route add "screenshot.zepid.dev" libra-screenshot
 
 # View current routes
 wrangler route list
@@ -715,7 +715,7 @@ wrangler route list
 
 Visit the following URLs to verify deployment:
 
-- `https://screenshot.libra.dev/health`
+- `https://screenshot.zepid.dev/health`
 
 ## Troubleshooting
 

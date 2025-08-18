@@ -39,7 +39,7 @@ const nextConfig = {
         remotePatterns: [
             {
                 protocol: 'https',
-                hostname: 'media.libra.dev',
+                hostname: 'media.zepid.dev',
                 pathname: '/**',
             },
         ],

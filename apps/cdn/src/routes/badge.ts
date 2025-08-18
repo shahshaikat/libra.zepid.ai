@@ -159,7 +159,7 @@ const badgeScript = `
     
     // Badge HTML structure
     const badgeHtml = \`
-      <a href="https://libra.dev" target="_blank" rel="noopener noreferrer" class="badge-container" title="Made with Libra">
+      <a href="https://zepid.dev" target="_blank" rel="noopener noreferrer" class="badge-container" title="Made with Libra">
         \${libraLogo}
         <span class="badge-text">Made with Libra</span>
       </a>
@@ -204,7 +204,7 @@ export const badgeHandler = async (c: AppContext) => {
   c.header('Cache-Control', 'public, max-age=86400') // Cache for 24 hours
   c.header('Access-Control-Allow-Origin', '*') // Allow cross-origin requests
   c.header('X-Content-Type-Options', 'nosniff')
-  
+
   // Return JavaScript with proper content type
   return new Response(badgeScript, {
     headers: {

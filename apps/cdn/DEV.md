@@ -159,7 +159,7 @@ Last Updated: 2025-07-30
 | **Authorization** | Middleware chain | Route-level permission control, skip public endpoints |
 | **Rate Limiting** | Cloudflare Rate Limiting | Configurable user-level limits |
 | **Validation** | Zod Schemas | Request/response validation, file type verification |
-| **CORS** | Dynamic configuration | localhost/libra.dev whitelist |
+| **CORS** | Dynamic configuration | localhost/zepid.dev whitelist |
 | **Encryption** | SHA256 | File uniqueness verification, prevent duplicate uploads |
 | **Quota** | KV storage | User/organization level upload limits |
 
@@ -370,7 +370,7 @@ curl -X DELETE http://localhost:3004/file/your_plan_id \
 curl "http://localhost:3004/badge.js"
 
 # Use in web pages
-<script src="https://cdn.libra.dev/badge.js"></script>
+<script src="https://cdn.zepid.dev/badge.js"></script>
 ```
 
 #### Component Inspector
@@ -872,7 +872,7 @@ bun run deploy
 
 ```bash
 # Add custom domain route
-wrangler route add "cdn.libra.dev/*" libra-cdn
+wrangler route add "cdn.zepid.dev/*" libra-cdn
 
 # View current routes
 wrangler route list
@@ -893,7 +893,7 @@ wrangler route list
   },
   "routes": [
     {
-      "pattern": "libra.dev",
+      "pattern": "zepid.dev",
       "custom_domain": true
     }
   ],

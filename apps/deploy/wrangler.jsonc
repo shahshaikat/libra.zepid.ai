@@ -16,7 +16,7 @@
   },
   "routes": [
     {
-      "pattern": "deploy.libra.dev",
+      "pattern": "deploy.zepid.dev",
       "custom_domain": true
     }
   ],
@@ -24,28 +24,28 @@
   "placement": {
     "mode": "smart"
   },
-    "queues": {
-      "consumers": [
-        {
-          "queue": "deployment-queue",
-          "max_batch_size": 1,
-          "max_batch_timeout": 0,
-          "max_retries": 2,
-          "max_concurrency": 5,
-          "dead_letter_queue": "deployment-dlq"
-        }
-      ],
-      "producers": [
-        {
-          "queue": "deployment-queue",
-          "binding": "DEPLOYMENT_QUEUE"
-        },
-        {
-          "queue": "deployment-dlq",
-          "binding": "DEPLOYMENT_DLQ"
-        }
-      ]
-    },
+  "queues": {
+    "consumers": [
+      {
+        "queue": "deployment-queue",
+        "max_batch_size": 1,
+        "max_batch_timeout": 0,
+        "max_retries": 2,
+        "max_concurrency": 5,
+        "dead_letter_queue": "deployment-dlq"
+      }
+    ],
+    "producers": [
+      {
+        "queue": "deployment-queue",
+        "binding": "DEPLOYMENT_QUEUE"
+      },
+      {
+        "queue": "deployment-dlq",
+        "binding": "DEPLOYMENT_DLQ"
+      }
+    ]
+  },
   "hyperdrive": [
     {
       "binding": "HYPERDRIVE",

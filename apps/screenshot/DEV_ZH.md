@@ -541,7 +541,7 @@ GET /screenshot-status?id=<screenshotId>
   "success": true,
   "status": "completed",
   "message": "Screenshot completed successfully",
-  "previewImageUrl": "https://cdn.libra.dev/screenshots/screenshot_1721649600000_abc123def.png"
+  "previewImageUrl": "https://cdn.zepid.dev/screenshots/screenshot_1721649600000_abc123def.png"
 }
 ```
 
@@ -658,7 +658,7 @@ bun run deploy:prod
 
 ```bash
 # 添加自定义域名路由
-wrangler route add "screenshot.libra.dev" libra-screenshot
+wrangler route add "screenshot.zepid.dev" libra-screenshot
 
 # 查看当前路由
 wrangler route list
@@ -668,7 +668,7 @@ wrangler route list
 
 访问以下 URL 验证部署：
 
-- `https://screenshot.libra.dev/health`
+- `https://screenshot.zepid.dev/health`
 
 ## 故障排除
 

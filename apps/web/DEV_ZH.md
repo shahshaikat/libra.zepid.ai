@@ -1278,8 +1278,8 @@ wrangler secret put AZURE_OPENAI_API_KEY
 
 # 公开环境变量 (wrangler.toml)
 [vars]
-NEXT_PUBLIC_APP_URL = "https://libra.dev"
-NEXT_PUBLIC_AUTH_URL = "https://libra.dev"
+NEXT_PUBLIC_APP_URL = "https://zepid.dev"
+NEXT_PUBLIC_AUTH_URL = "https://zepid.dev"
 NODE_ENV = "production"
 ```
 

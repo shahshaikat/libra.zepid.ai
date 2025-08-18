@@ -909,7 +909,7 @@
       "retry_github_auth": "Retry GitHub authentication",
       "or_continue": "Or continue with",
       "email_label": "Email",
-      "email_placeholder": "nextify@libra.dev",
+      "email_placeholder": "nextify@zepid.dev",
       "send_link": "Send me my link",
       "sending": "Sending...",
       "email_required": "Please enter a valid email address",
@@ -2235,7 +2235,7 @@
         "billingParagraph2": "The length of your billing cycle will depend on the type of subscription plan you choose when purchasing the subscription.",
         "cancellationTitle": "Cancellation",
         "cancellationParagraph1": "You can cancel your subscription at any time by logging into your account. Your cancellation will take effect at the end of the current paid term.",
-        "cancellationParagraph2": "If you are unsatisfied with our Services, please email us at contact@libra.dev.",
+        "cancellationParagraph2": "If you are unsatisfied with our Services, please email us at contact@zepid.dev.",
         "feeChangesTitle": "Fee Changes",
         "feeChangesParagraph1": "We may, from time to time, make changes to the subscription fee and will communicate any price changes to you in accordance with applicable law."
       },
@@ -2301,7 +2301,7 @@
       },
       "privacyPolicy": {
         "title": "PRIVACY POLICY",
-        "paragraph1": "We care about data privacy and security. Please review our Privacy Policy at libra.dev/privacy. By using the Services, you agree to be bound by our Privacy Policy, which is incorporated into these Legal Terms.",
+        "paragraph1": "We care about data privacy and security. Please review our Privacy Policy at zepid.dev/privacy. By using the Services, you agree to be bound by our Privacy Policy, which is incorporated into these Legal Terms.",
         "paragraph2": "Please be advised that while our Services are delivered through a global edge network for optimal performance, all user data is stored in the United States. If you access the Services from any other region of the world with laws or other requirements governing personal data collection, use, or disclosure that differ from applicable laws in the United States, then through your continued use of the Services, you acknowledge that your data will be stored in the United States, and you expressly consent to have your data stored and processed in the United States."
       },
       "copyrightInfringements": {

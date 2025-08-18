@@ -160,7 +160,7 @@ export default function PrivacyPage() {
                   {m["privacy.about.usageScenarios.website"]({
                     websiteUrl: (
                       <a href='https://zepid.dev' className='text-primary hover:text-primary/80 transition-colors font-medium'>
-                        https://libra.dev
+                        https://zepid.dev
                       </a>
                     )
                   })}
@@ -187,10 +187,10 @@ export default function PrivacyPage() {
             {m["privacy.concerns.description"]({
               contactEmail: (
                 <a
-                  href="mailto:contact@libra.dev"
+                  href="mailto:contact@zepid.dev"
                   className="text-primary hover:text-primary/80 transition-colors font-medium"
                 >
-                  contact@libra.dev
+                  contact@zepid.dev
                 </a>
               )
             })}
@@ -344,10 +344,10 @@ export default function PrivacyPage() {
               {m["privacy.contact.description"]({
                 contactEmail: (
                   <a
-                    href="mailto:contact@libra.dev"
+                    href="mailto:contact@zepid.dev"
                     className="text-primary hover:text-primary/80 transition-colors font-medium"
                   >
-                    contact@libra.dev
+                    contact@zepid.dev
                   </a>
                 )
               })}

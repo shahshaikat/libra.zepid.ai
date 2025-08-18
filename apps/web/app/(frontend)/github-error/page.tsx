@@ -169,7 +169,7 @@ export default function GitHubErrorPage() {
 						>
 							{isClient && window.opener ? "Close Window" : "Go Back"}
 						</Button>
-						<Link href="mailto:contact@libra.dev" className="flex-1">
+						<Link href="mailto:contact@zepid.dev" className="flex-1">
 							<Button variant="outline" className="w-full gap-2">
 								<Mail className="w-4 h-4" />
 								Support

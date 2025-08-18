@@ -1,47 +1,47 @@
-name: 'Libra Web Core Deploy'
+name: "Libra Web Core Deploy"
 
 on:
   workflow_dispatch:
   push:
-    branches: [ main ]
+    branches: [main]
     paths:
-      - 'apps/web/**'
-      - 'packages/api/**'
-      - 'packages/auth/**'
-      - 'packages/better-auth-cloudflare/**'
-      - 'packages/better-auth-stripe/**'
-      - 'packages/common/**'
-      - 'packages/db/**'
-      - 'packages/email/**'
-      - 'packages/templates/**'
-      - 'packages/ui/**'
-      - 'packages/shikicode/**'
-      - 'packages/sandbox/**'
-      - 'tooling/**'
-      - 'package.json'
-      - 'turbo.json'
-      - '.github/workflows/web.yml'
-      - 'bun.lock'
+      - "apps/web/**"
+      - "packages/api/**"
+      - "packages/auth/**"
+      - "packages/better-auth-cloudflare/**"
+      - "packages/better-auth-stripe/**"
+      - "packages/common/**"
+      - "packages/db/**"
+      - "packages/email/**"
+      - "packages/templates/**"
+      - "packages/ui/**"
+      - "packages/shikicode/**"
+      - "packages/sandbox/**"
+      - "tooling/**"
+      - "package.json"
+      - "turbo.json"
+      - ".github/workflows/web.yml"
+      - "bun.lock"
   pull_request:
-    branches: [ main ]
+    branches: [main]
     paths:
-      - 'apps/web/**'
-      - 'packages/api/**'
-      - 'packages/auth/**'
-      - 'packages/better-auth-cloudflare/**'
-      - 'packages/better-auth-stripe/**'
-      - 'packages/common/**'
-      - 'packages/db/**'
-      - 'packages/email/**'
-      - 'packages/templates/**'
-      - 'packages/ui/**'
-      - 'packages/shikicode/**'
-      - 'packages/sandbox/**'
-      - 'tooling/**'
-      - 'package.json'
-      - 'turbo.json'
-      - '.github/workflows/web.yml'
-      - 'bun.lock'
+      - "apps/web/**"
+      - "packages/api/**"
+      - "packages/auth/**"
+      - "packages/better-auth-cloudflare/**"
+      - "packages/better-auth-stripe/**"
+      - "packages/common/**"
+      - "packages/db/**"
+      - "packages/email/**"
+      - "packages/templates/**"
+      - "packages/ui/**"
+      - "packages/shikicode/**"
+      - "packages/sandbox/**"
+      - "tooling/**"
+      - "package.json"
+      - "turbo.json"
+      - ".github/workflows/web.yml"
+      - "bun.lock"
 
 # Limit concurrent workflow runs
 concurrency:
@@ -66,13 +66,12 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version-file: '.nvmrc'
+          node-version-file: ".nvmrc"
 
-      - name: 'Bun setup'
+      - name: "Bun setup"
         uses: oven-sh/setup-bun@v1
         with:
           bun-version: 1.2.19
-
 
       - name: Cache dependencies
         uses: useblacksmith/cache@v5
@@ -214,8 +213,8 @@ jobs:
         with:
           token: ${{ secrets.LIBRA_GITHUB_TOKEN }}
           environment: production
-          environment-url: https://libra.dev
-          description: 'Deployed version ${{ steps.version.outputs.version }}'
+          environment-url: https://zepid.dev
+          description: "Deployed version ${{ steps.version.outputs.version }}"
           ref: ${{ github.sha }}
 
       - name: Purge Cloudflare CDN cache
@@ -227,4 +226,3 @@ jobs:
         with:
           cf_zone: ${{ env.CLOUDFLARE_ZONE_ID }}
           cf_auth: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-

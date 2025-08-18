@@ -177,7 +177,7 @@ export default function TermsPage() {
               {m["terms.agreement.serviceDescription"]({
                 websiteUrl: (
                   <a href='https://zepid.dev' className='text-primary hover:text-primary/80 transition-colors font-medium'>
-                    https://libra.dev
+                    https://zepid.dev
                   </a>
                 )
               })}
@@ -586,7 +586,7 @@ export default function TermsPage() {
                   href='mailto:contact@zepid.dev'
                   className='text-primary hover:text-primary/80 transition-colors font-medium'
                 >
-                  contact@libra.dev
+                  contact@zepid.dev
                 </a>
               </p>
             </address>

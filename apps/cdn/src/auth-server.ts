@@ -48,7 +48,7 @@ async function authBuilder(c: AppContext) {
             clientSecret: process.env.BETTER_GITHUB_CLIENT_SECRET as string,
           },
         },
-        // Enable cross-subdomain cookies for libra.dev and subdomains
+        // Enable cross-subdomain cookies for zepid.dev and subdomains
         advanced: {
           crossSubDomainCookies: {
             enabled: true,

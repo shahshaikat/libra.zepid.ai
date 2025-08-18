@@ -1,45 +1,45 @@
-name: 'Libra Dispatcher Deploy'
+name: "Libra Dispatcher Deploy"
 
 on:
   workflow_dispatch:
     inputs:
       environment:
-        description: 'Deployment environment'
+        description: "Deployment environment"
         required: true
-        default: 'production'
+        default: "production"
         type: choice
         options:
           - production
           - staging
       force_deploy:
-        description: 'Force deployment even if no changes detected'
+        description: "Force deployment even if no changes detected"
         required: false
         default: false
         type: boolean
   push:
-    branches: [ main ]
+    branches: [main]
     tags:
-      - 'dispatcher-v*'
+      - "dispatcher-v*"
     paths:
-      - 'apps/dispatcher/**'
-      - 'packages/db/**'
-      - 'packages/common/**'
-      - 'packages/middleware/**'
-      - 'package.json'
-      - 'turbo.json'
-      - 'bun.lock'
-      - '.github/workflows/dispatcher.yml'
+      - "apps/dispatcher/**"
+      - "packages/db/**"
+      - "packages/common/**"
+      - "packages/middleware/**"
+      - "package.json"
+      - "turbo.json"
+      - "bun.lock"
+      - ".github/workflows/dispatcher.yml"
   pull_request:
     types: [opened, synchronize, reopened]
     paths:
-      - 'apps/dispatcher/**'
-      - 'packages/db/**'
-      - 'packages/common/**'
-      - 'packages/middleware/**'
-      - 'package.json'
-      - 'turbo.json'
-      - 'bun.lock'
-      - '.github/workflows/dispatcher.yml'
+      - "apps/dispatcher/**"
+      - "packages/db/**"
+      - "packages/common/**"
+      - "packages/middleware/**"
+      - "package.json"
+      - "turbo.json"
+      - "bun.lock"
+      - ".github/workflows/dispatcher.yml"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -68,7 +68,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version-file: '.nvmrc'
+          node-version-file: ".nvmrc"
 
       - name: Setup Bun
         uses: oven-sh/setup-bun@v1
@@ -132,7 +132,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version-file: '.nvmrc'
+          node-version-file: ".nvmrc"
 
       - name: Setup Bun
         uses: oven-sh/setup-bun@v1
@@ -315,7 +315,7 @@ jobs:
           bun run deploy
 
           # Set deployment URL for GitHub deployment record
-          echo "deployment-url=https://dispatcher.libra.dev" >> $GITHUB_OUTPUT
+          echo "deployment-url=https://dispatcher.zepid.dev" >> $GITHUB_OUTPUT
         continue-on-error: false
 
       - name: Verify deployment
@@ -334,5 +334,5 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           environment: ${{ github.event.inputs.environment || 'production' }}
           environment-url: ${{ steps.deploy.outputs.deployment-url }}
-          description: 'Dispatcher service deployed - version ${{ steps.version.outputs.version }}'
+          description: "Dispatcher service deployed - version ${{ steps.version.outputs.version }}"
           ref: ${{ github.sha }}

@@ -108,7 +108,7 @@ bun run deploy
 自定义域名示例：
 
 ```bash
-wrangler route add "cdn.libra.dev/*" libra-cdn
+wrangler route add "cdn.zepid.dev/*" libra-cdn
 ```
 
 ## API 参考

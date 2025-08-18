@@ -130,7 +130,7 @@ Create a `.env` file in the root directory to customize configurations:
 # Inspector configuration
 VITE_INSPECTOR_HOST=localhost
 VITE_INSPECTOR_PORT=3004
-VITE_INSPECTOR_URL=https://cdn.libra.dev
+VITE_INSPECTOR_URL=https://cdn.zepid.dev
 ```
 
 ## Contributing
@@ -149,4 +149,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ---
 
-Built with ❤️ by [Libra](https://libra.dev)
+Built with ❤️ by [Libra](https://zepid.dev)

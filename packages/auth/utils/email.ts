@@ -40,7 +40,7 @@
 //    */
 //   constructor() {
 //     this.resend = new Resend(process.env.RESEND_API_KEY)
-//     this.from = process.env.RESEND_FROM || 'Libra <hi@libra.dev>'
+//     this.from = process.env.RESEND_FROM || 'Libra <hi@zepid.dev>'
 //   }
 //
 //   /**

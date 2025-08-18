@@ -22,7 +22,7 @@ export const siteConfig = {
   name: 'Libra AI',
   url: process.env.NEXT_PUBLIC_APP_URL || 'https://zepid.dev',
   getStartedUrl: 'https://zepid.dev',
-  ogImage: 'https://libra.dev/opengraph-image.png',
+  ogImage: 'https://zepid.dev/opengraph-image.png',
   description:
     'Libra is a platform for building AI-powered applications.',
   links: {

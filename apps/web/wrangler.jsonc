@@ -19,7 +19,7 @@
   },
   "routes": [
     {
-      "pattern": "libra.dev",
+      "pattern": "zepid.dev",
       "custom_domain": true
     }
   ],
@@ -34,18 +34,17 @@
    * Environment Variables
    * https://developers.cloudflare.com/workers/wrangler/configuration/#environment-variables
    */
-
   /**
    * Note: Use secrets to store sensitive data.
    * https://developers.cloudflare.com/workers/configuration/secrets/
    */
   "vars": {
-    "NEXT_PUBLIC_APP_URL": "https://libra.dev",
-    "NEXT_PUBLIC_CDN_URL": "https://cdn.libra.dev",
-    "NEXT_PUBLIC_DEPLOY_URL": "https://deploy.libra.dev",
-    "NEXT_PUBLIC_DISPATCHER_URL": "https://dispatcher.libra.dev",
-    "NEXT_PUBLIC_DOCS_URL": "https://docs.libra.dev",
-    "NEXT_PUBLIC_SCREENSHOT_URL": "https://screenshot.libra.dev",
+    "NEXT_PUBLIC_APP_URL": "https://zepid.dev",
+    "NEXT_PUBLIC_CDN_URL": "https://cdn.zepid.dev",
+    "NEXT_PUBLIC_DEPLOY_URL": "https://deploy.zepid.dev",
+    "NEXT_PUBLIC_DISPATCHER_URL": "https://dispatcher.zepid.dev",
+    "NEXT_PUBLIC_DOCS_URL": "https://docs.zepid.dev",
+    "NEXT_PUBLIC_SCREENSHOT_URL": "https://screenshot.zepid.dev",
     "NEXT_PUBLIC_SCAN": "0",
     "NEXT_PUBLIC_TURNSTILE_SITE_KEY": "0x4AAAAAABgQW7OpphMdlFWn",
     "NEXT_PUBLIC_SANDBOX_DEFAULT_PROVIDER": "e2b",

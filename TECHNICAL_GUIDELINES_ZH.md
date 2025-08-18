@@ -4264,7 +4264,7 @@ export default defineCloudflareConfig({
   // 自定义域名路由
   "routes": [
     {
-      "pattern": "libra.dev",
+      "pattern": "zepid.dev",
       "custom_domain": true
     }
   ],
@@ -4721,7 +4721,7 @@ export async function syncProjectToGitHub(
   // 添加 README
   filesToCommit.push({
     path: 'README.md',
-    content: `# ${project.name}\n\n${project.description || ''}【\n\nCreated with [Libra AI](https://libra.dev)`,
+    content: `# ${project.name}\n\n${project.description || ''}【\n\nCreated with [Libra AI](https://zepid.dev)`,
   })
 
   // 提交到 GitHub

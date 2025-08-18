@@ -1,25 +1,25 @@
-name: 'Libra Docs Deploy'
+name: "Libra Docs Deploy"
 
 on:
   workflow_dispatch:
   push:
-    branches: [ main ]
+    branches: [main]
     paths:
-      - 'apps/docs/**'
-      - 'tooling/typescript-config/**'
-      - 'package.json'
-      - 'turbo.json'
-      - '.github/workflows/docs.yml'
-      - 'bun.lock'
+      - "apps/docs/**"
+      - "tooling/typescript-config/**"
+      - "package.json"
+      - "turbo.json"
+      - ".github/workflows/docs.yml"
+      - "bun.lock"
   pull_request:
-    branches: [ main ]
+    branches: [main]
     paths:
-      - 'apps/docs/**'
-      - 'tooling/typescript-config/**'
-      - 'package.json'
-      - 'turbo.json'
-      - '.github/workflows/docs.yml'
-      - 'bun.lock'
+      - "apps/docs/**"
+      - "tooling/typescript-config/**"
+      - "package.json"
+      - "turbo.json"
+      - ".github/workflows/docs.yml"
+      - "bun.lock"
 
 # Limit concurrent workflow runs
 concurrency:
@@ -44,9 +44,9 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version-file: '.nvmrc'
+          node-version-file: ".nvmrc"
 
-      - name: 'Bun setup'
+      - name: "Bun setup"
         uses: oven-sh/setup-bun@v1
         with:
           bun-version: 1.2.19
@@ -184,6 +184,6 @@ jobs:
         with:
           token: ${{ secrets.LIBRA_GITHUB_TOKEN }}
           environment: docs-production
-          environment-url: https://docs.libra.dev
-          description: 'Deployed docs version ${{ steps.version.outputs.version }}'
+          environment-url: https://docs.zepid.dev
+          description: "Deployed docs version ${{ steps.version.outputs.version }}"
           ref: ${{ github.sha }}

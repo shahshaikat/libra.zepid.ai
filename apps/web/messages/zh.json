@@ -908,7 +908,7 @@
       "retry_github_auth": "重试 GitHub 身份验证",
       "or_continue": "或继续使用",
       "email_label": "邮箱",
-      "email_placeholder": "nextify@libra.dev",
+      "email_placeholder": "nextify@zepid.dev",
       "send_link": "发送我的链接",
       "sending": "发送中...",
       "email_required": "请输入有效的邮箱地址",
@@ -2222,7 +2222,7 @@
         "billingParagraph2": "您的计费周期长度将取决于您在购买订阅时选择的订阅计划类型。",
         "cancellationTitle": "取消",
         "cancellationParagraph1": "您可以随时通过登录您的账户取消订阅。您的取消将在当前付费期结束时生效。",
-        "cancellationParagraph2": "如果您对我们的服务不满意，请发送电子邮件至 contact@libra.dev。",
+        "cancellationParagraph2": "如果您对我们的服务不满意，请发送电子邮件至 contact@zepid.dev。",
         "feeChangesTitle": "费用变更",
         "feeChangesParagraph1": "我们可能会不时更改订阅费用，并将根据适用法律向您传达任何价格变更。"
       },
@@ -2288,7 +2288,7 @@
       },
       "privacyPolicy": {
         "title": "隐私政策",
-        "paragraph1": "我们关心数据隐私和安全。请查看我们在 libra.dev/privacy 的隐私政策。通过使用服务，您同意受我们的隐私政策约束，该政策已纳入这些法律条款。",
+        "paragraph1": "我们关心数据隐私和安全。请查看我们在 zepid.dev/privacy 的隐私政策。通过使用服务，您同意受我们的隐私政策约束，该政策已纳入这些法律条款。",
         "paragraph2": "请注意，虽然我们的服务通过全球边缘网络提供以获得最佳性能，但所有用户数据都存储在美国。如果您从世界任何其他地区访问服务，该地区的法律或其他要求管理个人数据收集、使用或披露与美国适用法律不同，那么通过您继续使用服务，您承认您的数据将存储在美国，并且您明确同意在美国存储和处理您的数据。"
       },
       "copyrightInfringements": {

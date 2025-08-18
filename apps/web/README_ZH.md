@@ -159,7 +159,7 @@ bun run deploy
 
 ```bash
 # 添加自定义域名路由
-wrangler route add "libra.dev/*" libra
+wrangler route add "zepid.dev/*" libra
 ```
 
 ### 环境变量设置

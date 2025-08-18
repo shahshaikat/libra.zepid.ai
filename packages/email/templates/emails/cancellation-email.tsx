@@ -25,11 +25,11 @@ import {
   Link,
 } from '@react-email/components';
 import type * as React from 'react';
-import { 
-  Button, 
-  ContentSection, 
-  EmailContainer, 
-  InfoBox 
+import {
+  Button,
+  ContentSection,
+  EmailContainer,
+  InfoBox
 } from '../../components';
 
 /**
@@ -123,7 +123,7 @@ export const CancellationEmailTemplate: React.FC = () => {
         >
           Changed your mind? {" "}
           <Link
-            href="https://libra.dev/#price"
+            href="https://zepid.dev/#price"
             style={{
               color: '#e9680c', // Your brand color
               textDecoration: 'none',

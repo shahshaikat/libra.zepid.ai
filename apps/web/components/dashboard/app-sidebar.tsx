@@ -180,7 +180,7 @@ const getNavSecondaryItems = () => [
   },
   {
     title: m['dashboard.sidebar.navigation.help'](),
-    url: 'https://forum.libra.dev/c/9-category/9',
+    url: 'https://forum.zepid.dev/c/9-category/9',
     icon: HelpCircleIcon,
   },
 ]

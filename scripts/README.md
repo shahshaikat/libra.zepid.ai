@@ -34,8 +34,8 @@ bun config-processor.ts wrangler.jsonc.example wrangler.jsonc
 
 #### Application Configuration
 
-- `{{NEXT_PUBLIC_APP_URL}}` - application main domain (default: https://libra.dev)
-- `{{NEXT_PUBLIC_CDN_URL}}` - CDN domain (default: https://cdn.libra.dev)
+- `{{NEXT_PUBLIC_APP_URL}}` - application main domain (default: https://zepid.dev)
+- `{{NEXT_PUBLIC_CDN_URL}}` - CDN domain (default: https://cdn.zepid.dev)
 
 ## Environment Variable Initialization (init-env.ts)
 

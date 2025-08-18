@@ -37,7 +37,7 @@ This code of conduct applies to all Libra community spaces, including but not li
 
 ## Enforcement
 
-If you witness or experience any abusive, harassing, or otherwise unacceptable behavior, please report it to the community maintainers at contact@libra.dev. All complaints will be promptly, fairly reviewed and investigated.
+If you witness or experience any abusive, harassing, or otherwise unacceptable behavior, please report it to the community maintainers at contact@zepid.dev. All complaints will be promptly, fairly reviewed and investigated.
 
 Community maintainers are obligated to respect the privacy and security of the reporter. Project maintainers who fail to follow or enforce this code of conduct in good faith may face temporary or permanent community restrictions, as determined by the project leadership team.
 

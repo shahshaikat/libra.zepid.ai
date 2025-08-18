@@ -166,7 +166,7 @@ Last Updated: 2025-07-30
 | **Authentication** | @libra/auth | Bearer Token, Session management |
 | **Authorization** | Middleware chain | Route-level permission control |
 | **Validation** | Zod Schemas | Request/response validation, parameter checking |
-| **CORS** | Dynamic configuration | localhost/libra.dev whitelist |
+| **CORS** | Dynamic configuration | localhost/zepid.dev whitelist |
 | **Quota** | D1 Storage | Organization-level deployment limits |
 | **Error Handling** | Structured logging | Sensitive information filtering, error classification |
 
@@ -996,7 +996,7 @@ bun run deploy:prod
 
 ```bash
 # Add custom domain route
-wrangler route add "deploy.libra.dev/*" libra-deploy
+wrangler route add "deploy.zepid.dev/*" libra-deploy
 
 # View current routes
 wrangler route list
@@ -1014,7 +1014,7 @@ wrangler route list
 
   "routes": [
     {
-      "pattern": "deploy.libra.dev",
+      "pattern": "deploy.zepid.dev",
       "custom_domain": true
     }
   ],

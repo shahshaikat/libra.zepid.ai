@@ -96,7 +96,7 @@
 | **授权** | 中间件链 | 路由级权限控制、公开端点跳过 |
 | **限流** | Cloudflare Rate Limiting | 可配置的用户级限制 |
 | **验证** | Zod Schemas | 请求/响应验证、文件类型校验 |
-| **CORS** | 动态配置 | localhost/libra.dev 白名单 |
+| **CORS** | 动态配置 | localhost/zepid.dev 白名单 |
 | **加密** | SHA256 | 文件唯一性校验、防重复上传 |
 | **配额** | KV 存储 | 用户/组织级别的上传限制 |
 
@@ -307,7 +307,7 @@ curl -X DELETE http://localhost:3004/file/your_plan_id \
 curl "http://localhost:3004/badge.js"
 
 # 在网页中使用
-<script src="https://cdn.libra.dev/badge.js"></script>
+<script src="https://cdn.zepid.dev/badge.js"></script>
 ```
 
 #### Component Inspector
@@ -809,7 +809,7 @@ bun run deploy
 
 ```bash
 # 添加自定义域名路由
-wrangler route add "cdn.libra.dev/*" libra-cdn
+wrangler route add "cdn.zepid.dev/*" libra-cdn
 
 # 查看当前路由
 wrangler route list
@@ -830,7 +830,7 @@ wrangler route list
   },
   "routes": [
     {
-      "pattern": "libra.dev",
+      "pattern": "zepid.dev",
       "custom_domain": true
     }
   ],

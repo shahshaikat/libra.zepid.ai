@@ -100,7 +100,7 @@
 | **认证** | @libra/auth | Bearer Token、Session 管理 |
 | **授权** | 中间件链 | 路由级权限控制 |
 | **验证** | Zod Schemas | 请求/响应验证、参数校验 |
-| **CORS** | 动态配置 | localhost/libra.dev 白名单 |
+| **CORS** | 动态配置 | localhost/zepid.dev 白名单 |
 | **配额** | D1 存储 | 组织级别的部署限制 |
 | **错误处理** | 结构化日志 | 敏感信息过滤、错误分类 |
 
@@ -930,7 +930,7 @@ bun run deploy:prod
 
 ```bash
 # 添加自定义域名路由
-wrangler route add "deploy.libra.dev/*" libra-deploy
+wrangler route add "deploy.zepid.dev/*" libra-deploy
 
 # 查看当前路由
 wrangler route list
@@ -948,7 +948,7 @@ wrangler route list
 
   "routes": [
     {
-      "pattern": "deploy.libra.dev",
+      "pattern": "deploy.zepid.dev",
       "custom_domain": true
     }
   ],

@@ -120,7 +120,7 @@ vite-shadcn-template/
 # 检查器配置
 VITE_INSPECTOR_HOST=localhost
 VITE_INSPECTOR_PORT=3004
-VITE_INSPECTOR_URL=https://cdn.libra.dev
+VITE_INSPECTOR_URL=https://cdn.zepid.dev
 ```
 
 ## 贡献
@@ -139,4 +139,4 @@ VITE_INSPECTOR_URL=https://cdn.libra.dev
 
 ---
 
-由 [Libra](https://libra.dev) 用 ❤️ 构建
+由 [Libra](https://zepid.dev) 用 ❤️ 构建

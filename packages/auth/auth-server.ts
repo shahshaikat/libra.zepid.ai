@@ -94,7 +94,7 @@ async function authBuilder() {
             clientSecret: envs.BETTER_GITHUB_CLIENT_SECRET as string,
           },
         },
-        // Enable cross-subdomain cookies for libra.dev and subdomains
+        // Enable cross-subdomain cookies for zepid.dev and subdomains
         ...(isDevelopment() ? {} : {
           advanced: {
             crossSubDomainCookies: {
@@ -165,7 +165,7 @@ export const auth = betterAuth({
           clientSecret: envs.BETTER_GITHUB_CLIENT_SECRET as string,
         },
       },
-      // Enable cross-subdomain cookies for libra.dev and subdomains
+      // Enable cross-subdomain cookies for zepid.dev and subdomains
       ...(isDevelopment() ? {} : {
         advanced: {
           crossSubDomainCookies: {

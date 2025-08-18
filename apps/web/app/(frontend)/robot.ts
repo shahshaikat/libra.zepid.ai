@@ -26,8 +26,8 @@ export default function robots(): MetadataRoute.Robots {
         rules: {
             userAgent: '*',
             allow: '/',
-            disallow: ["/*/dashboard", "/*/dashboard/*", "/*/project/*" ,"/*/project/*"],
+            disallow: ["/*/dashboard", "/*/dashboard/*", "/*/project/*", "/*/project/*"],
         },
-        sitemap: 'https://libra.dev/sitemap.xml',
+        sitemap: 'https://zepid.dev/sitemap.xml',
     }
 }

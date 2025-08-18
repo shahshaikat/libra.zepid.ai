@@ -31,7 +31,7 @@ export interface EmailFooterProps {
  */
 export const EmailFooter: React.FC<EmailFooterProps> = ({ extraContent }) => {
   const currentYear = new Date().getFullYear();
-  
+
   return (
     <Section className="bg-muted p-5 text-center border-t border-border rounded-b-lg">
       {extraContent && (
@@ -41,15 +41,15 @@ export const EmailFooter: React.FC<EmailFooterProps> = ({ extraContent }) => {
         © {currentYear} Libra. All rights reserved.
       </Text>
       <Text className="m-0 text-muted-foreground text-sm">
-        <Link href="https://libra.dev/privacy" className="text-brand no-underline mx-2 hover:underline">
+        <Link href="https://zepid.dev/privacy" className="text-brand no-underline mx-2 hover:underline">
           Privacy Policy
         </Link>
         |
-        <Link href="https://libra.dev/terms" className="text-brand no-underline mx-2 hover:underline">
+        <Link href="https://zepid.dev/terms" className="text-brand no-underline mx-2 hover:underline">
           Terms of Service
         </Link>
         |
-        <Link href="mailto:contact@libra.dev" className="text-brand no-underline mx-2 hover:underline">
+        <Link href="mailto:contact@zepid.dev" className="text-brand no-underline mx-2 hover:underline">
           Contact Us
         </Link>
       </Text>

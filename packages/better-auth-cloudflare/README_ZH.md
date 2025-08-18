@@ -941,7 +941,7 @@ bun test
 - 🐛 [报告问题](https://github.com/libra-ai/libra/issues) - 错误报告和功能请求
 - 💬 [讨论](https://github.com/libra-ai/libra/discussions) - 社区讨论和问答
 - 🌐 [Cloudflare 社区](https://community.cloudflare.com/) - Cloudflare 特定帮助
-- 📧 [联系我们](mailto:support@libra.dev) - 企业用户直接支持
+- 📧 [联系我们](mailto:support@zepid.dev) - 企业用户直接支持
 
 ### 快速链接
 

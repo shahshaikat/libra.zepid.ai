@@ -124,7 +124,7 @@ export function createCorsMiddleware(
         }
       }
 
-      // Production: Allow subdomains of libra.dev and libra.sh
+      // Production: Allow subdomains of zepid.dev and libra.sh
       if (!isDevelopment) {
         if (requestOrigin.match(/^https:\/\/[a-zA-Z0-9-]+\.libra\.dev$/)) {
           return requestOrigin

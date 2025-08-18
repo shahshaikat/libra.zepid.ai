@@ -95,7 +95,7 @@ wrangler deploy --name my-react-app --dispatch-namespace libra-dispatcher
 
 当前配置支持以下域名的子域名路由：
 - `*.libra.sh` (生产环境)
-- `*.dispatcher.libra.dev` (测试环境)
+- `*.dispatcher.zepid.dev` (测试环境)
 - `*.localhost` (本地开发)
 
 ## 保留子域名

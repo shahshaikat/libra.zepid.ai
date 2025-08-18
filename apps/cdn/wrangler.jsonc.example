@@ -12,7 +12,7 @@
   },
   "routes": [
     {
-      "pattern": "cdn.libra.dev",
+      "pattern": "cdn.zepid.dev",
       "custom_domain": true
     }
   ],

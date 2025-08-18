@@ -145,7 +145,7 @@ interface ButtonProps {
 }
 
 // Example usage
-<Button href="https://libra.dev" variant="primary">
+<Button href="https://zepid.dev" variant="primary">
   Get started
 </Button>
 
@@ -467,7 +467,7 @@ export default function TestCustomNotification() {
   return (
     <CustomNotificationTemplate
       userName="John Doe"
-      actionUrl="https://libra.dev/dashboard/alerts"
+      actionUrl="https://zepid.dev/dashboard/alerts"
       urgencyLevel="high"
     />
   )

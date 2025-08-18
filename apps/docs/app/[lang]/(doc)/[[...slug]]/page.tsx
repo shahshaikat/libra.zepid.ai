@@ -18,13 +18,13 @@
  *
  */
 
-import {Heading} from "@/components/heading";
-import {source} from "@/loaders/source";
-import {Callout} from "fumadocs-ui/components/callout";
-import defaultMdxComponents, {createRelativeLink} from "fumadocs-ui/mdx";
-import {DocsBody, DocsDescription, DocsPage, DocsTitle} from "fumadocs-ui/page";
-import {notFound, redirect} from "next/navigation";
-import {Tabs} from "fumadocs-ui/components/tabs";
+import { Heading } from "@/components/heading";
+import { source } from "@/loaders/source";
+import { Callout } from "fumadocs-ui/components/callout";
+import defaultMdxComponents, { createRelativeLink } from "fumadocs-ui/mdx";
+import { DocsBody, DocsDescription, DocsPage, DocsTitle } from "fumadocs-ui/page";
+import { notFound, redirect } from "next/navigation";
+import { Tabs } from "fumadocs-ui/components/tabs";
 import { existsSync } from "node:fs";
 import { join } from "node:path";
 
@@ -97,7 +97,7 @@ export default async function Page(props: {
     return (
         <DocsPage
             toc={toc}
-            tableOfContent={{style: "clerk", single: false}}
+            tableOfContent={{ style: "clerk", single: false }}
             full={false}
             editOnGithub={{
                 owner: "nextify-limited",
@@ -153,10 +153,10 @@ export async function generateMetadata(props: {
             title,
             description,
             siteName: "Libra Docs",
-            url: `https://docs.libra.dev/${lang}/${page.slugs.join("/")}`,
+            url: `https://docs.zepid.dev/${lang}/${page.slugs.join("/")}`,
             images: [
                 {
-                    url: `/og.png?title=${encodeURIComponent(rootTitle)}&description=${encodeURIComponent(description ?? "")}&path=${encodeURIComponent(`${["libra.dev", ...page.slugs].join("/")}`)}`,
+                    url: `/og.png?title=${encodeURIComponent(rootTitle)}&description=${encodeURIComponent(description ?? "")}&path=${encodeURIComponent(`${["zepid.dev", ...page.slugs].join("/")}`)}`,
                     width: 1200,
                     height: 630,
                     alt: title,
@@ -168,7 +168,7 @@ export async function generateMetadata(props: {
             title,
             description,
             creator: "@nextify2024",
-            site: "https://libra.dev",
+            site: "https://zepid.dev",
         },
         keywords: ["libra", "open source", "ai", "web coding", "vibe coding"],
     };

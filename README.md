@@ -8,15 +8,15 @@
 
 **Libra AI: Language as Application** - Launch, iterate, and deploy your next web application with a single sentence.
 
-[![SPONSORED BY CLERK](https://img.shields.io/badge/SPONSORED%20BY-CLERK-6C47FF?style=for-the-badge)](https://clerk.com?utm_source=libra.dev)
-[![SPONSORED BY E2B FOR STARTUPS](https://img.shields.io/badge/SPONSORED%20BY-E2B%20FOR%20STARTUPS-ff8800?style=for-the-badge)](https://e2b.dev/startups?utm_source=libra.dev)
-[![SPONSORED BY POSTHOG FOR STARTUPS](https://img.shields.io/badge/SPONSORED%20BY-POSTHOG%20FOR%20STARTUPS-1D4AFF?style=for-the-badge)](https://posthog.com/startups?utm_source=libra.dev)
-[![SPONSORED BY DAYTONA STARTUP GRID](https://img.shields.io/badge/SPONSORED%20BY-DAYTONA%20STARTUP%20GRID-2ECC71?style=for-the-badge)](https://daytona.io/startups?utm_source=libra.dev)
-[![SPONSORED BY CLOUDFLARE FOR STARTUPS](https://img.shields.io/badge/SPONSORED%20BY-CLOUDFLARE%20FOR%20STARTUPS-F38020?style=for-the-badge)](https://www.cloudflare.com/forstartups/?utm_source=libra.dev)
+[![SPONSORED BY CLERK](https://img.shields.io/badge/SPONSORED%20BY-CLERK-6C47FF?style=for-the-badge)](https://clerk.com?utm_source=zepid.dev)
+[![SPONSORED BY E2B FOR STARTUPS](https://img.shields.io/badge/SPONSORED%20BY-E2B%20FOR%20STARTUPS-ff8800?style=for-the-badge)](https://e2b.dev/startups?utm_source=zepid.dev)
+[![SPONSORED BY POSTHOG FOR STARTUPS](https://img.shields.io/badge/SPONSORED%20BY-POSTHOG%20FOR%20STARTUPS-1D4AFF?style=for-the-badge)](https://posthog.com/startups?utm_source=zepid.dev)
+[![SPONSORED BY DAYTONA STARTUP GRID](https://img.shields.io/badge/SPONSORED%20BY-DAYTONA%20STARTUP%20GRID-2ECC71?style=for-the-badge)](https://daytona.io/startups?utm_source=zepid.dev)
+[![SPONSORED BY CLOUDFLARE FOR STARTUPS](https://img.shields.io/badge/SPONSORED%20BY-CLOUDFLARE%20FOR%20STARTUPS-F38020?style=for-the-badge)](https://www.cloudflare.com/forstartups/?utm_source=zepid.dev)
 
 [![Open Source License](https://img.shields.io/badge/License-AGPL-green.svg)](https://github.com/nextify-limited/libra/blob/main/LICENSE) [![Made by Nextify2024](https://img.shields.io/badge/made_by-nextify2024-blue?color=FF782B&link=https://x.com/nextify2024)](https://x.com/nextify2024)
 
-[🌐 **Try Now**](https://libra.dev) • [📖 **Documentation**](https://docs.libra.dev/) • [💬 **Join Community**](https://forum.libra.dev) • [⚡ **View Source**](https://github.com/nextify-limited/libra)
+[🌐 **Try Now**](https://zepid.dev) • [📖 **Documentation**](https://docs.zepid.dev/) • [💬 **Join Community**](https://forum.zepid.dev) • [⚡ **View Source**](https://github.com/nextify-limited/libra)
 
 [🇨🇳 **中文版**](README_ZH.md)
 
@@ -132,35 +132,35 @@ Libra is built entirely on Cloudflare. You need to be familiar with the followin
 
 | Product Name | Description | Application in Libra |
 |-------------|-------------|---------------------|
-| [Workers](https://developers.cloudflare.com/workers/?utm_source=libra.dev) | Serverless computing platform | Core application runtime environment, hosting all service logic |
-| [Durable Objects](https://developers.cloudflare.com/durable-objects/?utm_source=libra.dev) | Strong consistency storage | Real-time state management and session persistence |
-| [Browser Rendering](https://developers.cloudflare.com/browser-rendering/?utm_source=libra.dev) | Browser rendering service | Web screenshot generation and preview functionality |
-| [Workers for Platforms](https://developers.cloudflare.com/cloudflare-for-platforms/?utm_source=libra.dev) | Multi-tenant platform | User project isolation deployment and routing management |
+| [Workers](https://developers.cloudflare.com/workers/?utm_source=zepid.dev) | Serverless computing platform | Core application runtime environment, hosting all service logic |
+| [Durable Objects](https://developers.cloudflare.com/durable-objects/?utm_source=zepid.dev) | Strong consistency storage | Real-time state management and session persistence |
+| [Browser Rendering](https://developers.cloudflare.com/browser-rendering/?utm_source=zepid.dev) | Browser rendering service | Web screenshot generation and preview functionality |
+| [Workers for Platforms](https://developers.cloudflare.com/cloudflare-for-platforms/?utm_source=zepid.dev) | Multi-tenant platform | User project isolation deployment and routing management |
 
 ### Data Storage
 
 | Product Name | Description | Application in Libra |
 |-------------|-------------|---------------------|
-| [KV](https://developers.cloudflare.com/kv/?utm_source=libra.dev) | Global key-value storage | Configuration caching and temporary data storage |
-| [D1](https://developers.cloudflare.com/d1/?utm_source=libra.dev) | Serverless SQLite database | Authentication data and lightweight business data |
-| [Hyperdrive](https://developers.cloudflare.com/hyperdrive/?utm_source=libra.dev) | Database connection acceleration | PostgreSQL connection pooling and query optimization |
-| [R2](https://developers.cloudflare.com/r2/?utm_source=libra.dev) | Object storage service | File uploads, static assets, and build artifact storage |
+| [KV](https://developers.cloudflare.com/kv/?utm_source=zepid.dev) | Global key-value storage | Configuration caching and temporary data storage |
+| [D1](https://developers.cloudflare.com/d1/?utm_source=zepid.dev) | Serverless SQLite database | Authentication data and lightweight business data |
+| [Hyperdrive](https://developers.cloudflare.com/hyperdrive/?utm_source=zepid.dev) | Database connection acceleration | PostgreSQL connection pooling and query optimization |
+| [R2](https://developers.cloudflare.com/r2/?utm_source=zepid.dev) | Object storage service | File uploads, static assets, and build artifact storage |
 
 ### Network & Security
 
 | Product Name | Description | Application in Libra |
 |-------------|-------------|---------------------|
-| [Turnstile](https://developers.cloudflare.com/turnstile/?utm_source=libra.dev) | Smart CAPTCHA | Security verification for user registration and sensitive operations |
-| [Cloudflare for SaaS](https://developers.cloudflare.com/cloudflare-for-platforms/cloudflare-for-saas/?utm_source=libra.dev) | Custom domain management | Custom domain binding and SSL certificates for user projects |
+| [Turnstile](https://developers.cloudflare.com/turnstile/?utm_source=zepid.dev) | Smart CAPTCHA | Security verification for user registration and sensitive operations |
+| [Cloudflare for SaaS](https://developers.cloudflare.com/cloudflare-for-platforms/cloudflare-for-saas/?utm_source=zepid.dev) | Custom domain management | Custom domain binding and SSL certificates for user projects |
 
 ### Development Tools & Services
 
 | Product Name | Description | Application in Libra |
 |-------------|-------------|---------------------|
-| [Workflows](https://developers.cloudflare.com/workflows/?utm_source=libra.dev) | Workflow orchestration | Step-by-step management of complex deployment processes |
-| [Queues](https://developers.cloudflare.com/queues/?utm_source=libra.dev) | Message queue service | Asynchronous task processing and batch deployment management |
-| [AI Gateway](https://developers.cloudflare.com/ai-gateway/?utm_source=libra.dev) | AI model gateway | Monitor and control your AI applications |
-| [Images](https://developers.cloudflare.com/images/?utm_source=libra.dev) | Image processing optimization | Dynamic image transformation and CDN distribution |
+| [Workflows](https://developers.cloudflare.com/workflows/?utm_source=zepid.dev) | Workflow orchestration | Step-by-step management of complex deployment processes |
+| [Queues](https://developers.cloudflare.com/queues/?utm_source=zepid.dev) | Message queue service | Asynchronous task processing and batch deployment management |
+| [AI Gateway](https://developers.cloudflare.com/ai-gateway/?utm_source=zepid.dev) | AI model gateway | Monitor and control your AI applications |
+| [Images](https://developers.cloudflare.com/images/?utm_source=zepid.dev) | Image processing optimization | Dynamic image transformation and CDN distribution |
 
 Libra adopts **Turborepo** Monorepo architecture design:
 
@@ -288,32 +288,32 @@ libra/
 
 | Technology Framework | Application Scenario | Version |
 |---------------------|---------------------|---------|
-| [Next.js](https://nextjs.org?utm_source=libra.dev) | React full-stack development framework (App Router) | 15.3.5 |
-| [React](https://react.dev?utm_source=libra.dev) | User interface library (Server Components) | 19.1.1 |
-| [TypeScript](https://typescriptlang.org?utm_source=libra.dev) | Statically typed JavaScript superset | 5.8.3+ |
-| [Tailwind CSS](https://tailwindcss.com?utm_source=libra.dev) | Utility-first CSS framework | 4.1.11 |
-| [shadcn/ui](https://ui.shadcn.com?utm_source=libra.dev) | Component library and design system | Based on Radix UI |
-| [Radix UI](https://radix-ui.com?utm_source=libra.dev) | Unstyled accessible UI primitive library | 1.2.x-1.3.x |
-| [Motion](https://motion.dev?utm_source=libra.dev) | Modern animation engine | 12.23.11 |
-| [Lucide React](https://lucide.dev?utm_source=libra.dev) | Vector icon library | 0.486.0 |
+| [Next.js](https://nextjs.org?utm_source=zepid.dev) | React full-stack development framework (App Router) | 15.3.5 |
+| [React](https://react.dev?utm_source=zepid.dev) | User interface library (Server Components) | 19.1.1 |
+| [TypeScript](https://typescriptlang.org?utm_source=zepid.dev) | Statically typed JavaScript superset | 5.8.3+ |
+| [Tailwind CSS](https://tailwindcss.com?utm_source=zepid.dev) | Utility-first CSS framework | 4.1.11 |
+| [shadcn/ui](https://ui.shadcn.com?utm_source=zepid.dev) | Component library and design system | Based on Radix UI |
+| [Radix UI](https://radix-ui.com?utm_source=zepid.dev) | Unstyled accessible UI primitive library | 1.2.x-1.3.x |
+| [Motion](https://motion.dev?utm_source=zepid.dev) | Modern animation engine | 12.23.11 |
+| [Lucide React](https://lucide.dev?utm_source=zepid.dev) | Vector icon library | 0.486.0 |
 
 #### Backend & API Architecture
 
 | Technology Framework | Application Scenario | Version |
 |---------------------|---------------------|---------|
-| [tRPC](https://trpc.io?utm_source=libra.dev) | End-to-end type-safe API development | 11.4.3+ |
-| [Hono](https://hono.dev?utm_source=libra.dev) | Edge computing web framework | 4.8.10+ |
-| [Zod](https://zod.dev?utm_source=libra.dev) | TypeScript data validation library | 4.0.14 |
-| [Drizzle ORM](https://orm.drizzle.team?utm_source=libra.dev) | Type-safe TypeScript ORM | 0.44.4 |
-| [better-auth](https://better-auth.com?utm_source=libra.dev) | Modern identity authentication solution | 1.3.4 |
+| [tRPC](https://trpc.io?utm_source=zepid.dev) | End-to-end type-safe API development | 11.4.3+ |
+| [Hono](https://hono.dev?utm_source=zepid.dev) | Edge computing web framework | 4.8.10+ |
+| [Zod](https://zod.dev?utm_source=zepid.dev) | TypeScript data validation library | 4.0.14 |
+| [Drizzle ORM](https://orm.drizzle.team?utm_source=zepid.dev) | Type-safe TypeScript ORM | 0.44.4 |
+| [better-auth](https://better-auth.com?utm_source=zepid.dev) | Modern identity authentication solution | 1.3.4 |
 
 #### AI & Machine Learning
 
 | AI Platform | Features | API Version |
 |------------|----------|-------------|
-| [AI SDK](https://sdk.vercel.ai?utm_source=libra.dev) | Multi-provider AI model integration | 4.3.19 |
-| [E2B](https://e2b.dev?utm_source=libra.dev) | Secure code execution sandbox | 1.2.0-beta.5 |
-| [Daytona](https://daytona.io?utm_source=libra.dev) | Development environment sandbox provider | Latest |
+| [AI SDK](https://sdk.vercel.ai?utm_source=zepid.dev) | Multi-provider AI model integration | 4.3.19 |
+| [E2B](https://e2b.dev?utm_source=zepid.dev) | Secure code execution sandbox | 1.2.0-beta.5 |
+| [Daytona](https://daytona.io?utm_source=zepid.dev) | Development environment sandbox provider | Latest |
 | **Integrated AI Models** | | |
 | Anthropic Claude | Advanced reasoning and code generation | API v1 |
 | Azure OpenAI | Enterprise-grade AI model service | API v1 |
@@ -324,27 +324,27 @@ libra/
 
 | Database Technology | Application Scenario | Version |
 |--------------------|---------------------|---------|
-| [Neon](https://neon.com?utm_source=libra.dev) | Main database (PostgreSQL) | 17+ |
-| [Cloudflare Hyperdrive](https://developers.cloudflare.com/hyperdrive?utm_source=libra.dev) | Database connection pooling and acceleration | Latest |
-| [Cloudflare D1](https://developers.cloudflare.com/d1?utm_source=libra.dev) | Edge database (SQLite) | Latest |
-| [Drizzle Kit](https://orm.drizzle.team/kit-docs/overview?utm_source=libra.dev) | Database migration tool | 0.31.4+ |
+| [Neon](https://neon.com?utm_source=zepid.dev) | Main database (PostgreSQL) | 17+ |
+| [Cloudflare Hyperdrive](https://developers.cloudflare.com/hyperdrive?utm_source=zepid.dev) | Database connection pooling and acceleration | Latest |
+| [Cloudflare D1](https://developers.cloudflare.com/d1?utm_source=zepid.dev) | Edge database (SQLite) | Latest |
+| [Drizzle Kit](https://orm.drizzle.team/kit-docs/overview?utm_source=zepid.dev) | Database migration tool | 0.31.4+ |
 
 #### Deployment & Infrastructure
 
 | Platform Technology | Application Scenario | Version |
 |---------------------|---------------------|---------|
-| [Cloudflare Workers](https://workers.cloudflare.com?utm_source=libra.dev) | Serverless edge computing platform | Latest |
-| [OpenNext](https://opennext.js.org/cloudflare?utm_source=libra.dev) | Next.js Cloudflare deployment adapter | 1.6.2 |
-| [Turborepo](https://turbo.build?utm_source=libra.dev) | High-performance Monorepo build system | 2.5.5 |
-| [Bun](https://bun.sh?utm_source=libra.dev) | JavaScript runtime and package manager | 1.2.19 |
+| [Cloudflare Workers](https://workers.cloudflare.com?utm_source=zepid.dev) | Serverless edge computing platform | Latest |
+| [OpenNext](https://opennext.js.org/cloudflare?utm_source=zepid.dev) | Next.js Cloudflare deployment adapter | 1.6.2 |
+| [Turborepo](https://turbo.build?utm_source=zepid.dev) | High-performance Monorepo build system | 2.5.5 |
+| [Bun](https://bun.sh?utm_source=zepid.dev) | JavaScript runtime and package manager | 1.2.19 |
 
 #### Development Toolchain
 
 | Tool | Purpose | Version |
 |------|---------|---------|
-| [Biome](https://biomejs.dev?utm_source=libra.dev) | Code formatting and quality checking | 2.0.6 |
-| [Vitest](https://vitest.dev?utm_source=libra.dev) | Unit testing framework | 3.2.4 |
-| [Paraglide.js](https://inlang.com/m/gerre34r/library-inlang-paraglideJs?utm_source=libra.dev) | Internationalization i18n solution | 2.2.0 |
+| [Biome](https://biomejs.dev?utm_source=zepid.dev) | Code formatting and quality checking | 2.0.6 |
+| [Vitest](https://vitest.dev?utm_source=zepid.dev) | Unit testing framework | 3.2.4 |
+| [Paraglide.js](https://inlang.com/m/gerre34r/library-inlang-paraglideJs?utm_source=zepid.dev) | Internationalization i18n solution | 2.2.0 |
 
 ## ⚡ Quick Start
 
@@ -352,7 +352,7 @@ libra/
 
 #### 🌐 Cloud Hosted Service (Recommended)
 
-- Visit [libra.dev](https://libra.dev) to get started
+- Visit [zepid.dev](https://zepid.dev) to get started
 - Quick registration with GitHub OAuth or email
 - Build production-grade applications in minutes
 
@@ -454,7 +454,7 @@ After setup, you can access various services through the following addresses:
 
 Ready-to-use cloud development experience:
 
-1. Visit [libra.dev](https://libra.dev) official platform
+1. Visit [zepid.dev](https://zepid.dev) official platform
 2. Quick registration with GitHub OAuth or email
 3. AI-driven rapid application building
 4. One-click deployment to custom domains
@@ -623,7 +623,7 @@ A: Yes. Our enterprise services include:
 - Service Level Agreement (SLA) guarantees
 - Security auditing and compliance support
 
-For enterprise services, please contact: [contact@libra.dev](mailto:contact@libra.dev)
+For enterprise services, please contact: [contact@zepid.dev](mailto:contact@zepid.dev)
 
 ### 🔧 Development & Deployment
 
@@ -641,7 +641,7 @@ We warmly welcome contributions from developers worldwide! Here are the ways you
 
 #### 🌟 Usage & Promotion
 
-- Experience [Libra platform](https://libra.dev) and share your usage experience
+- Experience [Libra platform](https://zepid.dev) and share your usage experience
 - Create amazing application projects and showcase them in the community
 - Write technical blog articles or create tutorial videos
 - Share and recommend Libra on social media platforms
@@ -677,7 +677,7 @@ git push origin feature/your-amazing-feature
     - Project uses Paraglide.js for internationalization
     - Translation file location: `apps/web/messages/[locale].json`
     - Add new language: Add language code in `apps/web/project.inlang/settings.json`
-- **Community Support**: Help other users in [forum](https://forum.libra.dev) and GitHub discussions
+- **Community Support**: Help other users in [forum](https://forum.zepid.dev) and GitHub discussions
 
 #### 🎯 Contribution Guidelines
 
@@ -715,7 +715,7 @@ If you need more flexibility, we provide commercial licenses suitable for:
 - Product distribution without open sourcing
 - Customized licensing terms
 
-Commercial licensing consultation: [contact@libra.dev](mailto:contact@libra.dev)
+Commercial licensing consultation: [contact@zepid.dev](mailto:contact@zepid.dev)
 
 ### 💬 Participate in Roadmap Discussion
 
@@ -723,20 +723,20 @@ We welcome community participation in roadmap planning:
 
 - 📝 [Feature Requests](https://github.com/nextify-limited/libra/issues/new?template=feature_request.md)
 - 💬 [Roadmap Discussion](https://github.com/nextify-limited/libra/discussions)
-- 📧 [Enterprise Requirements](mailto:contact@libra.dev)
+- 📧 [Enterprise Requirements](mailto:contact@zepid.dev)
 
 ### 🙏 Acknowledgments
 
 Thanks to the following excellent sponsors for their valuable support to the Libra project, enabling us to focus on building better AI development experiences for developers:
 
-**[Clerk](https://clerk.com?utm_source=libra.dev)** - The most comprehensive user management platform
+**[Clerk](https://clerk.com?utm_source=zepid.dev)** - The most comprehensive user management platform
 
-**[E2B](https://e2b.dev/startups?utm_source=libra.dev)** - E2B is an open-source runtime environment for executing AI-generated code in secure cloud sandboxes, suitable for intelligent agents and AI application scenarios.
+**[E2B](https://e2b.dev/startups?utm_source=zepid.dev)** - E2B is an open-source runtime environment for executing AI-generated code in secure cloud sandboxes, suitable for intelligent agents and AI application scenarios.
 
-**[PostHog](https://posthog.com/startups?utm_source=libra.dev)** - A single platform for analytics, testing, observing, and deploying new features
+**[PostHog](https://posthog.com/startups?utm_source=zepid.dev)** - A single platform for analytics, testing, observing, and deploying new features
 
-**[Daytona](https://daytona.io/startups?utm_source=libra.dev)** - Daytona is a secure and resilient infrastructure for running AI-generated code
+**[Daytona](https://daytona.io/startups?utm_source=zepid.dev)** - Daytona is a secure and resilient infrastructure for running AI-generated code
 
-**[Cloudflare](https://www.cloudflare.com/forstartups/?utm_source=libra.dev)** - Global leading edge computing and network infrastructure provider
+**[Cloudflare](https://www.cloudflare.com/forstartups/?utm_source=zepid.dev)** - Global leading edge computing and network infrastructure provider
 
 ---

@@ -269,7 +269,7 @@ jobs:
 
           # Application URLs
           export NEXT_PUBLIC_APP_URL="${{ secrets.NEXT_PUBLIC_APP_URL || 'https://zepid.dev' }}"
-          export NEXT_PUBLIC_CDN_URL="https://cdn.libra.dev"
+          export NEXT_PUBLIC_CDN_URL="https://cdn.zepid.dev"
 
           # Database
           export POSTGRES_URL="${{ secrets.POSTGRES_URL }}"
@@ -310,7 +310,7 @@ jobs:
           bun run deploy
 
           # Set deployment URL for GitHub deployment record
-          echo "deployment-url=https://cdn.libra.dev" >> $GITHUB_OUTPUT
+          echo "deployment-url=https://cdn.zepid.dev" >> $GITHUB_OUTPUT
         continue-on-error: false
 
       - name: Verify deployment

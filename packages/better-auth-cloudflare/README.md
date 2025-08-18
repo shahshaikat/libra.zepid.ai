@@ -1138,7 +1138,7 @@ This project is licensed under the AGPL-3.0 License - see the [LICENSE](../../LI
 - 🐛 [Report Issues](https://github.com/libra-ai/libra/issues) - Bug reports and feature requests
 - 💬 [Discussions](https://github.com/libra-ai/libra/discussions) - Community discussions and Q&A
 - 🌐 [Cloudflare Community](https://community.cloudflare.com/) - Cloudflare-specific help
-- 📧 [Contact Us](mailto:support@libra.dev) - Direct support for enterprise users
+- 📧 [Contact Us](mailto:support@zepid.dev) - Direct support for enterprise users
 
 ### Quick Links
 

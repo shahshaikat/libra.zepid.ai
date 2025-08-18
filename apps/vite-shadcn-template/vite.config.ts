@@ -20,7 +20,7 @@ export default defineConfig(({ mode }) => {
     //   return `http://${env.VITE_INSPECTOR_HOST || 'localhost'}:${env.VITE_INSPECTOR_PORT || '3004'}`;
     // }
 
-    // Default to cdn.libra.dev for production and other environments
+    // Default to cdn.zepid.dev for production and other environments
     return 'https://cdn.zepid.dev';
   };
 

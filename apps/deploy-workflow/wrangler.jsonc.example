@@ -16,7 +16,7 @@
   },
   "routes": [
     {
-      "pattern": "deploy.libra.dev",
+      "pattern": "deploy.zepid.dev",
       "custom_domain": true
     }
   ],

@@ -12,7 +12,7 @@
   },
   "routes": [
     {
-      "pattern": "cdn.libra.dev",
+      "pattern": "cdn.zepid.dev",
       "custom_domain": true
     }
   ],
@@ -64,42 +64,33 @@
   "vars": {
     // Environment configuration
     "ENVIRONMENT": "{{ENVIRONMENT}}",
-
     // Core application configuration
     "NEXT_PUBLIC_APP_URL": "{{NEXT_PUBLIC_APP_URL}}",
     "NEXT_PUBLIC_CDN_URL": "{{NEXT_PUBLIC_CDN_URL}}",
-
     // Authentication configuration
     "BETTER_AUTH_SECRET": "{{BETTER_AUTH_SECRET}}",
     "BETTER_GITHUB_CLIENT_ID": "{{BETTER_GITHUB_CLIENT_ID}}",
     "BETTER_GITHUB_CLIENT_SECRET": "{{BETTER_GITHUB_CLIENT_SECRET}}",
     "GITHUB_OAUTH_CLIENT_ID": "{{GITHUB_OAUTH_CLIENT_ID}}",
     "GITHUB_OAUTH_CLIENT_SECRET": "{{GITHUB_OAUTH_CLIENT_SECRET}}",
-
     // Security configuration
     "TURNSTILE_SECRET_KEY": "{{TURNSTILE_SECRET_KEY}}",
-
     // Payment configuration (optional)
     "STRIPE_SECRET_KEY": "{{STRIPE_SECRET_KEY}}",
     "STRIPE_WEBHOOK_SECRET": "{{STRIPE_WEBHOOK_SECRET}}",
-
     // Admin configuration (optional)
     "ADMIN_USER_IDS": "{{ADMIN_USER_IDS}}",
-
     // Database configuration
     "POSTGRES_URL": "{{POSTGRES_URL}}",
     "DATABASE_ID": "{{DATABASE_ID}}",
-
     // Cloudflare configuration
     "CLOUDFLARE_ACCOUNT_ID": "{{CLOUDFLARE_ACCOUNT_ID}}",
     "CLOUDFLARE_API_TOKEN": "{{CLOUDFLARE_API_TOKEN}}",
     "CLOUDFLARE_ZONE_ID": "{{CLOUDFLARE_ZONE_ID}}",
     "CLOUDFLARE_AIGATEWAY_NAME": "{{CLOUDFLARE_AIGATEWAY_NAME}}",
-
     // Email service (optional)
     "RESEND_API_KEY": "{{RESEND_API_KEY}}",
     "RESEND_FROM": "{{RESEND_FROM}}",
-
     "LOG_LEVEL": "{{LOG_LEVEL}}",
   }
 }

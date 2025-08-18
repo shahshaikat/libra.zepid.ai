@@ -8,15 +8,15 @@
 
 **Libra AI：语言即应用**，一句话启动、迭代和部署您的下一个 Web 应用。
 
-[![由 CLERK 赞助](https://img.shields.io/badge/SPONSORED%20BY-CLERK-6C47FF?style=for-the-badge)](https://clerk.com?utm_source=libra.dev)
-[![由 E2B FOR STARTUPS 赞助](https://img.shields.io/badge/SPONSORED%20BY-E2B%20FOR%20STARTUPS-ff8800?style=for-the-badge)](https://e2b.dev/startups?utm_source=libra.dev)
-[![由 POSTHOG FOR STARTUPS 赞助](https://img.shields.io/badge/SPONSORED%20BY-POSTHOG%20FOR%20STARTUPS-1D4AFF?style=for-the-badge)](https://posthog.com/startups?utm_source=libra.dev)
-[![由 DAYTONA STARTUP GRID 赞助](https://img.shields.io/badge/SPONSORED%20BY-DAYTONA%20STARTUP%20GRID-2ECC71?style=for-the-badge)](https://daytona.io/startups?utm_source=libra.dev)
-[![由 CLOUDFLARE FOR STARTUPS 赞助](https://img.shields.io/badge/SPONSORED%20BY-CLOUDFLARE%20FOR%20STARTUPS-F38020?style=for-the-badge)](https://www.cloudflare.com/forstartups/?utm_source=libra.dev)
+[![由 CLERK 赞助](https://img.shields.io/badge/SPONSORED%20BY-CLERK-6C47FF?style=for-the-badge)](https://clerk.com?utm_source=zepid.dev)
+[![由 E2B FOR STARTUPS 赞助](https://img.shields.io/badge/SPONSORED%20BY-E2B%20FOR%20STARTUPS-ff8800?style=for-the-badge)](https://e2b.dev/startups?utm_source=zepid.dev)
+[![由 POSTHOG FOR STARTUPS 赞助](https://img.shields.io/badge/SPONSORED%20BY-POSTHOG%20FOR%20STARTUPS-1D4AFF?style=for-the-badge)](https://posthog.com/startups?utm_source=zepid.dev)
+[![由 DAYTONA STARTUP GRID 赞助](https://img.shields.io/badge/SPONSORED%20BY-DAYTONA%20STARTUP%20GRID-2ECC71?style=for-the-badge)](https://daytona.io/startups?utm_source=zepid.dev)
+[![由 CLOUDFLARE FOR STARTUPS 赞助](https://img.shields.io/badge/SPONSORED%20BY-CLOUDFLARE%20FOR%20STARTUPS-F38020?style=for-the-badge)](https://www.cloudflare.com/forstartups/?utm_source=zepid.dev)
 
 [![开源许可](https://img.shields.io/badge/License-AGPL-green.svg)](https://github.com/nextify-limited/libra/blob/main/LICENSE) [![由 Nextify2024 打造](https://img.shields.io/badge/made_by-nextify2024-blue?color=FF782B&link=https://x.com/nextify2024)](https://x.com/nextify2024)
 
-[🌐 **立即体验**](https://libra.dev) • [📖 **开发文档**](https://docs.libra.dev/) • [💬 **加入社区**](https://forum.libra.dev) • [⚡ **查看源码**](https://github.com/nextify-limited/libra)
+[🌐 **立即体验**](https://zepid.dev) • [📖 **开发文档**](https://docs.zepid.dev/) • [💬 **加入社区**](https://forum.zepid.dev) • [⚡ **查看源码**](https://github.com/nextify-limited/libra)
 
 </div>
 
@@ -130,35 +130,35 @@ Libra 完全构建于 Cloudflare 上。你需要对以下产品熟悉：
 
 | 产品名称 | 功能描述 | 在 Libra 中的应用 |
 |---------|---------|------------------|
-| [Workers](https://developers.cloudflare.com/workers/?utm_source=libra.dev) | 无服务器计算平台 | 核心应用运行环境，承载所有服务逻辑 |
-| [Durable Objects](https://developers.cloudflare.com/durable-objects/?utm_source=libra.dev) | 强一致性存储 | 实时状态管理和会话持久化 |
-| [Browser Rendering](https://developers.cloudflare.com/browser-rendering/?utm_source=libra.dev) | 浏览器渲染服务 | 网页截图生成和预览功能 |
-| [Workers for Platforms](https://developers.cloudflare.com/cloudflare-for-platforms/?utm_source=libra.dev) | 多租户平台 | 用户项目隔离部署和路由管理 |
+| [Workers](https://developers.cloudflare.com/workers/?utm_source=zepid.dev) | 无服务器计算平台 | 核心应用运行环境，承载所有服务逻辑 |
+| [Durable Objects](https://developers.cloudflare.com/durable-objects/?utm_source=zepid.dev) | 强一致性存储 | 实时状态管理和会话持久化 |
+| [Browser Rendering](https://developers.cloudflare.com/browser-rendering/?utm_source=zepid.dev) | 浏览器渲染服务 | 网页截图生成和预览功能 |
+| [Workers for Platforms](https://developers.cloudflare.com/cloudflare-for-platforms/?utm_source=zepid.dev) | 多租户平台 | 用户项目隔离部署和路由管理 |
 
 ### 数据存储
 
 | 产品名称 | 功能描述 | 在 Libra 中的应用 |
 |---------|---------|------------------|
-| [KV](https://developers.cloudflare.com/kv/?utm_source=libra.dev) | 全局键值存储 | 配置缓存和临时数据存储 |
-| [D1](https://developers.cloudflare.com/d1/?utm_source=libra.dev) | 无服务器 SQLite 数据库 | 认证数据和轻量级业务数据 |
-| [Hyperdrive](https://developers.cloudflare.com/hyperdrive/?utm_source=libra.dev) | 数据库连接加速 | PostgreSQL 连接池和查询优化 |
-| [R2](https://developers.cloudflare.com/r2/?utm_source=libra.dev) | 对象存储服务 | 文件上传、静态资源和构建产物存储 |
+| [KV](https://developers.cloudflare.com/kv/?utm_source=zepid.dev) | 全局键值存储 | 配置缓存和临时数据存储 |
+| [D1](https://developers.cloudflare.com/d1/?utm_source=zepid.dev) | 无服务器 SQLite 数据库 | 认证数据和轻量级业务数据 |
+| [Hyperdrive](https://developers.cloudflare.com/hyperdrive/?utm_source=zepid.dev) | 数据库连接加速 | PostgreSQL 连接池和查询优化 |
+| [R2](https://developers.cloudflare.com/r2/?utm_source=zepid.dev) | 对象存储服务 | 文件上传、静态资源和构建产物存储 |
 
 ### 网络与安全
 
 | 产品名称 | 功能描述 | 在 Libra 中的应用 |
 |---------|---------|------------------|
-| [Turnstile](https://developers.cloudflare.com/turnstile/?utm_source=libra.dev) | 智能验证码 | 用户注册和敏感操作的安全验证 |
-| [Cloudflare for SaaS](https://developers.cloudflare.com/cloudflare-for-platforms/cloudflare-for-saas/?utm_source=libra.dev) | 自定义域名管理 | 用户项目的自定义域名绑定和 SSL 证书 |
+| [Turnstile](https://developers.cloudflare.com/turnstile/?utm_source=zepid.dev) | 智能验证码 | 用户注册和敏感操作的安全验证 |
+| [Cloudflare for SaaS](https://developers.cloudflare.com/cloudflare-for-platforms/cloudflare-for-saas/?utm_source=zepid.dev) | 自定义域名管理 | 用户项目的自定义域名绑定和 SSL 证书 |
 
 ### 开发工具与服务
 
 | 产品名称 | 功能描述 | 在 Libra 中的应用 |
 |---------|---------|------------------|
-| [Workflows](https://developers.cloudflare.com/workflows/?utm_source=libra.dev) | 工作流编排 | 复杂部署流程的步骤化管理 |
-| [Queues](https://developers.cloudflare.com/queues/?utm_source=libra.dev) | 消息队列服务 | 异步任务处理和批量部署管理 |
-| [AI Gateway](https://developers.cloudflare.com/ai-gateway/?utm_source=libra.dev) | AI 模型网关 | 监控和控制你的 AI 应用|
-| [Images](https://developers.cloudflare.com/images/?utm_source=libra.dev) | 图像处理优化 | 动态图像变换和 CDN 分发 |
+| [Workflows](https://developers.cloudflare.com/workflows/?utm_source=zepid.dev) | 工作流编排 | 复杂部署流程的步骤化管理 |
+| [Queues](https://developers.cloudflare.com/queues/?utm_source=zepid.dev) | 消息队列服务 | 异步任务处理和批量部署管理 |
+| [AI Gateway](https://developers.cloudflare.com/ai-gateway/?utm_source=zepid.dev) | AI 模型网关 | 监控和控制你的 AI 应用|
+| [Images](https://developers.cloudflare.com/images/?utm_source=zepid.dev) | 图像处理优化 | 动态图像变换和 CDN 分发 |
 
 Libra 采用 **Turborepo** Monorepo 架构设计：
 
@@ -286,32 +286,32 @@ libra/
 
 | 技术框架                                   | 应用场景                       | 版本   |
 |-------------------------------------------|-------------------------------|--------|
-| [Next.js](https://nextjs.org?utm_source=libra.dev)            | React 全栈开发框架（App Router） | 15.3.5 |
-| [React](https://react.dev?utm_source=libra.dev)               | 用户界面库（服务器端组件）       | 19.1.1 |
-| [TypeScript](https://typescriptlang.org?utm_source=libra.dev) | 静态类型 JavaScript 超集      | 5.8.3+ |
-| [Tailwind CSS](https://tailwindcss.com?utm_source=libra.dev)  | 工具优先的 CSS 框架                | 4.1.11 |
-| [shadcn/ui](https://ui.shadcn.com?utm_source=libra.dev)       | 组件库与设计系统            | 基于 Radix UI |
-| [Radix UI](https://radix-ui.com?utm_source=libra.dev)         | 无样式可访问 UI 原语库  | 1.2.x-1.3.x |
-| [Motion](https://motion.dev?utm_source=libra.dev)             | 现代动画引擎                 | 12.23.11 |
-| [Lucide React](https://lucide.dev?utm_source=libra.dev)       | 矢量图标库               | 0.486.0 |
+| [Next.js](https://nextjs.org?utm_source=zepid.dev)            | React 全栈开发框架（App Router） | 15.3.5 |
+| [React](https://react.dev?utm_source=zepid.dev)               | 用户界面库（服务器端组件）       | 19.1.1 |
+| [TypeScript](https://typescriptlang.org?utm_source=zepid.dev) | 静态类型 JavaScript 超集      | 5.8.3+ |
+| [Tailwind CSS](https://tailwindcss.com?utm_source=zepid.dev)  | 工具优先的 CSS 框架                | 4.1.11 |
+| [shadcn/ui](https://ui.shadcn.com?utm_source=zepid.dev)       | 组件库与设计系统            | 基于 Radix UI |
+| [Radix UI](https://radix-ui.com?utm_source=zepid.dev)         | 无样式可访问 UI 原语库  | 1.2.x-1.3.x |
+| [Motion](https://motion.dev?utm_source=zepid.dev)             | 现代动画引擎                 | 12.23.11 |
+| [Lucide React](https://lucide.dev?utm_source=zepid.dev)       | 矢量图标库               | 0.486.0 |
 
 #### 后端与 API 架构
 
 | 技术框架                                  | 应用场景                      | 版本   |
 |------------------------------------------|------------------------------|--------|
-| [tRPC](https://trpc.io?utm_source=libra.dev)                 | 端到端类型安全 API 开发       | 11.4.3+ |
-| [Hono](https://hono.dev?utm_source=libra.dev)                | 边缘计算 Web 框架       | 4.8.10+ |
-| [Zod](https://zod.dev?utm_source=libra.dev)                  | TypeScript 数据验证库     | 4.0.14 |
-| [Drizzle ORM](https://orm.drizzle.team?utm_source=libra.dev) | 类型安全 TypeScript ORM     | 0.44.4 |
-| [better-auth](https://better-auth.com?utm_source=libra.dev)  | 现代身份认证解决方案        | 1.3.4 |
+| [tRPC](https://trpc.io?utm_source=zepid.dev)                 | 端到端类型安全 API 开发       | 11.4.3+ |
+| [Hono](https://hono.dev?utm_source=zepid.dev)                | 边缘计算 Web 框架       | 4.8.10+ |
+| [Zod](https://zod.dev?utm_source=zepid.dev)                  | TypeScript 数据验证库     | 4.0.14 |
+| [Drizzle ORM](https://orm.drizzle.team?utm_source=zepid.dev) | 类型安全 TypeScript ORM     | 0.44.4 |
+| [better-auth](https://better-auth.com?utm_source=zepid.dev)  | 现代身份认证解决方案        | 1.3.4 |
 
 #### AI 与机器学习
 
 | AI 平台                           | 功能特点               | API 版本     |
 |----------------------------------|----------------------|--------------|
-| [AI SDK](https://sdk.vercel.ai?utm_source=libra.dev) | 多提供商 AI 模型集成   | 4.3.19       |
-| [E2B](https://e2b.dev?utm_source=libra.dev)          | 安全代码执行沙箱       | 1.2.0-beta.5 |
-| [Daytona](https://daytona.io?utm_source=libra.dev)   | 开发环境沙箱提供商      | 最新版本       |
+| [AI SDK](https://sdk.vercel.ai?utm_source=zepid.dev) | 多提供商 AI 模型集成   | 4.3.19       |
+| [E2B](https://e2b.dev?utm_source=zepid.dev)          | 安全代码执行沙箱       | 1.2.0-beta.5 |
+| [Daytona](https://daytona.io?utm_source=zepid.dev)   | 开发环境沙箱提供商      | 最新版本       |
 | **集成 AI 模型**               |                       |              |
 | Anthropic Claude                | 高级推理及代码生成 | API v1       |
 | Azure OpenAI                    | 企业级 AI 模型服务     | API v1       |
@@ -322,27 +322,27 @@ libra/
 
 | 数据库技术                                              | 应用场景             | 版本   |
 |--------------------------------------------------------|---------------------|--------|
-| [Neon](https://neon.com?utm_source=libra.dev)                   | 主数据库（PostgreSQL）     | 17+    |
-| [Cloudflare Hyperdrive](https://developers.cloudflare.com/hyperdrive?utm_source=libra.dev) | 数据库连接池与加速 | 最新版本 |
-| [Cloudflare D1](https://developers.cloudflare.com/d1?utm_source=libra.dev)  | 边缘数据库（SQLite）   | 最新版本 |
-| [Drizzle Kit](https://orm.drizzle.team/kit-docs/overview?utm_source=libra.dev) | 数据库迁移工具 | 0.31.4+ |
+| [Neon](https://neon.com?utm_source=zepid.dev)                   | 主数据库（PostgreSQL）     | 17+    |
+| [Cloudflare Hyperdrive](https://developers.cloudflare.com/hyperdrive?utm_source=zepid.dev) | 数据库连接池与加速 | 最新版本 |
+| [Cloudflare D1](https://developers.cloudflare.com/d1?utm_source=zepid.dev)  | 边缘数据库（SQLite）   | 最新版本 |
+| [Drizzle Kit](https://orm.drizzle.team/kit-docs/overview?utm_source=zepid.dev) | 数据库迁移工具 | 0.31.4+ |
 
 #### 部署与基础设施
 
 | 平台技术                                              | 应用场景                      | 版本     |
 |------------------------------------------------------|------------------------------|--------|
-| [Cloudflare Workers](https://workers.cloudflare.com?utm_source=libra.dev) | Serverless 边缘计算平台          | 最新版本   |
-| [OpenNext](https://opennext.js.org/cloudflare?utm_source=libra.dev)       | Next.js Cloudflare 部署适配器 | 1.6.2  |
-| [Turborepo](https://turbo.build?utm_source=libra.dev)                     | 高性能 Monorepo 构建系统     | 2.5.5  |
-| [Bun](https://bun.sh?utm_source=libra.dev)                                | JavaScript 运行时及包管理器 | 1.2.19 |
+| [Cloudflare Workers](https://workers.cloudflare.com?utm_source=zepid.dev) | Serverless 边缘计算平台          | 最新版本   |
+| [OpenNext](https://opennext.js.org/cloudflare?utm_source=zepid.dev)       | Next.js Cloudflare 部署适配器 | 1.6.2  |
+| [Turborepo](https://turbo.build?utm_source=zepid.dev)                     | 高性能 Monorepo 构建系统     | 2.5.5  |
+| [Bun](https://bun.sh?utm_source=zepid.dev)                                | JavaScript 运行时及包管理器 | 1.2.19 |
 
 #### 开发工具链
 
 | 工具                                                                     | 用途                 | 版本   |
 |-------------------------------------------------------------------------|---------------------|--------|
-| [Biome](https://biomejs.dev?utm_source=libra.dev)                                            | 代码格式化及质量检查 | 2.0.6  |
-| [Vitest](https://vitest.dev?utm_source=libra.dev)                                            | 单元测试框架     | 3.2.4  |
-| [Paraglide.js](https://inlang.com/m/gerre34r/library-inlang-paraglideJs?utm_source=libra.dev) | 国际化 i18n 解决方案    | 2.2.0  |
+| [Biome](https://biomejs.dev?utm_source=zepid.dev)                                            | 代码格式化及质量检查 | 2.0.6  |
+| [Vitest](https://vitest.dev?utm_source=zepid.dev)                                            | 单元测试框架     | 3.2.4  |
+| [Paraglide.js](https://inlang.com/m/gerre34r/library-inlang-paraglideJs?utm_source=zepid.dev) | 国际化 i18n 解决方案    | 2.2.0  |
 
 ---
 
@@ -352,7 +352,7 @@ libra/
 
 #### 🌐 云端托管服务（推荐）
 
-- 访问 [libra.dev](https://libra.dev) 即可使用
+- 访问 [zepid.dev](https://zepid.dev) 即可使用
 - GitHub OAuth 或邮箱快速注册
 - 几分钟构建生产级应用
 
@@ -454,7 +454,7 @@ stripe listen --forward-to localhost:3000/api/auth/stripe/webhook
 
 即开即用的云端开发体验：
 
-1. 访问 [libra.dev](https://libra.dev) 官方平台
+1. 访问 [zepid.dev](https://zepid.dev) 官方平台
 2. GitHub OAuth 或邮箱快速注册
 3. AI 驱动应用快速构建
 4. 一键部署至自定义域名
@@ -630,7 +630,7 @@ Libra 使用 **Workers for Platforms** 技术为用户提供项目部署能力�
 - 服务等级协议（SLA）保障
 - 安全审计和合规性支持
 
-如需了解企业服务，请联系：[contact@libra.dev](mailto:contact@libra.dev)
+如需了解企业服务，请联系：[contact@zepid.dev](mailto:contact@zepid.dev)
 
 ### 🔧 开发部署
 
@@ -648,7 +648,7 @@ Libra 使用 **Workers for Platforms** 技术为用户提供项目部署能力�
 
 #### 🌟 使用与推广
 
-- 体验 [Libra 平台](https://libra.dev) 并分享您的使用感受
+- 体验 [Libra 平台](https://zepid.dev) 并分享您的使用感受
 - 创建精彩的应用项目并在社区展示
 - 撰写技术博客文章或制作教程视频
 - 在社交媒体平台分享和推荐 Libra
@@ -686,7 +686,7 @@ git push origin feature/your-amazing-feature
   - 添加新语言：在 `apps/web/project.inlang/settings.json` 中添加语言代码
 
 [//]: # (  - 使用 `bun machine-translate` 命令进行机器翻译初始化)
-- **社区互助**：在[论坛](https://forum.libra.dev) 和 GitHub 讨论中帮助其他用户
+- **社区互助**：在[论坛](https://forum.zepid.dev) 和 GitHub 讨论中帮助其他用户
 
 
 #### 🎯 贡献指南
@@ -725,7 +725,7 @@ Libra 基于 [GNU Affero General Public License v3.0](https://github.com/nextify
 - 不开源的产品分发
 - 定制化的授权条款
 
-商业授权咨询：[contact@libra.dev](mailto:contact@libra.dev)
+商业授权咨询：[contact@zepid.dev](mailto:contact@zepid.dev)
 
 ### 💬 参与路线图讨论
 
@@ -733,20 +733,20 @@ Libra 基于 [GNU Affero General Public License v3.0](https://github.com/nextify
 
 - 📝 [功能请求](https://github.com/nextify-limited/libra/issues/new?template=feature_request.md)
 - 💬 [路线图讨论](https://github.com/nextify-limited/libra/discussions)
-- 📧 [企业需求](mailto:contact@libra.dev)
+- 📧 [企业需求](mailto:contact@zepid.dev)
 
 ### 🙏 鸣谢
 
 感谢以下优秀的赞助商为 Libra 项目提供的宝贵支持，让我们能够专注于为开发者构建更好的 AI 开发体验：
 
-**[Clerk](https://clerk.com?utm_source=libra.dev)** - 最全面的用户管理平台
+**[Clerk](https://clerk.com?utm_source=zepid.dev)** - 最全面的用户管理平台
 
-**[E2B](https://e2b.dev/startups?utm_source=libra.dev)** - E2B 是一个开源的运行时环境，用于在安全的云沙盒中执行 AI 生成的代码,适用于智能代理和 AI 应用场景。
+**[E2B](https://e2b.dev/startups?utm_source=zepid.dev)** - E2B 是一个开源的运行时环境，用于在安全的云沙盒中执行 AI 生成的代码,适用于智能代理和 AI 应用场景。
 
-**[PostHog](https://posthog.com/startups?utm_source=libra.dev)** - 分析、测试、观察和部署新功能的单一平台
+**[PostHog](https://posthog.com/startups?utm_source=zepid.dev)** - 分析、测试、观察和部署新功能的单一平台
 
-**[Daytona](https://daytona.io/startups?utm_source=libra.dev)** - Daytona 是一个用于运行 AI 生成代码的安全且具有弹性的基础设施
+**[Daytona](https://daytona.io/startups?utm_source=zepid.dev)** - Daytona 是一个用于运行 AI 生成代码的安全且具有弹性的基础设施
 
-**[Cloudflare](https://www.cloudflare.com/forstartups/?utm_source=libra.dev)** - 全球领先的边缘计算和网络基础设施提供商
+**[Cloudflare](https://www.cloudflare.com/forstartups/?utm_source=zepid.dev)** - 全球领先的边缘计算和网络基础设施提供商
 
 ---

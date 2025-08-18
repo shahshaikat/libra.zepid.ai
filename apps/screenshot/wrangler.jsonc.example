@@ -10,7 +10,7 @@
   },
   "routes": [
     {
-      "pattern": "screenshot.libra.dev",
+      "pattern": "screenshot.zepid.dev",
       "custom_domain": true
     }
   ],

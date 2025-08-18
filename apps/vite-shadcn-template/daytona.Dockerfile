@@ -11,7 +11,7 @@ RUN chmod +x /prepare-daytona.sh
 RUN mkdir -p /home/user/vite-shadcn-template-libra
 WORKDIR /home/user/vite-shadcn-template-libra
 
-ENV VITE_INSPECTOR_URL=https://cdn.libra.dev
+ENV VITE_INSPECTOR_URL=https://cdn.zepid.dev
 
 COPY . .
 

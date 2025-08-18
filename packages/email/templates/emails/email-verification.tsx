@@ -66,7 +66,7 @@ export const EmailVerificationTemplate: React.FC<EmailVerificationTemplateProps>
 
         {/*/!* Call to Action Button *!/*/}
         {/*<Section className="text-center mb-7">*/}
-        {/*  <Button href="https://libra.dev" variant="primary">*/}
+        {/*  <Button href="https://zepid.dev" variant="primary">*/}
         {/*    Complete Verification*/}
         {/*  </Button>*/}
         {/*</Section>*/}

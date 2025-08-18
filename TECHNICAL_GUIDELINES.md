@@ -1999,7 +1999,7 @@ export const WelcomeEmail = ({ username, loginUrl }: WelcomeEmailProps) => (
     <Body style={main}>
       <Container style={container}>
         <Img
-          src="https://libra.dev/logo.png"
+          src="https://zepid.dev/logo.png"
           width="170"
           height="50"
           alt="Libra AI"
@@ -2096,7 +2096,7 @@ export async function sendEmail({
 }) {
   try {
     const { data, error } = await resend.emails.send({
-      from: 'Libra AI <noreply@libra.dev>',
+      from: 'Libra AI <noreply@zepid.dev>',
       to,
       subject,
       react: template,
@@ -3880,7 +3880,7 @@ export default config
   ],
   "vars": {
     "NODE_ENV": "production",
-    "NEXT_PUBLIC_APP_URL": "https://libra.dev"
+    "NEXT_PUBLIC_APP_URL": "https://zepid.dev"
   },
   "secrets": [
     "DATABASE_URL",
@@ -4667,8 +4667,8 @@ This document serves as both a learning resource for new developers and a refere
 For the most up-to-date information and additional implementation details:
 
 - **GitHub Repository**: [libra-ai/libra](https://github.com/libra-ai/libra)
-- **Documentation Site**: [docs.libra.dev](https://docs.libra.dev)
-- **API Reference**: [api.libra.dev](https://api.libra.dev)
+- **Documentation Site**: [docs.zepid.dev](https://docs.zepid.dev)
+- **API Reference**: [api.zepid.dev](https://api.zepid.dev)
 - **Community Discord**: [discord.gg/libra-ai](https://discord.gg/libra-ai)
 
 ---

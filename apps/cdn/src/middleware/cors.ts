@@ -42,7 +42,7 @@ export function createCorsMiddleware() {
 
           // Check for subdomain match in production
           if (config.ENVIRONMENT === 'production') {
-            // Allow any subdomain of libra.dev
+            // Allow any subdomain of zepid.dev
             if (requestOrigin.match(/^https:\/\/[a-zA-Z0-9-]+\.libra\.dev$/)) {
               return requestOrigin
             }

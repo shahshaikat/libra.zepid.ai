@@ -157,7 +157,7 @@ bun run deploy
 
 ```bash
 # Add custom domain route
-wrangler route add "libra.dev/*" libra
+wrangler route add "zepid.dev/*" libra
 ```
 
 ### Environment Variables Setup
