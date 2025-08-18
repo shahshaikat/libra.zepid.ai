@@ -54,7 +54,7 @@ jobs:
   # Validation job
   validate:
     name: Code Quality & Type Checking
-    runs-on: blacksmith-2vcpu-ubuntu-2204
+    runs-on: ubuntu-latest
     timeout-minutes: 15
     permissions:
       contents: read
@@ -111,7 +111,7 @@ jobs:
   # Build and deploy job
   deploy:
     name: Build & Deploy to Cloudflare Workers
-    runs-on: blacksmith-2vcpu-ubuntu-2204
+    runs-on: ubuntu-latest
     timeout-minutes: 20
     needs: validate
     permissions:
