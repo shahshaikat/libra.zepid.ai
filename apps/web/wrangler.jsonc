@@ -77,7 +77,8 @@
   "hyperdrive": [
     {
       "binding": "HYPERDRIVE",
-      "id": "{{HYPERDRIVE_ID}}"
+      "id": "{{HYPERDRIVE_ID}}",
+      "localConnectionString": "postgresql://postgres:postgres@zepid:5432/zepid"
     }
   ],
   "kv_namespaces": [
