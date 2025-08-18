@@ -1,5 +1,5 @@
 {
-  "name": "libra-cdn",
+  "name": "zepid-cdn",
   "main": "src/index.ts",
   "compatibility_date": "2025-07-23",
   "compatibility_flags": [
@@ -25,7 +25,7 @@
   "d1_databases": [
     {
       "binding": "DATABASE",
-      "database_name": "libra",
+      "database_name": "zepid-d1",
       "database_id": "{{DATABASE_ID}}"
     }
   ],
@@ -38,7 +38,7 @@
   "r2_buckets": [
     {
       "binding": "BUCKET",
-      "bucket_name": "libra-cdn"
+      "bucket_name": "zepid-cdn"
     }
   ],
   "images": {

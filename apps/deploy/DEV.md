@@ -1022,7 +1022,7 @@ wrangler route list
   "d1_databases": [
     {
       "binding": "DATABASE",
-      "database_name": "libra",
+      "database_name": "zepid-d1",
       "database_id": "your_database_id"
     }
   ],

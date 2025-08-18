@@ -1,6 +1,6 @@
 {
   "$schema": "../../node_modules/wrangler/config-schema.json",
-  "name": "libra-dispatcher",
+  "name": "zepid-dispatcher",
   "main": "src/index.ts",
   "compatibility_date": "2025-08-03",
   "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
@@ -13,8 +13,7 @@
   "hyperdrive": [
     {
       "binding": "HYPERDRIVE",
-      "id": "{{HYPERDRIVE_ID}}",
-      "localConnectionString": "postgresql://postgres:postgres@libra:5432/libra"
+      "id": "{{HYPERDRIVE_ID}}"
     }
   ],
   "dispatch_namespaces": [

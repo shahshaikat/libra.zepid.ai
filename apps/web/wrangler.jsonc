@@ -1,6 +1,6 @@
 {
   "$schema": "../../node_modules/wrangler/config-schema.json",
-  "name": "libra",
+  "name": "zepid",
   "main": ".open-next/worker.js",
   "compatibility_date": "2025-08-03",
   "compatibility_flags": [
@@ -63,22 +63,21 @@
   "services": [
     {
       "binding": "WORKER_SELF_REFERENCE",
-      "service": "libra"
+      "service": "zepid"
     }
   ],
   "d1_databases": [
     {
       "binding": "DATABASE",
-      "database_name": "libra",
-      "database_id": "67910497-d3de-4085-ba2f-70c7d4ba5983"
+      "database_name": "zepid-d1",
+      "database_id": "{{DATABASE_ID}}"
     }
   ],
   // docker run --name libra -e POSTGRES_PASSWORD=postgres -d postgres
   "hyperdrive": [
     {
       "binding": "HYPERDRIVE",
-      "id": "c00328e4ab70457fb86356e1e325ef7d",
-      "localConnectionString": "postgresql://postgres:postgres@libra:5432/libra"
+      "id": "{{HYPERDRIVE_ID}}"
     }
   ],
   "kv_namespaces": [
@@ -95,7 +94,7 @@
   "r2_buckets": [
     {
       "binding": "NEXT_INC_CACHE_R2_BUCKET",
-      "bucket_name": "libra-inc-cache"
+      "bucket_name": "zepid-inc-cache"
     }
   ],
   // DO Queue and DO Sharded Tag Cache

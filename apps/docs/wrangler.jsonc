@@ -1,7 +1,7 @@
 {
   "$schema": "../../node_modules/wrangler/config-schema.json",
   //  "account_id": "",
-  "name": "libra-docs",
+  "name": "zepid-docs",
   "main": ".open-next/worker.js",
   "compatibility_date": "2025-08-03",
   "compatibility_flags": [
@@ -46,14 +46,14 @@
   "services": [
     {
       "binding": "WORKER_SELF_REFERENCE",
-      "service": "libra-docs"
+      "service": "zepid-docs"
     }
   ],
   // R2 incremental cache
   "r2_buckets": [
     {
       "binding": "NEXT_INC_CACHE_R2_BUCKET",
-      "bucket_name": "libra-docs"
+      "bucket_name": "zepid-docs"
     }
   ],
   // DO Queue and DO Sharded Tag Cache

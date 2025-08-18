@@ -1,6 +1,6 @@
 {
   "$schema": "../../node_modules/wrangler/config-schema.json",
-  "name": "libra-deploy",
+  "name": "zepid-deploy",
   "main": "src/index.ts",
   "compatibility_date": "2025-08-03",
   "compatibility_flags": [
@@ -55,7 +55,7 @@
   "d1_databases": [
     {
       "binding": "DATABASE",
-      "database_name": "libra",
+      "database_name": "zepid-d1",
       "database_id": "{{DATABASE_ID}}"
     }
   ],

@@ -2,8 +2,8 @@
   "d1_databases": [
     {
       "binding": "DATABASE",
-      "database_name": "libra",
-      "database_id": "67910497-d3de-4085-ba2f-70c7d4ba5983",
+      "database_name": "zepid-d1",
+      "database_id": "{{DATABASE_ID}}",
       "migrations_dir": "./db/migrations"
     }
   ]
