@@ -19,7 +19,7 @@
   "hyperdrive": [
     {
       "binding": "HYPERDRIVE",
-      "id": "{{HYPERDRIVE_ID}}",
+      "id": "{{HYPERDRIVE_ID}}"
     }
   ],
   "d1_databases": [
