@@ -70,14 +70,14 @@
     {
       "binding": "DATABASE",
       "database_name": "zepid-d1",
-      "database_id": "{{DATABASE_ID}}"
+      "database_id": "d9d14e7f-fe1c-44dd-9e49-b400d7f5396d"
     }
   ],
   // docker run --name libra -e POSTGRES_PASSWORD=postgres -d postgres
   "hyperdrive": [
     {
       "binding": "HYPERDRIVE",
-      "id": "{{HYPERDRIVE_ID}}",
+      "id": "4396ca1dbdf04838914002eb937a0d08",
       "localConnectionString": "postgresql://postgres:postgres@zepid:5432/zepid"
     }
   ],
