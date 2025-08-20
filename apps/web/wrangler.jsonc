@@ -99,20 +99,20 @@
     }
   ],
   // DO Queue and DO Sharded Tag Cache
-  "durable_objects": {
-    "bindings": [
-      {
-        "name": "NEXT_CACHE_DO_QUEUE",
-        "class_name": "DOQueueHandler",
-        "script_name": "opennext-cache"
-      },
-      {
-        "name": "NEXT_TAG_CACHE_DO_SHARDED",
-        "class_name": "DOShardedTagCache",
-        "script_name": "opennext-cache"
-      }
-    ]
-  }
+  // "durable_objects": {
+  //   "bindings": [
+  //     {
+  //       "name": "NEXT_CACHE_DO_QUEUE",
+  //       "class_name": "DOQueueHandler",
+  //       "script_name": "opennext-cache"
+  //     },
+  //     {
+  //       "name": "NEXT_TAG_CACHE_DO_SHARDED",
+  //       "class_name": "DOShardedTagCache",
+  //       "script_name": "opennext-cache"
+  //     }
+  //   ]
+  // }
   // "migrations": [
   //   {
   //     "tag": "v1",
