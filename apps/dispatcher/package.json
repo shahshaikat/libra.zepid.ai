@@ -4,10 +4,9 @@
   "type": "module",
   "scripts": {
     "dev": "wrangler dev --port 3007 --persist-to=../web/.wrangler/state",
-    "deploy": "bun with-env wrangler  deploy --minify",
+    "deploy": "wrangler deploy --minify",
     "cf-typegen": "wrangler types --env-interface CloudflareBindings",
     "typecheck": "tsc --noEmit",
-    "with-env": "dotenv -e .env --",
     "update": "bun update"
   },
   "dependencies": {
