@@ -56,7 +56,7 @@ export const corsConfig = {
         origins.push(
             'https://zepid.dev',
             'https://cdn.zepid.dev',
-            "https://libra.sh"
+            "https://zapid.dev"
         )
 
         return origins

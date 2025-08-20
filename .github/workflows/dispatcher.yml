@@ -252,7 +252,8 @@ jobs:
 
           # Environment
           export ENVIRONMENT="production"
-
+          
+          # Dispatcher URL
           export NEXT_PUBLIC_DISPATCHER_URL="${{ secrets.NEXT_PUBLIC_DISPATCHER_URL || 'https://dispatcher.zapid.dev' }}"
 
           # Cloudflare API credentials

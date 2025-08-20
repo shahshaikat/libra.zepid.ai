@@ -1520,7 +1520,7 @@
         "addDnsRecordsApex": "对于顶级域名，请添加以下A记录。如果您的域名供应商支持CNAME扁平化，也可以使用CNAME记录：",
         "addDnsRecordsSubdomain": "对于二级域名，请添加以下CNAME记录：",
         "cnameFlattening": "CNAME扁平化备选方案",
-        "cnameAlternative": "如果您的域名供应商支持CNAME扁平化（CNAME flattening），您也可以创建CNAME记录指向 customers.libra.sh",
+        "cnameAlternative": "如果您的域名供应商支持CNAME扁平化（CNAME flattening），您也可以创建CNAME记录指向 customers.zapid.dev",
         "verificationFailed": "验证失败。DNS更改可能需要最多48小时生效。",
         "ownershipVerified": "域名所有权验证成功。请配置上述CNAME记录以完成设置。",
         "dnsHint": "DNS更改可能需要最多48小时生效。点击验证检查状态。",

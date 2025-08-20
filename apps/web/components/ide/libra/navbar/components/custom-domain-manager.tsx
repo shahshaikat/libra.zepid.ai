@@ -107,7 +107,7 @@ export function CustomDomainManager({
     {
       type: 'CNAME',
       name: domain,
-      target: 'customers.libra.sh',
+      target: 'customers.zapid.dev',
       status: status === 'active' ? 'active' : 'pending'
     }
   ]

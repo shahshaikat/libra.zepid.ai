@@ -35,7 +35,7 @@ export const deployEnvSchema = z.object({
   // Security (required for authentication)
   TURNSTILE_SECRET_KEY: z.string().min(1),
 
-  // Dispatcher URL (optional, defaults to libra.sh)
+  // Dispatcher URL (optional, defaults to zapid.dev)
   NEXT_PUBLIC_DISPATCHER_URL: z.string().optional(),
 
   // Sandbox provider configuration

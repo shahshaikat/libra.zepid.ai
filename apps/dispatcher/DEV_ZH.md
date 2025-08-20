@@ -27,7 +27,7 @@
 ### 🚀 路由分发
 | 功能 | 说明 | 技术特点 |
 |-----|------|----------|
-| **通配符子域名路由** | 支持 `*.libra.sh` 形式的动态子域名路由 | 自动解析子域名、Worker 名称验证、RFC 1123 兼容 |
+| **通配符子域名路由** | 支持 `*.zapid.dev` 形式的动态子域名路由 | 自动解析子域名、Worker 名称验证、RFC 1123 兼容 |
 | **自定义域名支持** | 完整的用户自定义域名处理和数据库集成 | 数据库查询、域名验证、项目关联 |
 | **多策略路由** | 支持子域名、路径、查询参数等多种路由方式 | 灵活的路由策略、智能匹配 |
 | **智能转发** | 自动处理请求转发和响应代理 | 完整的 HTTP 方法支持、头部转发 |
@@ -136,9 +136,9 @@ apps/dispatcher/                   # Dispatcher 服务根目录
 #### 路由流程
 
 ```text
-用户请求: https://vite-shadcn-template.libra.sh/
+用户请求: https://vite-shadcn-template.zapid.dev/
     ↓
-Cloudflare DNS: *.libra.sh → libra-dispatcher Worker
+Cloudflare DNS: *.zapid.dev → libra-dispatcher Worker
     ↓
 Dispatcher 解析子域名: "vite-shadcn-template"
     ↓
@@ -156,7 +156,7 @@ Dispatcher 解析子域名: "vite-shadcn-template"
 ```text
 用户请求: https://myapp.example.com/
     ↓
-Dispatcher 检测非 libra.sh 域名
+Dispatcher 检测非 zapid.dev 域名
     ↓
 查询数据库获取域名关联的项目
     ↓
@@ -298,7 +298,7 @@ bun dev
   "routes": [
     {
       "pattern": "*/*",
-      "zone_name": "libra.sh"
+      "zone_name": "zapid.dev"
     }
   ],
 
@@ -358,7 +358,7 @@ curl http://localhost:3005/dispatch
 
 ```bash
 # 测试子域名路由（需要配置 DNS）
-curl https://my-worker.libra.sh/
+curl https://my-worker.zapid.dev/
 
 # 测试自定义域名（需要数据库配置）
 curl https://myapp.example.com/
@@ -415,11 +415,11 @@ dispatchRoute.get('/', async (c) => {
  * 从主机名中提取子域名
  */
 export function extractSubdomain(hostname: string): string | null {
-  if (!hostname.endsWith('.libra.sh')) {
+  if (!hostname.endsWith('.zapid.dev')) {
     return null
   }
 
-  const subdomain = hostname.replace('.libra.sh', '')
+  const subdomain = hostname.replace('.zapid.dev', '')
   return subdomain || null
 }
 
@@ -440,8 +440,8 @@ export function isValidWorkerSubdomain(subdomain: string): ValidationResult {
 
 ```text
 # 标准 Libra 子域名
-https://your-worker.libra.sh/ → Worker "your-worker"
-https://vite-template.libra.sh/about → Worker "vite-template" + /about 路径
+https://your-worker.zapid.dev/ → Worker "your-worker"
+https://vite-template.zapid.dev/about → Worker "vite-template" + /about 路径
 ```
 
 #### 2. 自定义域名路由（新功能）✅
@@ -459,8 +459,8 @@ https://blog.mysite.org/posts → 自定义域名 + 路径转发
 适用于 API 调用和程序化访问：
 
 ```text
-https://libra.sh/dispatch/your-worker/path/to/resource
-https://libra.sh/api/dispatch/your-worker/api/endpoint
+https://zapid.dev/dispatch/your-worker/path/to/resource
+https://zapid.dev/api/dispatch/your-worker/api/endpoint
 ```
 
 #### 4. 查询参数路由✅
@@ -468,8 +468,8 @@ https://libra.sh/api/dispatch/your-worker/api/endpoint
 适用于简单的 Worker 调用：
 
 ```text
-https://libra.sh/dispatch?worker=your-worker
-https://libra.sh/dispatch?worker=my-app&debug=true
+https://zapid.dev/dispatch?worker=your-worker
+https://zapid.dev/dispatch?worker=my-app&debug=true
 ```
 
 ### Worker 名称规则
@@ -660,10 +660,10 @@ ALL /dispatch/:workerName/*
 
 ```bash
 # 转发到 Worker "my-app" 的 /api/users 路径
-curl https://libra.sh/dispatch/my-app/api/users
+curl https://zapid.dev/dispatch/my-app/api/users
 
 # POST 请求转发
-curl -X POST https://libra.sh/dispatch/blog-app/posts \
+curl -X POST https://zapid.dev/dispatch/blog-app/posts \
   -H "Content-Type: application/json" \
   -d '{"title": "Hello World"}'
 ```
@@ -678,10 +678,10 @@ ALL /dispatch?worker=:workerName
 
 ```bash
 # 简单的 Worker 调用
-curl "https://libra.sh/dispatch?worker=my-app"
+curl "https://zapid.dev/dispatch?worker=my-app"
 
 # 带额外查询参数
-curl "https://libra.sh/dispatch?worker=my-app&debug=true&env=staging"
+curl "https://zapid.dev/dispatch?worker=my-app&debug=true&env=staging"
 ```
 
 ### 开发工具
@@ -767,7 +767,7 @@ bun run deploy
 
 ```bash
 # 添加自定义域名路由
-wrangler route add "*.libra.sh/*" libra-dispatcher
+wrangler route add "*.zapid.dev/*" libra-dispatcher
 
 # 查看当前路由
 wrangler route list
@@ -789,8 +789,8 @@ wrangler deploy --name my-react-app --dispatch-namespace libra-dispatcher
 
 访问以下 URL 验证部署：
 
-- `https://vite-shadcn-template.libra.sh/` （需要先部署对应的 Worker）
-- `https://my-react-app.libra.sh/` （需要先部署对应的 Worker）
+- `https://vite-shadcn-template.zapid.dev/` （需要先部署对应的 Worker）
+- `https://my-react-app.zapid.dev/` （需要先部署对应的 Worker）
 - `https://dispatcher.zapid.dev/health` （Dispatcher 健康检查）
 
 ## 故障排除
@@ -801,7 +801,7 @@ wrangler deploy --name my-react-app --dispatch-namespace libra-dispatcher
 
 ```bash
 # 检查 DNS 配置
-dig *.libra.sh
+dig *.zapid.dev
 
 # 检查 Worker 部署状态
 wrangler status

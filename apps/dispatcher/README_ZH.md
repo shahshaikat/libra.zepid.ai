@@ -14,7 +14,7 @@
 
 * 使用 TypeScript 5.x 和 Hono v4.8+ 构建
 
-* 支持 `*.libra.sh`、自定义域名和查询调度的智能路由
+* 支持 `*.zapid.dev`、自定义域名和查询调度的智能路由
 
 * 通过 **@libra/auth**（better-auth）进行企业身份验证
 
@@ -76,10 +76,10 @@ bun dev
 **示例 - 子域名路由（生产环境）：**
 
 ```text
-# DNS 记录：*.libra.sh → libra-dispatcher
+# DNS 记录：*.zapid.dev → libra-dispatcher
 
 # 请求自动路由到 Worker "vite-shadcn-template"
-https://vite-shadcn-template.libra.sh/about
+https://vite-shadcn-template.zapid.dev/about
 ```
 
 ## 必需环境变量
@@ -141,7 +141,7 @@ bun run deploy
 添加生产环境路由（通配符）：
 
 ```bash
-wrangler route add "*.libra.sh/*" libra-dispatcher-prod
+wrangler route add "*.zapid.dev/*" libra-dispatcher-prod
 ```
 
 ## API 和路由参考
@@ -155,7 +155,7 @@ wrangler route add "*.libra.sh/*" libra-dispatcher-prod
 | `GET /health` | ❌ | 健康检查 / 准备就绪探测 |
 
 
-| `*.libra.sh/*`（通配符） | ✅/❌* | 子域名路由；您的应用程序决定 |
+| `*.zapid.dev/*`（通配符） | ✅/❌* | 子域名路由；您的应用程序决定 |
 
 > *通配符请求转发到您的应用程序 Worker，它可以决定自己的身份验证要求。*
 

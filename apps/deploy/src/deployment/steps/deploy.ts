@@ -83,18 +83,18 @@ export async function deployToCloudflare(context: DeploymentContext): Promise<De
   // Parse deployment output to extract worker URL
   let workerUrl = ''
   const deploymentSuccess = !deployOutput.toLowerCase().includes('error') &&
-                           !deployOutput.toLowerCase().includes('failed')
+    !deployOutput.toLowerCase().includes('failed')
 
   if (deploymentSuccess) {
     // Try to extract worker URL from output
     const urlMatch = deployOutput.match(/https:\/\/[^\s]+\.workers\.dev/i) ||
-                     deployOutput.match(/https:\/\/[^\s]+\.libra\.sh/i)
+      deployOutput.match(/https:\/\/[^\s]+\.libra\.sh/i)
 
     if (urlMatch) {
       workerUrl = urlMatch[0]
     } else {
       // Construct expected URL based on worker name
-      workerUrl = `https://${workerName}.libra.sh`
+      workerUrl = `https://${workerName}.zapid.dev`
     }
 
     logger.info('Deployment successful', {
@@ -109,7 +109,7 @@ export async function deployToCloudflare(context: DeploymentContext): Promise<De
   // Verify deployment by checking if worker is accessible
   try {
     logger.info('Verifying deployment accessibility', { workerUrl })
-    
+
     const verifyResponse = await fetch(workerUrl, {
       method: 'GET',
       headers: {

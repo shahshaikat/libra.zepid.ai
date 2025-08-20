@@ -2,16 +2,16 @@
 
 ## Overview
 
-This dispatcher application has implemented a wildcard subdomain routing system. Users can directly access the corresponding Worker through subdomains like `*.libra.sh`.
+This dispatcher application has implemented a wildcard subdomain routing system. Users can directly access the corresponding Worker through subdomains like `*.zapid.dev`.
 
 ## Architecture Process
 
 ```
-User Request: https://vite-shadcn-template.libra.sh/
+User Request: https://vite-shadcn-template.zapid.dev/
 
 ↓
 
-Cloudflare DNS: *.libra.sh → libra-dispatcher Worker
+Cloudflare DNS: *.zapid.dev → libra-dispatcher Worker
 
 ↓
 
@@ -40,8 +40,8 @@ This will automatically apply the routing configuration in `wrangler.jsonc`:
 ```json
 "routes": [
   {
-    "pattern": "*.libra.sh/*",
-    "zone_name": "libra.sh"
+    "pattern": "*.zapid.dev/*",
+    "zone_name": "zapid.dev"
   }
 ]
 ```
@@ -50,7 +50,7 @@ This will automatically apply the routing configuration in `wrangler.jsonc`:
 
 ### 2. Configure DNS
 
-Add the following DNS record in Cloudflare Dashboard for `libra.sh` domain:
+Add the following DNS record in Cloudflare Dashboard for `zapid.dev` domain:
 
 ```
 Type: CNAME
@@ -75,8 +75,8 @@ wrangler deploy --name my-react-app --dispatch-namespace libra-dispatcher
 
 After deployment, you can access:
 
-- `https://vite-shadcn-template.libra.sh/` → Worker "vite-shadcn-template"
-- `https://my-react-app.libra.sh/` → Worker "my-react-app"
+- `https://vite-shadcn-template.zapid.dev/` → Worker "vite-shadcn-template"
+- `https://my-react-app.zapid.dev/` → Worker "my-react-app"
 
 ## Configuration File Description
 
@@ -93,8 +93,8 @@ After deployment, you can access:
   ],
   "routes": [
     {
-      "pattern": "*.libra.sh/*",
-      "zone_name": "libra.sh"
+      "pattern": "*.zapid.dev/*",
+      "zone_name": "zapid.dev"
     }
   ]
 }
@@ -104,7 +104,7 @@ After deployment, you can access:
 
 The current configuration supports subdomain routing for the following domains:
 
-- `*.libra.sh` (production environment)
+- `*.zapid.dev` (production environment)
 - `*.dispatcher.zapid.dev` (testing environment)
 - `*.localhost` (local development)
 

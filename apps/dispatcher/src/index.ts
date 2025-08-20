@@ -36,7 +36,7 @@ type Variables = ContextVariables
 const app = new Hono<{ Bindings: Bindings; Variables: Variables }>()
 
 /**
- * Handle worker forwarding for libra.sh subdomains
+ * Handle worker forwarding for zapid.dev subdomains
  */
 async function handleLibraSubdomainWorker(request: Request, env: Bindings, subdomain: string, requestId: string): Promise<Response> {
   try {
@@ -101,7 +101,7 @@ async function handleLibraSubdomainWorker(request: Request, env: Bindings, subdo
 
 
 
-// Priority 1: Dispatcher's own routes (for libra.sh root domain)
+// Priority 1: Dispatcher's own routes (for zapid.dev root domain)
 // Integrate OpenAPI application routes
 app.route('/', openApiApp)
 
@@ -143,17 +143,17 @@ app.all('*', async (c) => {
   })
 
   try {
-    // 1. Check if it's a libra.sh domain
-    if (hostname === 'libra.sh' || hostname.endsWith('.libra.sh')) {
-      // Check if it's the root domain libra.sh
-      if (hostname === 'libra.sh') {
+    // 1. Check if it's a zapid.dev domain
+    if (hostname === 'zapid.dev' || hostname.endsWith('.zapid.dev')) {
+      // Check if it's the root domain zapid.dev
+      if (hostname === 'zapid.dev') {
         // Root domain request, return dispatcher information
         if (pathname === '/') {
           return c.json({
             service: 'Libra Dispatcher',
             version: '1.0.0',
             status: 'running',
-            domain: 'libra.sh',
+            domain: 'zapid.dev',
             description: 'Cloudflare Workers dispatcher for Libra platform',
             timestamp: new Date().toISOString(),
             requestId
@@ -172,7 +172,7 @@ app.all('*', async (c) => {
       // Handle subdomain routing
       const subdomain = extractSubdomain(hostname)
       if (!subdomain) {
-        log.dispatcher('warn', 'No valid subdomain found for libra.sh domain', {
+        log.dispatcher('warn', 'No valid subdomain found for zapid.dev domain', {
           hostname,
           requestId,
           operation: 'libra_domain_routing'
@@ -180,7 +180,7 @@ app.all('*', async (c) => {
 
         return c.json({
           error: 'Invalid subdomain',
-          message: 'No valid subdomain found for libra.sh domain',
+          message: 'No valid subdomain found for zapid.dev domain',
           hostname,
           requestId
         }, 400)

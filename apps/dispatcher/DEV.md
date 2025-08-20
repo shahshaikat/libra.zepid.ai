@@ -92,7 +92,7 @@ Last Updated: 2025-07-30
 ### 🚀 Routing & Dispatch
 | Feature | Description | Technical Characteristics |
 |---------|-------------|---------------------------|
-| **Wildcard Subdomain Routing** | Supports dynamic subdomain routing in `*.libra.sh` format | Automatic subdomain parsing, Worker name validation, RFC 1123 compatible |
+| **Wildcard Subdomain Routing** | Supports dynamic subdomain routing in `*.zapid.dev` format | Automatic subdomain parsing, Worker name validation, RFC 1123 compatible |
 | **Custom Domain Support** | Complete custom domain handling and database integration | Database queries, domain validation, project association |
 | **Multi-Strategy Routing** | Supports subdomain, path, query parameter routing methods | Flexible routing strategies, intelligent matching |
 | **Smart Forwarding** | Automatic request forwarding and response proxying | Complete HTTP method support, header forwarding |
@@ -201,9 +201,9 @@ apps/dispatcher/                   # Dispatcher service root directory
 #### Routing Flow
 
 ```text
-User Request: https://vite-shadcn-template.libra.sh/
+User Request: https://vite-shadcn-template.zapid.dev/
     ↓
-Cloudflare DNS: *.libra.sh → libra-dispatcher Worker
+Cloudflare DNS: *.zapid.dev → libra-dispatcher Worker
     ↓
 Dispatcher parses subdomain: "vite-shadcn-template"
     ↓
@@ -221,7 +221,7 @@ Return Worker response to user
 ```text
 User Request: https://myapp.example.com/
     ↓
-Dispatcher detects non-libra.sh domain
+Dispatcher detects non-zapid.dev domain
     ↓
 Query database for domain-associated project
     ↓
@@ -363,7 +363,7 @@ bun dev
   "routes": [
     {
       "pattern": "*/*",
-      "zone_name": "libra.sh"
+      "zone_name": "zapid.dev"
     }
   ],
 
@@ -423,7 +423,7 @@ curl http://localhost:3005/dispatch
 
 ```bash
 # Test subdomain routing (requires DNS configuration)
-curl https://my-worker.libra.sh/
+curl https://my-worker.zapid.dev/
 
 # Test custom domain (requires database configuration)
 curl https://myapp.example.com/
@@ -475,11 +475,11 @@ dispatchRoute.get('/', async (c) => {
  * Extract subdomain from hostname
  */
 export function extractSubdomain(hostname: string): string | null {
-  if (!hostname.endsWith('.libra.sh')) {
+  if (!hostname.endsWith('.zapid.dev')) {
     return null
   }
 
-  const subdomain = hostname.replace('.libra.sh', '')
+  const subdomain = hostname.replace('.zapid.dev', '')
   return subdomain || null
 }
 
@@ -499,8 +499,8 @@ This is the recommended routing method, providing the best performance and user 
 
 ```text
 # Standard Libra subdomain
-https://your-worker.libra.sh/ → Worker "your-worker"
-https://vite-template.libra.sh/about → Worker "vite-template" + /about path
+https://your-worker.zapid.dev/ → Worker "your-worker"
+https://vite-template.zapid.dev/about → Worker "vite-template" + /about path
 ```
 
 #### 2. Custom Domain Routing (New Feature) ✅
@@ -518,8 +518,8 @@ https://blog.mysite.org/posts → Custom domain + path forwarding
 Suitable for API calls and programmatic access:
 
 ```text
-https://libra.sh/dispatch/your-worker/path/to/resource
-https://libra.sh/api/dispatch/your-worker/api/endpoint
+https://zapid.dev/dispatch/your-worker/path/to/resource
+https://zapid.dev/api/dispatch/your-worker/api/endpoint
 ```
 
 #### 4. Query Parameter Routing ✅
@@ -527,8 +527,8 @@ https://libra.sh/api/dispatch/your-worker/api/endpoint
 Suitable for simple Worker calls:
 
 ```text
-https://libra.sh/dispatch?worker=your-worker
-https://libra.sh/dispatch?worker=my-app&debug=true
+https://zapid.dev/dispatch?worker=your-worker
+https://zapid.dev/dispatch?worker=my-app&debug=true
 ```
 
 ### Worker Name Rules
@@ -713,10 +713,10 @@ ALL /dispatch/:workerName/*
 
 ```bash
 # Forward to Worker "my-app" /api/users path
-curl https://libra.sh/dispatch/my-app/api/users
+curl https://zapid.dev/dispatch/my-app/api/users
 
 # POST request forwarding
-curl -X POST https://libra.sh/dispatch/blog-app/posts \
+curl -X POST https://zapid.dev/dispatch/blog-app/posts \
   -H "Content-Type: application/json" \
   -d '{"title": "Hello World"}'
 ```
@@ -731,10 +731,10 @@ ALL /dispatch?worker=:workerName
 
 ```bash
 # Simple Worker call
-curl "https://libra.sh/dispatch?worker=my-app"
+curl "https://zapid.dev/dispatch?worker=my-app"
 
 # With additional query parameters
-curl "https://libra.sh/dispatch?worker=my-app&debug=true&env=staging"
+curl "https://zapid.dev/dispatch?worker=my-app&debug=true&env=staging"
 ```
 
 ### Developer Tools
@@ -820,7 +820,7 @@ bun run deploy
 
 ```bash
 # Add custom domain routes
-wrangler route add "*.libra.sh/*" libra-dispatcher
+wrangler route add "*.zapid.dev/*" libra-dispatcher
 
 # View current routes
 wrangler route list
@@ -842,8 +842,8 @@ wrangler deploy --name my-react-app --dispatch-namespace libra-dispatcher
 
 Visit the following URLs to verify deployment:
 
-- `https://vite-shadcn-template.libra.sh/` (requires corresponding Worker deployment)
-- `https://my-react-app.libra.sh/` (requires corresponding Worker deployment)
+- `https://vite-shadcn-template.zapid.dev/` (requires corresponding Worker deployment)
+- `https://my-react-app.zapid.dev/` (requires corresponding Worker deployment)
 - `https://dispatcher.zapid.dev/health` (Dispatcher health check)
 
 ## Troubleshooting
@@ -854,7 +854,7 @@ Visit the following URLs to verify deployment:
 
 ```bash
 # Check DNS configuration
-dig *.libra.sh
+dig *.zapid.dev
 
 # Check Worker deployment status
 wrangler status

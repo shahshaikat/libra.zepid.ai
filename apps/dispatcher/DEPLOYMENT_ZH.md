@@ -2,14 +2,14 @@
 
 ## 概述
 
-本 dispatcher 应用已实现了通配符子域名路由系统。用户可以通过 `*.libra.sh` 的子域名直接访问对应的 Worker。
+本 dispatcher 应用已实现了通配符子域名路由系统。用户可以通过 `*.zapid.dev` 的子域名直接访问对应的 Worker。
 
 ## 架构流程
 
 ```
-用户请求: https://vite-shadcn-template.libra.sh/
+用户请求: https://vite-shadcn-template.zapid.dev/
     ↓
-Cloudflare DNS: *.libra.sh → libra-dispatcher Worker
+Cloudflare DNS: *.zapid.dev → libra-dispatcher Worker
     ↓
 Dispatcher 解析子域名: "vite-shadcn-template"
     ↓
@@ -31,8 +31,8 @@ wrangler deploy
 ```json
 "routes": [
   {
-    "pattern": "*.libra.sh/*",
-    "zone_name": "libra.sh"
+    "pattern": "*.zapid.dev/*",
+    "zone_name": "zapid.dev"
   }
 ]
 ```
@@ -41,7 +41,7 @@ wrangler deploy
 
 ### 2. 配置 DNS
 
-在 Cloudflare Dashboard 中为 `libra.sh` 域名添加：
+在 Cloudflare Dashboard 中为 `zapid.dev` 域名添加：
 
 ```
 类型: CNAME
@@ -66,8 +66,8 @@ wrangler deploy --name my-react-app --dispatch-namespace libra-dispatcher
 
 部署完成后，可以通过以下 URL 访问：
 
-- `https://vite-shadcn-template.libra.sh/` → Worker "vite-shadcn-template"
-- `https://my-react-app.libra.sh/` → Worker "my-react-app"
+- `https://vite-shadcn-template.zapid.dev/` → Worker "vite-shadcn-template"
+- `https://my-react-app.zapid.dev/` → Worker "my-react-app"
 
 ## 配置文件说明
 
@@ -84,8 +84,8 @@ wrangler deploy --name my-react-app --dispatch-namespace libra-dispatcher
   ],
   "routes": [
     {
-      "pattern": "*.libra.sh/*",
-      "zone_name": "libra.sh"
+      "pattern": "*.zapid.dev/*",
+      "zone_name": "zapid.dev"
     }
   ]
 }
@@ -94,7 +94,7 @@ wrangler deploy --name my-react-app --dispatch-namespace libra-dispatcher
 ### 支持的域名
 
 当前配置支持以下域名的子域名路由：
-- `*.libra.sh` (生产环境)
+- `*.zapid.dev` (生产环境)
 - `*.dispatcher.zapid.dev` (测试环境)
 - `*.localhost` (本地开发)
 

@@ -45,7 +45,7 @@ export function DeploymentConfirmation({
 
   // Generate expected deployment URL based on projectId
   const generateExpectedUrl = (projectId: string): string => {
-    return `https://${projectId}-worker.libra.sh`
+    return `https://${projectId}-worker.zapid.dev`
   }
 
   const expectedUrl = generateExpectedUrl(projectId)

@@ -205,7 +205,7 @@ DAYTONA_API_KEY="your_daytona_api_key"
 SANDBOX_BUILDER_DEFAULT_PROVIDER="daytona"
 
 # 应用配置
-NEXT_PUBLIC_DISPATCHER_URL="https://libra.sh"
+NEXT_PUBLIC_DISPATCHER_URL="https://zapid.dev"
 
 # 队列配置
 SCREENSHOT_QUEUE_NAME="screenshot-queue"

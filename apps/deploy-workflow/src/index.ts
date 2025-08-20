@@ -19,7 +19,7 @@
  */
 
 import { WorkflowEntrypoint, WorkflowStep, type WorkflowEvent } from 'cloudflare:workers';
-import {buildFiles as buildFilesWithHistory, getCdnStaticAssetUrl, type HistoryType} from '@libra/common';
+import { buildFiles as buildFilesWithHistory, getCdnStaticAssetUrl, type HistoryType } from '@libra/common';
 import { templateConfigs } from '@libra/templates';
 
 import { project, getDbForWorkflow, hasPremiumMembership } from '@libra/db';
@@ -36,13 +36,13 @@ import {
     createDeploymentSandbox,
     terminateDeploymentSandbox,
 } from './utils/deployment';
-import {getDynamicDeploymentTemplate} from '@libra/sandbox';
-import {isExcludedFile} from "./utils/common";
+import { getDynamicDeploymentTemplate } from '@libra/sandbox';
+import { isExcludedFile } from "./utils/common";
 
 /**
  * Parse message history from JSON string
  */
-function parseMessageHistory(messageHistory: string | null){
+function parseMessageHistory(messageHistory: string | null) {
     return JSON.parse(messageHistory || '[]') as HistoryType
 }
 
@@ -274,7 +274,7 @@ export class DeploymentWorkflow extends WorkflowEntrypoint<Bindings, DeploymentP
 
             // Use NEXT_PUBLIC_DISPATCHER_URL environment variable instead of hardcoded domain
             const rawDispatcherUrl = env.NEXT_PUBLIC_DISPATCHER_URL;
-            const dispatcherUrl = rawDispatcherUrl || 'https://libra.sh';
+            const dispatcherUrl = rawDispatcherUrl || 'https://zapid.dev';
 
             logStep('Deploy', `Environment NEXT_PUBLIC_DISPATCHER_URL: ${rawDispatcherUrl}`);
             logStep('Deploy', `Using dispatcher URL: ${dispatcherUrl}`);
@@ -293,8 +293,8 @@ export class DeploymentWorkflow extends WorkflowEntrypoint<Bindings, DeploymentP
                 logStep('Deploy', `Extracted dispatcher domain: ${dispatcherDomain}`);
             } catch (urlError) {
                 logStep('Deploy', `Invalid dispatcher URL: "${dispatcherUrl}", error: ${urlError}`);
-                // Fallback to libra.sh if URL parsing fails
-                dispatcherDomain = 'libra.sh';
+                // Fallback to zapid.dev if URL parsing fails
+                dispatcherDomain = 'zapid.dev';
                 logStep('Deploy', `Using fallback domain: ${dispatcherDomain}`);
             }
 

@@ -180,7 +180,7 @@ export async function createCustomHostname(
       hostname: domain,
       // Use custom origin server from environment variable if provided, otherwise fall back to default
       custom_origin_server:
-        env.CUSTOMERS_ORIGIN_SERVER || 'customers.libra.sh',
+        env.CUSTOMERS_ORIGIN_SERVER || 'customers.zapid.dev',
       ssl: {
         method: 'txt',
         type: 'dv',
@@ -368,7 +368,7 @@ export async function configureDomainDNS(
     const recordData = {
       type: 'CNAME',
       name: domain,
-      content: 'libra-dispatcher.libra.sh',
+      content: 'libra-dispatcher.zapid.dev',
       ttl: 1, // Auto TTL
       proxied: true, // Enable Cloudflare proxy
     }
@@ -514,7 +514,7 @@ export function validateDomainFormat(domain: string): {
   // Check for reserved domains
   const reservedDomains = [
     'localhost',
-    'libra.sh',
+    'zapid.dev',
     'zepid.dev',
     'workers.dev',
   ]

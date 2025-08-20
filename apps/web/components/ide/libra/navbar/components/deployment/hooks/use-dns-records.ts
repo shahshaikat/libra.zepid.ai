@@ -61,9 +61,9 @@ export function useDnsRecords(customDomainStatus?: CustomDomainStatus): DNSRecor
     if (!customDomainStatus) return []
 
     const records: DNSRecord[] = []
-    
+
     // Unified customer gateway domain, can be overridden by environment variable
-    const customerOrigin = process.env.NEXT_PUBLIC_CUSTOMERS_ORIGIN_SERVER || 'customers.libra.sh'
+    const customerOrigin = process.env.NEXT_PUBLIC_CUSTOMERS_ORIGIN_SERVER || 'customers.zapid.dev'
 
     // Phase 1: TXT record for ownership verification
     if (
@@ -82,7 +82,7 @@ export function useDnsRecords(customDomainStatus?: CustomDomainStatus): DNSRecor
     // Phase 2: SSL certificate and domain resolution records after hostname verification
     if (
       (customDomainStatus.status === 'verified' ||
-       (customDomainStatus.status === 'active' && customDomainStatus.sslStatus === 'pending_validation')) &&
+        (customDomainStatus.status === 'active' && customDomainStatus.sslStatus === 'pending_validation')) &&
       customDomainStatus.customDomain
     ) {
       const domain = customDomainStatus.customDomain
@@ -90,7 +90,7 @@ export function useDnsRecords(customDomainStatus?: CustomDomainStatus): DNSRecor
 
       // DCV delegation record for SSL certificate verification
       const dcvId = process.env.NEXT_PUBLIC_CLOUDFLARE_DCV_VERIFICATION_ID
-      const needsSSLVerification = 
+      const needsSSLVerification =
         customDomainStatus.sslStatus === 'pending_validation' ||
         customDomainStatus.sslStatus === 'pending'
 

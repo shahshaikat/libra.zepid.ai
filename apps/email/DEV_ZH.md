@@ -138,8 +138,8 @@ const WelcomeEmailPreview = () => (
   <WelcomeTemplate 
     userName="张三"
     userEmail="zhangsan@example.com"
-    loginUrl="https://libra.sh/auth/sign-in"
-    dashboardUrl="https://libra.sh/dashboard"
+    loginUrl="https://zapid.dev/auth/sign-in"
+    dashboardUrl="https://zapid.dev/dashboard"
   />
 )
 
@@ -160,7 +160,7 @@ const OrganizationInvitationPreview = () => (
     inviterName="李四"
     organizationName="示例科技公司"
     inviteeEmail="invited@example.com"
-    acceptUrl="https://libra.sh/accept-invitation?token=abc123"
+    acceptUrl="https://zapid.dev/accept-invitation?token=abc123"
     role="developer"
   />
 )

@@ -38,7 +38,7 @@ export interface DomainConfig {
  * Main domain configuration
  */
 export const DOMAIN_CONFIG: DomainConfig = {
-  supportedDomains: ['libra.sh', 'dispatcher.zapid.dev', 'localhost'],
+  supportedDomains: ['zapid.dev', 'dispatcher.zapid.dev', 'localhost'],
   reservedSubdomains: [
     'dispatcher',
     'api',
@@ -53,7 +53,7 @@ export const DOMAIN_CONFIG: DomainConfig = {
     'static',
   ],
   developmentDomain: 'localhost',
-  productionDomains: ['libra.sh', 'dispatcher.zapid.dev'],
+  productionDomains: ['zapid.dev', 'dispatcher.zapid.dev'],
 }
 
 /**
@@ -67,16 +67,16 @@ export function isSupportedDomain(_hostname: string): boolean {
 
 /**
  * Extract subdomain from hostname
- * For libra.sh domains, only extract subdomain if it's actually a subdomain (not the root domain)
+ * For zapid.dev domains, only extract subdomain if it's actually a subdomain (not the root domain)
  * For other domains, extract the first part before the first dot
  */
 export function extractSubdomain(hostname: string): string | null {
   // Split hostname by dots
   const parts = hostname.split('.')
 
-  // For libra.sh domains (including root domain), we need at least 3 parts to have a subdomain
-  // e.g., worker.libra.sh has 3 parts, libra.sh has 2 parts
-  if (hostname === 'libra.sh' || hostname.endsWith('.libra.sh')) {
+  // For zapid.dev domains (including root domain), we need at least 3 parts to have a subdomain
+  // e.g., worker.zapid.dev has 3 parts, zapid.dev has 2 parts
+  if (hostname === 'zapid.dev' || hostname.endsWith('.zapid.dev')) {
     if (parts.length >= 3) {
       const subdomain = parts[0]
       // Ensure it's a valid subdomain (not empty)

@@ -11,7 +11,7 @@
 
 * Edge-first serverless architecture on Cloudflare Workers
 * Built with TypeScript 5.x and Hono v4.8+
-* Smart routing for `*.libra.sh`, custom domains and query dispatch
+* Smart routing for `*.zapid.dev`, custom domains and query dispatch
 * Enterprise authentication via **@libra/auth** (better-auth)
 * Structured logging, health checks and quota-aware rate limiting
 
@@ -63,9 +63,9 @@ Key URLs:
 **Example – Sub-domain Routing (production):**
 
 ```text
-# DNS record: *.libra.sh → libra-dispatcher
+# DNS record: *.zapid.dev → libra-dispatcher
 # Request automatically routed to Worker "vite-shadcn-template"
-https://vite-shadcn-template.libra.sh/about
+https://vite-shadcn-template.zapid.dev/about
 ```
 
 ## Required Environment Variables
@@ -108,7 +108,7 @@ bun run deploy
 Add production routes (wildcard):
 
 ```bash
-wrangler route add "*.libra.sh/*" libra-dispatcher-prod
+wrangler route add "*.zapid.dev/*" libra-dispatcher-prod
 ```
 
 ## API & Routing Reference
@@ -120,7 +120,7 @@ wrangler route add "*.libra.sh/*" libra-dispatcher-prod
 | `GET /health` | ❌ | Health / readiness probe |
 | `ALL /dispatch/:worker/*` | ✅ | Path-based routing to target Worker |
 | `ALL /dispatch?worker=` | ✅ | Query-based routing |
-| `*.libra.sh/*` (wildcard) | ✅/❌* | Sub-domain routing; your app decides |
+| `*.zapid.dev/*` (wildcard) | ✅/❌* | Sub-domain routing; your app decides |
 
 > *Wildcard requests are forwarded to your application Worker, which can decide its own auth requirements.*
 

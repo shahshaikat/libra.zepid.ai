@@ -56,7 +56,7 @@ export const organizationInvitationTestData = {
   invitedByUsername: "张三",
   invitedByEmail: "zhangsan@example.com",
   teamName: "示例科技团队",
-  inviteLink: "https://libra.sh/accept-invitation?token=abc123def456"
+  inviteLink: "https://zapid.dev/accept-invitation?token=abc123def456"
 };
 
 // Contact form email test data

@@ -1511,7 +1511,7 @@
         "addDnsRecordsApex": "For apex domains, add the following A records. If your DNS provider supports CNAME flattening, you can also use CNAME records:",
         "addDnsRecordsSubdomain": "For subdomains, add the following CNAME records:",
         "cnameFlattening": "CNAME Flattening Alternative",
-        "cnameAlternative": "If your DNS provider supports CNAME flattening, you can also create a CNAME record pointing to customers.libra.sh",
+        "cnameAlternative": "If your DNS provider supports CNAME flattening, you can also create a CNAME record pointing to customers.zapid.dev",
         "verificationFailed": "Verification failed. DNS changes may take up to 48 hours to take effect.",
         "ownershipVerified": "Domain ownership verified. Please configure the CNAME records above to complete setup.",
         "dnsHint": "DNS changes may take up to 48 hours to take effect. Click verify to check status.",

@@ -20,7 +20,7 @@ declare namespace Cloudflare {
         E2B_API_KEY: "e2b_placeholder";
         DAYTONA_API_KEY: "dtn_placeholder";
         SANDBOX_BUILDER_DEFAULT_PROVIDER: "daytona";
-        NEXT_PUBLIC_DISPATCHER_URL: "https://libra.sh";
+        NEXT_PUBLIC_DISPATCHER_URL: "https://zapid.dev";
         DISPATCH_NAMESPACE_NAME: "zepid-dispatcher";
         DEPLOYMENT_QUEUE_NAME: "deployment-queue";
         DEPLOYMENT_DLQ_NAME: "deployment-dlq";

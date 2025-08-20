@@ -27,19 +27,19 @@
   "routes": [
     {
       "pattern": "*/*",
-      "zone_name": "libra.sh"
+      "zone_name": "zapid.dev"
     }
   ],
 
   // Deployment Configuration Instructions:
-  // 1. ✅ Routing Configuration: Configured *.libra.sh/* (including zone_name) in the routes above.
-  // 2. 📋 DNS Configuration: *.libra.sh CNAME libra-dispatcher.<account>.workers.dev (Orange Cloud enabled)
+  // 1. ✅ Routing Configuration: Configured *.zapid.dev/* (including zone_name) in the routes above.
+  // 2. 📋 DNS Configuration: *.zapid.dev CNAME libra-dispatcher.<account>.workers.dev (Orange Cloud enabled)
   // 3. 🗄️ Database Configuration:
   //    - Create Hyperdrive configuration: `wrangler hyperdrive create <name> --connection-string="<postgres-url>"`
   //    - Update hyperdrive_bindings[0].id with the returned Hyperdrive ID
   //    - Update POSTGRES_URL with actual database connection string
   // 4. 🚀 User Worker Deployment: wrangler deploy --name <subdomain> --dispatch-namespace libra-dispatcher
-  // 5. 🎯 Example: vite-shadcn-template.libra.sh → Worker name "vite-shadcn-template"
+  // 5. 🎯 Example: vite-shadcn-template.zapid.dev → Worker name "vite-shadcn-template"
   // 6. 📝 Note: Use zone_name instead of zone_id to avoid hardcoding sensitive information
 
   "observability": {

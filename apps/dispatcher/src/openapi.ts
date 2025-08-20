@@ -104,7 +104,7 @@ openApiApp.doc('/openapi.json', {
       description: 'Production server',
     },
     {
-      url: 'https://libra.sh',
+      url: 'https://zapid.dev',
       description: 'Production dispatcher (subdomain routing)',
     },
     {

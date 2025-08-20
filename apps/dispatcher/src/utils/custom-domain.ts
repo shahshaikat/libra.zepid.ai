@@ -36,13 +36,13 @@ export interface CustomDomainResult {
 }
 
 /**
- * Check if a hostname is a custom domain (not libra.sh)
+ * Check if a hostname is a custom domain (not zapid.dev)
  * @param hostname The hostname to check
- * @returns True if it's a custom domain, false if it's libra.sh
+ * @returns True if it's a custom domain, false if it's zapid.dev
  */
 export function isCustomDomain(hostname: string): boolean {
-  // Check if hostname ends with libra.sh
-  const isCustom = !hostname.endsWith('libra.sh')
+  // Check if hostname ends with zapid.dev
+  const isCustom = !hostname.endsWith('zapid.dev')
   return isCustom
 }
 
@@ -69,72 +69,72 @@ export async function handleCustomDomainRequest(
       // Query PostgreSQL database using unified function
       return await getProjectByCustomDomain(db, hostname)
     })
-  
-  if (dbError || !dbResult) {
-    return {
-      success: false,
-      error: dbError instanceof Error ? dbError.message : 'Database operation failed',
-      response: c.json({
-        error: 'Database error',
-        message: 'Failed to query custom domain',
-        domain: hostname,
-        requestId
-      }, 500)
-    }
-  }
 
-  if (!dbResult.success || !dbResult.project) {
-    return {
-      success: false,
-      error: dbResult.error || 'Custom domain not found or not verified',
-      response: c.json({
-        error: 'Custom domain not found',
-        message: `The domain '${hostname}' is not configured or not verified`,
-        domain: hostname,
-        requestId
-      }, 404)
+    if (dbError || !dbResult) {
+      return {
+        success: false,
+        error: dbError instanceof Error ? dbError.message : 'Database operation failed',
+        response: c.json({
+          error: 'Database error',
+          message: 'Failed to query custom domain',
+          domain: hostname,
+          requestId
+        }, 500)
+      }
     }
-  }
 
-  const project = dbResult.project
-
-  // Validate project configuration using @libra/db function
-  const validation = validateCustomDomainProject(project)
-  if (!validation.valid) {
-    return {
-      success: false,
-      error: validation.error || 'Domain validation failed',
-      response: c.json({
-        error: 'Custom domain configuration invalid',
-        message: validation.error,
-        domain: hostname,
-        requestId
-      }, 403)
+    if (!dbResult.success || !dbResult.project) {
+      return {
+        success: false,
+        error: dbResult.error || 'Custom domain not found or not verified',
+        response: c.json({
+          error: 'Custom domain not found',
+          message: `The domain '${hostname}' is not configured or not verified`,
+          domain: hostname,
+          requestId
+        }, 404)
+      }
     }
-  }
+
+    const project = dbResult.project
+
+    // Validate project configuration using @libra/db function
+    const validation = validateCustomDomainProject(project)
+    if (!validation.valid) {
+      return {
+        success: false,
+        error: validation.error || 'Domain validation failed',
+        response: c.json({
+          error: 'Custom domain configuration invalid',
+          message: validation.error,
+          domain: hostname,
+          requestId
+        }, 403)
+      }
+    }
 
 
-  // Forward request to production deploy URL
-  const [forwardResult, forwardError] = await tryCatch(async () => {
-    if (!project.productionDeployUrl) {
-      throw new Error('Production deploy URL is not configured')
+    // Forward request to production deploy URL
+    const [forwardResult, forwardError] = await tryCatch(async () => {
+      if (!project.productionDeployUrl) {
+        throw new Error('Production deploy URL is not configured')
+      }
+      return await forwardRequestToProductionUrl(c, project.productionDeployUrl, requestId)
+    })
+
+    if (forwardError || !forwardResult) {
+      return {
+        success: false,
+        error: forwardError instanceof Error ? forwardError.message : 'Request forwarding failed',
+        response: c.json({
+          error: 'Service temporarily unavailable',
+          message: 'Failed to forward request to application',
+          domain: hostname,
+          requestId
+        }, 502)
+      }
     }
-    return await forwardRequestToProductionUrl(c, project.productionDeployUrl, requestId)
-  })
-  
-  if (forwardError || !forwardResult) {
-    return {
-      success: false,
-      error: forwardError instanceof Error ? forwardError.message : 'Request forwarding failed',
-      response: c.json({
-        error: 'Service temporarily unavailable',
-        message: 'Failed to forward request to application',
-        domain: hostname,
-        requestId
-      }, 502)
-    }
-  }
-  
+
     return {
       success: true,
       response: forwardResult,
@@ -160,36 +160,36 @@ async function forwardRequestToProductionUrl(
 ): Promise<Response> {
   // Parse the original request URL
   const originalUrl = new URL(c.req.url)
-  
+
   // Parse the production URL
   const targetUrl = new URL(productionUrl)
-  
+
   // Construct the target URL with original path and query parameters
   const forwardUrl = new URL(originalUrl.pathname + originalUrl.search, targetUrl.origin)
-  
-  
+
+
   // Get request body for non-GET/HEAD requests
   const hasBody = c.req.method !== 'GET' && c.req.method !== 'HEAD'
   const requestBody = hasBody ? c.req.raw.body : null
-  
+
   // Create new request with the same method, headers, and body
   const forwardRequest = new Request(forwardUrl.href, {
     method: c.req.method,
     headers: c.req.header(),
     body: requestBody,
   })
-  
+
   // Add custom headers for debugging and tracking
   forwardRequest.headers.set('X-Forwarded-Host', originalUrl.hostname)
   forwardRequest.headers.set('X-Forwarded-Proto', originalUrl.protocol.slice(0, -1))
   forwardRequest.headers.set('X-Request-ID', requestId)
   forwardRequest.headers.set('X-Custom-Domain', 'true')
-  
+
   // Forward the request
   const response = await fetch(forwardRequest)
-  
+
   // Log the response status
-  
+
   return response
 }
 

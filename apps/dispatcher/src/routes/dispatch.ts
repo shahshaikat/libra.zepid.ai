@@ -61,11 +61,11 @@ dispatchRoute.get('/', async (c) => {
 
     return c.json({
       message: 'Libra Dispatcher API - Solution A (Wildcard Subdomain Routing)',
-      description: 'Use subdomain routing for optimal performance: https://your-worker.libra.sh/',
+      description: 'Use subdomain routing for optimal performance: https://your-worker.zapid.dev/',
       namespace: namespaceInfo,
       routing: {
         primary: 'Subdomain-based routing (recommended)',
-        example: 'https://vite-shadcn-template.libra.sh/',
+        example: 'https://vite-shadcn-template.zapid.dev/',
         fallback: 'Path-based routing for API access',
         apiExample: '/api/dispatch/vite-shadcn-template/'
       },
@@ -98,7 +98,7 @@ dispatchRoute.all('/', async (c) => {
   const requestId = c.get('requestId') || crypto.randomUUID()
   const url = new URL(c.req.url)
   const workerName = url.searchParams.get('worker')
-  
+
   log.dispatcher('info', 'Query-based dispatch request received', {
     requestId,
     operation: 'dispatch_query',
@@ -106,7 +106,7 @@ dispatchRoute.all('/', async (c) => {
     url: c.req.url,
     hasWorkerParam: !!workerName
   })
-  
+
   if (!workerName) {
     log.dispatcher('warn', 'Missing worker parameter in query dispatch', {
       requestId,
@@ -123,9 +123,9 @@ dispatchRoute.all('/', async (c) => {
       requestId
     }, 400)
   }
-  
+
   const [result, error] = await tryCatch(async () => {
-    
+
     // Validate the dispatch request
     const validation = validateDispatchRequest(c, workerName)
     if (!validation.valid) {
@@ -144,13 +144,13 @@ dispatchRoute.all('/', async (c) => {
         requestId
       }, 400)
     }
-    
+
     // Parse route information
     const routeInfo = parseRouteInfo(c)
-    
+
     // Create modified request for the worker
     const workerRequest = createWorkerRequest(c.req.raw, routeInfo)
-    
+
     log.dispatcher('info', 'Initiating query-based worker dispatch', {
       workerName,
       requestId,
@@ -158,14 +158,14 @@ dispatchRoute.all('/', async (c) => {
       routingStrategy: routeInfo.strategy,
       targetPath: routeInfo.targetPath
     })
-    
+
     // Dispatch to worker
     const result = await dispatchToWorker({
       workerName,
       request: workerRequest,
       context: c
     })
-    
+
     if (!result.success) {
       if (result.error?.includes('not found')) {
         log.dispatcher('error', 'Worker not found during query dispatch', {
@@ -182,7 +182,7 @@ dispatchRoute.all('/', async (c) => {
           requestId
         }, 404)
       }
-      
+
       log.dispatcher('error', 'Query-based worker dispatch failed', {
         workerName,
         requestId,
@@ -197,7 +197,7 @@ dispatchRoute.all('/', async (c) => {
         requestId
       }, 500)
     }
-    
+
     // Return the worker's response
     if (result.response) {
       log.dispatcher('info', 'Query-based worker dispatch completed successfully', {
@@ -221,7 +221,7 @@ dispatchRoute.all('/', async (c) => {
       worker: workerName,
       requestId
     }, 500)
-    
+
   })
 
   if (error) {
@@ -230,7 +230,7 @@ dispatchRoute.all('/', async (c) => {
       requestId,
       operation: 'dispatch_query'
     }, error instanceof Error ? error : new Error(String(error)))
-    
+
     return c.json({
       error: 'Internal server error',
       message: error instanceof Error ? error.message : 'Unknown error',

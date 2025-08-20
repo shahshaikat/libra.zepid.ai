@@ -257,7 +257,7 @@ DAYTONA_API_KEY="your_daytona_api_key"
 SANDBOX_BUILDER_DEFAULT_PROVIDER="daytona"
 
 # Application configuration
-NEXT_PUBLIC_DISPATCHER_URL="https://libra.sh"
+NEXT_PUBLIC_DISPATCHER_URL="https://zapid.dev"
 
 # Queue configuration
 SCREENSHOT_QUEUE_NAME="screenshot-queue"
