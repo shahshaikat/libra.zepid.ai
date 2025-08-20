@@ -84,7 +84,7 @@
   "kv_namespaces": [
     {
       "binding": "KV",
-      "id": "0251e67dd0194dbab2d78c47e6d2cce9"
+      "id": "{{KV_NAMESPACE_ID}}"
     },
     {
       "binding": "CACHE",
