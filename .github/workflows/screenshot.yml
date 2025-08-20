@@ -229,6 +229,12 @@ jobs:
           DEPLOY_VERSION: ${{ steps.version.outputs.version }}
         run: |
           cd apps/screenshot
+
+          # Ensure NEXT_PUBLIC_DISPATCHER_URL is set
+          if [ -z "${NEXT_PUBLIC_DISPATCHER_URL}" ]; then
+            echo "Error: NEXT_PUBLIC_DISPATCHER_URL secret is not set!"
+            exit 1
+          fi
           # Generate wrangler.jsonc using simple config processor (no sed/perl needed)
           bun ../../scripts/config-processor.ts wrangler.jsonc.example wrangler.jsonc
           bun run cf-typegen
