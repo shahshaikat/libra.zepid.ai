@@ -177,6 +177,13 @@ jobs:
         if: steps.bun-cache.outputs.cache-hit != 'true'
         run: bun install --frozen-lockfile
 
+      - name: Ensure screenshot queues exists
+        run: |
+          npm install -g wrangler
+          # Try to create the queue, ignore error if it already exists
+          # wrangler queues create deployment-queue || echo "deployment-queue queue already exists"
+          # wrangler queues create deployment-dlq || echo "deployment-dlq queue already exists"
+
       - name: Generate version
         id: version
         run: |

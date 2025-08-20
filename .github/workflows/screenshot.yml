@@ -245,15 +245,12 @@ jobs:
         env:
           NODE_ENV: production
 
-      - name: Setup Wrangler
-        run: |
-          npm install -g wrangler
-
       - name: Ensure screenshot queues exists
         run: |
+          # npm install -g wrangler
           # Try to create the queue, ignore error if it already exists
-          wrangler queues create screenshot-queue || echo "screenshot-queue queue already exists"
-          wrangler queues create screenshot-dlq || echo "screenshot-dlq queue already exists"
+          # wrangler queues create screenshot-queue || echo "screenshot-queue queue already exists"
+          # wrangler queues create screenshot-dlq || echo "screenshot-dlq queue already exists"
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
