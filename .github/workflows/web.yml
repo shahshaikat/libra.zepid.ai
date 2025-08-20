@@ -119,7 +119,7 @@ jobs:
           echo "Setting up environment variables..."
 
           # Suppress Wrangler verbose logging to prevent secret exposure
-          export WRANGLER_LOG=error
+          export WRANGLER_LOG=debug
 
           # Public URLs (safe to show)
           export NEXT_PUBLIC_APP_URL="${{ secrets.NEXT_PUBLIC_APP_URL }}"
