@@ -791,7 +791,7 @@ wrangler deploy --name my-react-app --dispatch-namespace libra-dispatcher
 
 - `https://vite-shadcn-template.libra.sh/` （需要先部署对应的 Worker）
 - `https://my-react-app.libra.sh/` （需要先部署对应的 Worker）
-- `https://dispatcher.zepid.dev/health` （Dispatcher 健康检查）
+- `https://dispatcher.zapid.dev/health` （Dispatcher 健康检查）
 
 ## 故障排除
 

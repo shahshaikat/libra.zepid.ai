@@ -315,7 +315,7 @@ jobs:
           bun run deploy
 
           # Set deployment URL for GitHub deployment record
-          echo "deployment-url=https://dispatcher.zepid.dev" >> $GITHUB_OUTPUT
+          echo "deployment-url=https://dispatcher.zapid.dev" >> $GITHUB_OUTPUT
         continue-on-error: false
 
       - name: Verify deployment

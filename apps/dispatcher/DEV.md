@@ -844,7 +844,7 @@ Visit the following URLs to verify deployment:
 
 - `https://vite-shadcn-template.libra.sh/` (requires corresponding Worker deployment)
 - `https://my-react-app.libra.sh/` (requires corresponding Worker deployment)
-- `https://dispatcher.zepid.dev/health` (Dispatcher health check)
+- `https://dispatcher.zapid.dev/health` (Dispatcher health check)
 
 ## Troubleshooting
 

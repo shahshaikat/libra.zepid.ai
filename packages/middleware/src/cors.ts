@@ -73,7 +73,7 @@ function getEnvironmentOrigins(environment: string): string[] {
     'https://docs.zepid.dev',
     'https://auth.zepid.dev',
     'https://api.zepid.dev',
-    'https://dispatcher.zepid.dev',
+    'https://dispatcher.zapid.dev',
     'https://builder.zepid.dev',
     'https://email.zepid.dev',
     'https://web.zepid.dev',

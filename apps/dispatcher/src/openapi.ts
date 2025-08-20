@@ -100,7 +100,7 @@ openApiApp.doc('/openapi.json', {
   },
   servers: [
     {
-      url: 'https://dispatcher.zepid.dev',
+      url: 'https://dispatcher.zapid.dev',
       description: 'Production server',
     },
     {

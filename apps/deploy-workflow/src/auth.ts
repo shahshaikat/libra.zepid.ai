@@ -75,7 +75,7 @@ async function authBuilder(c: any) {
                 'https://zepid.dev',
                 'https://cdn.zepid.dev',
                 'https://deploy.zepid.dev',
-                'https://dispatcher.zepid.dev',
+                'https://dispatcher.zapid.dev',
                 'https://auth.zepid.dev',
                 'https://api.zepid.dev',
                 'https://docs.zepid.dev',

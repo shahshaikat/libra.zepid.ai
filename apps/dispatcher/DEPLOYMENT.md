@@ -105,7 +105,7 @@ After deployment, you can access:
 The current configuration supports subdomain routing for the following domains:
 
 - `*.libra.sh` (production environment)
-- `*.dispatcher.zepid.dev` (testing environment)
+- `*.dispatcher.zapid.dev` (testing environment)
 - `*.localhost` (local development)
 
 ## Reserved Subdomains

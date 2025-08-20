@@ -38,7 +38,7 @@ export interface DomainConfig {
  * Main domain configuration
  */
 export const DOMAIN_CONFIG: DomainConfig = {
-  supportedDomains: ['libra.sh', 'dispatcher.zepid.dev', 'localhost'],
+  supportedDomains: ['libra.sh', 'dispatcher.zapid.dev', 'localhost'],
   reservedSubdomains: [
     'dispatcher',
     'api',
@@ -53,7 +53,7 @@ export const DOMAIN_CONFIG: DomainConfig = {
     'static',
   ],
   developmentDomain: 'localhost',
-  productionDomains: ['libra.sh', 'dispatcher.zepid.dev'],
+  productionDomains: ['libra.sh', 'dispatcher.zapid.dev'],
 }
 
 /**
