@@ -1,4 +1,4 @@
-name: "Libra Screenshot Service Deploy 1"
+name: "Libra Screenshot Service Deploy"
 
 on:
   workflow_dispatch:
@@ -252,7 +252,7 @@ jobs:
       - name: Ensure screenshot queue exists
         run: |
           # Try to create the queue, ignore error if it already exists
-          wrangler queues create screenshot-queue
+          wrangler queues create screenshot-queue || echo "Queue already exists"
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
