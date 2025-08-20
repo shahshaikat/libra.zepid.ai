@@ -248,7 +248,7 @@ jobs:
           echo "Setting up environment variables..."
 
           # Suppress Wrangler verbose logging to prevent secret exposure
-          export WRANGLER_LOG=error
+          export WRANGLER_LOG=debug
 
           # Environment
           export ENVIRONMENT="production"
