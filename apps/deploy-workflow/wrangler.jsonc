@@ -1,6 +1,6 @@
 {
   "$schema": "../../node_modules/wrangler/config-schema.json",
-  "name": "libra-deploy",
+  "name": "zepid-deploy",
   "main": "src/index.ts",
   "compatibility_date": "2025-07-17",
   "compatibility_flags": [

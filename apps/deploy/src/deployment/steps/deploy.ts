@@ -113,7 +113,7 @@ export async function deployToCloudflare(context: DeploymentContext): Promise<De
     const verifyResponse = await fetch(workerUrl, {
       method: 'GET',
       headers: {
-        'User-Agent': 'Libra-Deploy-Verification/1.0'
+        'User-Agent': 'Zepid-Deploy-Verification/1.0'
       }
     })
 
