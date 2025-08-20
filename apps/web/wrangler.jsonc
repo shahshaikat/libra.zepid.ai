@@ -42,7 +42,7 @@
     "NEXT_PUBLIC_APP_URL": "https://zepid.dev",
     "NEXT_PUBLIC_CDN_URL": "https://cdn.zepid.dev",
     "NEXT_PUBLIC_DEPLOY_URL": "https://deploy.zepid.dev",
-    "NEXT_PUBLIC_DISPATCHER_URL": "https://dispatcher.zepid.dev",
+    "NEXT_PUBLIC_DISPATCHER_URL": "https://zapid.dev",
     "NEXT_PUBLIC_DOCS_URL": "https://docs.zepid.dev",
     "NEXT_PUBLIC_SCREENSHOT_URL": "https://screenshot.zepid.dev",
     "NEXT_PUBLIC_SCAN": "0",
