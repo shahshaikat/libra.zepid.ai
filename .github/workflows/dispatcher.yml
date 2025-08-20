@@ -252,7 +252,7 @@ jobs:
 
           # Environment
           export ENVIRONMENT="production"
-          
+
           # Dispatcher URL
           export NEXT_PUBLIC_DISPATCHER_URL="${{ secrets.NEXT_PUBLIC_DISPATCHER_URL || 'https://dispatcher.zapid.dev' }}"
 
@@ -267,7 +267,7 @@ jobs:
           export HYPERDRIVE_ID="${{ secrets.HYPERDRIVE_ID }}"
 
           # Dispatch namespace configuration
-          export DISPATCH_NAMESPACE_NAME="${{ secrets.DISPATCH_NAMESPACE_NAME || 'libra-dispatcher' }}"
+          export DISPATCH_NAMESPACE_NAME="${{ secrets.DISPATCH_NAMESPACE_NAME || 'zepid-dispatcher' }}"
 
           # AI API Keys
           export ANTHROPIC_API_KEY="${{ secrets.ANTHROPIC_API_KEY }}"

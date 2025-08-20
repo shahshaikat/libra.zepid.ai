@@ -62,10 +62,10 @@ export async function deployToCloudflare(context: DeploymentContext): Promise<De
   // Deploy to Cloudflare Workers
   logger.info('Deploying to Cloudflare Workers', {
     workerName,
-    dispatchNamespace: env.DISPATCH_NAMESPACE_NAME || 'libra-dispatcher'
+    dispatchNamespace: env.DISPATCH_NAMESPACE_NAME || 'zepid-dispatcher'
   })
 
-  const deployCommand = `cd ${DEPLOYMENT_CONFIG.PROJECT_PATH} && bun wrangler deploy --dispatch-namespace ${env.DISPATCH_NAMESPACE_NAME || 'libra-dispatcher'} --name ${workerName}`
+  const deployCommand = `cd ${DEPLOYMENT_CONFIG.PROJECT_PATH} && bun wrangler deploy --dispatch-namespace ${env.DISPATCH_NAMESPACE_NAME || 'zepid-dispatcher'} --name ${workerName}`
 
   const deployResult = await executeCommand(
     container,

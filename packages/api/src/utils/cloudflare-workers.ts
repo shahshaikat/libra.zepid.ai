@@ -34,7 +34,7 @@ const CLOUDFLARE_CONFIG = {
 /**
  * Error types for worker operations
  */
-export type WorkerOperationError = 
+export type WorkerOperationError =
   | 'WORKER_NOT_FOUND'
   | 'PERMISSION_DENIED'
   | 'NETWORK_ERROR'
@@ -102,14 +102,14 @@ export async function deleteWorkerForPlatforms(
   // Validate configuration
   const accountId = env.CLOUDFLARE_ACCOUNT_ID
   const apiToken = env.CLOUDFLARE_API_TOKEN
-  const dispatchNamespace = env.DISPATCH_NAMESPACE_NAME || 'libra-dispatcher'
+  const dispatchNamespace = env.DISPATCH_NAMESPACE_NAME || 'zepid-dispatcher'
 
   if (!accountId || !apiToken) {
     const error = {
       type: 'CONFIG_ERROR' as WorkerOperationError,
       message: 'Cloudflare API credentials not configured'
     }
-    
+
     log.project('error', 'Worker deletion failed - missing configuration', {
       orgId,
       projectId,
@@ -127,7 +127,7 @@ export async function deleteWorkerForPlatforms(
 
   const [result, requestError] = await tryCatch(async () => {
     const url = `${CLOUDFLARE_CONFIG.baseUrl}/accounts/${accountId}/workers/dispatch/namespaces/${dispatchNamespace}/scripts/${workerName}`
-    
+
     log.project('info', 'Calling Cloudflare Workers API for deletion', {
       orgId,
       projectId,
@@ -149,7 +149,7 @@ export async function deleteWorkerForPlatforms(
     if (!response.ok) {
       const responseText = await response.text()
       const errorType = classifyError(response.status, responseText)
-      
+
       // Don't treat "worker not found" as an error - it might already be deleted
       if (errorType === 'WORKER_NOT_FOUND') {
         log.project('info', 'Worker not found during deletion (may already be deleted)', {
@@ -159,7 +159,7 @@ export async function deleteWorkerForPlatforms(
           workerName,
           status: response.status,
         })
-        
+
         return {
           success: true,
           workerName,
@@ -170,7 +170,7 @@ export async function deleteWorkerForPlatforms(
     }
 
     const responseData = await response.json()
-    
+
     log.project('info', 'Worker deleted successfully', {
       orgId,
       projectId,
@@ -186,8 +186,8 @@ export async function deleteWorkerForPlatforms(
   })
 
   if (requestError) {
-    const errorType: WorkerOperationError = requestError.name === 'AbortError' 
-      ? 'NETWORK_ERROR' 
+    const errorType: WorkerOperationError = requestError.name === 'AbortError'
+      ? 'NETWORK_ERROR'
       : 'UNKNOWN_ERROR'
 
     const error = {
@@ -227,7 +227,7 @@ export async function deleteProjectWorker(
   }
 ): Promise<WorkerDeletionResult> {
   const workerName = generateWorkerName(projectId)
-  
+
   return deleteWorkerForPlatforms(workerName, {
     ...context,
     projectId,

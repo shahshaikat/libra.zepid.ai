@@ -32,7 +32,7 @@ import type { DeploymentContext, SandboxResult } from '../../types'
  */
 export async function createSandbox(context: DeploymentContext): Promise<SandboxResult> {
   const { env, logger, state } = context
-  
+
   // Get deployment config from validation step
   const validationResult = state.stepResults.validation
   if (!validationResult?.data?.deploymentConfig) {
@@ -65,7 +65,7 @@ export async function createSandbox(context: DeploymentContext): Promise<Sandbox
   const sandboxEnvs = {
     CLOUDFLARE_ACCOUNT_ID: env.CLOUDFLARE_ACCOUNT_ID,
     CLOUDFLARE_API_TOKEN: env.CLOUDFLARE_API_TOKEN,
-    DISPATCH_NAMESPACE_NAME: env.DISPATCH_NAMESPACE_NAME || 'libra-dispatcher'
+    DISPATCH_NAMESPACE_NAME: env.DISPATCH_NAMESPACE_NAME || 'zepid-dispatcher'
   }
 
   logger.info('Sandbox environment variables prepared', {

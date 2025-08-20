@@ -56,7 +56,7 @@ function replaceConfigPlaceholders(templatePath: string, outputPath: string): vo
     RESEND_FROM: '',
 
     // Dispatcher-specific defaults
-    DISPATCH_NAMESPACE_NAME: 'libra-dispatcher',
+    DISPATCH_NAMESPACE_NAME: 'zepid-dispatcher',
 
     // AI API Keys placeholders (for type generation)
     ANTHROPIC_API_KEY: 'sk-ant-api03-placeholder',

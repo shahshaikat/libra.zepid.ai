@@ -76,7 +76,7 @@ bun dev
 **示例 - 子域名路由（生产环境）：**
 
 ```text
-# DNS 记录：*.zapid.dev → libra-dispatcher
+# DNS 记录：*.zapid.dev → zepid-dispatcher
 
 # 请求自动路由到 Worker "vite-shadcn-template"
 https://vite-shadcn-template.zapid.dev/about
@@ -141,7 +141,7 @@ bun run deploy
 添加生产环境路由（通配符）：
 
 ```bash
-wrangler route add "*.zapid.dev/*" libra-dispatcher-prod
+wrangler route add "*.zapid.dev/*" zepid-dispatcher-prod
 ```
 
 ## API 和路由参考

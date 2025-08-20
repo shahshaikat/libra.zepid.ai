@@ -9,7 +9,7 @@
 ```
 用户请求: https://vite-shadcn-template.zapid.dev/
     ↓
-Cloudflare DNS: *.zapid.dev → libra-dispatcher Worker
+Cloudflare DNS: *.zapid.dev → zepid-dispatcher Worker
     ↓
 Dispatcher 解析子域名: "vite-shadcn-template"
     ↓
@@ -46,7 +46,7 @@ wrangler deploy
 ```
 类型: CNAME
 名称: *
-目标: libra-dispatcher.<your-account>.workers.dev
+目标: zepid-dispatcher.<your-account>.workers.dev
 代理状态: 已代理 (橙色云)
 ```
 
@@ -56,10 +56,10 @@ wrangler deploy
 
 ```bash
 # 示例：部署 vite-shadcn-template 项目
-wrangler deploy --name vite-shadcn-template --dispatch-namespace libra-dispatcher
+wrangler deploy --name vite-shadcn-template --dispatch-namespace zepid-dispatcher
 
 # 示例：部署其他项目
-wrangler deploy --name my-react-app --dispatch-namespace libra-dispatcher
+wrangler deploy --name my-react-app --dispatch-namespace zepid-dispatcher
 ```
 
 ### 4. 验证部署
@@ -75,11 +75,11 @@ wrangler deploy --name my-react-app --dispatch-namespace libra-dispatcher
 
 ```json
 {
-  "name": "libra-dispatcher",
+  "name": "zepid-dispatcher",
   "dispatch_namespaces": [
     {
       "binding": "dispatcher",
-      "namespace": "libra-dispatcher"
+      "namespace": "zepid-dispatcher"
     }
   ],
   "routes": [
@@ -133,7 +133,7 @@ Dispatcher 提供详细的错误信息：
 
 - 查看 Dispatcher 信息: `GET /dispatch`
 - 健康检查: `GET /health`
-- 查看日志: Cloudflare Dashboard → Workers → libra-dispatcher → Logs
+- 查看日志: Cloudflare Dashboard → Workers → zepid-dispatcher → Logs
 
 ## 故障排除
 

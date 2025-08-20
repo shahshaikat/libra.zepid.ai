@@ -11,7 +11,7 @@ User Request: https://vite-shadcn-template.zapid.dev/
 
 ↓
 
-Cloudflare DNS: *.zapid.dev → libra-dispatcher Worker
+Cloudflare DNS: *.zapid.dev → zepid-dispatcher Worker
 
 ↓
 
@@ -55,7 +55,7 @@ Add the following DNS record in Cloudflare Dashboard for `zapid.dev` domain:
 ```
 Type: CNAME
 Name: *
-Target: libra-dispatcher.<your-account>.workers.dev
+Target: zepid-dispatcher.<your-account>.workers.dev
 Proxy Status: Proxied (orange cloud)
 ```
 
@@ -65,10 +65,10 @@ Deploy Worker for each project to dispatch namespace:
 
 ```bash
 # Example: Deploy vite-shadcn-template project
-wrangler deploy --name vite-shadcn-template --dispatch-namespace libra-dispatcher
+wrangler deploy --name vite-shadcn-template --dispatch-namespace zepid-dispatcher
 
 # Example: Deploy other projects
-wrangler deploy --name my-react-app --dispatch-namespace libra-dispatcher
+wrangler deploy --name my-react-app --dispatch-namespace zepid-dispatcher
 ```
 
 ### 4. Verify Deployment
@@ -84,11 +84,11 @@ After deployment, you can access:
 
 ```json
 {
-  "name": "libra-dispatcher",
+  "name": "zepid-dispatcher",
   "dispatch_namespaces": [
     {
       "binding": "dispatcher",
-      "namespace": "libra-dispatcher"
+      "namespace": "zepid-dispatcher"
     }
   ],
   "routes": [
@@ -144,7 +144,7 @@ Dispatcher provides detailed error information:
 
 - View Dispatcher information: `GET /dispatch`
 - Health check: `GET /health`
-- View logs: Cloudflare Dashboard → Workers → libra-dispatcher → Logs
+- View logs: Cloudflare Dashboard → Workers → zepid-dispatcher → Logs
 
 ## Troubleshooting
 

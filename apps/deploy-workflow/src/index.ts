@@ -267,7 +267,7 @@ export class DeploymentWorkflow extends WorkflowEntrypoint<Bindings, DeploymentP
             const container = await connectToSandbox(sandboxId);
             await executeCommand(
                 container,
-                `cd ${DEPLOYMENT_CONFIG.PROJECT_PATH} && bun wrangler deploy --dispatch-namespace libra-dispatcher --name ${workerName}`,
+                `cd ${DEPLOYMENT_CONFIG.PROJECT_PATH} && bun wrangler deploy --dispatch-namespace zepid-dispatcher --name ${workerName}`,
                 DEPLOYMENT_CONFIG.TIMEOUTS.DEPLOY,
                 'Deploy'
             );

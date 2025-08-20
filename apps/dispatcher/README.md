@@ -63,7 +63,7 @@ Key URLs:
 **Example – Sub-domain Routing (production):**
 
 ```text
-# DNS record: *.zapid.dev → libra-dispatcher
+# DNS record: *.zapid.dev → zepid-dispatcher
 # Request automatically routed to Worker "vite-shadcn-template"
 https://vite-shadcn-template.zapid.dev/about
 ```
@@ -108,7 +108,7 @@ bun run deploy
 Add production routes (wildcard):
 
 ```bash
-wrangler route add "*.zapid.dev/*" libra-dispatcher-prod
+wrangler route add "*.zapid.dev/*" zepid-dispatcher-prod
 ```
 
 ## API & Routing Reference

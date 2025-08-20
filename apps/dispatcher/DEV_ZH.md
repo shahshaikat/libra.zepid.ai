@@ -138,7 +138,7 @@ apps/dispatcher/                   # Dispatcher 服务根目录
 ```text
 用户请求: https://vite-shadcn-template.zapid.dev/
     ↓
-Cloudflare DNS: *.zapid.dev → libra-dispatcher Worker
+Cloudflare DNS: *.zapid.dev → zepid-dispatcher Worker
     ↓
 Dispatcher 解析子域名: "vite-shadcn-template"
     ↓
@@ -266,7 +266,7 @@ bun dev
 ```jsonc
 {
   "$schema": "../../node_modules/wrangler/config-schema.json",
-  "name": "libra-dispatcher",
+  "name": "zepid-dispatcher",
   "main": "src/index.ts",
   "compatibility_date": "2025-07-17",
   "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
@@ -290,7 +290,7 @@ bun dev
   "dispatch_namespaces": [
     {
       "binding": "dispatcher",
-      "namespace": "libra-dispatcher"
+      "namespace": "zepid-dispatcher"
     }
   ],
 
@@ -310,7 +310,7 @@ bun dev
 
   // 环境变量
   "vars": {
-    "DISPATCH_NAMESPACE_NAME": "libra-dispatcher",
+    "DISPATCH_NAMESPACE_NAME": "zepid-dispatcher",
     "NEXT_PUBLIC_APP_URL": "http://localhost:3000",
     "BETTER_AUTH_SECRET": "your_secret_key",
     "POSTGRES_URL": "your_postgres_url",
@@ -624,7 +624,7 @@ GET /health/detailed
     },
     "dispatcher": {
       "status": "available",
-      "namespace": "libra-dispatcher"
+      "namespace": "zepid-dispatcher"
     }
   }
 }
@@ -643,7 +643,7 @@ GET /dispatch
 ```json
 {
   "service": "Libra Dispatcher",
-  "namespace": "libra-dispatcher",
+  "namespace": "zepid-dispatcher",
   "status": "available",
   "timestamp": "2025-07-22T12:00:00.000Z",
   "requestId": "uuid-string"
@@ -734,7 +734,7 @@ wrangler hyperdrive list
 
 ```bash
 # 创建 Dispatch Namespace
-wrangler dispatch-namespace create libra-dispatcher
+wrangler dispatch-namespace create zepid-dispatcher
 
 # 查看命名空间列表
 wrangler dispatch-namespace list
@@ -767,7 +767,7 @@ bun run deploy
 
 ```bash
 # 添加自定义域名路由
-wrangler route add "*.zapid.dev/*" libra-dispatcher
+wrangler route add "*.zapid.dev/*" zepid-dispatcher
 
 # 查看当前路由
 wrangler route list
@@ -779,10 +779,10 @@ wrangler route list
 
 ```bash
 # 部署示例项目
-wrangler deploy --name vite-shadcn-template --dispatch-namespace libra-dispatcher
+wrangler deploy --name vite-shadcn-template --dispatch-namespace zepid-dispatcher
 
 # 部署其他项目
-wrangler deploy --name my-react-app --dispatch-namespace libra-dispatcher
+wrangler deploy --name my-react-app --dispatch-namespace zepid-dispatcher
 ```
 
 ### 验证部署
@@ -807,7 +807,7 @@ dig *.zapid.dev
 wrangler status
 
 # 查看实时日志
-wrangler tail libra-dispatcher
+wrangler tail zepid-dispatcher
 ```
 
 #### Q: Worker 部署失败
@@ -817,7 +817,7 @@ wrangler tail libra-dispatcher
 wrangler dispatch-namespace list
 
 # 重新部署
-wrangler deploy --name worker-name --dispatch-namespace libra-dispatcher
+wrangler deploy --name worker-name --dispatch-namespace zepid-dispatcher
 
 # 检查 Hyperdrive 配置
 wrangler hyperdrive list
@@ -842,15 +842,15 @@ wrangler hyperdrive list
 
 ```bash
 # 查看 Worker 日志
-wrangler tail libra-dispatcher
+wrangler tail zepid-dispatcher
 
 # 实时监控
-wrangler tail libra-dispatcher --format pretty
+wrangler tail zepid-dispatcher --format pretty
 ```
 
 #### 性能监控
 
-- Cloudflare Dashboard → Workers → libra-dispatcher → Analytics
+- Cloudflare Dashboard → Workers → zepid-dispatcher → Analytics
 - 查看请求量、错误率、响应时间等指标
 
 ## 相关资源

@@ -368,7 +368,7 @@ export async function configureDomainDNS(
     const recordData = {
       type: 'CNAME',
       name: domain,
-      content: 'libra-dispatcher.zapid.dev',
+      content: 'zepid-dispatcher.zapid.dev',
       ttl: 1, // Auto TTL
       proxied: true, // Enable Cloudflare proxy
     }

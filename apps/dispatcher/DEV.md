@@ -203,7 +203,7 @@ apps/dispatcher/                   # Dispatcher service root directory
 ```text
 User Request: https://vite-shadcn-template.zapid.dev/
     ↓
-Cloudflare DNS: *.zapid.dev → libra-dispatcher Worker
+Cloudflare DNS: *.zapid.dev → zepid-dispatcher Worker
     ↓
 Dispatcher parses subdomain: "vite-shadcn-template"
     ↓
@@ -331,7 +331,7 @@ bun dev
 ```jsonc
 {
   "$schema": "../../node_modules/wrangler/config-schema.json",
-  "name": "libra-dispatcher",
+  "name": "zepid-dispatcher",
   "main": "src/index.ts",
   "compatibility_date": "2025-07-17",
   "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
@@ -355,7 +355,7 @@ bun dev
   "dispatch_namespaces": [
     {
       "binding": "dispatcher",
-      "namespace": "libra-dispatcher"
+      "namespace": "zepid-dispatcher"
     }
   ],
 
@@ -375,7 +375,7 @@ bun dev
 
   // Environment variables
   "vars": {
-    "DISPATCH_NAMESPACE_NAME": "libra-dispatcher",
+    "DISPATCH_NAMESPACE_NAME": "zepid-dispatcher",
     "NEXT_PUBLIC_APP_URL": "http://localhost:3000",
     "BETTER_AUTH_SECRET": "your_secret_key",
     "POSTGRES_URL": "your_postgres_url",
@@ -677,7 +677,7 @@ Response:
     },
     "dispatcher": {
       "status": "available",
-      "namespace": "libra-dispatcher"
+      "namespace": "zepid-dispatcher"
     }
   }
 }
@@ -696,7 +696,7 @@ Response:
 ```json
 {
   "service": "Libra Dispatcher",
-  "namespace": "libra-dispatcher",
+  "namespace": "zepid-dispatcher",
   "status": "available",
   "timestamp": "2025-07-22T12:00:00.000Z",
   "requestId": "uuid-string"
@@ -787,7 +787,7 @@ wrangler hyperdrive list
 
 ```bash
 # Create Dispatch Namespace
-wrangler dispatch-namespace create libra-dispatcher
+wrangler dispatch-namespace create zepid-dispatcher
 
 # List namespaces
 wrangler dispatch-namespace list
@@ -820,7 +820,7 @@ bun run deploy
 
 ```bash
 # Add custom domain routes
-wrangler route add "*.zapid.dev/*" libra-dispatcher
+wrangler route add "*.zapid.dev/*" zepid-dispatcher
 
 # View current routes
 wrangler route list
@@ -832,10 +832,10 @@ Deploy Workers for each project to dispatch namespace:
 
 ```bash
 # Deploy example project
-wrangler deploy --name vite-shadcn-template --dispatch-namespace libra-dispatcher
+wrangler deploy --name vite-shadcn-template --dispatch-namespace zepid-dispatcher
 
 # Deploy other projects
-wrangler deploy --name my-react-app --dispatch-namespace libra-dispatcher
+wrangler deploy --name my-react-app --dispatch-namespace zepid-dispatcher
 ```
 
 ### Deployment Verification
@@ -860,7 +860,7 @@ dig *.zapid.dev
 wrangler status
 
 # View real-time logs
-wrangler tail libra-dispatcher
+wrangler tail zepid-dispatcher
 ```
 
 #### Q: Worker deployment failed
@@ -870,7 +870,7 @@ wrangler tail libra-dispatcher
 wrangler dispatch-namespace list
 
 # Redeploy
-wrangler deploy --name worker-name --dispatch-namespace libra-dispatcher
+wrangler deploy --name worker-name --dispatch-namespace zepid-dispatcher
 
 # Check Hyperdrive configuration
 wrangler hyperdrive list
@@ -895,15 +895,15 @@ wrangler hyperdrive list
 
 ```bash
 # View Worker logs
-wrangler tail libra-dispatcher
+wrangler tail zepid-dispatcher
 
 # Real-time monitoring
-wrangler tail libra-dispatcher --format pretty
+wrangler tail zepid-dispatcher --format pretty
 ```
 
 #### Performance Monitoring
 
-- Cloudflare Dashboard → Workers → libra-dispatcher → Analytics
+- Cloudflare Dashboard → Workers → zepid-dispatcher → Analytics
 - View request volume, error rates, response times, and other metrics
 
 ## Related Resources
