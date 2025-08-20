@@ -222,6 +222,12 @@ jobs:
         # Set secrets to environment variables first, then reference env in if condition
         env:
           CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
+          BETTER_GITHUB_CLIENT_ID: ${{ secrets.BETTER_GITHUB_CLIENT_ID }}
+          BETTER_GITHUB_CLIENT_SECRET: ${{ secrets.BETTER_GITHUB_CLIENT_SECRET }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          DATABASE_ID: ${{ secrets.DATABASE_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          TURNSTILE_SECRET_KEY: ${{ secrets.TURNSTILE_SECRET_KEY }}
         if: ${{ success() && env.CLOUDFLARE_ZONE_ID != '' }}
         uses: nathanvaughn/actions-cloudflare-purge@master
         with:
