@@ -70,21 +70,21 @@
     {
       "binding": "DATABASE",
       "database_name": "zepid-d1",
-      "database_id": "{{DATABASE_ID}}"
+      "database_id": "${DATABASE_ID}"
     }
   ],
   // docker run --name libra -e POSTGRES_PASSWORD=postgres -d postgres
   "hyperdrive": [
     {
       "binding": "HYPERDRIVE",
-      "id": "{{HYPERDRIVE_ID}}",
+      "id": "${HYPERDRIVE_ID}",
       "localConnectionString": "postgresql://postgres:postgres@zepid:5432/zepid"
     }
   ],
   "kv_namespaces": [
     {
       "binding": "KV",
-      "id": "{{KV_NAMESPACE_ID}}"
+      "id": "${KV_NAMESPACE_ID}"
     },
     {
       "binding": "CACHE",
