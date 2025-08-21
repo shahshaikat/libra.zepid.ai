@@ -98,13 +98,61 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/bun.lock') }}-
 
-      - name: Install Deps
+      - name: Install Deps 
         if: steps.bun-cache.outputs.cache-hit != 'true'
         run: bun install
 
-      - name: Set version
+      - name: Set version & Set Environment Variables
         id: version
         run: echo "version=$(date +'%Y%m%d%H%M%S')-${GITHUB_SHA::7}" >> $GITHUB_OUTPUT
+        env:
+          
+          NEXT_PUBLIC_APP_URL: ${{ secrets.NEXT_PUBLIC_APP_URL }}
+          NEXT_PUBLIC_CDN_URL: ${{ secrets.NEXT_PUBLIC_CDN_URL }}
+          NEXT_PUBLIC_DEPLOY_URL: ${{ secrets.NEXT_PUBLIC_DEPLOY_URL }}
+          NEXT_PUBLIC_DISPATCHER_URL: ${{ secrets.NEXT_PUBLIC_DISPATCHER_URL }}
+          NEXT_PUBLIC_SCREENSHOT_URL: ${{ secrets.NEXT_PUBLIC_SCREENSHOT_URL }}
+          NEXT_PUBLIC_DOCS_URL: ${{ secrets.NEXT_PUBLIC_DOCS_URL }}
+          NEXT_PUBLIC_SCAN: ${{ secrets.NEXT_PUBLIC_SCAN }}
+          BETTER_AUTH_SECRET: ${{ secrets.BETTER_AUTH_SECRET }}
+          BETTER_GITHUB_CLIENT_ID: ${{ secrets.BETTER_GITHUB_CLIENT_ID }}
+          BETTER_GITHUB_CLIENT_SECRET: ${{ secrets.BETTER_GITHUB_CLIENT_SECRET }}
+          NEXT_PUBLIC_TURNSTILE_SITE_KEY: ${{ secrets.NEXT_PUBLIC_TURNSTILE_SITE_KEY }}
+          TURNSTILE_SECRET_KEY: ${{ secrets.TURNSTILE_SECRET_KEY }}
+          POSTGRES_URL: ${{ secrets.POSTGRES_URL }}
+          DATABASE_ID: ${{ secrets.DATABASE_ID }}
+          STRIPE_WEBHOOK_SECRET: ${{ secrets.STRIPE_WEBHOOK_SECRET }}
+          STRIPE_SECRET_KEY: ${{ secrets.STRIPE_SECRET_KEY }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          RESEND_FROM: ${{ secrets.RESEND_FROM }}
+          E2B_API_KEY: ${{ secrets.E2B_API_KEY }}
+          DAYTONA_API_KEY: ${{ secrets.DAYTONA_API_KEY }}
+          SANDBOX_DEFAULT_PROVIDER: ${{ secrets.SANDBOX_DEFAULT_PROVIDER }}
+          SANDBOX_BUILDER_DEFAULT_PROVIDER: ${{ secrets.SANDBOX_BUILDER_DEFAULT_PROVIDER }}
+          NEXT_PUBLIC_POSTHOG_KEY: ${{ secrets.NEXT_PUBLIC_POSTHOG_KEY }}
+          NEXT_PUBLIC_POSTHOG_HOST: ${{ secrets.NEXT_PUBLIC_POSTHOG_HOST }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_AIGATEWAY_NAME: ${{ secrets.CLOUDFLARE_AIGATEWAY_NAME }}
+          CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
+          LIBRA_GITHUB_TOKEN: ${{ secrets.LIBRA_GITHUB_TOKEN }}
+          LIBRA_GITHUB_OWNER: ${{ secrets.LIBRA_GITHUB_OWNER }}
+          LIBRA_GITHUB_REPO: ${{ secrets.LIBRA_GITHUB_REPO }}
+          ENHANCED_PROMPT: ${{ secrets.ENHANCED_PROMPT }}
+          REASONING_ENABLED: ${{ secrets.REASONING_ENABLED }}
+          GITHUB_APP_SLUG: ${{ secrets.GITHUB_APP_SLUG }}
+          GITHUB_APP_ID: ${{ secrets.GITHUB_APP_ID }}
+          GITHUB_APP_PRIVATE_KEY: ${{ secrets.GITHUB_APP_PRIVATE_KEY }}
+          GITHUB_APP_CLIENT_ID: ${{ secrets.GITHUB_APP_CLIENT_ID }}
+          GITHUB_APP_CLIENT_SECRET: ${{ secrets.GITHUB_APP_CLIENT_SECRET }}
+          NEXT_PUBLIC_GITHUB_APP_URL: ${{ secrets.NEXT_PUBLIC_GITHUB_APP_URL }}
+          GITHUB_WEBHOOK_SECRET: ${{ secrets.GITHUB_WEBHOOK_SECRET }}
+          NEXT_PUBLIC_CLOUDFLARE_DCV_VERIFICATION_ID: ${{ secrets.NEXT_PUBLIC_CLOUDFLARE_DCV_VERIFICATION_ID }}
+          CLOUDFLARE_SAAS_ZONE_ID: ${{ secrets.CLOUDFLARE_SAAS_ZONE_ID }}
+          HYPERDRIVE_ID: ${{ secrets.HYPERDRIVE_ID }}
+          KV_NAMESPACE_ID: ${{ secrets.KV_NAMESPACE_ID }}
+          NEXT_PUBLIC_CUSTOMERS_IP_ADDRESS: ${{ secrets.NEXT_PUBLIC_CUSTOMERS_IP_ADDRESS }}
+          DEPLOY_VERSION: ${{ steps.version.outputs.version }}
 
       - name: Compile Paraglide
         run: |
@@ -219,55 +267,6 @@ jobs:
           ref: ${{ github.sha }}
 
       - name: Purge Cloudflare CDN cache
-        # Set secrets to environment variables first, then reference env in if condition
-        env:
-          
-          NEXT_PUBLIC_APP_URL: ${{ secrets.NEXT_PUBLIC_APP_URL }}
-          NEXT_PUBLIC_CDN_URL: ${{ secrets.NEXT_PUBLIC_CDN_URL }}
-          NEXT_PUBLIC_DEPLOY_URL: ${{ secrets.NEXT_PUBLIC_DEPLOY_URL }}
-          NEXT_PUBLIC_DISPATCHER_URL: ${{ secrets.NEXT_PUBLIC_DISPATCHER_URL }}
-          NEXT_PUBLIC_SCREENSHOT_URL: ${{ secrets.NEXT_PUBLIC_SCREENSHOT_URL }}
-          NEXT_PUBLIC_DOCS_URL: ${{ secrets.NEXT_PUBLIC_DOCS_URL }}
-          NEXT_PUBLIC_SCAN: ${{ secrets.NEXT_PUBLIC_SCAN }}
-          BETTER_AUTH_SECRET: ${{ secrets.BETTER_AUTH_SECRET }}
-          BETTER_GITHUB_CLIENT_ID: ${{ secrets.BETTER_GITHUB_CLIENT_ID }}
-          BETTER_GITHUB_CLIENT_SECRET: ${{ secrets.BETTER_GITHUB_CLIENT_SECRET }}
-          NEXT_PUBLIC_TURNSTILE_SITE_KEY: ${{ secrets.NEXT_PUBLIC_TURNSTILE_SITE_KEY }}
-          TURNSTILE_SECRET_KEY: ${{ secrets.TURNSTILE_SECRET_KEY }}
-          POSTGRES_URL: ${{ secrets.POSTGRES_URL }}
-          DATABASE_ID: ${{ secrets.DATABASE_ID }}
-          STRIPE_WEBHOOK_SECRET: ${{ secrets.STRIPE_WEBHOOK_SECRET }}
-          STRIPE_SECRET_KEY: ${{ secrets.STRIPE_SECRET_KEY }}
-          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
-          RESEND_FROM: ${{ secrets.RESEND_FROM }}
-          E2B_API_KEY: ${{ secrets.E2B_API_KEY }}
-          DAYTONA_API_KEY: ${{ secrets.DAYTONA_API_KEY }}
-          SANDBOX_DEFAULT_PROVIDER: ${{ secrets.SANDBOX_DEFAULT_PROVIDER }}
-          SANDBOX_BUILDER_DEFAULT_PROVIDER: ${{ secrets.SANDBOX_BUILDER_DEFAULT_PROVIDER }}
-          NEXT_PUBLIC_POSTHOG_KEY: ${{ secrets.NEXT_PUBLIC_POSTHOG_KEY }}
-          NEXT_PUBLIC_POSTHOG_HOST: ${{ secrets.NEXT_PUBLIC_POSTHOG_HOST }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_AIGATEWAY_NAME: ${{ secrets.CLOUDFLARE_AIGATEWAY_NAME }}
-          CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
-          LIBRA_GITHUB_TOKEN: ${{ secrets.LIBRA_GITHUB_TOKEN }}
-          LIBRA_GITHUB_OWNER: ${{ secrets.LIBRA_GITHUB_OWNER }}
-          LIBRA_GITHUB_REPO: ${{ secrets.LIBRA_GITHUB_REPO }}
-          ENHANCED_PROMPT: ${{ secrets.ENHANCED_PROMPT }}
-          REASONING_ENABLED: ${{ secrets.REASONING_ENABLED }}
-          GITHUB_APP_SLUG: ${{ secrets.GITHUB_APP_SLUG }}
-          GITHUB_APP_ID: ${{ secrets.GITHUB_APP_ID }}
-          GITHUB_APP_PRIVATE_KEY: ${{ secrets.GITHUB_APP_PRIVATE_KEY }}
-          GITHUB_APP_CLIENT_ID: ${{ secrets.GITHUB_APP_CLIENT_ID }}
-          GITHUB_APP_CLIENT_SECRET: ${{ secrets.GITHUB_APP_CLIENT_SECRET }}
-          NEXT_PUBLIC_GITHUB_APP_URL: ${{ secrets.NEXT_PUBLIC_GITHUB_APP_URL }}
-          GITHUB_WEBHOOK_SECRET: ${{ secrets.GITHUB_WEBHOOK_SECRET }}
-          NEXT_PUBLIC_CLOUDFLARE_DCV_VERIFICATION_ID: ${{ secrets.NEXT_PUBLIC_CLOUDFLARE_DCV_VERIFICATION_ID }}
-          CLOUDFLARE_SAAS_ZONE_ID: ${{ secrets.CLOUDFLARE_SAAS_ZONE_ID }}
-          HYPERDRIVE_ID: ${{ secrets.HYPERDRIVE_ID }}
-          KV_NAMESPACE_ID: ${{ secrets.KV_NAMESPACE_ID }}
-          NEXT_PUBLIC_CUSTOMERS_IP_ADDRESS: ${{ secrets.NEXT_PUBLIC_CUSTOMERS_IP_ADDRESS }}
-          DEPLOY_VERSION: ${{ steps.version.outputs.version }}
 
         if: ${{ success() && env.CLOUDFLARE_ZONE_ID != '' }}
         uses: nathanvaughn/actions-cloudflare-purge@master
