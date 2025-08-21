@@ -102,57 +102,61 @@ jobs:
         if: steps.bun-cache.outputs.cache-hit != 'true'
         run: bun install
 
-      - name: Set version & Set Environment Variables
+      # ⬇️ ENV-ONLY CHANGE: keep version step, remove ineffective per-step env block
+      - name: Set version
         id: version
         run: echo "version=$(date +'%Y%m%d%H%M%S')-${GITHUB_SHA::7}" >> $GITHUB_OUTPUT
+
+      # ⬇️ ENV-ONLY CHANGE: inject secrets into wrangler.jsonc (mirrors screenshot.yml behavior)
+      - name: Inject environment into wrangler.jsonc
+        run: |
+          cd apps/web
+          if [ -f wrangler.jsonc.example ]; then
+            echo "Found wrangler.jsonc.example -> generating wrangler.jsonc via config-processor"
+            bun ../../scripts/config-processor.ts wrangler.jsonc.example wrangler.jsonc
+          else
+            echo "No wrangler.jsonc.example found. Performing safe placeholder substitution in wrangler.jsonc"
+            node -e '
+              const fs = require("fs");
+              const path = "wrangler.jsonc";
+              if (!fs.existsSync(path)) { process.exit(0); }
+              let s = fs.readFileSync(path, "utf8");
+              s = s.replace(/\{\{([A-Z0-9_]+)\}\}/g, (m, k) => {
+                const v = process.env[k];
+                if (v == null) return m; // leave placeholder if not provided
+                // JSON-escape but keep surrounding quotes from file
+                return JSON.stringify(String(v)).slice(1, -1);
+              });
+              fs.writeFileSync(path, s);
+            '
+          fi
         env:
-          
+          # Provide all vars that appear in wrangler.jsonc so substitution works
+          ENVIRONMENT: ${{ secrets.ENVIRONMENT }}
           NEXT_PUBLIC_APP_URL: ${{ secrets.NEXT_PUBLIC_APP_URL }}
           NEXT_PUBLIC_CDN_URL: ${{ secrets.NEXT_PUBLIC_CDN_URL }}
-          NEXT_PUBLIC_DEPLOY_URL: ${{ secrets.NEXT_PUBLIC_DEPLOY_URL }}
-          NEXT_PUBLIC_DISPATCHER_URL: ${{ secrets.NEXT_PUBLIC_DISPATCHER_URL }}
-          NEXT_PUBLIC_SCREENSHOT_URL: ${{ secrets.NEXT_PUBLIC_SCREENSHOT_URL }}
-          NEXT_PUBLIC_DOCS_URL: ${{ secrets.NEXT_PUBLIC_DOCS_URL }}
-          NEXT_PUBLIC_SCAN: ${{ secrets.NEXT_PUBLIC_SCAN }}
           BETTER_AUTH_SECRET: ${{ secrets.BETTER_AUTH_SECRET }}
           BETTER_GITHUB_CLIENT_ID: ${{ secrets.BETTER_GITHUB_CLIENT_ID }}
           BETTER_GITHUB_CLIENT_SECRET: ${{ secrets.BETTER_GITHUB_CLIENT_SECRET }}
-          NEXT_PUBLIC_TURNSTILE_SITE_KEY: ${{ secrets.NEXT_PUBLIC_TURNSTILE_SITE_KEY }}
+          GITHUB_OAUTH_CLIENT_ID: ${{ secrets.GITHUB_OAUTH_CLIENT_ID }}
+          GITHUB_OAUTH_CLIENT_SECRET: ${{ secrets.GITHUB_OAUTH_CLIENT_SECRET }}
           TURNSTILE_SECRET_KEY: ${{ secrets.TURNSTILE_SECRET_KEY }}
+          STRIPE_SECRET_KEY: ${{ secrets.STRIPE_SECRET_KEY }}
+          STRIPE_WEBHOOK_SECRET: ${{ secrets.STRIPE_WEBHOOK_SECRET }}
+          ADMIN_USER_IDS: ${{ secrets.ADMIN_USER_IDS }}
           POSTGRES_URL: ${{ secrets.POSTGRES_URL }}
           DATABASE_ID: ${{ secrets.DATABASE_ID }}
-          STRIPE_WEBHOOK_SECRET: ${{ secrets.STRIPE_WEBHOOK_SECRET }}
-          STRIPE_SECRET_KEY: ${{ secrets.STRIPE_SECRET_KEY }}
-          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
-          RESEND_FROM: ${{ secrets.RESEND_FROM }}
-          E2B_API_KEY: ${{ secrets.E2B_API_KEY }}
-          DAYTONA_API_KEY: ${{ secrets.DAYTONA_API_KEY }}
-          SANDBOX_DEFAULT_PROVIDER: ${{ secrets.SANDBOX_DEFAULT_PROVIDER }}
-          SANDBOX_BUILDER_DEFAULT_PROVIDER: ${{ secrets.SANDBOX_BUILDER_DEFAULT_PROVIDER }}
-          NEXT_PUBLIC_POSTHOG_KEY: ${{ secrets.NEXT_PUBLIC_POSTHOG_KEY }}
-          NEXT_PUBLIC_POSTHOG_HOST: ${{ secrets.NEXT_PUBLIC_POSTHOG_HOST }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_AIGATEWAY_NAME: ${{ secrets.CLOUDFLARE_AIGATEWAY_NAME }}
           CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
-          LIBRA_GITHUB_TOKEN: ${{ secrets.LIBRA_GITHUB_TOKEN }}
-          LIBRA_GITHUB_OWNER: ${{ secrets.LIBRA_GITHUB_OWNER }}
-          LIBRA_GITHUB_REPO: ${{ secrets.LIBRA_GITHUB_REPO }}
-          ENHANCED_PROMPT: ${{ secrets.ENHANCED_PROMPT }}
-          REASONING_ENABLED: ${{ secrets.REASONING_ENABLED }}
-          GITHUB_APP_SLUG: ${{ secrets.GITHUB_APP_SLUG }}
-          GITHUB_APP_ID: ${{ secrets.GITHUB_APP_ID }}
-          GITHUB_APP_PRIVATE_KEY: ${{ secrets.GITHUB_APP_PRIVATE_KEY }}
-          GITHUB_APP_CLIENT_ID: ${{ secrets.GITHUB_APP_CLIENT_ID }}
-          GITHUB_APP_CLIENT_SECRET: ${{ secrets.GITHUB_APP_CLIENT_SECRET }}
-          NEXT_PUBLIC_GITHUB_APP_URL: ${{ secrets.NEXT_PUBLIC_GITHUB_APP_URL }}
-          GITHUB_WEBHOOK_SECRET: ${{ secrets.GITHUB_WEBHOOK_SECRET }}
-          NEXT_PUBLIC_CLOUDFLARE_DCV_VERIFICATION_ID: ${{ secrets.NEXT_PUBLIC_CLOUDFLARE_DCV_VERIFICATION_ID }}
-          CLOUDFLARE_SAAS_ZONE_ID: ${{ secrets.CLOUDFLARE_SAAS_ZONE_ID }}
-          HYPERDRIVE_ID: ${{ secrets.HYPERDRIVE_ID }}
-          KV_NAMESPACE_ID: ${{ secrets.KV_NAMESPACE_ID }}
-          NEXT_PUBLIC_CUSTOMERS_IP_ADDRESS: ${{ secrets.NEXT_PUBLIC_CUSTOMERS_IP_ADDRESS }}
-          DEPLOY_VERSION: ${{ steps.version.outputs.version }}
+          CLOUDFLARE_AIGATEWAY_NAME: ${{ secrets.CLOUDFLARE_AIGATEWAY_NAME }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          RESEND_FROM: ${{ secrets.RESEND_FROM }}
+          LOG_LEVEL: ${{ secrets.LOG_LEVEL }}
+          E2B_API_KEY: ${{ secrets.E2B_API_KEY }}
+          DAYTONA_API_KEY: ${{ secrets.DAYTONA_API_KEY }}
+          SANDBOX_BUILDER_DEFAULT_PROVIDER: ${{ secrets.SANDBOX_BUILDER_DEFAULT_PROVIDER }}
+          NEXT_PUBLIC_DISPATCHER_URL: ${{ secrets.NEXT_PUBLIC_DISPATCHER_URL }}
 
       - name: Compile Paraglide
         run: |
@@ -266,10 +270,10 @@ jobs:
           description: "Deployed version ${{ steps.version.outputs.version }}"
           ref: ${{ github.sha }}
 
+      # ⬇️ ENV-ONLY CHANGE: make purge condition use secrets (job-level env is not set)
       - name: Purge Cloudflare CDN cache
-
-        if: ${{ success() && env.CLOUDFLARE_ZONE_ID != '' }}
+        if: ${{ success() && secrets.CLOUDFLARE_ZONE_ID != '' }}
         uses: nathanvaughn/actions-cloudflare-purge@master
         with:
-          cf_zone: ${{ env.CLOUDFLARE_ZONE_ID }}
+          cf_zone: ${{ secrets.CLOUDFLARE_ZONE_ID }}
           cf_auth: ${{ secrets.CLOUDFLARE_API_TOKEN }}
