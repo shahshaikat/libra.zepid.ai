@@ -1,0 +1,154 @@
+{
+  "$schema": "../../node_modules/wrangler/config-schema.json",
+  "name": "zepid",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2025-08-03",
+  "compatibility_flags": [
+    "nodejs_compat",
+    "global_fetch_strictly_public"
+  ],
+  "preview_urls": true,
+  "minify": true,
+  "keep_vars": true,
+  "assets": {
+    "binding": "ASSETS",
+    "directory": ".open-next/assets"
+  },
+  "observability": {
+    "enabled": true
+  },
+  "routes": [
+    {
+      "pattern": "zepid.dev",
+      "custom_domain": true
+    }
+  ],
+  /**
+   * Smart Placement
+   * Docs: https://developers.cloudflare.com/workers/configuration/smart-placement/#smart-placement
+   */
+  "placement": {
+    "mode": "smart"
+  },
+  /**
+   * Environment Variables
+   * https://developers.cloudflare.com/workers/wrangler/configuration/#environment-variables
+   */
+  /**
+   * Note: Use secrets to store sensitive data.
+   * https://developers.cloudflare.com/workers/configuration/secrets/
+   */
+  "vars": {
+    // Environment configuration
+    "ENVIRONMENT": "{{ENVIRONMENT}}",
+    // Core application configuration
+    "NEXT_PUBLIC_APP_URL": "{{NEXT_PUBLIC_APP_URL}}",
+    "NEXT_PUBLIC_CDN_URL": "{{NEXT_PUBLIC_CDN_URL}}",
+    // Authentication configuration
+    "BETTER_AUTH_SECRET": "{{BETTER_AUTH_SECRET}}",
+    "BETTER_GITHUB_CLIENT_ID": "{{BETTER_GITHUB_CLIENT_ID}}",
+    "BETTER_GITHUB_CLIENT_SECRET": "{{BETTER_GITHUB_CLIENT_SECRET}}",
+    "GITHUB_OAUTH_CLIENT_ID": "{{GITHUB_OAUTH_CLIENT_ID}}",
+    "GITHUB_OAUTH_CLIENT_SECRET": "{{GITHUB_OAUTH_CLIENT_SECRET}}",
+    // Security configuration
+    "TURNSTILE_SECRET_KEY": "{{TURNSTILE_SECRET_KEY}}",
+    // Payment configuration (optional)
+    "STRIPE_SECRET_KEY": "{{STRIPE_SECRET_KEY}}",
+    "STRIPE_WEBHOOK_SECRET": "{{STRIPE_WEBHOOK_SECRET}}",
+    // Admin configuration (optional)
+    "ADMIN_USER_IDS": "{{ADMIN_USER_IDS}}",
+    // Database configuration
+    "POSTGRES_URL": "{{POSTGRES_URL}}",
+    "DATABASE_ID": "{{DATABASE_ID}}",
+    // Cloudflare configuration
+    "CLOUDFLARE_ACCOUNT_ID": "{{CLOUDFLARE_ACCOUNT_ID}}",
+    "CLOUDFLARE_API_TOKEN": "{{CLOUDFLARE_API_TOKEN}}",
+    "CLOUDFLARE_ZONE_ID": "{{CLOUDFLARE_ZONE_ID}}",
+    "CLOUDFLARE_AIGATEWAY_NAME": "{{CLOUDFLARE_AIGATEWAY_NAME}}",
+    // Email service (optional)
+    "RESEND_API_KEY": "{{RESEND_API_KEY}}",
+    "RESEND_FROM": "{{RESEND_FROM}}",
+    "LOG_LEVEL": "{{LOG_LEVEL}}",
+    // Sandbox provider configuration
+    "E2B_API_KEY": "{{E2B_API_KEY}}",
+    "DAYTONA_API_KEY": "{{DAYTONA_API_KEY}}",
+    "SANDBOX_BUILDER_DEFAULT_PROVIDER": "{{SANDBOX_BUILDER_DEFAULT_PROVIDER}}",
+    // Application URLs
+    "NEXT_PUBLIC_DISPATCHER_URL": "{{NEXT_PUBLIC_DISPATCHER_URL}}",
+  },
+  /**
+   * Bindings
+   * Bindings allow your Worker to interact with resources on the Cloudflare Developer Platform, including
+   * databases, object storage, AI inference, real-time communication and more.
+   * https://developers.cloudflare.com/workers/runtime-apis/bindings/
+   */
+  "services": [
+    {
+      "binding": "WORKER_SELF_REFERENCE",
+      "service": "zepid"
+    }
+  ],
+  "d1_databases": [
+    {
+      "binding": "DATABASE",
+      "database_name": "zepid-d1",
+      "database_id": "d9d14e7f-fe1c-44dd-9e49-b400d7f5396d"
+    }
+  ],
+  // docker run --name libra -e POSTGRES_PASSWORD=postgres -d postgres
+  "hyperdrive": [
+    {
+      "binding": "HYPERDRIVE",
+      "id": "4396ca1dbdf04838914002eb937a0d08",
+      "localConnectionString": "postgresql://postgres:postgres@zepid:5432/zepid"
+    }
+  ],
+  "kv_namespaces": [
+    {
+      "binding": "KV",
+      "id": "89b51a6adee943e2af2608b3b731d85a"
+    },
+    {
+      "binding": "CACHE",
+      "id": "89b51a6adee943e2af2608b3b731d85a"
+    }
+  ],
+  // R2 incremental cache
+  "r2_buckets": [
+    {
+      "binding": "NEXT_INC_CACHE_R2_BUCKET",
+      "bucket_name": "zepid-inc-cache"
+    }
+  ],
+  // DO Queue and DO Sharded Tag Cache
+  // "durable_objects": {
+  //   "bindings": [
+  //     {
+  //       "name": "NEXT_CACHE_DO_QUEUE",
+  //       "class_name": "DOQueueHandler",
+  //       "script_name": "opennext-cache"
+  //     },
+  //     {
+  //       "name": "NEXT_TAG_CACHE_DO_SHARDED",
+  //       "class_name": "DOShardedTagCache",
+  //       "script_name": "opennext-cache"
+  //     }
+  //   ]
+  // }
+  // "migrations": [
+  //   {
+  //     "tag": "v1",
+  //     "new_sqlite_classes": [
+  //       "DOQueueHandler",
+  //       "DOShardedTagCache"
+  //     ]
+  //   },
+  //   {
+  //     "tag": "v2",
+  //     "deleted_classes": [
+  //       "DOQueueHandler",
+  //       "DOShardedTagCache"
+  //     ]
+  //   }
+  // ]
+}
