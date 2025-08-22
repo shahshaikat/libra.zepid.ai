@@ -26,7 +26,7 @@ import type { PricingProps } from './types'
 import { PricingContent } from './components/pricing-content'
 
 export default function Pricing({
-  yearlyDiscount = 20,
+  yearlyDiscount = 33,
   plans: propPlans,
   className,
   showEnterprise = true,
