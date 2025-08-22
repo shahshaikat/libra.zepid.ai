@@ -8,7 +8,7 @@
     "auth:generate": "NODE_OPTIONS=--experimental-detect-module bun with-env bunx @better-auth/cli generate --config auth-server.ts --output ./db/schema/auth-schema.ts -y",
     "db:generate": "bun with-env drizzle-kit generate",
     "db:migrate": "bun with-env bunx drizzle-kit migrate",
-    "db:migrate-remote": "bun with-env wrangler d1 migrations apply libra --remote",
+    "db:migrate-remote": "bun run wrangler d1 migrations apply zepid-d1 --remote",
     "db:studio": "bun with-env drizzle-kit studio --port 3002",
     "test": "bun with-env vitest",
     "test:watch": "bun with-env vitest watch",
