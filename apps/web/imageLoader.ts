@@ -33,6 +33,13 @@ export default function cloudflareLoader({
   }
   const paramsString = params.join(',')
 
+  // ✅ 1. Skip Cloudflare optimization for anything in /public
+  // (like .svg, .png, .jpg, .ico, etc.)
+  if (src.startsWith('/')) {
+    return src
+  }
+
+  // ✅ 2. In dev, use CLOUDFLARE_DOMAIN if available
   if (process.env.NODE_ENV === 'development') {
     if (process.env.CLOUDFLARE_DOMAIN) {
       return `https://${process.env.CLOUDFLARE_DOMAIN}/cdn-cgi/image/${paramsString}/${normalizeSrc(src)}`
@@ -40,12 +47,11 @@ export default function cloudflareLoader({
     return src
   }
 
-  // Skip Cloudflare image optimization for cdn.zepid.dev URLs
-  // This prevents double processing of images already served by our CDN
+  // ✅ 3. Skip Cloudflare optimization for CDN-hosted images
   if (src.startsWith('https://cdn.zepid.dev/') || src.startsWith('http://cdn.zepid.dev/')) {
     return src
   }
 
-  // Production environment uses relative paths for other images
+  // ✅ 4. Otherwise, use Cloudflare optimization
   return `/cdn-cgi/image/${paramsString}/${normalizeSrc(src)}`
 }
