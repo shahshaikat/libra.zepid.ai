@@ -38,7 +38,7 @@ export const EmailFooter: React.FC<EmailFooterProps> = ({ extraContent }) => {
         <div className="mb-4">{extraContent}</div>
       )}
       <Text className="m-0 text-muted-foreground text-sm mb-2">
-        © {currentYear} Libra. All rights reserved.
+        © {currentYear} Zepid. All rights reserved.
       </Text>
       <Text className="m-0 text-muted-foreground text-sm">
         <Link href="https://zepid.dev/privacy" className="text-brand no-underline mx-2 hover:underline">

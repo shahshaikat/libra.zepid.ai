@@ -17,7 +17,7 @@ A comprehensive authentication and authorization solution built on the better-au
 
 ## Overview
 
-`@libra/auth` is the core authentication package of the Libra project, providing complete user authentication, authorization, and subscription management functionality.
+`@libra/auth` is the core authentication package of the Zepid project, providing complete user authentication, authorization, and subscription management functionality.
 
 ### Core Features
 

@@ -2,7 +2,7 @@
   "name": "@libra/common",
   "version": "1.0.1",
   "private": true,
-  "description": "Common utilities and types for Libra",
+  "description": "Common utilities and types for Zepid",
   "exports": {
     ".": "./src/index.ts"
   },

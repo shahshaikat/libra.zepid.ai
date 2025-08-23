@@ -38,8 +38,8 @@ import {
 export const CancellationEmailTemplate: React.FC = () => {
   return (
     <EmailContainer
-      title="Libra Subscription Cancelled"
-      previewText="Your Libra subscription has been cancelled"
+      title="Zepid Subscription Cancelled"
+      previewText="Your Zepid subscription has been cancelled"
     >
       <ContentSection>
         <Heading
@@ -63,7 +63,7 @@ export const CancellationEmailTemplate: React.FC = () => {
             lineHeight: '1.6',
           }}
         >
-          We're sorry to see you go. Your Libra subscription has been cancelled and will no longer renew automatically.
+          We're sorry to see you go. Your Zepid subscription has been cancelled and will no longer renew automatically.
         </Text>
 
         {/* Cancellation Details */}
@@ -99,7 +99,7 @@ export const CancellationEmailTemplate: React.FC = () => {
             lineHeight: '1.6',
           }}
         >
-          We'd like to understand your experience with Libra and how we can improve our service. If you have a moment, please let us know why you decided to cancel.
+          We'd like to understand your experience with Zepid and how we can improve our service. If you have a moment, please let us know why you decided to cancel.
         </Text>
 
         {/* Call to Action Button */}

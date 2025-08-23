@@ -7,7 +7,7 @@
 
 > **Zepid AI 驱动的 Web 应用 - AI 原生的开发体验**
 
-Libra Web 应用基于 Next.js 15 和 React 19 构建的现代 AI 原生开发体验平台，提供类似 IDE 的界面和体验，集成 AI 助手、GitHub 集成、团队协作等功能，打造 Libra 生态系统的核心应用。
+Zepid Web 应用基于 Next.js 15 和 React 19 构建的现代 AI 原生开发体验平台，提供类似 IDE 的界面和体验，集成 AI 助手、GitHub 集成、团队协作等功能，打造 Zepid 生态系统的核心应用。
 
 ## 目录导航
 
@@ -1244,7 +1244,7 @@ export default config
 
 set -e
 
-echo "开始部署 Libra Web 应用到 Cloudflare Workers"
+echo "开始部署 Zepid Web 应用到 Cloudflare Workers"
 
 # 1. 构建国际化
 echo "构建国际化..."
@@ -1387,7 +1387,7 @@ export const api = createCaller(createContext)
 
 ## 总结
 
-Libra Web 应用是一个现代化的 AI 原生开发平台，具备以下特点：
+Zepid Web 应用是一个现代化的 AI 原生开发平台，具备以下特点：
 
 ### 核心优势
 
@@ -1413,4 +1413,4 @@ Libra Web 应用是一个现代化的 AI 原生开发平台，具备以下特点
 - 性能监控和优化
 - 安全最佳实践
 
-这个文档为 Libra Web 应用的开发、维护和扩展提供了全面的指导，帮助开发团队快速上手和高效协作。
+这个文档为 Zepid Web 应用的开发、维护和扩展提供了全面的指导，帮助开发团队快速上手和高效协作。

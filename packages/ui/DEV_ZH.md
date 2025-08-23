@@ -1,8 +1,8 @@
-# Libra UI 设计系统
+# Zepid UI 设计系统
 
 > 现代化、可扩展的 React 组件库和设计系统
 
-Libra UI 是一个基于 **Tailwind CSS v4** 和 **Radix UI** 构建的企业级设计系统，为现代 Web 应用提供一致、美观且功能强大的用户界面解决方案。该系统包含 **47+ 精心设计的组件**，涵盖从基础元素到复杂交互的完整 UI 生态。
+Zepid UI 是一个基于 **Tailwind CSS v4** 和 **Radix UI** 构建的企业级设计系统，为现代 Web 应用提供一致、美观且功能强大的用户界面解决方案。该系统包含 **47+ 精心设计的组件**，涵盖从基础元素到复杂交互的完整 UI 生态。
 
 ## 🚀 核心特性
 
@@ -122,7 +122,7 @@ export default function HomePage() {
   return (
     <Card className="w-96">
       <CardHeader>
-        <CardTitle>欢迎使用 Libra UI</CardTitle>
+        <CardTitle>欢迎使用 Zepid UI</CardTitle>
       </CardHeader>
       <CardContent>
         <Button>开始使用</Button>
@@ -226,7 +226,7 @@ export default function HomePage() {
 
 ### Tailwind CSS v4 集成
 
-Libra UI 基于 **Tailwind CSS v4** 构建，采用最新的 CSS-in-CSS 语法，提供更强大的主题定制能力：
+Zepid UI 基于 **Tailwind CSS v4** 构建，采用最新的 CSS-in-CSS 语法，提供更强大的主题定制能力：
 
 ```css
 /* theme.css - 使用 @theme 指令定义主题 */
@@ -871,7 +871,7 @@ import '@libra/ui/globals.css'
 // 原有组件
 <button className="btn btn-primary">按钮</button>
 
-// 替换为 Libra UI
+// 替换为 Zepid UI
 <Button variant="default">按钮</Button>
 ```
 
@@ -926,7 +926,7 @@ export default {
 
 ## 🚀 总结
 
-Libra UI 设计系统为现代 Web 应用开发提供了完整的解决方案：
+Zepid UI 设计系统为现代 Web 应用开发提供了完整的解决方案：
 
 ### 🎯 核心优势
 

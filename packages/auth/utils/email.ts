@@ -40,7 +40,7 @@
 //    */
 //   constructor() {
 //     this.resend = new Resend(process.env.RESEND_API_KEY)
-//     this.from = process.env.RESEND_FROM || 'Libra <hi@zepid.dev>'
+//     this.from = process.env.RESEND_FROM || 'Zepid <hi@zepid.dev>'
 //   }
 //
 //   /**
@@ -75,7 +75,7 @@
 //    * @param planName - subscription plan name
 //    */
 //   async sendWelcomeEmail(userEmail: string, planName: string) {
-//     const subject = `Welcome to Libra ${planName} Plan!`
+//     const subject = `Welcome to Zepid ${planName} Plan!`
 //     const htmlContent = welcomeEmailTemplate(planName)
 //     return this.sendEmail(userEmail, subject, htmlContent)
 //   }
@@ -85,7 +85,7 @@
 //    * @param userEmail - user's email address
 //    */
 //   async sendCancellationEmail(userEmail: string) {
-//     const subject = 'Libra Subscription Cancelled'
+//     const subject = 'Zepid Subscription Cancelled'
 //     const htmlContent = cancellationEmailTemplate()
 //     return this.sendEmail(userEmail, subject, htmlContent)
 //   }
@@ -186,7 +186,7 @@
 //     console.log(`Sending organization invitation to ${email} for team ${teamName}`)
 //    
 //     // Generate email content from template
-//     const subject = 'Invitation to join a team on Libra'
+//     const subject = 'Invitation to join a team on Zepid'
 //     const htmlContent = organizationInvitationTemplate(
 //       invitedByUsername,
 //       invitedByEmail,

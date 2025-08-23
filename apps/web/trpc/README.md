@@ -533,8 +533,8 @@ loggerLink({
 - [📖 tRPC Official Documentation](https://trpc.io)
 - [🔧 React Query Documentation](https://tanstack.com/query)
 - [⚡ Next.js App Router](https://nextjs.org/docs/app)
-- [🏗️ Libra API Package](../../packages/api/README.md)
-- [🗄️ Libra Database Package](../../packages/db/README.md)
+- [🏗️ Zepid API Package](../../packages/api/README.md)
+- [🗄️ Zepid Database Package](../../packages/db/README.md)
 
 ---
 

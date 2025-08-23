@@ -60,7 +60,7 @@ dispatchRoute.get('/', async (c) => {
     })
 
     return c.json({
-      message: 'Libra Dispatcher API - Solution A (Wildcard Subdomain Routing)',
+      message: 'Zepid Dispatcher API - Solution A (Wildcard Subdomain Routing)',
       description: 'Use subdomain routing for optimal performance: https://your-worker.zapid.dev/',
       namespace: namespaceInfo,
       routing: {

@@ -139,4 +139,4 @@ VITE_INSPECTOR_URL=https://cdn.zepid.dev
 
 ---
 
-由 [Libra](https://zepid.dev) 用 ❤️ 构建
+由 [Zepid](https://zepid.dev) 用 ❤️ 构建

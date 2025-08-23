@@ -35,7 +35,7 @@ export const selectFile = (fileContentMap: FileContentMap, path: string): string
 
   // Check path validity
   if (!path || typeof path !== 'string') {
-    console.error("[Libra] Invalid file path:", path);
+    console.error("[Zepid] Invalid file path:", path);
     return null;
   }
 
@@ -62,7 +62,7 @@ export const selectFile = (fileContentMap: FileContentMap, path: string): string
     return content;
   }
 
-  console.error(`[Libra] File not found or not displayable: ${path}`);
+  console.error(`[Zepid] File not found or not displayable: ${path}`);
   toast.error(`File not found or not readable: ${path}`);
   return null;
 };
@@ -139,7 +139,7 @@ export const loadDefaultFile = (fileContentMap: FileContentMap): { path: string;
 export const updateFile = (
   fileContentMap: FileContentMap,
   treeContents: TreeNode[],
-  path: string, 
+  path: string,
   content: string
 ): { updatedFileMap: FileContentMap; updatedTreeContents: TreeNode[]; success: boolean } => {
   if (!path || content == null) {
@@ -207,7 +207,7 @@ export const updateFile = (
     // Add new file
     updatedTreeContents = addFileToTree(updatedTreeContents, path, content);
   }
-  
+
   return {
     updatedFileMap,
     updatedTreeContents,

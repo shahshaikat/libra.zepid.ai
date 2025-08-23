@@ -24,7 +24,7 @@ export const siteConfig = {
   getStartedUrl: 'https://zepid.dev',
   ogImage: 'https://zepid.dev/opengraph-image.png',
   description:
-    'Libra is a platform for building AI-powered applications.',
+    'Zepid is a platform for building AI-powered applications.',
   links: {
     twitter: 'https://twitter.com/nextify2024',
     github: 'https://github.com/nextify-limited/libra',

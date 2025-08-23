@@ -39,7 +39,7 @@ export async function sendWelcomeEmail(userEmail: string, planName: string) {
     await resend.emails.send({
       from: env.RESEND_FROM,
       to: [userEmail],
-      subject: `Welcome to the Libra ${planName} Plan`,
+      subject: `Welcome to the Zepid ${planName} Plan`,
       react: React.createElement(WelcomeEmailTemplate, { planName }) as any,
     });
   } catch (error) {
@@ -57,7 +57,7 @@ export async function sendCancellationEmail(userEmail: string) {
     await resend.emails.send({
       from: env.RESEND_FROM,
       to: [userEmail],
-      subject: 'Libra Subscription Cancelled',
+      subject: 'Zepid Subscription Cancelled',
       react: React.createElement(CancellationEmailTemplate, {}) as any,
     });
   } catch (error) {
@@ -82,7 +82,7 @@ export async function sendOrganizationInvitation(options: {
     await resend.emails.send({
       from: env.RESEND_FROM,
       to: [email],
-      subject: 'Invitation to join a team on Libra',
+      subject: 'Invitation to join a team on Zepid',
       react: React.createElement(OrganizationInvitationTemplate, { invitedByUsername, invitedByEmail, teamName, inviteLink }) as any,
     });
   } catch (error) {
@@ -99,7 +99,7 @@ export async function sendSignInEmail(userEmail: string, otp: string) {
     await resend.emails.send({
       from: env.RESEND_FROM,
       to: [userEmail],
-      subject: 'Libra - Sign-in Verification Code',
+      subject: 'Zepid - Sign-in Verification Code',
       react: React.createElement(SignInTemplate, { otp }) as any,
     });
   } catch (error) {
@@ -116,7 +116,7 @@ export async function sendEmailVerification(userEmail: string, otp: string) {
     await resend.emails.send({
       from: env.RESEND_FROM,
       to: [userEmail],
-      subject: 'Libra - Email Verification Code',
+      subject: 'Zepid - Email Verification Code',
       react: React.createElement(EmailVerificationTemplate, { otp }) as any,
     });
   } catch (error) {
@@ -139,7 +139,7 @@ export async function sendContactFormNotification(options: {
     await resend.emails.send({
       from: env.RESEND_FROM,
       to: [recipientEmail],
-      subject: 'Libra Contact Form Submission',
+      subject: 'Zepid Contact Form Submission',
       react: React.createElement(ContactTemplate, { name, email, message }) as any,
     });
   } catch (error) {

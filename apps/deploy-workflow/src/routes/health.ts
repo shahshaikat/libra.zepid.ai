@@ -59,7 +59,7 @@ export const healthHandler = async (c: AppContext) => {
     return c.json({
       status: 'healthy',
       timestamp: new Date().toISOString(),
-      service: 'Libra Deploy Service',
+      service: 'Zepid Deploy Service',
       version: '1.0.0'
     }, 200)
   } catch (error) {
@@ -76,7 +76,7 @@ export const healthHandler = async (c: AppContext) => {
     return c.json({
       status: 'unhealthy',
       timestamp: new Date().toISOString(),
-      service: 'Libra Deploy Service',
+      service: 'Zepid Deploy Service',
       version: '1.0.0'
     }, 200)
   }

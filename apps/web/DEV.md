@@ -7,7 +7,7 @@
 
 > **Zepid AI-Powered Web Application - AI-Native Development Experience**
 
-Libra Web application is a modern AI-native development experience platform built on Next.js 15 and React 19, providing IDE-like interface and experience, integrating AI assistants, GitHub integration, team collaboration, and other features to create the core application of the Libra ecosystem.
+Zepid Web application is a modern AI-native development experience platform built on Next.js 15 and React 19, providing IDE-like interface and experience, integrating AI assistants, GitHub integration, team collaboration, and other features to create the core application of the Zepid ecosystem.
 
 ## Table of Contents
 
@@ -1111,7 +1111,7 @@ export default config
 
 set -e
 
-echo "Starting Libra Web application deployment to Cloudflare Workers"
+echo "Starting Zepid Web application deployment to Cloudflare Workers"
 
 # 1. Build internationalization
 echo "Building internationalization..."
@@ -1254,7 +1254,7 @@ export const api = createCaller(createContext)
 
 ## Summary
 
-Libra Web application is a modern AI-native development platform with the following characteristics:
+Zepid Web application is a modern AI-native development platform with the following characteristics:
 
 ### Core Advantages
 
@@ -1280,4 +1280,4 @@ Libra Web application is a modern AI-native development platform with the follow
 - Performance monitoring and optimization
 - Security best practices
 
-This documentation provides comprehensive guidance for the development, maintenance, and expansion of the Libra Web application, helping development teams get started quickly and collaborate efficiently.
+This documentation provides comprehensive guidance for the development, maintenance, and expansion of the Zepid Web application, helping development teams get started quickly and collaborate efficiently.

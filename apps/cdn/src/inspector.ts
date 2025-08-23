@@ -26,7 +26,7 @@ export function registerInspectorRoutes(app: Hono<{ Bindings: Bindings, Variable
   app.get('/inspector', async (c) => {
     // Check if we're in development mode
     const isDev = (c.env.ENVIRONMENT as string) !== 'production' &&
-                  c.env.NODE_ENV !== 'production'
+      c.env.NODE_ENV !== 'production'
     if (!isDev) {
       return c.notFound()
     }
@@ -35,7 +35,7 @@ export function registerInspectorRoutes(app: Hono<{ Bindings: Bindings, Variable
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Libra Component Inspector</title>
+    <title>Zepid Component Inspector</title>
     <style>
       :root {
         /* Basic design variables */
@@ -374,7 +374,7 @@ export function registerInspectorRoutes(app: Hono<{ Bindings: Bindings, Variable
   <body>
     <div class="container">
       <header class="header">
-        <h1>Libra Component Inspector</h1>
+        <h1>Zepid Component Inspector</h1>
         <div class="connection-status">
           <span class="status-indicator connected"></span>
           <span class="status-text">Connected</span>
@@ -677,7 +677,7 @@ export function registerInspectorRoutes(app: Hono<{ Bindings: Bindings, Variable
     </script>
   </body>
   </html>`;
-    
+
     return c.html(inspectorHtml);
   });
 
@@ -685,7 +685,7 @@ export function registerInspectorRoutes(app: Hono<{ Bindings: Bindings, Variable
   app.get('/inspect.min.js', async (c) => {
     // Check if we're in development mode
     const isDev = (c.env.ENVIRONMENT as string) !== 'production' &&
-                  c.env.NODE_ENV !== 'production'
+      c.env.NODE_ENV !== 'production'
     if (!isDev) {
       return c.notFound()
     }
@@ -696,12 +696,12 @@ export function registerInspectorRoutes(app: Hono<{ Bindings: Bindings, Variable
   app.get('/inspect.js', async (c) => {
     // Check if we're in development mode
     const isDev = (c.env.ENVIRONMENT as string) !== 'production' &&
-                  c.env.NODE_ENV !== 'production'
+      c.env.NODE_ENV !== 'production'
     if (!isDev) {
       return c.notFound()
     }
     return c.text(`/**
- * Libra Component Inspector Script
+ * Zepid Component Inspector Script
  * 
  * This script enables component inspection and interaction.
  * It's a simplified version for demonstration purposes.

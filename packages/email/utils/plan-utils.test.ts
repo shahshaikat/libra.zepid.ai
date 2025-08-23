@@ -19,13 +19,13 @@
  */
 
 import { describe, it, expect } from 'vitest';
-import { 
-  normalizePlanName, 
-  getPlanConfig, 
-  getPlanBenefits, 
-  isFreePlan, 
-  isProPlan, 
-  isMaxPlan 
+import {
+  normalizePlanName,
+  getPlanConfig,
+  getPlanBenefits,
+  isFreePlan,
+  isProPlan,
+  isMaxPlan
 } from './plan-utils';
 import { PLAN_TYPES } from '../types/plan-types';
 
@@ -33,7 +33,7 @@ describe('Plan Utils', () => {
   describe('normalizePlanName', () => {
     it('should normalize free plan names', () => {
       expect(normalizePlanName('libra free')).toBe(PLAN_TYPES.FREE);
-      expect(normalizePlanName('Libra Free')).toBe(PLAN_TYPES.FREE);
+      expect(normalizePlanName('Zepid Free')).toBe(PLAN_TYPES.FREE);
       expect(normalizePlanName('LIBRA FREE')).toBe(PLAN_TYPES.FREE);
       expect(normalizePlanName('free')).toBe(PLAN_TYPES.FREE);
       expect(normalizePlanName('Free Plan')).toBe(PLAN_TYPES.FREE);
@@ -41,7 +41,7 @@ describe('Plan Utils', () => {
 
     it('should normalize pro plan names', () => {
       expect(normalizePlanName('libra pro')).toBe(PLAN_TYPES.PRO);
-      expect(normalizePlanName('Libra Pro')).toBe(PLAN_TYPES.PRO);
+      expect(normalizePlanName('Zepid Pro')).toBe(PLAN_TYPES.PRO);
       expect(normalizePlanName('LIBRA PRO')).toBe(PLAN_TYPES.PRO);
       expect(normalizePlanName('pro')).toBe(PLAN_TYPES.PRO);
       expect(normalizePlanName('Pro Plan')).toBe(PLAN_TYPES.PRO);
@@ -49,7 +49,7 @@ describe('Plan Utils', () => {
 
     it('should normalize max plan names', () => {
       expect(normalizePlanName('libra max')).toBe(PLAN_TYPES.MAX);
-      expect(normalizePlanName('Libra Max')).toBe(PLAN_TYPES.MAX);
+      expect(normalizePlanName('Zepid Max')).toBe(PLAN_TYPES.MAX);
       expect(normalizePlanName('LIBRA MAX')).toBe(PLAN_TYPES.MAX);
       expect(normalizePlanName('max')).toBe(PLAN_TYPES.MAX);
       expect(normalizePlanName('Max Plan')).toBe(PLAN_TYPES.MAX);
@@ -88,21 +88,21 @@ describe('Plan Utils', () => {
   describe('plan type checks', () => {
     it('should correctly identify free plans', () => {
       expect(isFreePlan('libra free')).toBe(true);
-      expect(isFreePlan('Libra Free')).toBe(true);
+      expect(isFreePlan('Zepid Free')).toBe(true);
       expect(isFreePlan('libra pro')).toBe(false);
       expect(isFreePlan('libra max')).toBe(false);
     });
 
     it('should correctly identify pro plans', () => {
       expect(isProPlan('libra pro')).toBe(true);
-      expect(isProPlan('Libra Pro')).toBe(true);
+      expect(isProPlan('Zepid Pro')).toBe(true);
       expect(isProPlan('libra free')).toBe(false);
       expect(isProPlan('libra max')).toBe(false);
     });
 
     it('should correctly identify max plans', () => {
       expect(isMaxPlan('libra max')).toBe(true);
-      expect(isMaxPlan('Libra Max')).toBe(true);
+      expect(isMaxPlan('Zepid Max')).toBe(true);
       expect(isMaxPlan('libra free')).toBe(false);
       expect(isMaxPlan('libra pro')).toBe(false);
     });

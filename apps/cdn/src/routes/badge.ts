@@ -26,8 +26,8 @@ import type { AppContext } from '../types'
 export const badgeRoute = createRoute({
   method: 'get',
   path: '/badge.js',
-  summary: 'Get Libra badge script',
-  description: 'Returns a JavaScript script that displays "Made with Libra" badge on the website',
+  summary: 'Get Zepid badge script',
+  description: 'Returns a JavaScript script that displays "Made with Zepid" badge on the website',
   tags: ['Badge'],
   responses: {
     200: {
@@ -50,7 +50,7 @@ const badgeScript = `
   if (window.libraBadgeLoaded) return;
   window.libraBadgeLoaded = true;
 
-  // Libra SVG Logo (dark version) - direct embedding with proportional scaling
+  // Zepid SVG Logo (dark version) - direct embedding with proportional scaling
   const libraLogo = \`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 1500" preserveAspectRatio="xMidYMid meet" class="badge-logo">
       <g transform="translate(0,1500) scale(0.1,-0.1)" fill="#FFFFFF" stroke="none">
         <path d="M9585 12384 c-16 -2 -73 -9 -125 -15 -801 -88 -1669 -448 -2255 -934 -107 -89 -300 -280 -390 -386 -323 -385 -522 -829 -591 -1324 -24 -173 -15 -373 25 -565 113 -543 445 -1404 907 -2349 74 -151 133 -275 132 -277 -2 -2 -2026 146 -2345 171 -78 6 -83 6 -83 -12 0 -19 173 -1274 185 -1340 4 -24 11 -33 25 -33 20 0 3164 476 3214 486 l28 6 -45 47 c-145 151 -351 413 -504 641 -429 642 -683 1309 -754 1985 -15 142 -15 524 0 640 51 392 214 766 478 1095 84 105 262 284 367 370 295 239 713 443 1108 539 302 74 506 96 883 96 317 0 387 -5 590 -46 779 -156 1447 -685 1820 -1444 130 -262 197 -481 227 -730 16 -139 16 -571 0 -725 -82 -765 -326 -1584 -720 -2412 l-70 -146 122 -30 c243 -61 2492 -611 2510 -614 18 -3 31 46 148 511 71 282 127 515 125 517 -2 2 -468 94 -1037 204 -568 110 -1034 201 -1036 202 -1 2 18 50 43 108 391 911 694 1764 794 2238 53 250 52 618 -2 927 -130 735 -521 1343 -1170 1817 -552 403 -1300 689 -2019 772 -122 14 -493 20 -585 10z"/>
@@ -159,9 +159,9 @@ const badgeScript = `
     
     // Badge HTML structure
     const badgeHtml = \`
-      <a href="https://zepid.dev" target="_blank" rel="noopener noreferrer" class="badge-container" title="Made with Libra">
+      <a href="https://zepid.dev" target="_blank" rel="noopener noreferrer" class="badge-container" title="Made with Zepid">
         \${libraLogo}
-        <span class="badge-text">Made with Libra</span>
+        <span class="badge-text">Made with Zepid</span>
       </a>
     \`;
     

@@ -68,10 +68,10 @@ openApiApp.openapi(healthRoute, healthHandler)
 // Service info endpoint
 openApiApp.get('/', async (c) => {
   return c.json({
-    message: 'Libra Deployment Service',
+    message: 'Zepid Deployment Service',
     endpoints: ['/deploy', '/deploy-status', '/health'],
     timestamp: new Date().toISOString(),
-    service: 'Libra Deploy Service',
+    service: 'Zepid Deploy Service',
     version: '1.0.0'
   })
 })
@@ -80,11 +80,11 @@ openApiApp.get('/', async (c) => {
 openApiApp.doc('/openapi.json', {
   openapi: '3.1.0',
   info: {
-    title: 'Libra Deploy API',
+    title: 'Zepid Deploy API',
     version: '1.0.0',
     description: 'API for deploying projects using Cloudflare Workflows',
     contact: {
-      name: 'Libra Team',
+      name: 'Zepid Team',
       url: 'https://zepid.dev',
       email: 'support@zepid.dev',
     },

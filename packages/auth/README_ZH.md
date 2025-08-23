@@ -27,7 +27,7 @@ bun add @libra/auth
 # 核心身份验证框架
 bun add better-auth better-auth-harmony stripe drizzle-orm
 
-# Libra 特定包（在 monorepo 中自动安装）
+# Zepid 特定包（在 monorepo 中自动安装）
 bun add @libra/better-auth-cloudflare @libra/better-auth-stripe
 bun add @libra/email @libra/db @libra/common @libra/ui
 ```

@@ -64,7 +64,7 @@ export function InstallStep({ isLoading, error, onInstall }: InstallStepProps) {
                 Installation Required
               </h3>
               <p className="text-xs text-amber-600 dark:text-amber-400 mt-1">
-                Install the Libra GitHub App to enable repository access and code export
+                Install the Zepid GitHub App to enable repository access and code export
               </p>
             </div>
           </div>

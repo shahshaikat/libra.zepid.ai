@@ -1,4 +1,4 @@
-name: "Libra Web Core Deploy"
+name: "Zepid Web Core Deploy"
 
 on:
   workflow_dispatch:
@@ -51,7 +51,7 @@ concurrency:
 jobs:
   publish:
     name: Publish to Cloudflare Workers
-    
+
     runs-on: ubuntu-latest
     timeout-minutes: 20
     permissions:
@@ -98,7 +98,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/bun.lock') }}-
 
-      - name: Install Deps 
+      - name: Install Deps
         if: steps.bun-cache.outputs.cache-hit != 'true'
         run: bun install
 

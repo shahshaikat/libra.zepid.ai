@@ -60,7 +60,7 @@ openApiApp.get('/health', async (c) => {
     return c.json({
       status: allHealthy ? 'healthy' : 'unhealthy',
       timestamp: new Date().toISOString(),
-      service: 'Libra Dispatcher',
+      service: 'Zepid Dispatcher',
       version: '1.0.0',
       requestId,
       checks,
@@ -73,7 +73,7 @@ openApiApp.get('/health', async (c) => {
     return c.json({
       status: 'error',
       timestamp: new Date().toISOString(),
-      service: 'Libra Dispatcher',
+      service: 'Zepid Dispatcher',
       version: '1.0.0',
       requestId,
       error: error instanceof Error ? error.message : 'Unknown error'
@@ -85,11 +85,11 @@ openApiApp.get('/health', async (c) => {
 openApiApp.doc('/openapi.json', {
   openapi: '3.1.0',
   info: {
-    title: 'Libra Dispatcher API',
+    title: 'Zepid Dispatcher API',
     version: '1.0.0',
     description: 'API for dispatching requests to Cloudflare Workers using subdomain routing',
     contact: {
-      name: 'Libra Team',
+      name: 'Zepid Team',
       url: 'https://zepid.dev',
       email: 'support@zepid.dev',
     },

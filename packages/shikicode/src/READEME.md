@@ -1,4 +1,4 @@
-# Libra ShikiCode
+# Zepid ShikiCode
 
 A modern code editor component built on top of **Shiki**, providing high-performance syntax highlighting and code editing capabilities for web applications.
 

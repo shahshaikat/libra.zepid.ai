@@ -1,7 +1,7 @@
 {
   "name": "libra-scripts",
   "version": "1.0.0",
-  "description": "Utility scripts for Libra project",
+  "description": "Utility scripts for Zepid project",
   "type": "module",
   "main": "index.js",
   "scripts": {

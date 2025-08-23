@@ -25,10 +25,10 @@ import {
   Link,
 } from '@react-email/components';
 import type * as React from 'react';
-import { 
-  Button, 
-  ContentSection, 
-  EmailContainer, 
+import {
+  Button,
+  ContentSection,
+  EmailContainer,
   InfoBox,
   OtpCode
 } from '../../components';
@@ -43,16 +43,16 @@ interface SignInTemplateProps {
 export const SignInTemplate: React.FC<SignInTemplateProps> = ({ otp }) => {
   return (
     <EmailContainer
-      title="Libra Sign-in Verification"
-      previewText={`Libra verification code: ${otp}`}
+      title="Zepid Sign-in Verification"
+      previewText={`Zepid verification code: ${otp}`}
     >
       <ContentSection>
         <Heading as="h2" className="mt-0 text-gray-800 text-xl font-semibold">
           Verify Your Sign-in
         </Heading>
-        
+
         <Text className="mb-6 text-gray-600 leading-relaxed">
-          Hello! We received a request to sign in to your Libra account. Please use the following verification code to complete the sign-in process:
+          Hello! We received a request to sign in to your Zepid account. Please use the following verification code to complete the sign-in process:
         </Text>
 
         {/* Verification Code Box - Using OtpCode component */}
@@ -69,14 +69,14 @@ export const SignInTemplate: React.FC<SignInTemplateProps> = ({ otp }) => {
         {/*/!* Call to Action Button *!/*/}
         {/*<Section className="text-center mb-7">*/}
         {/*  <Button href="#" variant="primary">*/}
-        {/*    Visit Libra*/}
+        {/*    Visit Zepid*/}
         {/*  </Button>*/}
         {/*</Section>*/}
 
         {/* Security Message */}
         <Section className="border-t border-gray-200 pt-5 mt-2">
           <Text className="text-sm text-gray-500 mb-0 leading-relaxed">
-            <strong>Security Tip:</strong> Libra will never ask for your password or financial information via email.
+            <strong>Security Tip:</strong> Zepid will never ask for your password or financial information via email.
           </Text>
         </Section>
       </ContentSection>

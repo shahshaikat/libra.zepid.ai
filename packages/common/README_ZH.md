@@ -3,7 +3,7 @@
 [![License](https://img.shields.io/badge/license-AGPL--3.0-blue.svg)](../../LICENSE)
 [![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue.svg)](https://www.typescriptlang.org/)
 
-Zepid AI 平台的共享工具、类型和实用程序的综合集合。此包为 Libra 应用程序中的文件操作、数据处理、日志记录、错误处理和类型安全提供了基本构建块。
+Zepid AI 平台的共享工具、类型和实用程序的综合集合。此包为 Zepid 应用程序中的文件操作、数据处理、日志记录、错误处理和类型安全提供了基本构建块。
 
 ## 📋 目录
 
@@ -34,9 +34,9 @@ Zepid AI 平台的共享工具、类型和实用程序的综合集合。此包�
 
 ## 📦 安装
 
-> **注意**: 这是 Libra monorepo 内部的包，不会发布到 npm。
+> **注意**: 这是 Zepid monorepo 内部的包，不会发布到 npm。
 
-### 在 Libra 项目中
+### 在 Zepid 项目中
 
 ```bash
 # 在 monorepo 根目录安装依赖
@@ -49,7 +49,7 @@ bun install
 
 ### 外部项目
 
-如果你想在 Libra monorepo 之外使用此包，你需要复制源文件并安装所需的依赖：
+如果你想在 Zepid monorepo 之外使用此包，你需要复制源文件并安装所需的依赖：
 
 ```bash
 # 核心依赖（如果需要）
@@ -145,7 +145,7 @@ if (error) {
 3. **环境无关**: 在 Node.js、浏览器和 Cloudflare Workers 中工作
 4. **性能优先**: 优化的工具，开销最小
 5. **错误恢复**: 强大的错误处理和用户友好的消息
-6. **日志一致性**: 所有 Libra 应用程序的结构化日志
+6. **日志一致性**: 所有 Zepid 应用程序的结构化日志
 
 ### 模块依赖关系
 
@@ -715,7 +715,7 @@ log.api('error', '请求失败', { endpoint: '/api/users' }, error)
 **解决方案:**
 
 ```bash
-# 确保你在 Libra monorepo 中
+# 确保你在 Zepid monorepo 中
 cd /path/to/libra
 
 # 安装依赖

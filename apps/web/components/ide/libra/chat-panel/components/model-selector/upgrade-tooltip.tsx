@@ -41,7 +41,7 @@ export const UpgradeTooltip = ({ model, children }: UpgradeTooltipProps) => {
     switch (requiredPlan) {
       case PLAN_TYPES.PRO:
         return {
-          name: 'Libra Pro',
+          name: 'Zepid Pro',
           icon: Crown,
           color: 'text-amber-600 dark:text-amber-400',
           bgColor: 'bg-amber-50 dark:bg-amber-900/20',
@@ -54,7 +54,7 @@ export const UpgradeTooltip = ({ model, children }: UpgradeTooltipProps) => {
         }
       case PLAN_TYPES.MAX:
         return {
-          name: 'Libra Max',
+          name: 'Zepid Max',
           icon: Sparkles,
           color: 'text-purple-600 dark:text-purple-400',
           bgColor: 'bg-purple-50 dark:bg-purple-900/20',
@@ -86,8 +86,8 @@ export const UpgradeTooltip = ({ model, children }: UpgradeTooltipProps) => {
       <TooltipTrigger asChild>
         {children}
       </TooltipTrigger>
-      <TooltipContent 
-        side="right" 
+      <TooltipContent
+        side="right"
         align="center"
         className={cn(
           'max-w-xs p-0 border-0 shadow-xl',
@@ -127,7 +127,7 @@ export const UpgradeTooltip = ({ model, children }: UpgradeTooltipProps) => {
             </p>
             <ul className="space-y-0.5">
               {planInfo.features.map((feature, index) => (
-                <li 
+                <li
                   key={index}
                   className="text-xs text-gray-600 dark:text-gray-400 flex items-center gap-1"
                 >

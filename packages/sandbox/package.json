@@ -2,7 +2,7 @@
   "name": "@libra/sandbox",
   "version": "1.0.1",
   "private": true,
-  "description": "Sandbox utilities and types for Libra",
+  "description": "Sandbox utilities and types for Zepid",
   "exports": {
     ".": "./src/index.ts"
   },

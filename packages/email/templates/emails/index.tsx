@@ -28,9 +28,9 @@ export { WelcomeEmailTemplate } from './welcomeEmail'
 
 // Template subject mapping
 export const emailSubjects = {
-  'sign-in': 'Libra - Sign-in Verification Code',
-  'email-verification': 'Libra - Email Verification Code',
-  welcome: 'Welcome to Libra!',
-  cancellation: 'Libra Subscription Cancelled',
-  'organization-invitation': 'Invitation to join a team on Libra',
+  'sign-in': 'Zepid - Sign-in Verification Code',
+  'email-verification': 'Zepid - Email Verification Code',
+  welcome: 'Welcome to Zepid!',
+  cancellation: 'Zepid Subscription Cancelled',
+  'organization-invitation': 'Invitation to join a team on Zepid',
 }

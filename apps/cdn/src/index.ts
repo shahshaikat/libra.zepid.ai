@@ -74,7 +74,7 @@ app.get(
   Scalar({
     url: '/openapi.json',
     theme: 'default',
-    pageTitle: 'Libra CDN API Documentation',
+    pageTitle: 'Zepid CDN API Documentation',
     customCss: `
     .light-mode {
       --scalar-color-accent: #0099ff;

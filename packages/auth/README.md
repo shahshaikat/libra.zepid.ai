@@ -27,7 +27,7 @@ This package requires several peer dependencies:
 # Core authentication framework
 bun add better-auth better-auth-harmony stripe drizzle-orm
 
-# Libra-specific packages (automatically installed in monorepo)
+# Zepid-specific packages (automatically installed in monorepo)
 bun add @libra/better-auth-cloudflare @libra/better-auth-stripe
 bun add @libra/email @libra/db @libra/common @libra/ui
 ```

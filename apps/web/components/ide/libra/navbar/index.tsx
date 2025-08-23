@@ -172,9 +172,9 @@ export default function Navbar({
         'py-1'
       )}
     >
-      {/* Left side - Libra Logo */}
+      {/* Left side - Zepid Logo */}
       <div className='flex items-center pl-1 sm:pl-2'>
-        {/* Libra Logo */}
+        {/* Zepid Logo */}
         <Link
           href='/dashboard'
           className={cn(
@@ -207,8 +207,8 @@ export default function Navbar({
       <div className='flex items-center'>
         {/* Function button groups */}
         <div className='flex items-center gap-1 sm:gap-2 md:gap-3 mr-3 sm:mr-4 md:mr-6'>
-                      {/* Tool buttons group */}
-            <div className='flex items-center gap-2'>
+          {/* Tool buttons group */}
+          <div className='flex items-center gap-2'>
             {/* Small screen search button */}
             {isSmallScreen && (
               <Button
@@ -364,11 +364,11 @@ export default function Navbar({
           </div>
         </div>
 
-                {/* User actions */}
+        {/* User actions */}
         <div className='flex items-center gap-3'>
-          <RainbowButton 
-            onClick={handleShare} 
-            variant="outline" 
+          <RainbowButton
+            onClick={handleShare}
+            variant="outline"
             size="sm"
             className="h-8 px-3 hover:scale-105 transition-all duration-200"
           >

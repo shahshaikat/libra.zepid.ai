@@ -1,6 +1,6 @@
-# Libra Deploy V2 - Queue-based Deployment Service
+# Zepid Deploy V2 - Queue-based Deployment Service
 
-A modern, queue-based deployment service for the Libra platform, built on Cloudflare Workers with Queues and R2 storage.
+A modern, queue-based deployment service for the Zepid platform, built on Cloudflare Workers with Queues and R2 storage.
 
 ## Architecture
 

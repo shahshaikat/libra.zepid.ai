@@ -352,7 +352,7 @@ const healthHandler = async (c: any) => {
     const response = {
       status: 'healthy',
       timestamp: new Date().toISOString(),
-      service: 'Libra Screenshot Service',
+      service: 'Zepid Screenshot Service',
       version: '1.0.0',
       queues: {
         screenshot: {
@@ -392,13 +392,13 @@ openApiApp.openapi(healthRoute, healthHandler)
 // Service info endpoint
 openApiApp.get('/', async (c) => {
   return c.json({
-    message: 'Libra Screenshot Service',
-    service: 'Libra Screenshot Service',
+    message: 'Zepid Screenshot Service',
+    service: 'Zepid Screenshot Service',
     version: '1.0.0',
     status: 'running',
     timestamp: new Date().toISOString(),
     architecture: 'queue-based',
-    description: 'Queue-based screenshot service for Libra platform',
+    description: 'Queue-based screenshot service for Zepid platform',
     endpoints: ['/screenshot', '/screenshot-status?id=<screenshotId>', '/health', '/docs']
   })
 })
@@ -407,11 +407,11 @@ openApiApp.get('/', async (c) => {
 openApiApp.doc('/openapi.json', {
   openapi: '3.1.0',
   info: {
-    title: 'Libra Screenshot Service API',
+    title: 'Zepid Screenshot Service API',
     version: '1.0.0',
     description: 'API for capturing screenshots using Cloudflare Workers and Queues',
     contact: {
-      name: 'Libra Team',
+      name: 'Zepid Team',
       url: 'https://zepid.dev',
       email: 'support@zepid.dev',
     },

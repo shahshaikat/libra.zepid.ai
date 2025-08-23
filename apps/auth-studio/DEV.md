@@ -12,7 +12,7 @@ Last Updated: 2025-07-30
 
 ## Overview
 
-`apps/auth-studio` is a convenient launcher in the Libra project, used to quickly access the Drizzle Studio management interface of the authentication database. It is essentially a script shortcut, not a standalone application.
+`apps/auth-studio` is a convenient launcher in the Zepid project, used to quickly access the Drizzle Studio management interface of the authentication database. It is essentially a script shortcut, not a standalone application.
 
 **Important Note**: This is not a complete application, but a quick entry to the database management tool provided by the `@libra/auth` package.
 

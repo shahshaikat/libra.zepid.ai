@@ -87,7 +87,7 @@ export const sponsorshipTexts: Record<string, SponsorshipTexts> = {
   en: {
     platinum: {
       title: "💎 PLATINUM SPONSORS",
-      description: "Join our Platinum tier to showcase your company with maximum visibility. Your logo, description, and custom messaging will be prominently featured across all Libra documentation and marketing materials.",
+      description: "Join our Platinum tier to showcase your company with maximum visibility. Your logo, description, and custom messaging will be prominently featured across all Zepid documentation and marketing materials.",
       buttonText: "Become a Platinum Sponsor",
       tagline: "Empowering developers to build the future",
       benefits: {
@@ -173,7 +173,7 @@ export const sponsorshipTexts: Record<string, SponsorshipTexts> = {
   zh: {
     platinum: {
       title: "💎 白金级赞助商",
-      description: "加入我们的白金级赞助商，享受最高级别的品牌曝光。您的企业标识、详细介绍和定制信息将在所有 Libra 文档和营销材料中获得突出展示。",
+      description: "加入我们的白金级赞助商，享受最高级别的品牌曝光。您的企业标识、详细介绍和定制信息将在所有 Zepid 文档和营销材料中获得突出展示。",
       buttonText: "成为白金级赞助商",
       tagline: "赋能开发者构建未来",
       benefits: {

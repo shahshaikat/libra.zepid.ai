@@ -7,7 +7,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue.svg)](https://www.typescriptlang.org/)
 [![Private Package](https://img.shields.io/badge/package-private-red.svg)](#)
 
-一个为 Better Auth 提供的全面 Stripe 集成插件，为 SaaS 应用程序提供完整的订阅管理、客户处理和支付处理功能。此包是 Zepid AI 平台单体仓库的一部分，专为 Libra 的订阅和配额管理系统设计。
+一个为 Better Auth 提供的全面 Stripe 集成插件，为 SaaS 应用程序提供完整的订阅管理、客户处理和支付处理功能。此包是 Zepid AI 平台单体仓库的一部分，专为 Zepid 的订阅和配额管理系统设计。
 
 ## 🚀 功能特性
 
@@ -15,7 +15,7 @@
 - **👥 客户管理** - 自动创建 Stripe 客户并同步
 - **🔗 Webhook 处理** - 安全处理 Stripe 事件与 Better Auth 集成
 - **💳 计费门户** - 集成 Stripe 客户门户访问
-- **🏢 多租户** - 基于组织的订阅管理（Libra 的核心模型）
+- **🏢 多租户** - 基于组织的订阅管理（Zepid 的核心模型）
 - **💺 配额管理** - AI 使用量、项目限制和席位管理
 - **📊 使用量跟踪** - 实时配额跟踪和执行
 - **🔄 自动续费** - 免费计划配额刷新和付费计划管理
@@ -24,7 +24,7 @@
 ## 📦 安装
 
 ```bash
-# 注意：这是 Libra 单体仓库内的私有包
+# 注意：这是 Zepid 单体仓库内的私有包
 # 不会发布到 npm，仅供内部使用
 
 # 在单体仓库内开发：
@@ -62,12 +62,12 @@ import { stripe } from "@libra/better-auth-stripe"
 import Stripe from "stripe"
 
 const stripeClient = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: "2025-05-28.basil", // Libra 中使用的当前 API 版本
+  apiVersion: "2025-05-28.basil", // Zepid 中使用的当前 API 版本
 })
 
 export const auth = betterAuth({
   database: {
-    provider: "sqlite", // Libra 使用 SQLite 存储认证数据
+    provider: "sqlite", // Zepid 使用 SQLite 存储认证数据
     url: process.env.DATABASE || "auth.db",
   },
   plugins: [
@@ -169,7 +169,7 @@ const getSubscriptions = async () => {
    - `invoice.payment_failed`
 4. 将 webhook 密钥复制到您的环境变量中
 
-> **重要**：webhook 端点必须匹配 Better Auth 路由结构。在 Libra 中，这由 Better Auth Stripe 插件自动处理。
+> **重要**：webhook 端点必须匹配 Better Auth 路由结构。在 Zepid 中，这由 Better Auth Stripe 插件自动处理。
 
 > **注意**：当插件配置完成后，webhook 端点会自动在 `/stripe/webhook` 创建。
 
@@ -215,7 +215,7 @@ ALTER TABLE user ADD COLUMN stripeCustomerId TEXT; -- 注意：实际架构中�
 └── tsup.config.ts       # 构建配置
 ```
 
-> **注意**：此包与 Libra 的订阅系统深度集成，与 `@libra/auth` 配合工作，用于配额管理和基于组织的计费。
+> **注意**：此包与 Zepid 的订阅系统深度集成，与 `@libra/auth` 配合工作，用于配额管理和基于组织的计费。
 
 ## 📚 文档
 
@@ -319,7 +319,7 @@ bun test
 bun run typecheck
 ```
 
-> **注意**：此包目前依赖于通过主 `@libra/auth` 包进行集成测试，而不是拥有专门的单元测试。文档中的测试示例指的是在 Libra 平台中使用的更广泛的 Stripe 集成测试模式。
+> **注意**：此包目前依赖于通过主 `@libra/auth` 包进行集成测试，而不是拥有专门的单元测试。文档中的测试示例指的是在 Zepid 平台中使用的更广泛的 Stripe 集成测试模式。
 
 ## 🤝 贡献
 
@@ -338,4 +338,4 @@ bun run typecheck
 
 ---
 
-由 Libra 团队用 ❤️ 构建。
+由 Zepid 团队用 ❤️ 构建。

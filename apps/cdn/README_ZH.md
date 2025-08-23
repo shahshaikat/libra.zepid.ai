@@ -1,4 +1,4 @@
-# Libra CDN 服务
+# Zepid CDN 服务
 
 [English Version](./README.md)
 
@@ -24,7 +24,7 @@
 | **文件管理** | SHA-256 去重、基于 planId 的替换、配额跟踪 |
 | **图片处理** | Cloudflare Images 优化、AVIF/WebP/JPEG/PNG 支持 |
 | **截图服务** | Base64 存储、planId 检索、公开 iframe 访问 |
-| **开发者工具** | 组件检查器、"Made with Libra" 徽章、实时调试 |
+| **开发者工具** | 组件检查器、"Made with Zepid" 徽章、实时调试 |
 | **API 文档** | OpenAPI 3.1 与 Scalar UI，在 `/docs` 提供交互式测试 |
 | **安全性能** | 限流保护、CORS 防护、30天边缘缓存 |
 
@@ -121,7 +121,7 @@ wrangler route add "cdn.zepid.dev/*" libra-cdn
 | `GET /` | ❌ | 健康检查 |
 | `GET /image/{key}` | ❌ | 图片访问（缓存30天） |
 | `GET /screenshot/{planId}` | ❌ | 截图密钥查找（支持iframe） |
-| `GET /badge.js` | ❌ | "Made with Libra" 徽章脚本 |
+| `GET /badge.js` | ❌ | "Made with Zepid" 徽章脚本 |
 | `GET /docs` | ❌ | API 文档 |
 | `GET /openapi.json` | ❌ | OpenAPI 规范 |
 | `GET /inspector` | ❌ | 组件检查器（仅开发环境） |

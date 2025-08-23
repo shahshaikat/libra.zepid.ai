@@ -309,7 +309,7 @@ const healthHandler = async (c: any) => {
     const response = {
       status: 'healthy' as const,
       timestamp: new Date().toISOString(),
-      service: 'Libra Deploy V2',
+      service: 'Zepid Deploy V2',
       version: '2.0.0',
       uptime: Date.now() - startTime,
       checks
@@ -331,7 +331,7 @@ const healthHandler = async (c: any) => {
     return c.json({
       status: 'unhealthy',
       timestamp: new Date().toISOString(),
-      service: 'Libra Deploy V2',
+      service: 'Zepid Deploy V2',
       version: '2.0.0',
       error: error instanceof Error ? error.message : String(error)
     }, 500)
@@ -345,13 +345,13 @@ openApiApp.openapi(healthRoute, healthHandler)
 // Service info endpoint
 openApiApp.get('/', async (c) => {
   return c.json({
-    message: 'Libra Deploy V2 Service',
-    service: 'Libra Deploy V2',
+    message: 'Zepid Deploy V2 Service',
+    service: 'Zepid Deploy V2',
     version: '2.0.0',
     status: 'running',
     timestamp: new Date().toISOString(),
     architecture: 'queue-based',
-    description: 'Queue-based deployment service for Libra platform',
+    description: 'Queue-based deployment service for Zepid platform',
     endpoints: ['/deploy', '/deploy-status?id=<deploymentId>', '/health', '/docs']
   })
 })
@@ -360,11 +360,11 @@ openApiApp.get('/', async (c) => {
 openApiApp.doc('/openapi.json', {
   openapi: '3.1.0',
   info: {
-    title: 'Libra Deploy V2 API',
+    title: 'Zepid Deploy V2 API',
     version: '2.0.0',
     description: 'API for deploying projects using Cloudflare Workers and Queues',
     contact: {
-      name: 'Libra Team',
+      name: 'Zepid Team',
       url: 'https://zepid.dev',
       email: 'support@zepid.dev',
     },

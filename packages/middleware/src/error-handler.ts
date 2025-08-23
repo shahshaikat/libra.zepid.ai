@@ -23,7 +23,7 @@ import { ZodError } from 'zod/v4'
 import type { BaseContext, ErrorResponse, ErrorHandlerFunction } from './types'
 
 /**
- * Base error class for Libra applications
+ * Base error class for Zepid applications
  */
 export class LibraError extends Error {
   constructor(
@@ -51,7 +51,7 @@ export const CommonErrorCodes = {
   VALIDATION_ERROR: 'VALIDATION_ERROR',
   RATE_LIMITED: 'RATE_LIMITED',
   PAYLOAD_TOO_LARGE: 'PAYLOAD_TOO_LARGE',
-  
+
   // Server errors (5xx)
   INTERNAL_ERROR: 'INTERNAL_ERROR',
   SERVICE_UNAVAILABLE: 'SERVICE_UNAVAILABLE',
@@ -78,7 +78,7 @@ function createErrorResponse(
   service?: string
 ): ErrorResponse {
   const isProd = isProduction()
-  
+
   // Handle known error types
   if (error instanceof LibraError) {
     return {
@@ -92,7 +92,7 @@ function createErrorResponse(
       timestamp: new Date().toISOString()
     }
   }
-  
+
   if (error instanceof HTTPException) {
     return {
       success: false,
@@ -104,7 +104,7 @@ function createErrorResponse(
       timestamp: new Date().toISOString()
     }
   }
-  
+
   if (error instanceof ZodError) {
     return {
       success: false,
@@ -117,16 +117,16 @@ function createErrorResponse(
       timestamp: new Date().toISOString()
     }
   }
-  
+
   // Generic error handling
   const message = error instanceof Error ? error.message : 'An unexpected error occurred'
-  
+
   return {
     success: false,
     error: {
       code: CommonErrorCodes.INTERNAL_ERROR,
       message: isProd ? 'An unexpected error occurred' : message,
-      details: isProd ? undefined : { 
+      details: isProd ? undefined : {
         stack: error instanceof Error ? error.stack : undefined,
         raw: String(error)
       },
@@ -154,7 +154,7 @@ function getHttpErrorCode(status: number): string {
     503: CommonErrorCodes.SERVICE_UNAVAILABLE,
     504: CommonErrorCodes.TIMEOUT_ERROR,
   }
-  
+
   return statusMap[status] || CommonErrorCodes.INTERNAL_ERROR
 }
 
@@ -176,7 +176,7 @@ function getGenericMessage(status: number): string {
     503: 'Service temporarily unavailable',
     504: 'Request timeout',
   }
-  
+
   return messageMap[status] || 'An error occurred'
 }
 
@@ -186,13 +186,13 @@ function getGenericMessage(status: number): string {
 export function createErrorHandler(service: string): ErrorHandlerFunction {
   return async (err: Error, c: BaseContext) => {
     const requestId = c.get('requestId') || crypto.randomUUID()
-    
+
     // Determine log level based on error type and status
-    const statusCode = err instanceof HTTPException ? err.status : 
-                      err instanceof LibraError ? err.statusCode : 500
-    
+    const statusCode = err instanceof HTTPException ? err.status :
+      err instanceof LibraError ? err.statusCode : 500
+
     const logLevel = statusCode >= 500 ? 'error' : 'warn'
-    
+
     // Log the error with service context
     console[logLevel](`Request error in ${service} service`, {
       operation: 'error-handler',
@@ -208,7 +208,7 @@ export function createErrorHandler(service: string): ErrorHandlerFunction {
 
     // Create error response
     const errorResponse = createErrorResponse(err, requestId, service)
-    
+
     // Return error response with appropriate status code
     return c.json(errorResponse, statusCode as any)
   }
@@ -218,40 +218,40 @@ export function createErrorHandler(service: string): ErrorHandlerFunction {
  * Common error factory functions
  */
 export const CommonErrors = {
-  unauthorized: (message = 'Authentication required') => 
+  unauthorized: (message = 'Authentication required') =>
     new LibraError(401, CommonErrorCodes.UNAUTHORIZED, message),
 
-  forbidden: (message = 'Access denied') => 
+  forbidden: (message = 'Access denied') =>
     new LibraError(403, CommonErrorCodes.FORBIDDEN, message),
 
-  notFound: (resource = 'Resource') => 
+  notFound: (resource = 'Resource') =>
     new LibraError(404, CommonErrorCodes.NOT_FOUND, `${resource} not found`),
 
-  conflict: (message = 'Resource conflict') => 
+  conflict: (message = 'Resource conflict') =>
     new LibraError(409, CommonErrorCodes.CONFLICT, message),
 
-  validationError: (message = 'Validation failed', details?: unknown) => 
+  validationError: (message = 'Validation failed', details?: unknown) =>
     new LibraError(422, CommonErrorCodes.VALIDATION_ERROR, message, details),
 
-  rateLimited: (message = 'Too many requests', retryAfter?: number) => 
+  rateLimited: (message = 'Too many requests', retryAfter?: number) =>
     new LibraError(429, CommonErrorCodes.RATE_LIMITED, message, { retryAfter }),
 
-  payloadTooLarge: (message = 'Request payload too large', maxSize?: number) => 
+  payloadTooLarge: (message = 'Request payload too large', maxSize?: number) =>
     new LibraError(413, CommonErrorCodes.PAYLOAD_TOO_LARGE, message, { maxSize }),
 
-  internalError: (message = 'Internal server error', details?: unknown) => 
+  internalError: (message = 'Internal server error', details?: unknown) =>
     new LibraError(500, CommonErrorCodes.INTERNAL_ERROR, message, details),
 
-  serviceUnavailable: (message = 'Service temporarily unavailable') => 
+  serviceUnavailable: (message = 'Service temporarily unavailable') =>
     new LibraError(503, CommonErrorCodes.SERVICE_UNAVAILABLE, message),
 
-  databaseError: (operation = 'Database operation failed') => 
+  databaseError: (operation = 'Database operation failed') =>
     new LibraError(500, CommonErrorCodes.DATABASE_ERROR, operation),
 
-  externalServiceError: (service: string, message?: string) => 
-    new LibraError(500, CommonErrorCodes.EXTERNAL_SERVICE_ERROR, 
+  externalServiceError: (service: string, message?: string) =>
+    new LibraError(500, CommonErrorCodes.EXTERNAL_SERVICE_ERROR,
       message || `External service error: ${service}`),
 
-  timeoutError: (operation = 'Operation timed out') => 
+  timeoutError: (operation = 'Operation timed out') =>
     new LibraError(504, CommonErrorCodes.TIMEOUT_ERROR, operation),
 }

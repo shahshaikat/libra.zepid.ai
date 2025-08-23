@@ -1,6 +1,6 @@
 # 🚀 Local Development Setup
 
-This guide will help you set up the Libra project for local development.
+This guide will help you set up the Zepid project for local development.
 
 ## 📋 Prerequisites
 

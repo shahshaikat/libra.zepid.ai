@@ -1,4 +1,4 @@
-# Libra Scripts
+# Zepid Scripts
 
 Modern configuration management and deployment scripts, avoiding traditional text processing tools like `sed` and `perl`.
 

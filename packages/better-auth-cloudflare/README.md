@@ -36,9 +36,9 @@ A specialized Better Auth integration plugin designed for the Cloudflare ecosyst
 
 ## 📦 Installation
 
-> **Note**: This is an internal package within the Libra monorepo and is not published to npm.
+> **Note**: This is an internal package within the Zepid monorepo and is not published to npm.
 
-### Within Libra Project
+### Within Zepid Project
 
 ```bash
 # Install dependencies in the monorepo root
@@ -51,7 +51,7 @@ bun install
 
 ### External Projects
 
-If you want to use this package outside the Libra monorepo, you'll need to install the required dependencies:
+If you want to use this package outside the Zepid monorepo, you'll need to install the required dependencies:
 
 ```bash
 # Core dependencies
@@ -1091,7 +1091,7 @@ We welcome contributions! Please see our [Contributing Guidelines](../../CONTRIB
 ### Development Setup
 
 ```bash
-# Clone the Libra repository
+# Clone the Zepid repository
 git clone https://github.com/libra-ai/libra.git
 cd libra
 
@@ -1148,7 +1148,7 @@ This project is licensed under the AGPL-3.0 License - see the [LICENSE](../../LI
 
 ## 🙏 Credits
 
-This package is based on the original work from [better-auth-cloudflare](https://github.com/zpg6/better-auth-cloudflare/) with significant enhancements and adaptations for the Libra ecosystem.
+This package is based on the original work from [better-auth-cloudflare](https://github.com/zpg6/better-auth-cloudflare/) with significant enhancements and adaptations for the Zepid ecosystem.
 
 Special thanks to:
 

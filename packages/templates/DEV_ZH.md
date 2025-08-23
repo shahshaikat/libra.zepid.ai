@@ -1,4 +1,4 @@
-# Libra Templates 包目录结构
+# Zepid Templates 包目录结构
 ```bash
 packages/templates/
 ├── DEV-ZH.md                 # 文档文件

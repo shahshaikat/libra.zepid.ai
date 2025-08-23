@@ -45,7 +45,7 @@ const HydrationSafeBadge = () => {
   return (
     <Badge variant='outline' className='animate-appear'>
       <span className='text-muted-foreground'>
-        {isHydrated ? m['hero.badge']() : 'Introducing Libra'}
+        {isHydrated ? m['hero.badge']() : 'Introducing Zepid'}
       </span>
       <a href={siteConfig.getStartedUrl} className='flex items-center gap-1'>
         {isHydrated ? m['hero.cta_primary']() : 'Get Started'}
@@ -66,7 +66,7 @@ export const HeroHeader = ({ title, description, badge }: HeroHeaderProps) => {
   }, [])
 
   // Use default values after hydration to avoid mismatch
-  const displayTitle =  m['hero.title']()
+  const displayTitle = m['hero.title']()
   const displayDescription =
     description ||
     (isHydrated

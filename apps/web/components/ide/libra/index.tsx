@@ -42,7 +42,7 @@ import { validateMessages } from './utils/messageValidation'
 /**
  * Provide file browsing and editing capabilities
  */
-export default function Libra({
+export default function Zepid({
   codePreviewActive = false,
   initialMessages,
   usageData,

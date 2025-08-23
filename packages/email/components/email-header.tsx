@@ -33,7 +33,7 @@ export const EmailHeader: React.FC<EmailHeaderProps> = ({ logoUrl }) => {
   return (
     <Section className="bg-brand p-5 text-center rounded-t-lg">
       {logoUrl ? (
-        <img src={logoUrl} alt="Libra" className="h-8 mx-auto" />
+        <img src={logoUrl} alt="Zepid" className="h-8 mx-auto" />
       ) : (
         <Heading as="h1" className="text-white m-0 text-2xl font-bold">
           Zepid AI

@@ -1,4 +1,4 @@
-# Libra Templates Package Directory Structure
+# Zepid Templates Package Directory Structure
 
 ```bash
 packages/templates/

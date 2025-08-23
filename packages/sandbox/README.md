@@ -16,7 +16,7 @@ A unified sandbox abstraction layer for Zepid AI, supporting multiple sandbox pr
 ## Installation
 
 ```bash
-# This package is part of the Libra monorepo
+# This package is part of the Zepid monorepo
 # Install dependencies
 bun install
 ```

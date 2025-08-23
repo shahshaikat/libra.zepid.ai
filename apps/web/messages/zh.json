@@ -23,7 +23,7 @@
     "cta_primary": "免费开始",
     "cta_secondary": "在 GitHub 上查看",
     "form": {
-      "typewriter_base": "让 Libra 创建 ",
+      "typewriter_base": "让 Zepid 创建 ",
       "placeholder": "一个舒适的阅读追踪器，让书虫们记录他们的阅读冒险...",
       "add_attachment": "添加图片",
       "send": "发送",
@@ -126,7 +126,7 @@
   "testimonials": {
     "title": "用户评价",
     "subtitle": "听听使用我们平台构建出色产品的开发者们的声音。",
-    "description": "Libra 不仅仅是一个工具——它是一个完整的开发生态系统，专为每个人设计——从初学者到专业人士。",
+    "description": "Zepid 不仅仅是一个工具——它是一个完整的开发生态系统，专为每个人设计——从初学者到专业人士。",
     "user1": {
       "name": "张小雅",
       "role": "加密货币投资者",
@@ -146,18 +146,18 @@
   "faq": {
     "title": "常见问题",
     "subtitle": "关于 Zepid AI 平台的一切信息",
-    "q1": "Libra 是开源的吗？",
-    "a1": "是的，这是与其他 AI 构建工具最大的不同。Libra 核心代码开源，代码透明，社区驱动，没有供应商锁定。",
-    "q2": "什么是 Libra？",
-    "a2": "Libra 是一个 AI 驱动的平台，将文本描述转换为功能完整的 Web 应用程序。基于 React + shadcn/ui 构建，支持自动化开发流程。",
+    "q1": "Zepid 是开源的吗？",
+    "a1": "是的，这是与其他 AI 构建工具最大的不同。Zepid 核心代码开源，代码透明，社区驱动，没有供应商锁定。",
+    "q2": "什么是 Zepid？",
+    "a2": "Zepid 是一个 AI 驱动的平台，将文本描述转换为功能完整的 Web 应用程序。基于 React + shadcn/ui 构建，支持自动化开发流程。",
     "q3": "与其他 AI 构建工具的差异是什么？",
-    "a3": "Libra 基于开发者喜爱的工具构建，支持自动安装软件包、使用 React + shadcn/ui、拥抱开源、支持自定义域名部署、图像上传功能完全可用、GitHub 自动提交、可视化编辑器精确编辑、免费自动修复功能、优秀的 UI/UX 输出、产品输出实际可用。",
+    "a3": "Zepid 基于开发者喜爱的工具构建，支持自动安装软件包、使用 React + shadcn/ui、拥抱开源、支持自定义域名部署、图像上传功能完全可用、GitHub 自动提交、可视化编辑器精确编辑、免费自动修复功能、优秀的 UI/UX 输出、产品输出实际可用。",
     "q4": "定价方式是什么？",
-    "a4": "Libra 提供免费开始的灵活定价计划。核心功能永久免费，高级功能提供合理的付费选项。",
+    "a4": "Zepid 提供免费开始的灵活定价计划。核心功能永久免费，高级功能提供合理的付费选项。",
     "q5": "代码所有权归谁？",
     "a5": "用户完全拥有生成的代码。您可以下载所有文件或同步到 GitHub，没有任何限制。",
     "q6": "是否需要编程经验？",
-    "a6": "不是必需的。Libra 对开发者和非开发者都友好，提供直观的界面和 AI 辅助开发。"
+    "a6": "不是必需的。Zepid 对开发者和非开发者都友好，提供直观的界面和 AI 辅助开发。"
   },
   "bento": {
     "title": "基于开发者喜爱的工具构建",
@@ -172,7 +172,7 @@
     },
     "complete_ownership": {
       "title": "核心开源",
-      "description": "与闭源工具不同，Libra 核心开源。您可以查看、修改、扩展每一行代码。没有黑盒，没有供应商锁定，真正的开发自由。"
+      "description": "与闭源工具不同，Zepid 核心开源。您可以查看、修改、扩展每一行代码。没有黑盒，没有供应商锁定，真正的开发自由。"
     },
     "performance_optimized": {
       "title": "自定义域名部署",
@@ -191,7 +191,7 @@
   },
   "cta": {
     "title": "准备开始免费构建了吗？",
-    "subtitle": "加入开源开发者社区，使用 Libra 将创意转化为真正可用的产品。永久免费，代码完全属于您。",
+    "subtitle": "加入开源开发者社区，使用 Zepid 将创意转化为真正可用的产品。永久免费，代码完全属于您。",
     "button": "免费开始构建",
     "secondary": "查看开源代码"
   },
@@ -217,7 +217,7 @@
     "privacy": "隐私政策",
     "terms": "服务条款",
     "cookies": "Cookie 政策",
-    "copyright": "© 2024 Libra. 保留所有权利。",
+    "copyright": "© 2024 Zepid. 保留所有权利。",
     "copyright_nextify": "© 2025 Nextify Limited. 保留所有权利",
     "all_rights_reserved": "保留所有权利。",
     "made_with_love": "由梦想家为梦想家精心打造 ❤️",
@@ -540,11 +540,11 @@
         "install": {
           "title": "安装 GitHub 应用",
           "subtitle": "启用代码导出到您的仓库",
-          "description": "安装 Libra GitHub 应用以启用仓库访问和代码导出",
+          "description": "安装 Zepid GitHub 应用以启用仓库访问和代码导出",
           "button": "安装 GitHub 应用",
           "installing": "安装中...",
           "required_title": "需要安装",
-          "required_description": "安装 Libra GitHub 应用以启用仓库访问和代码导出。",
+          "required_description": "安装 Zepid GitHub 应用以启用仓库访问和代码导出。",
           "error_popup_blocked": "弹窗被阻止。请允许此网站的弹窗并重试。",
           "error_installation_failed": "无法打开 GitHub 应用安装页面"
         },
@@ -607,7 +607,7 @@
           "step_create": "创建仓库",
           "step_push": "导出代码",
           "step_success": "GitHub 集成",
-          "description_install": "安装 Libra GitHub 应用以启用代码导出",
+          "description_install": "安装 Zepid GitHub 应用以启用代码导出",
           "description_oauth": "授权访问您的 GitHub 仓库",
           "description_repositories": "选择代码导出位置",
           "description_create": "为您的项目自动创建仓库",
@@ -929,7 +929,7 @@
       "custom_domain_deployment": "自定义域名部署",
       "multi_model_ai_support": "多模型 AI 支持",
       "real_time_preview": "实时预览",
-      "welcome": "欢迎来到 Libra"
+      "welcome": "欢迎来到 Zepid"
     },
     "oauth": {
       "continue_github": "使用 GitHub 继续",
@@ -1205,7 +1205,7 @@
       "switchModeTooltip": "在代码编辑器和预览模式之间切换",
       "share": "分享",
       "returnToDashboard": "返回控制台",
-      "libraAltText": "Libra - AI 开发平台"
+      "libraAltText": "Zepid - AI 开发平台"
     },
     "errorDisplay": {
       "failedToLoad": "加载文件结构失败",
@@ -1832,7 +1832,7 @@
     }
   },
   "dashboard_nav": {
-    "title": "Libra"
+    "title": "Zepid"
   },
   "chatPanel": {
     "main": {

@@ -16,7 +16,7 @@ Zepid AI 的统一沙箱抽象层，支持多个沙箱提供商（E2B、Daytona�
 ## 安装
 
 ```bash
-# 此包是 Libra monorepo 的一部分
+# 此包是 Zepid monorepo 的一部分
 # 安装依赖
 bun install
 ```

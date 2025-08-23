@@ -1,6 +1,6 @@
-# Libra Better-auth + Stripe 集成开发文档
+# Zepid Better-auth + Stripe 集成开发文档
 
-这是一份详细的中文开发文档，涵盖了 Libra 项目中 better-auth 与 Stripe 支付集成的完整实现模式。
+这是一份详细的中文开发文档，涵盖了 Zepid 项目中 better-auth 与 Stripe 支付集成的完整实现模式。
 
 ## 目录
 
@@ -16,7 +16,7 @@
 
 ## 架构概览
 
-Libra 采用多数据库混合架构，实现了强大的订阅管理和配额系统：
+Zepid 采用多数据库混合架构，实现了强大的订阅管理和配额系统：
 
 ```typescript
 // 架构组件

@@ -135,11 +135,11 @@ openApiApp.openapi(badgeRoute, badgeHandler)
 openApiApp.doc('/openapi.json', {
   openapi: '3.1.0',
   info: {
-    title: 'Libra CDN API',
+    title: 'Zepid CDN API',
     version: '1.0.0',
-    description: 'API for uploading and retrieving images from Libra CDN service',
+    description: 'API for uploading and retrieving images from Zepid CDN service',
     contact: {
-      name: 'Libra Team',
+      name: 'Zepid Team',
       url: 'https://zepid.dev',
       email: 'support@zepid.dev',
     },
@@ -169,7 +169,7 @@ openApiApp.doc('/openapi.json', {
     },
     {
       name: 'Badge',
-      description: 'Libra badge script for websites',
+      description: 'Zepid badge script for websites',
     },
   ],
 })

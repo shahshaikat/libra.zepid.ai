@@ -23,7 +23,7 @@
     "cta_primary": "Start Free",
     "cta_secondary": "View on GitHub",
     "form": {
-      "typewriter_base": "Ask Libra to create ",
+      "typewriter_base": "Ask Zepid to create ",
       "placeholder": "A cozy reading tracker where bookworms can log their adventures...",
       "add_attachment": "Add image",
       "send": "Send",
@@ -127,7 +127,7 @@
   "testimonials": {
     "title": "What our users say",
     "subtitle": "Hear from developers who have built amazing products with our platform.",
-    "description": "Libra isn't just a tool—it's a complete development ecosystem designed for everyone—from beginners to pros.",
+    "description": "Zepid isn't just a tool—it's a complete development ecosystem designed for everyone—from beginners to pros.",
     "user1": {
       "name": "Sarah Johnson",
       "role": "Crypto Investor",
@@ -147,18 +147,18 @@
   "faq": {
     "title": "Frequently Asked Questions",
     "subtitle": "Everything you need to know about the Zepid AI platform",
-    "q1": "Is Libra open source?",
-    "a1": "Yes, this is the biggest difference from other AI building tools. Libra is core open source with transparent code, community-driven development, and no vendor lock-in.",
-    "q2": "What is Libra?",
-    "a2": "Libra is an AI-powered platform that transforms text descriptions into functional web applications. Built with React + shadcn/ui, supporting automated development workflows.",
+    "q1": "Is Zepid open source?",
+    "a1": "Yes, this is the biggest difference from other AI building tools. Zepid is core open source with transparent code, community-driven development, and no vendor lock-in.",
+    "q2": "What is Zepid?",
+    "a2": "Zepid is an AI-powered platform that transforms text descriptions into functional web applications. Built with React + shadcn/ui, supporting automated development workflows.",
     "q3": "What's the difference from other AI building tools?",
-    "a3": "Libra is built on developer-loved tools, supports auto package installation, uses React + shadcn/ui, core open source, supports custom domain deployment, fully functional image upload, GitHub auto-commit, visual editor for precise editing, free auto-fix functionality, excellent UI/UX output, and production-ready results.",
+    "a3": "Zepid is built on developer-loved tools, supports auto package installation, uses React + shadcn/ui, core open source, supports custom domain deployment, fully functional image upload, GitHub auto-commit, visual editor for precise editing, free auto-fix functionality, excellent UI/UX output, and production-ready results.",
     "q4": "What's the pricing model?",
-    "a4": "Libra offers flexible pricing plans starting free. Core features are permanently free, with reasonable paid options for advanced features.",
+    "a4": "Zepid offers flexible pricing plans starting free. Core features are permanently free, with reasonable paid options for advanced features.",
     "q5": "Who owns the code?",
     "a5": "Users have complete ownership of generated code. You can download all files or sync to GitHub without any restrictions.",
     "q6": "Do I need programming experience?",
-    "a6": "Not required. Libra is friendly to both developers and non-developers, providing intuitive interface and AI-assisted development."
+    "a6": "Not required. Zepid is friendly to both developers and non-developers, providing intuitive interface and AI-assisted development."
   },
   "bento": {
     "title": "Built on Developer-Loved Tools",
@@ -173,7 +173,7 @@
     },
     "complete_ownership": {
       "title": "Core Open Source",
-      "description": "Unlike closed-source tools, Libra is core open source. You can view, modify, and extend every line of code. No black boxes, no vendor lock-in, true development freedom."
+      "description": "Unlike closed-source tools, Zepid is core open source. You can view, modify, and extend every line of code. No black boxes, no vendor lock-in, true development freedom."
     },
     "performance_optimized": {
       "title": "Custom Domain Deployment",
@@ -192,7 +192,7 @@
   },
   "cta": {
     "title": "Ready to Start Building for Free?",
-    "subtitle": "Join the open source developer community and use Libra to transform ideas into truly usable products. Free forever, your code completely belongs to you.",
+    "subtitle": "Join the open source developer community and use Zepid to transform ideas into truly usable products. Free forever, your code completely belongs to you.",
     "button": "Start Building Free",
     "secondary": "View Open Source Code"
   },
@@ -547,11 +547,11 @@
         "install": {
           "title": "Install GitHub App",
           "subtitle": "Enable code export to your repositories",
-          "description": "Install the Libra GitHub App to enable repository access and code export",
+          "description": "Install the Zepid GitHub App to enable repository access and code export",
           "button": "Install GitHub App",
           "installing": "Installing...",
           "required_title": "Installation Required",
-          "required_description": "Install the Libra GitHub App to enable repository access and code export.",
+          "required_description": "Install the Zepid GitHub App to enable repository access and code export.",
           "error_popup_blocked": "Popup blocked. Please allow popups for this site and try again.",
           "error_installation_failed": "Failed to open GitHub App installation"
         },
@@ -614,7 +614,7 @@
           "step_create": "Create Repository",
           "step_push": "Export Code",
           "step_success": "GitHub Integration",
-          "description_install": "Install the Libra GitHub App to enable code export",
+          "description_install": "Install the Zepid GitHub App to enable code export",
           "description_oauth": "Grant permission to access your GitHub repositories",
           "description_repositories": "Choose where to export your code",
           "description_create": "Automatically create a repository for your project",
@@ -930,7 +930,7 @@
       "custom_domain_deployment": "Custom Domain Deployment",
       "multi_model_ai_support": "Multi-Model AI Support",
       "real_time_preview": "Real-Time Preview",
-      "welcome": "Welcome to Libra"
+      "welcome": "Welcome to Zepid"
     },
     "oauth": {
       "continue_github": "Continue with GitHub",
@@ -1206,7 +1206,7 @@
       "switchModeTooltip": "Switch between code editor and preview mode",
       "share": "Share",
       "returnToDashboard": "Return to Dashboard",
-      "libraAltText": "Libra - AI Development Platform"
+      "libraAltText": "Zepid - AI Development Platform"
     },
     "errorDisplay": {
       "failedToLoad": "Failed to load file structure",
@@ -1845,7 +1845,7 @@
     }
   },
   "dashboard_nav": {
-    "title": "Libra"
+    "title": "Zepid"
   },
   "chatPanel": {
     "main": {

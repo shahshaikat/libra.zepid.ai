@@ -1,4 +1,4 @@
-name: "Libra CDN Deploy"
+name: "Zepid CDN Deploy"
 
 on:
   workflow_dispatch:

@@ -63,7 +63,7 @@ export const organizationInvitationTestData = {
 export const contactTestData = {
   name: "李四",
   email: "lisi@example.com",
-  message: "您好，我对 Libra 平台很感兴趣，希望了解更多关于企业版的功能和定价信息。请联系我安排一次演示。\n\n谢谢！"
+  message: "您好，我对 Zepid 平台很感兴趣，希望了解更多关于企业版的功能和定价信息。请联系我安排一次演示。\n\n谢谢！"
 };
 
 // Unsubscribe email test data (no additional parameters needed)

@@ -3,7 +3,7 @@
 [![License](https://img.shields.io/badge/license-AGPL--3.0-blue.svg)](../../LICENSE)
 [![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue.svg)](https://www.typescriptlang.org/)
 
-A comprehensive collection of shared utilities, types, and tools for the Zepid AI platform. This package provides essential building blocks for file manipulation, data processing, logging, error handling, and type safety across all Libra applications.
+A comprehensive collection of shared utilities, types, and tools for the Zepid AI platform. This package provides essential building blocks for file manipulation, data processing, logging, error handling, and type safety across all Zepid applications.
 
 ## 📋 Table of Contents
 
@@ -34,9 +34,9 @@ A comprehensive collection of shared utilities, types, and tools for the Zepid A
 
 ## 📦 Installation
 
-> **Note**: This is an internal package within the Libra monorepo and is not published to npm.
+> **Note**: This is an internal package within the Zepid monorepo and is not published to npm.
 
-### Within Libra Project
+### Within Zepid Project
 
 ```bash
 # Install dependencies in the monorepo root
@@ -49,7 +49,7 @@ bun install
 
 ### External Projects
 
-If you want to use this package outside the Libra monorepo, you'll need to copy the source files and install the required dependencies:
+If you want to use this package outside the Zepid monorepo, you'll need to copy the source files and install the required dependencies:
 
 ```bash
 # Core dependencies (if needed)
@@ -145,7 +145,7 @@ if (error) {
 3. **Environment Agnostic**: Works in Node.js, browsers, and Cloudflare Workers
 4. **Performance First**: Optimized utilities with minimal overhead
 5. **Error Resilience**: Robust error handling with user-friendly messages
-6. **Logging Consistency**: Structured logging across all Libra applications
+6. **Logging Consistency**: Structured logging across all Zepid applications
 
 ### Module Dependencies
 
@@ -715,7 +715,7 @@ log.api('error', 'Request failed', { endpoint: '/api/users' }, error)
 **Solution:**
 
 ```bash
-# Ensure you're in the Libra monorepo
+# Ensure you're in the Zepid monorepo
 cd /path/to/libra
 
 # Install dependencies

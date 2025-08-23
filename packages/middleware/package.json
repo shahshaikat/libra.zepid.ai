@@ -1,7 +1,7 @@
 {
   "name": "@libra/middleware",
   "version": "1.0.0",
-  "description": "Shared middleware for Libra applications",
+  "description": "Shared middleware for Zepid applications",
   "type": "module",
   "main": "./src/index.ts",
   "module": "./src/index.ts",

@@ -64,7 +64,7 @@ function getEnvironmentOrigins(environment: string): string[] {
     ]
   }
 
-  // Production: Allow specific Libra domains
+  // Production: Allow specific Zepid domains
   return [
     'https://zepid.dev',
     'https://www.zepid.dev',

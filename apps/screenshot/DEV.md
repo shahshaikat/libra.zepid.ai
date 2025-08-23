@@ -608,7 +608,7 @@ GET /health
 {
   "status": "healthy",
   "timestamp": "2025-07-22T12:00:00.000Z",
-  "service": "Libra Screenshot Service",
+  "service": "Zepid Screenshot Service",
   "version": "0.0.0",
   "environment": "development",
   "queue": {

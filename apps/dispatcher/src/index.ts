@@ -115,7 +115,7 @@ app.get(
   Scalar({
     url: '/openapi.json',
     theme: 'default',
-    pageTitle: 'Libra Dispatcher API Documentation',
+    pageTitle: 'Zepid Dispatcher API Documentation',
     customCss: `
       .light-mode {
         --scalar-color-accent: #0099ff;
@@ -150,11 +150,11 @@ app.all('*', async (c) => {
         // Root domain request, return dispatcher information
         if (pathname === '/') {
           return c.json({
-            service: 'Libra Dispatcher',
+            service: 'Zepid Dispatcher',
             version: '1.0.0',
             status: 'running',
             domain: 'zapid.dev',
-            description: 'Cloudflare Workers dispatcher for Libra platform',
+            description: 'Cloudflare Workers dispatcher for Zepid platform',
             timestamp: new Date().toISOString(),
             requestId
           })

@@ -1,8 +1,8 @@
-# Libra UI Design System
+# Zepid UI Design System
 
 > Modern, scalable React component library and design system
 
-Libra UI is an enterprise-grade design system built on **Tailwind CSS v4** and **Radix UI**, providing consistent, beautiful, and powerful user interface solutions for modern web applications. The system leverages the `radix-ui` package for headless component primitives and includes **47+ carefully designed components**, covering a complete UI ecosystem from basic elements to complex interactions.
+Zepid UI is an enterprise-grade design system built on **Tailwind CSS v4** and **Radix UI**, providing consistent, beautiful, and powerful user interface solutions for modern web applications. The system leverages the `radix-ui` package for headless component primitives and includes **47+ carefully designed components**, covering a complete UI ecosystem from basic elements to complex interactions.
 
 ## 🚀 Core Features
 
@@ -123,7 +123,7 @@ export default function HomePage() {
   return (
     <Card className="w-96">
       <CardHeader>
-        <CardTitle>Welcome to Libra UI</CardTitle>
+        <CardTitle>Welcome to Zepid UI</CardTitle>
       </CardHeader>
       <CardContent>
         <Button>Get Started</Button>
@@ -226,7 +226,7 @@ export default function HomePage() {
 
 ### Tailwind CSS v4 Integration
 
-Libra UI is built on **Tailwind CSS v4**, adopting the latest CSS-in-CSS syntax for more powerful theme customization capabilities:
+Zepid UI is built on **Tailwind CSS v4**, adopting the latest CSS-in-CSS syntax for more powerful theme customization capabilities:
 
 ```css
 /* theme.css - Define theme using @theme directive */
@@ -419,7 +419,7 @@ All colors support automatic light/dark theme switching:
 
 ### Radix UI Integration
 
-Libra UI components are built on top of Radix UI primitives, using the consolidated `radix-ui` package:
+Zepid UI components are built on top of Radix UI primitives, using the consolidated `radix-ui` package:
 
 ```tsx
 // Example: Dialog component implementation
@@ -503,7 +503,7 @@ const buttonVariants = cva(
 
 ### Slot Pattern
 
-Uses `asChild` prop to implement component slots, allowing custom element replacement. Note that Libra UI uses the `radix-ui` package which provides the `Slot` primitive:
+Uses `asChild` prop to implement component slots, allowing custom element replacement. Note that Zepid UI uses the `radix-ui` package which provides the `Slot` primitive:
 
 ```tsx
 // Button component used as Link
@@ -911,7 +911,7 @@ import '@libra/ui/globals.css'
 // Original component
 <button className="btn btn-primary">Button</button>
 
-// Replace with Libra UI
+// Replace with Zepid UI
 <Button variant="default">Button</Button>
 ```
 
@@ -924,7 +924,7 @@ import '@libra/ui/globals.css'
 
 ## 🚀 Summary
 
-Libra UI Design System provides a complete solution for modern web application development:
+Zepid UI Design System provides a complete solution for modern web application development:
 
 ### 🎯 Core Advantages
 

@@ -21,11 +21,11 @@
 'use client'
 
 import React from 'react'
-import { 
-  Dialog, 
-  DialogContent, 
-  DialogHeader, 
-  DialogTitle, 
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
   DialogDescription,
   DialogFooter
 } from '@libra/ui/components/dialog'
@@ -54,13 +54,13 @@ export const UpgradeModal = () => {
     if (plan === 'MAX') {
       return {
         icon: Crown,
-        text: 'Libra Max',
+        text: 'Zepid Max',
         className: 'bg-gradient-to-r from-purple-500 to-purple-600 text-white'
       }
     }
     return {
       icon: Crown,
-      text: 'Libra Pro',
+      text: 'Zepid Pro',
       className: 'bg-gradient-to-r from-amber-500 to-amber-600 text-white'
     }
   }
@@ -154,8 +154,8 @@ export const UpgradeModal = () => {
         {config.features && config.features.length > 0 && (
           <div className="space-y-6 mb-12">
             {config.features.map((feature, index) => (
-              <div 
-                key={feature.id} 
+              <div
+                key={feature.id}
                 className={cn(
                   "flex items-center gap-5 py-2",
                   feature.highlight && "bg-blue-500/15 border border-blue-500/25 rounded-lg px-4 py-4"
@@ -184,7 +184,7 @@ export const UpgradeModal = () => {
           >
             {config.buttonText || `Upgrade to ${planConfig.text}`}
           </Button>
-          
+
           <Button
             variant="ghost"
             onClick={handleCancel}

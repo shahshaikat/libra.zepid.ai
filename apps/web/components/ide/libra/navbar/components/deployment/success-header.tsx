@@ -29,7 +29,7 @@ interface SuccessHeaderProps {
 
 /**
  * Enhanced success header component for deployment success dialog
- * Displays modern, visually appealing success state with Libra UI design system
+ * Displays modern, visually appealing success state with Zepid UI design system
  */
 export function SuccessHeader({ showExistingDeployment }: SuccessHeaderProps) {
   return (

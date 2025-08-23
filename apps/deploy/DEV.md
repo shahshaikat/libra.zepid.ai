@@ -394,7 +394,7 @@ curl "http://localhost:3008/health"
 {
   "status": "healthy",
   "timestamp": "2025-07-22T10:30:00.000Z",
-  "service": "Libra Deploy V2",
+  "service": "Zepid Deploy V2",
   "version": "2.0.0",
   "uptime": 1234567,
   "checks": {
@@ -440,7 +440,7 @@ app.route('/', openApiApp)
 app.get('/docs', Scalar({
   url: '/openapi.json',
   theme: 'default',
-  pageTitle: 'Libra Deploy V2 API Documentation'
+  pageTitle: 'Zepid Deploy V2 API Documentation'
 }))
 
 // Cloudflare Worker exports

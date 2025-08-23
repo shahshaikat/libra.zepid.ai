@@ -41,8 +41,8 @@ interface EmailVerificationTemplateProps {
 export const EmailVerificationTemplate: React.FC<EmailVerificationTemplateProps> = ({ otp }) => {
   return (
     <EmailContainer
-      title="Libra Email Verification"
-      previewText={`Libra email verification code: ${otp}`}
+      title="Zepid Email Verification"
+      previewText={`Zepid email verification code: ${otp}`}
     >
       <ContentSection>
         <Heading as="h2" className="mt-0 text-gray-800 text-xl font-semibold">
@@ -50,7 +50,7 @@ export const EmailVerificationTemplate: React.FC<EmailVerificationTemplateProps>
         </Heading>
 
         <Text className="mb-6 text-gray-600 leading-relaxed">
-          Hello! Thank you for signing up with Libra. Please use the following verification code to confirm your email address:
+          Hello! Thank you for signing up with Zepid. Please use the following verification code to confirm your email address:
         </Text>
 
         {/* Verification Code Box - Using OtpCode component */}

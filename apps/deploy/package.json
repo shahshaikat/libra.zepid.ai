@@ -1,7 +1,7 @@
 {
   "name": "@libra/deploy",
   "version": "1.0.6",
-  "description": "Queue-based deployment service for Libra platform",
+  "description": "Queue-based deployment service for Zepid platform",
   "scripts": {
     "dev": "wrangler dev --port 3008 --persist-to=../web/.wrangler/state",
     "deploy": "wrangler deploy --minify",

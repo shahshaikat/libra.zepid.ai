@@ -1,6 +1,6 @@
-# Libra Screenshot Service - Queue-based Screenshot Service
+# Zepid Screenshot Service - Queue-based Screenshot Service
 
-A modern, queue-based screenshot service for the Libra platform, built on Cloudflare Workers with Queues and R2 storage.
+A modern, queue-based screenshot service for the Zepid platform, built on Cloudflare Workers with Queues and R2 storage.
 
 ## Architecture
 

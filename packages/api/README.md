@@ -6,7 +6,7 @@
 
 > **Enterprise-grade type-safe API layer for the Zepid AI platform**
 
-`@libra/api` is a comprehensive, type-safe backend service built on tRPC that powers the core business capabilities of the Libra platform. It provides a unified, scalable API interface for AI-powered development workflows, project management, user authentication, payment processing, and third-party integrations.
+`@libra/api` is a comprehensive, type-safe backend service built on tRPC that powers the core business capabilities of the Zepid platform. It provides a unified, scalable API interface for AI-powered development workflows, project management, user authentication, payment processing, and third-party integrations.
 
 ## ✨ Key Features
 
@@ -284,5 +284,5 @@ This project is licensed under the [AGPL-3.0 License](https://github.com/libra-a
 ---
 
 <div align="center">
-  <strong>Built with ❤️ by the Libra team</strong>
+  <strong>Built with ❤️ by the Zepid team</strong>
 </div>

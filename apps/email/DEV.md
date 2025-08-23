@@ -8,7 +8,7 @@ Last Updated: 2025-07-30
 
 ## Overview
 
-`apps/email` is a mail template preview development tool for the Libra project, built on top of React Email. It provides developers with a visual interface to preview, test, and develop various mail templates used in the project.
+`apps/email` is a mail template preview development tool for the Zepid project, built on top of React Email. It provides developers with a visual interface to preview, test, and develop various mail templates used in the project.
 
 **Important Note**: This is a development-time preview tool, and the actual email sending functionality is provided by the `@libra/email` package.
 

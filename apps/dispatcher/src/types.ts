@@ -18,7 +18,7 @@
  *
  */
 
-// Type definitions for Libra Dispatcher
+// Type definitions for Zepid Dispatcher
 
 import type { CustomDomainProject } from '@libra/db'
 

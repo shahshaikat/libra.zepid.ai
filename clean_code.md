@@ -1,4 +1,4 @@
-# Libra Code Quality Guidelines
+# Zepid Code Quality Guidelines
 
 <!-- TOC -->
 

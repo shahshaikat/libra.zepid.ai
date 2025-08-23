@@ -36,12 +36,12 @@ export default function useMessageHandler({
   const [messages, setMessages] = useState<Message[]>(initialMessages.length > 0
     ? initialMessages
     : [
-        {
-          id: "welcome",
-          role: "assistant",
-          content: "Welcome to Libra! I can help you analyze web pages and compare different versions."
-        }
-      ]
+      {
+        id: "welcome",
+        role: "assistant",
+        content: "Welcome to Zepid! I can help you analyze web pages and compare different versions."
+      }
+    ]
   );
 
   // Handle message sending

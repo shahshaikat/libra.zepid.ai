@@ -1,7 +1,7 @@
 {
   "name": "@libra/screenshot",
   "version": "1.0.6",
-  "description": "Queue-based screenshot service for Libra platform",
+  "description": "Queue-based screenshot service for Zepid platform",
   "scripts": {
     "dev": "wrangler dev --port 3009 --persist-to=../web/.wrangler/state",
     "deploy": "wrangler deploy --minify",

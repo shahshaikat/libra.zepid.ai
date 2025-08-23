@@ -25,22 +25,22 @@ import { i18n } from "@/lib/i18n";
 export const logo = (
   <div className='h-5'>
     <Image
-      alt='Libra logo'
+      alt='Zepid logo'
       src='/logo-dark.svg'
       width={32}
       height={32}
       sizes='100px'
       className='hidden dark:block w-8 md:w-8'
-      aria-label='Libra logo'
+      aria-label='Zepid logo'
     />
     <Image
-      alt='Libra logo'
+      alt='Zepid logo'
       src='/logo.svg'
       width={32}
       height={32}
       sizes='100px'
       className='block dark:hidden w-8 md:w-8'
-      aria-label='Libra logo'
+      aria-label='Zepid logo'
     />
   </div>
 )

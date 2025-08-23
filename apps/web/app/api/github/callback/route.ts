@@ -148,7 +148,7 @@ export async function GET(request: NextRequest) {
         headers: {
           Authorization: `token ${tokenData.access_token}`,
           Accept: 'application/vnd.github.v3+json',
-          'User-Agent': 'Libra-Platform/1.0',
+          'User-Agent': 'Zepid-Platform/1.0',
         },
       })
 

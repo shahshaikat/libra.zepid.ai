@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Architecture Overview
 
-Libra is an AI-powered web development platform built as a Turborepo monorepo targeting Cloudflare Workers infrastructure. The codebase follows a microservices architecture with shared packages for common functionality.
+Zepid is an AI-powered web development platform built as a Turborepo monorepo targeting Cloudflare Workers infrastructure. The codebase follows a microservices architecture with shared packages for common functionality.
 
 ### Core Structure
 ```

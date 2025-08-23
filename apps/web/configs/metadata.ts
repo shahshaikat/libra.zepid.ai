@@ -21,7 +21,7 @@
 import type { Metadata } from 'next/types'
 
 export const METADATA = {
-  title: 'Libra - Code Interpreting for AI apps',
+  title: 'Zepid - Code Interpreting for AI apps',
   description: 'Open-source  for AI code execution',
 }
 
@@ -33,7 +33,7 @@ function createMetadata(override: Metadata): Metadata {
       description: override.description ?? undefined,
       url: '',
       images: '/banner.png',
-      siteName: 'Libra',
+      siteName: 'Zepid',
       ...override.openGraph,
     },
     twitter: {

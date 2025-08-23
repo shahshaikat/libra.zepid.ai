@@ -56,7 +56,7 @@ app.get(
   Scalar({
     url: '/openapi.json',
     theme: 'default',
-    pageTitle: 'Libra Deploy V2 API Documentation',
+    pageTitle: 'Zepid Deploy V2 API Documentation',
     customCss: `
       .light-mode {
         --scalar-color-accent: #0099ff;
@@ -82,7 +82,7 @@ export default {
    */
   async queue(batch: MessageBatch<QueueMessage>, env: Bindings, ctx: ExecutionContext): Promise<void> {
     const logger = createLogger(env)
-    
+
     try {
       logger.info('Processing queue batch', {
         batchSize: batch.messages.length,

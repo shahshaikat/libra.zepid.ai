@@ -2,7 +2,7 @@
   "name": "@libra/templates",
   "version": "1.0.0",
   "private": true,
-  "description": "Template configurations for Libra platform",
+  "description": "Template configurations for Zepid platform",
   "type": "module",
   "main": "index.ts",
   "types": "./index.ts",

@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<img src="/logo.svg" alt="Libra logo" style="width: 250px; height: auto; max-width: 100%;" />
+<img src="/logo.svg" alt="Zepid logo" style="width: 250px; height: auto; max-width: 100%;" />
 
 **Open Source Alternative to V0/Lovable**
 
@@ -87,7 +87,7 @@
 
 **Zepid AI** is a production-ready AI-native development platform that enables full lifecycle management of web applications through natural language interaction. Built with modern technology architecture, it covers the complete engineering process from rapid prototyping to enterprise-grade production deployment.
 
-Just as V0 is deeply integrated with the Vercel ecosystem, Libra is specifically designed for the Cloudflare Workers architecture, providing a native AI development experience.
+Just as V0 is deeply integrated with the Vercel ecosystem, Zepid is specifically designed for the Cloudflare Workers architecture, providing a native AI development experience.
 
 ### ✨ Core Features
 
@@ -126,11 +126,11 @@ Just as V0 is deeply integrated with the Vercel ecosystem, Libra is specifically
 
 ## 🏗️ Technical Architecture
 
-Libra is built entirely on Cloudflare. You need to be familiar with the following products:
+Zepid is built entirely on Cloudflare. You need to be familiar with the following products:
 
 ### Compute & Runtime
 
-| Product Name | Description | Application in Libra |
+| Product Name | Description | Application in Zepid |
 |-------------|-------------|---------------------|
 | [Workers](https://developers.cloudflare.com/workers/?utm_source=zepid.dev) | Serverless computing platform | Core application runtime environment, hosting all service logic |
 | [Durable Objects](https://developers.cloudflare.com/durable-objects/?utm_source=zepid.dev) | Strong consistency storage | Real-time state management and session persistence |
@@ -139,7 +139,7 @@ Libra is built entirely on Cloudflare. You need to be familiar with the followin
 
 ### Data Storage
 
-| Product Name | Description | Application in Libra |
+| Product Name | Description | Application in Zepid |
 |-------------|-------------|---------------------|
 | [KV](https://developers.cloudflare.com/kv/?utm_source=zepid.dev) | Global key-value storage | Configuration caching and temporary data storage |
 | [D1](https://developers.cloudflare.com/d1/?utm_source=zepid.dev) | Serverless SQLite database | Authentication data and lightweight business data |
@@ -148,21 +148,21 @@ Libra is built entirely on Cloudflare. You need to be familiar with the followin
 
 ### Network & Security
 
-| Product Name | Description | Application in Libra |
+| Product Name | Description | Application in Zepid |
 |-------------|-------------|---------------------|
 | [Turnstile](https://developers.cloudflare.com/turnstile/?utm_source=zepid.dev) | Smart CAPTCHA | Security verification for user registration and sensitive operations |
 | [Cloudflare for SaaS](https://developers.cloudflare.com/cloudflare-for-platforms/cloudflare-for-saas/?utm_source=zepid.dev) | Custom domain management | Custom domain binding and SSL certificates for user projects |
 
 ### Development Tools & Services
 
-| Product Name | Description | Application in Libra |
+| Product Name | Description | Application in Zepid |
 |-------------|-------------|---------------------|
 | [Workflows](https://developers.cloudflare.com/workflows/?utm_source=zepid.dev) | Workflow orchestration | Step-by-step management of complex deployment processes |
 | [Queues](https://developers.cloudflare.com/queues/?utm_source=zepid.dev) | Message queue service | Asynchronous task processing and batch deployment management |
 | [AI Gateway](https://developers.cloudflare.com/ai-gateway/?utm_source=zepid.dev) | AI model gateway | Monitor and control your AI applications |
 | [Images](https://developers.cloudflare.com/images/?utm_source=zepid.dev) | Image processing optimization | Dynamic image transformation and CDN distribution |
 
-Libra adopts **Turborepo** Monorepo architecture design:
+Zepid adopts **Turborepo** Monorepo architecture design:
 
 ```text
 libra/
@@ -467,9 +467,9 @@ Ready-to-use cloud development experience:
 
 ### 🏠 Self-Hosted Deployment
 
-**1. Deploy Libra Platform Itself**
+**1. Deploy Zepid Platform Itself**
 
-All Libra platform services are deployed on Cloudflare Workers:
+All Zepid platform services are deployed on Cloudflare Workers:
 
 ```bash
 
@@ -485,7 +485,7 @@ All Libra platform services are deployed on Cloudflare Workers:
 
 **2. Deploy User Projects as PaaS Platform**
 
-Libra uses **Workers for Platforms** technology to provide project deployment capabilities for users, offering two deployment service architectures:
+Zepid uses **Workers for Platforms** technology to provide project deployment capabilities for users, offering two deployment service architectures:
 
 1. **Workers for Platforms Architecture**:
     - Each user project is deployed as an independent Worker
@@ -568,7 +568,7 @@ A: The open source version includes the platform's core functional architecture.
 
 ### 🛠️ Technical Issues
 
-**Q: What technical background is required to use Libra?**
+**Q: What technical background is required to use Zepid?**
 
 A: Depends on usage method:
 
@@ -597,7 +597,7 @@ A: Full customization is supported in the open source version:
 
 ### 💼 Commercial Use
 
-**Q: Can Libra be used for commercial projects?**
+**Q: Can Zepid be used for commercial projects?**
 
 A: Absolutely. We provide multiple commercial solutions:
 
@@ -641,10 +641,10 @@ We warmly welcome contributions from developers worldwide! Here are the ways you
 
 #### 🌟 Usage & Promotion
 
-- Experience [Libra platform](https://zepid.dev) and share your usage experience
+- Experience [Zepid platform](https://zepid.dev) and share your usage experience
 - Create amazing application projects and showcase them in the community
 - Write technical blog articles or create tutorial videos
-- Share and recommend Libra on social media platforms
+- Share and recommend Zepid on social media platforms
 
 #### 🔧 Code Contribution
 
@@ -673,7 +673,7 @@ git push origin feature/your-amazing-feature
 - **Documentation Improvement**: Improve usage guides, add example code, fix documentation errors
 - **Issue Reporting**: Help us discover and locate system issues
 - **Feature Suggestions**: Propose improvement ideas and new feature requirements
-- **Multi-language Support**: Help translate Libra into more languages
+- **Multi-language Support**: Help translate Zepid into more languages
     - Project uses Paraglide.js for internationalization
     - Translation file location: `apps/web/messages/[locale].json`
     - Add new language: Add language code in `apps/web/project.inlang/settings.json`
@@ -691,7 +691,7 @@ git push origin feature/your-amazing-feature
 
 ### 📜 AGPL-3.0 Open Source License
 
-Libra is released under the [GNU Affero General Public License v3.0](https://github.com/nextify-limited/libra/blob/main/LICENSE) open source license.
+Zepid is released under the [GNU Affero General Public License v3.0](https://github.com/nextify-limited/libra/blob/main/LICENSE) open source license.
 
 #### ✅ Your Rights
 
@@ -727,7 +727,7 @@ We welcome community participation in roadmap planning:
 
 ### 🙏 Acknowledgments
 
-Thanks to the following excellent sponsors for their valuable support to the Libra project, enabling us to focus on building better AI development experiences for developers:
+Thanks to the following excellent sponsors for their valuable support to the Zepid project, enabling us to focus on building better AI development experiences for developers:
 
 **[Clerk](https://clerk.com?utm_source=zepid.dev)** - The most comprehensive user management platform
 

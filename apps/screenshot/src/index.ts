@@ -53,7 +53,7 @@ app.use('*', createCorsMiddleware())
 app.onError((err, c) => {
   const logger = createLogger(c.env)
   const requestId = c.get('requestId') || 'unknown'
-  
+
   logger.error('Unhandled error in screenshot service', {
     requestId,
     error: err.message,
@@ -83,7 +83,7 @@ app.get('/docs', async (c) => {
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Libra Screenshot Service API Documentation</title>
+        <title>Zepid Screenshot Service API Documentation</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <style>
@@ -118,7 +118,7 @@ export default {
    */
   async queue(batch: MessageBatch<ScreenshotQueueMessage>, env: Bindings, ctx: ExecutionContext): Promise<void> {
     const logger = createLogger(env)
-    
+
     try {
       logger.info('Processing screenshot queue batch', {
         batchSize: batch.messages.length,
@@ -150,7 +150,7 @@ export default {
    */
   async scheduled(event: ScheduledEvent, env: Bindings, _ctx: ExecutionContext): Promise<void> {
     const logger = createLogger(env)
-    
+
     try {
       logger.info('Scheduled event triggered', {
         scheduledTime: new Date(event.scheduledTime).toISOString(),
@@ -159,7 +159,7 @@ export default {
 
       // Perform scheduled maintenance tasks
       // For example: cleanup old artifacts, health checks, etc.
-      
+
       logger.info('Scheduled event completed', {
         scheduledTime: new Date(event.scheduledTime).toISOString()
       })

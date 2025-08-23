@@ -1,4 +1,4 @@
-name: "Libra Dispatcher Deploy"
+name: "Zepid Dispatcher Deploy"
 
 on:
   workflow_dispatch:

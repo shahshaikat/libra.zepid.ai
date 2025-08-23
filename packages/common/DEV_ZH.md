@@ -1,13 +1,13 @@
 ---
 title: "Zepid AI 开发文档：Better-auth + Stripe 集成指南"
-description: "详细的中文开发文档，涵盖 Libra 项目中 better-auth 与 Stripe 支付集成的完整实现模式"
+description: "详细的中文开发文档，涵盖 Zepid 项目中 better-auth 与 Stripe 支付集成的完整实现模式"
 version: "1.0"
 lastUpdated: "2025-07-30"
 ---
 
 # Zepid AI 开发文档：Better-auth + Stripe 集成指南
 
-这是一份详细的中文开发文档，涵盖了 Libra 项目中 better-auth 与 Stripe 支付集成的完整实现模式。
+这是一份详细的中文开发文档，涵盖了 Zepid 项目中 better-auth 与 Stripe 支付集成的完整实现模式。
 
 ## 快速导航
 
@@ -38,7 +38,7 @@ lastUpdated: "2025-07-30"
 
 ## 架构概览
 
-Libra 采用多数据库混合架构 (Multi-Database Hybrid Architecture)，实现强大的订阅管理和配额系统：
+Zepid 采用多数据库混合架构 (Multi-Database Hybrid Architecture)，实现强大的订阅管理和配额系统：
 
 ```typescript
 // 架构组件 (Architecture Components)
@@ -533,7 +533,7 @@ export async function onSubscriptionCancel(subscription: any) {
 
 ## 配额管理系统
 
-> 📝 **说明**: 配额管理系统是 Libra 的核心功能，实现了高性能的配额扣减和自动刷新机制
+> 📝 **说明**: 配额管理系统是 Zepid 的核心功能，实现了高性能的配额扣减和自动刷新机制
 
 ### 核心配额扣减函数
 

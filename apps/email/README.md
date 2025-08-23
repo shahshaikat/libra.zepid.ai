@@ -1,6 +1,6 @@
 # Email Preview Application
 
-This application provides email template previews for the Libra platform.
+This application provides email template previews for the Zepid platform.
 
 ## Getting Started
 
@@ -32,7 +32,7 @@ The welcome email template has been optimized to show personalized content based
   - Up to 3 projects
   - 100 AI messages per month
   - Private projects
-  - Remove the Libra badge
+  - Remove the Zepid badge
   - Custom domains
   - Website hosting included
   - Email support

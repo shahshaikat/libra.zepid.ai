@@ -2,7 +2,7 @@
   "name": "@libra/db",
   "version": "1.0.0",
   "private": true,
-  "description": "Database schemas and utilities for Libra",
+  "description": "Database schemas and utilities for Zepid",
   "main": "index.ts",
   "types": "./index.ts",
   "type": "module",

@@ -1,6 +1,6 @@
-# Libra ShikiCode 包
+# Zepid ShikiCode 包
 
-Libra ShikiCode 是一个基于 **Shiki** 构建的现代化代码编辑器组件，为 Web 应用提供高性能的语法高亮和代码编辑功能。该包采用工厂模式设计，通过丰富的插件系统实现自动缩进、括号自动闭合、注释切换等专业代码编辑器功能。它支持 Shiki 所有编程语言和主题，提供与 VS Code 一致的语法高亮效果，同时保持轻量级和高度可定制的特性。
+Zepid ShikiCode 是一个基于 **Shiki** 构建的现代化代码编辑器组件，为 Web 应用提供高性能的语法高亮和代码编辑功能。该包采用工厂模式设计，通过丰富的插件系统实现自动缩进、括号自动闭合、注释切换等专业代码编辑器功能。它支持 Shiki 所有编程语言和主题，提供与 VS Code 一致的语法高亮效果，同时保持轻量级和高度可定制的特性。
 
 ## 🚀 核心特性
 
@@ -73,7 +73,7 @@ packages/shikicode/
 
 ### 包依赖
 
-在 Libra 项目中，shikicode 作为内部包使用：
+在 Zepid 项目中，shikicode 作为内部包使用：
 
 ```json
 {
@@ -425,7 +425,7 @@ interface UpdateOptions extends Partial<EditorOptions> {}
 
 ### 本地开发
 
-在 Libra 项目根目录运行：
+在 Zepid 项目根目录运行：
 
 ```bash
 # 安装依赖

@@ -43,10 +43,10 @@ app.use('*', createCorsMiddleware())
 // Root endpoint
 app.get('/', async (c) => {
   return c.json({
-    message: 'Libra Deployment Service',
+    message: 'Zepid Deployment Service',
     endpoints: ['/deploy', '/deploy-status', '/health', '/docs'],
     timestamp: new Date().toISOString(),
-    service: 'Libra Deploy Service',
+    service: 'Zepid Deploy Service',
     version: '1.0.0'
   })
 })
@@ -60,7 +60,7 @@ app.get(
   Scalar({
     url: '/openapi.json',
     theme: 'default',
-    pageTitle: 'Libra Deploy API Documentation',
+    pageTitle: 'Zepid Deploy API Documentation',
     customCss: `
       .light-mode {
         --scalar-color-accent: #0099ff;

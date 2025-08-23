@@ -1,6 +1,6 @@
-# Libra DB Package
+# Zepid DB Package
 
-Libra DB is a modern core package focused on database management, providing a unified, type-safe business data access layer for the entire application. Built on **Drizzle ORM**, it implements fully type-safe database operations and is deeply optimized for **Cloudflare** environments. It provides intelligent environment-adaptive connection solutions that can seamlessly switch between development and production environments, while leveraging Cloudflare Hyperdrive technology to significantly improve database performance in Serverless scenarios. Through centrally managed data model definitions and React caching mechanisms, it ensures the entire application uses consistent data structures and effectively prevents resource waste and connection leaks.
+Zepid DB is a modern core package focused on database management, providing a unified, type-safe business data access layer for the entire application. Built on **Drizzle ORM**, it implements fully type-safe database operations and is deeply optimized for **Cloudflare** environments. It provides intelligent environment-adaptive connection solutions that can seamlessly switch between development and production environments, while leveraging Cloudflare Hyperdrive technology to significantly improve database performance in Serverless scenarios. Through centrally managed data model definitions and React caching mechanisms, it ensures the entire application uses consistent data structures and effectively prevents resource waste and connection leaks.
 
 ## 🚀 Core Features
 

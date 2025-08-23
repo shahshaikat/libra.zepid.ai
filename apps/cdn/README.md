@@ -1,4 +1,4 @@
-# Libra CDN Service
+# Zepid CDN Service
 
 [简体中文版本](./README_ZH.md)
 
@@ -24,7 +24,7 @@
 | **File Management** | SHA-256 deduplication, planId-based replacement, quota tracking |
 | **Image Processing** | Cloudflare Images optimization, AVIF/WebP/JPEG/PNG support |
 | **Screenshot Service** | Base64 storage, planId retrieval, public iframe access |
-| **Developer Tools** | Component Inspector, "Made with Libra" badge, real-time debugging |
+| **Developer Tools** | Component Inspector, "Made with Zepid" badge, real-time debugging |
 | **API Documentation** | OpenAPI 3.1 with Scalar UI at `/docs`, interactive testing |
 | **Security & Performance** | Rate limiting, CORS protection, 30-day edge caching |
 
@@ -121,7 +121,7 @@ wrangler route add "cdn.zepid.dev/*" libra-cdn
 | `GET /` | ❌ | Health check |
 | `GET /image/{key}` | ❌ | Image access (cached 30 days) |
 | `GET /screenshot/{planId}` | ❌ | Screenshot key lookup (iframe support) |
-| `GET /badge.js` | ❌ | "Made with Libra" badge script |
+| `GET /badge.js` | ❌ | "Made with Zepid" badge script |
 | `GET /docs` | ❌ | API documentation |
 | `GET /openapi.json` | ❌ | OpenAPI specification |
 | `GET /inspector` | ❌ | Component Inspector (dev only) |

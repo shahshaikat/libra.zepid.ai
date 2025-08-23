@@ -1,6 +1,6 @@
-# Libra Email Development Guide
+# Zepid Email Development Guide
 
-Libra Email is a modern email system built on top of **React Email** and **Resend**, providing a complete email template system, reusable UI component library, and type-safe email sending API. It supports various business scenarios for email communication.
+Zepid Email is a modern email system built on top of **React Email** and **Resend**, providing a complete email template system, reusable UI component library, and type-safe email sending API. It supports various business scenarios for email communication.
 
 ## 🎯 Feature Overview
 
@@ -112,7 +112,7 @@ interface EmailContainerProps {
 
 // Example usage
 <EmailContainer
-  title="Welcome to Libra"
+  title="Welcome to Zepid"
   previewText="Start your AI development journey"
 />
   {/* Email content */}
@@ -284,7 +284,7 @@ await sendWelcomeEmail(userEmail: string, planName: string)
 await resend.emails.send({
   from: env.RESEND_FROM,
   to: [userEmail],
-  subject: `Welcome to the Libra ${planName} Plan`,
+  subject: `Welcome to the Zepid ${planName} Plan`,
   react: React.createElement(WelcomeEmailTemplate, { planName }),
 })
 ```
@@ -296,7 +296,7 @@ Send subscription cancellation confirmation:
 ```typescript
 await sendCancellationEmail(userEmail: string)
 // Implementation details
-- Use predefined subject: "Libra Subscription Cancelled"
+- Use predefined subject: "Zepid Subscription Cancelled"
 - Automatic error handling and logging
 ```
 
@@ -554,4 +554,4 @@ console.log(`[Email] Welcome email sent in ${duration}ms`)
 
 ---
 
-**Libra Email** - Modern, type-safe email solution
+**Zepid Email** - Modern, type-safe email solution

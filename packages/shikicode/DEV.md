@@ -1,6 +1,6 @@
-# Libra ShikiCode Package
+# Zepid ShikiCode Package
 
-Libra ShikiCode is a modern code editor component built on **Shiki**, providing high-performance syntax highlighting and code editing capabilities for web applications. The package adopts a factory pattern design with a rich plugin system that implements professional code editor features like auto-indentation, bracket auto-closing, and comment toggling. It supports all Shiki programming languages and themes, providing VS Code-consistent syntax highlighting while maintaining lightweight and highly customizable characteristics.
+Zepid ShikiCode is a modern code editor component built on **Shiki**, providing high-performance syntax highlighting and code editing capabilities for web applications. The package adopts a factory pattern design with a rich plugin system that implements professional code editor features like auto-indentation, bracket auto-closing, and comment toggling. It supports all Shiki programming languages and themes, providing VS Code-consistent syntax highlighting while maintaining lightweight and highly customizable characteristics.
 
 ## 🚀 Core Features
 
@@ -73,7 +73,7 @@ packages/shikicode/
 
 ### Package Dependencies
 
-In the Libra project, shikicode is used as an internal package:
+In the Zepid project, shikicode is used as an internal package:
 
 ```json
 {
@@ -425,7 +425,7 @@ interface UpdateOptions extends Partial<EditorOptions> {}
 
 ### Local Development
 
-In the Libra project root directory:
+In the Zepid project root directory:
 
 ```bash
 # Install dependencies

@@ -329,7 +329,7 @@ export const githubRouter = createTRPCRouter({
         const requestHeaders = {
           Authorization: authHeader,
           Accept: 'application/vnd.github.v3+json',
-          'User-Agent': 'Libra-AI/1.0',
+          'User-Agent': 'Zepid-AI/1.0',
         }
 
         const testResponse = await fetch(testUrl, {
@@ -451,7 +451,7 @@ export const githubRouter = createTRPCRouter({
         headers: {
           Authorization: authHeader,
           Accept: 'application/vnd.github.v3+json',
-          'User-Agent': 'Libra-AI/1.0',
+          'User-Agent': 'Zepid-AI/1.0',
         },
       })
 
@@ -546,7 +546,7 @@ export const githubRouter = createTRPCRouter({
         headers: {
           Authorization: authHeader,
           Accept: 'application/vnd.github.v3+json',
-          'User-Agent': 'Libra-AI/1.0',
+          'User-Agent': 'Zepid-AI/1.0',
         },
       })
 
@@ -709,7 +709,7 @@ export const githubRouter = createTRPCRouter({
                 headers: {
                   Authorization: authHeader,
                   Accept: 'application/vnd.github.v3+json',
-                  'User-Agent': 'Libra-AI/1.0',
+                  'User-Agent': 'Zepid-AI/1.0',
                 },
               }
             )
@@ -1198,7 +1198,7 @@ export const githubRouter = createTRPCRouter({
             Authorization: authHeader,
             Accept: 'application/vnd.github.v3+json',
             'Content-Type': 'application/json',
-            'User-Agent': 'Libra-AI/1.0',
+            'User-Agent': 'Zepid-AI/1.0',
           },
           body: JSON.stringify({
             name: repoName,
@@ -1316,7 +1316,7 @@ export const githubRouter = createTRPCRouter({
               headers: {
                 Authorization: authHeader,
                 Accept: 'application/vnd.github.v3+json',
-                'User-Agent': 'Libra-AI/1.0',
+                'User-Agent': 'Zepid-AI/1.0',
               },
             })
           })

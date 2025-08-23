@@ -36,9 +36,9 @@
 
 ## 📦 安装
 
-> **注意**：这是 Libra monorepo 内的内部包，不会发布到 npm。
+> **注意**：这是 Zepid monorepo 内的内部包，不会发布到 npm。
 
-### 在 Libra 项目中
+### 在 Zepid 项目中
 
 ```bash
 # 在 monorepo 根目录安装依赖
@@ -51,7 +51,7 @@ bun install
 
 ### 外部项目
 
-如果你想在 Libra monorepo 之外使用此包，需要安装所需的依赖：
+如果你想在 Zepid monorepo 之外使用此包，需要安装所需的依赖：
 
 ```bash
 # 核心依赖
@@ -894,7 +894,7 @@ const healthCheck = async (env: Env) => {
 ### 开发设置
 
 ```bash
-# 克隆 Libra 仓库
+# 克隆 Zepid 仓库
 git clone https://github.com/libra-ai/libra.git
 cd libra
 
@@ -951,7 +951,7 @@ bun test
 
 ## 🙏 致谢
 
-此包基于 [better-auth-cloudflare](https://github.com/zpg6/better-auth-cloudflare/) 的原始工作，并为 Libra 生态系统进行了重大增强和适配。
+此包基于 [better-auth-cloudflare](https://github.com/zpg6/better-auth-cloudflare/) 的原始工作，并为 Zepid 生态系统进行了重大增强和适配。
 
 特别感谢：
 

@@ -2727,7 +2727,7 @@ export const buildSystemPrompt = (context: GenerationContext): string => {
 
   return `
 <libra_info>
-你是 Libra，一个专业的全栈开发 AI 助手。你可以查看、创建和编辑文件，在浏览器中运行代码，并为用户构建完整的 Web 应用程序。
+你是 Zepid，一个专业的全栈开发 AI 助手。你可以查看、创建和编辑文件，在浏览器中运行代码，并为用户构建完整的 Web 应用程序。
 
 <capabilities>
 ${capabilities.map(cap => `- ${cap}`).join('\n')}
@@ -3136,11 +3136,11 @@ export { WelcomeEmailTemplate } from './welcomeEmail'
 
 // Template subject mapping
 export const emailSubjects = {
-  'sign-in': 'Libra - Sign-in Verification Code',
-  'email-verification': 'Libra - Email Verification Code',
-  welcome: 'Welcome to Libra!',
-  cancellation: 'Libra Subscription Cancelled',
-  'organization-invitation': 'Invitation to join a team on Libra',
+  'sign-in': 'Zepid - Sign-in Verification Code',
+  'email-verification': 'Zepid - Email Verification Code',
+  welcome: 'Welcome to Zepid!',
+  cancellation: 'Zepid Subscription Cancelled',
+  'organization-invitation': 'Invitation to join a team on Zepid',
 }
 ```
 
@@ -3180,7 +3180,7 @@ export const WelcomeEmailTemplate: React.FC<WelcomeEmailTemplateProps> = ({
         </Heading>
 
         <Text className="mb-6 text-gray-600 leading-relaxed">
-          Thank you for subscribing to the {planName} Plan! We're excited to have you on board and can't wait to see what you'll accomplish with Libra.
+          Thank you for subscribing to the {planName} Plan! We're excited to have you on board and can't wait to see what you'll accomplish with Zepid.
         </Text>
 
         {/* Plan Benefits */}
@@ -3200,7 +3200,7 @@ export const WelcomeEmailTemplate: React.FC<WelcomeEmailTemplateProps> = ({
         {/* Call to Action Button */}
         <Section className="text-center mb-7">
           <Button href="#" variant="primary">
-            Start Using Libra Now
+            Start Using Zepid Now
           </Button>
         </Section>
 
@@ -3242,8 +3242,8 @@ interface SignInTemplateProps {
 export const SignInTemplate: React.FC<SignInTemplateProps> = ({ otp }) => {
   return (
     <EmailContainer
-      title="Libra Sign-in Verification"
-      previewText={`Libra verification code: ${otp}`}
+      title="Zepid Sign-in Verification"
+      previewText={`Zepid verification code: ${otp}`}
     >
       <ContentSection>
         <Heading as="h2" className="mt-0 text-gray-800 text-xl font-semibold">
@@ -3251,7 +3251,7 @@ export const SignInTemplate: React.FC<SignInTemplateProps> = ({ otp }) => {
         </Heading>
 
         <Text className="mb-6 text-gray-600 leading-relaxed">
-          Hello! We received a request to sign in to your Libra account. Please use the following verification code to complete the sign-in process:
+          Hello! We received a request to sign in to your Zepid account. Please use the following verification code to complete the sign-in process:
         </Text>
 
         {/* 使用 OtpCode 组件显示验证码 */}
@@ -3263,13 +3263,13 @@ export const SignInTemplate: React.FC<SignInTemplateProps> = ({ otp }) => {
 
         <Section className="text-center mb-7">
           <Button href="#" variant="primary">
-            Visit Libra
+            Visit Zepid
           </Button>
         </Section>
 
         <Section className="border-t border-gray-200 pt-5 mt-2">
           <Text className="text-sm text-gray-500 mb-0 leading-relaxed">
-            <strong>Security Tip:</strong> Libra will never ask for your password or financial information via email.
+            <strong>Security Tip:</strong> Zepid will never ask for your password or financial information via email.
           </Text>
         </Section>
       </ContentSection>
@@ -3287,7 +3287,7 @@ export async function sendWelcomeEmail(userEmail: string, planName: string) {
     await resend.emails.send({
       from: env.RESEND_FROM,
       to: [userEmail],
-      subject: `Welcome to the Libra ${planName} Plan`,
+      subject: `Welcome to the Zepid ${planName} Plan`,
       react: React.createElement(WelcomeEmailTemplate, { planName }) as any,
     })
   } catch (error) {
@@ -3306,7 +3306,7 @@ export async function sendOrganizationInvitation(options: {
   await resend.emails.send({
     from: env.RESEND_FROM,
     to: [email],
-    subject: 'Invitation to join a team on Libra',
+    subject: 'Invitation to join a team on Zepid',
     react: React.createElement(OrganizationInvitationTemplate, {
       invitedByUsername,
       teamName,

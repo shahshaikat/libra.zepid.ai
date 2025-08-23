@@ -7,7 +7,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue.svg)](https://www.typescriptlang.org/)
 [![Private Package](https://img.shields.io/badge/package-private-red.svg)](#)
 
-A comprehensive Stripe integration plugin for Better Auth that provides complete subscription management, customer handling, and payment processing capabilities for SaaS applications. This package is part of the Zepid AI platform monorepo and is specifically designed for Libra's subscription and quota management system.
+A comprehensive Stripe integration plugin for Better Auth that provides complete subscription management, customer handling, and payment processing capabilities for SaaS applications. This package is part of the Zepid AI platform monorepo and is specifically designed for Zepid's subscription and quota management system.
 
 ## 🚀 Features
 
@@ -15,7 +15,7 @@ A comprehensive Stripe integration plugin for Better Auth that provides complete
 - **👥 Customer Management** - Automatic Stripe customer creation and synchronization
 - **🔗 Webhook Handling** - Secure processing of Stripe events with Better Auth integration
 - **💳 Billing Portal** - Integrated Stripe customer portal access
-- **🏢 Multi-tenant** - Organization-based subscription management (Libra's core model)
+- **🏢 Multi-tenant** - Organization-based subscription management (Zepid's core model)
 - **💺 Quota Management** - AI usage, project limits, and seat management
 - **📊 Usage Tracking** - Real-time quota tracking and enforcement
 - **🔄 Auto-renewal** - FREE plan quota refresh and paid plan management
@@ -24,7 +24,7 @@ A comprehensive Stripe integration plugin for Better Auth that provides complete
 ## 📦 Installation
 
 ```bash
-# Note: This is a private package within the Libra monorepo
+# Note: This is a private package within the Zepid monorepo
 # It's not published to npm and is used internally
 
 # For development within the monorepo:
@@ -62,12 +62,12 @@ import { stripe } from "@libra/better-auth-stripe"
 import Stripe from "stripe"
 
 const stripeClient = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: "2025-05-28.basil", // Current API version used in Libra
+  apiVersion: "2025-05-28.basil", // Current API version used in Zepid
 })
 
 export const auth = betterAuth({
   database: {
-    provider: "sqlite", // Libra uses SQLite for auth data
+    provider: "sqlite", // Zepid uses SQLite for auth data
     url: process.env.DATABASE || "auth.db",
   },
   plugins: [
@@ -169,7 +169,7 @@ const getSubscriptions = async () => {
    - `invoice.payment_failed`
 4. Copy the webhook secret to your environment variables
 
-> **Important**: The webhook endpoint must match the Better Auth route structure. In Libra, this is handled automatically by the Better Auth Stripe plugin.
+> **Important**: The webhook endpoint must match the Better Auth route structure. In Zepid, this is handled automatically by the Better Auth Stripe plugin.
 
 > **Note**: The webhook endpoint is automatically created by the plugin at `/stripe/webhook` when the plugin is configured.
 
@@ -215,7 +215,7 @@ ALTER TABLE user ADD COLUMN stripeCustomerId TEXT; -- Note: camelCase in actual 
 └── tsup.config.ts       # Build configuration
 ```
 
-> **Note**: This package integrates deeply with Libra's subscription system and works in conjunction with `@libra/auth` for quota management and organization-based billing.
+> **Note**: This package integrates deeply with Zepid's subscription system and works in conjunction with `@libra/auth` for quota management and organization-based billing.
 
 ## 📚 Documentation
 
@@ -319,7 +319,7 @@ bun test
 bun run typecheck
 ```
 
-> **Note**: This package currently relies on integration testing through the main `@libra/auth` package rather than having dedicated unit tests. The testing examples in the documentation refer to the broader Stripe integration testing patterns used across the Libra platform.
+> **Note**: This package currently relies on integration testing through the main `@libra/auth` package rather than having dedicated unit tests. The testing examples in the documentation refer to the broader Stripe integration testing patterns used across the Zepid platform.
 
 ## 🤝 Contributing
 
@@ -338,4 +338,4 @@ This project is licensed under the AGPL-3.0 License - see the [LICENSE](../../LI
 
 ---
 
-Built with ❤️ by the Libra team.
+Built with ❤️ by the Zepid team.

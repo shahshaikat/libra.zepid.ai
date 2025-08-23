@@ -1,6 +1,6 @@
-# Libra Deploy V2 - 基于队列的部署服务
+# Zepid Deploy V2 - 基于队列的部署服务
 
-现代化的、基于队列的 Libra 平台部署服务，构建于 Cloudflare Workers、Queues 和 R2 存储。
+现代化的、基于队列的 Zepid 平台部署服务，构建于 Cloudflare Workers、Queues 和 R2 存储。
 
 ## 架构
 

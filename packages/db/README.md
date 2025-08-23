@@ -1,6 +1,6 @@
 # @libra/db
 
-A modern, type-safe database management package providing unified business data access layer for the entire Libra application.
+A modern, type-safe database management package providing unified business data access layer for the entire Zepid application.
 
 ## ✨ Features
 
@@ -109,4 +109,4 @@ AGPL-3.0 License - see the project root for details.
 
 ---
 
-**Libra DB - Type-Safe Database Operations Made Simple** ✨ 
+**Zepid DB - Type-Safe Database Operations Made Simple** ✨ 

@@ -118,7 +118,7 @@ Last Updated: 2025-07-30
 |------|---------|-------------|
 | **API Documentation** | Scalar interactive documentation (OpenAPI 3.1) | `/docs` |
 | **Inspector** | Real-time component debugging (development only) | `/inspector` |
-| **Badge.js** | "Made with Libra" website badge | `/badge.js` |
+| **Badge.js** | "Made with Zepid" website badge | `/badge.js` |
 | **OpenAPI** | API specification export | `/openapi.json` |
 | **Health Check** | Service status monitoring | `/` |
 | **Static Resources** | Sound effects, scripts, icons | `/public/inspect.js` etc |
@@ -427,7 +427,7 @@ app.route('/', openApiApp)
 app.get('/docs', Scalar({
     url: '/openapi.json',
     theme: 'default',
-    pageTitle: 'Libra CDN API Documentation',
+    pageTitle: 'Zepid CDN API Documentation',
     customCss: `
     .light-mode {
       --scalar-color-accent: #0099ff;
@@ -681,7 +681,7 @@ Delete files associated with planId.
 
 #### GET /badge.js
 
-Get Libra Badge JavaScript script.
+Get Zepid Badge JavaScript script.
 
 **Authentication**: Not required
 

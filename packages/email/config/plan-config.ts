@@ -36,7 +36,7 @@ export const PLAN_EMAIL_CONFIG: PlanConfigMap = {
       ],
       description: 'Perfect for everyone starting out on a website for their big idea. Get started with essential features to bring your vision to life.',
       ctaText: 'Start Building Your Project',
-      welcomeMessage: 'Welcome to Libra! You\'re all set to start building amazing projects with our AI-powered platform. Your free plan gives you everything you need to get started.'
+      welcomeMessage: 'Welcome to Zepid! You\'re all set to start building amazing projects with our AI-powered platform. Your free plan gives you everything you need to get started.'
     },
     pricing: {
       monthly: 0,
@@ -49,21 +49,21 @@ export const PLAN_EMAIL_CONFIG: PlanConfigMap = {
       seats: 1
     }
   },
-  
+
   [PLAN_TYPES.PRO]: {
     benefits: {
       features: [
         'Up to 3 projects',
         '100 AI messages per month',
         'Private projects',
-        'Remove the Libra badge',
+        'Remove the Zepid badge',
         'Custom domains',
         'Website hosting included',
         'Email support'
       ],
       description: 'Perfect for small teams and growing businesses. Scale your development with advanced features and professional support.',
       ctaText: 'Explore Pro Features',
-      welcomeMessage: 'Welcome to Libra Pro! You now have access to powerful features designed for professional development and team collaboration.'
+      welcomeMessage: 'Welcome to Zepid Pro! You now have access to powerful features designed for professional development and team collaboration.'
     },
     pricing: {
       monthly: 20,
@@ -76,7 +76,7 @@ export const PLAN_EMAIL_CONFIG: PlanConfigMap = {
       seats: 5
     }
   },
-  
+
   [PLAN_TYPES.MAX]: {
     benefits: {
       features: [
@@ -90,7 +90,7 @@ export const PLAN_EMAIL_CONFIG: PlanConfigMap = {
       ],
       description: 'For larger teams with advanced needs. Get maximum power and priority support for your most ambitious projects.',
       ctaText: 'Unlock Maximum Potential',
-      welcomeMessage: 'Welcome to Libra Max! You\'re now part of our premium tier with access to the most advanced features and priority support.'
+      welcomeMessage: 'Welcome to Zepid Max! You\'re now part of our premium tier with access to the most advanced features and priority support.'
     },
     pricing: {
       monthly: 40,

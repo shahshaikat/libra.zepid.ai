@@ -195,7 +195,7 @@ export const useFileTreeStore = create<FileTreeState>((set, get) => ({
         // Create sample files for testing if no files exist
         const sampleFileMap: FileContentMap = {
           'README.md': {
-            content: '# Libra Project\n\nThis is a sample project created by Zepid AI.\n\n## Features\n\n- File tree management\n- Code editing\n- Project download\n',
+            content: '# Zepid Project\n\nThis is a sample project created by Zepid AI.\n\n## Features\n\n- File tree management\n- Code editing\n- Project download\n',
             isBinary: false,
             type: 'file',
             parentPath: null

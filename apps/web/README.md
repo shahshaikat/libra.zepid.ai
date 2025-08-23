@@ -1,4 +1,4 @@
-# Libra Web Application
+# Zepid Web Application
 
 ![version](https://img.shields.io/badge/version-0.0.0-blue)
 ![license](https://img.shields.io/badge/license-AGPL--3.0-green)

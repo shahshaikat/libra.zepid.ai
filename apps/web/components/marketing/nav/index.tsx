@@ -28,7 +28,7 @@ import { Menu } from 'lucide-react'
 import Link from 'next/link'
 import type { ReactNode } from 'react'
 import Navigation from './navigation'
-import {Logo} from "@/components/common/logo/LogoImage"
+import { Logo } from "@/components/common/logo/LogoImage"
 import { LanguageSwitcher } from '@/components/language-switcher'
 import * as m from '@/paraglide/messages'
 
@@ -59,7 +59,7 @@ interface NavbarProps {
 }
 
 export default function Navbar({
-  name = 'Libra',
+  name = 'Zepid',
   homeUrl = siteConfig.url,
   mobileLinks = [
     { text: m["nav.documentation"](), href: siteConfig.url },
@@ -75,16 +75,16 @@ export default function Navbar({
   // Generate actions based on authentication status
   const defaultActions: NavbarActionProps[] = isAuthenticated
     ? [
-        {
-          text: m["nav.dashboard"](),
-          href: "/dashboard",
-          isButton: true,
-          variant: 'default' as const,
-        },
-      ]
+      {
+        text: m["nav.dashboard"](),
+        href: "/dashboard",
+        isButton: true,
+        variant: 'default' as const,
+      },
+    ]
     : [
-        { text: m["nav.login"](), href: "/login", isButton: false },
-      ]
+      { text: m["nav.login"](), href: "/login", isButton: false },
+    ]
 
   const finalActions = actions || defaultActions
   return (

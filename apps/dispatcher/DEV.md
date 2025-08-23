@@ -498,7 +498,7 @@ export function isValidWorkerSubdomain(subdomain: string): ValidationResult {
 This is the recommended routing method, providing the best performance and user experience:
 
 ```text
-# Standard Libra subdomain
+# Standard Zepid subdomain
 https://your-worker.zapid.dev/ → Worker "your-worker"
 https://vite-template.zapid.dev/about → Worker "vite-template" + /about path
 ```
@@ -579,7 +579,7 @@ Based on actual code, domain handling strategy:
 
 **Domain Handling Strategy**:
 
-1. **Smart Routing**: Automatically detects Libra domains vs custom domains
+1. **Smart Routing**: Automatically detects Zepid domains vs custom domains
 2. **Database Integration**: Custom domains associated with projects through database queries
 3. **Reserved Name Protection**: Prevents use of system-reserved subdomains
 4. **Flexible Configuration**: Supports arbitrary custom domain binding
@@ -649,7 +649,7 @@ Response:
 {
   "status": "healthy",
   "timestamp": "2025-07-22T12:00:00.000Z",
-  "service": "Libra Dispatcher",
+  "service": "Zepid Dispatcher",
   "version": "0.0.0",
   "environment": "development"
 }
@@ -667,7 +667,7 @@ Response:
 {
   "status": "healthy",
   "timestamp": "2025-07-22T12:00:00.000Z",
-  "service": "Libra Dispatcher",
+  "service": "Zepid Dispatcher",
   "version": "0.0.0",
   "environment": "development",
   "checks": {
@@ -695,7 +695,7 @@ Response:
 
 ```json
 {
-  "service": "Libra Dispatcher",
+  "service": "Zepid Dispatcher",
   "namespace": "zepid-dispatcher",
   "status": "available",
   "timestamp": "2025-07-22T12:00:00.000Z",

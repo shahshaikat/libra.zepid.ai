@@ -1,13 +1,13 @@
 ---
 title: "Zepid AI Development Documentation: Better-auth + Stripe Integration Guide"
-description: "Comprehensive development documentation covering the complete implementation patterns of better-auth and Stripe payment integration in the Libra project"
+description: "Comprehensive development documentation covering the complete implementation patterns of better-auth and Stripe payment integration in the Zepid project"
 version: "1.0"
 lastUpdated: "2025-07-30"
 ---
 
 # Zepid AI Development Documentation: Better-auth + Stripe Integration Guide
 
-This is a comprehensive development documentation covering the complete implementation patterns of better-auth and Stripe payment integration in the Libra project.
+This is a comprehensive development documentation covering the complete implementation patterns of better-auth and Stripe payment integration in the Zepid project.
 
 ## Quick Navigation
 
@@ -60,7 +60,7 @@ This is a comprehensive development documentation covering the complete implemen
 
 ## Architecture Overview
 
-Libra adopts a Multi-Database Hybrid Architecture, implementing a powerful subscription management and quota system:
+Zepid adopts a Multi-Database Hybrid Architecture, implementing a powerful subscription management and quota system:
 
 ```typescript
 // Architecture Components
@@ -555,7 +555,7 @@ export async function onSubscriptionCancel(subscription: any) {
 
 ## Quota Management System
 
-> 📝 **Description**: The quota management system is the core functionality of Libra, implementing high-performance quota deduction and automatic refresh mechanisms
+> 📝 **Description**: The quota management system is the core functionality of Zepid, implementing high-performance quota deduction and automatic refresh mechanisms
 
 ### Core Quota Deduction Function
 

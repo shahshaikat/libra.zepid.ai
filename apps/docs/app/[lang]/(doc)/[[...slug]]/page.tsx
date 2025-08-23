@@ -152,7 +152,7 @@ export async function generateMetadata(props: {
             type: "website",
             title,
             description,
-            siteName: "Libra Docs",
+            siteName: "Zepid Docs",
             url: `https://docs.zepid.dev/${lang}/${page.slugs.join("/")}`,
             images: [
                 {

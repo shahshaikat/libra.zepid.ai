@@ -24,10 +24,10 @@ import {
   Section,
 } from '@react-email/components';
 import type * as React from 'react';
-import { 
-  ContentSection, 
-  EmailContainer, 
-  InfoBox 
+import {
+  ContentSection,
+  EmailContainer,
+  InfoBox
 } from '../../components';
 
 interface ContactTemplateProps {
@@ -39,21 +39,21 @@ interface ContactTemplateProps {
 /**
  * Contact form submission email template
  */
-export const ContactTemplate: React.FC<ContactTemplateProps> = ({ 
-  name, 
-  email, 
-  message 
+export const ContactTemplate: React.FC<ContactTemplateProps> = ({
+  name,
+  email,
+  message
 }) => {
   return (
     <EmailContainer
-      title="Libra Contact Form Submission"
+      title="Zepid Contact Form Submission"
       previewText={`${name} sent a message via the contact form`}
     >
       <ContentSection>
         <Heading as="h2" className="mt-0 text-gray-800 text-xl font-semibold">
           New Contact Form Submission
         </Heading>
-        
+
         <Text className="mb-2 text-gray-600 leading-relaxed">
           You have received a new message from the website contact form:
         </Text>
@@ -75,7 +75,7 @@ export const ContactTemplate: React.FC<ContactTemplateProps> = ({
             {message}
           </Text>
         </Section>
-        
+
         <Text className="text-gray-600 mb-0 text-sm leading-relaxed">
           Please respond to this message promptly to provide excellent customer service.
         </Text>

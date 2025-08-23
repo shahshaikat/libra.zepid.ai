@@ -1,6 +1,6 @@
-# Libra Better-auth + Stripe Integration Development Documentation
+# Zepid Better-auth + Stripe Integration Development Documentation
 
-This is a comprehensive English development documentation covering the complete implementation patterns of better-auth and Stripe payment integration in the Libra project.
+This is a comprehensive English development documentation covering the complete implementation patterns of better-auth and Stripe payment integration in the Zepid project.
 
 ## Table of Contents
 
@@ -16,7 +16,7 @@ This is a comprehensive English development documentation covering the complete 
 
 ## Architecture Overview
 
-Libra adopts a multi-database hybrid architecture, implementing a powerful subscription management and quota system:
+Zepid adopts a multi-database hybrid architecture, implementing a powerful subscription management and quota system:
 
 ```typescript
 // Architecture Components

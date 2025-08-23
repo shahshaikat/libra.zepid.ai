@@ -6,7 +6,7 @@
 
 > **Zepid AI 平台的企业级类型安全 API 层**
 
-`@libra/api` 是一个基于 tRPC 构建的全面、类型安全的后端服务，为 Libra 平台的核心业务功能提供支持。它为 AI 驱动的开发工作流、项目管理、用户认证、支付处理和第三方集成提供了统一、可扩展的 API 接口。
+`@libra/api` 是一个基于 tRPC 构建的全面、类型安全的后端服务，为 Zepid 平台的核心业务功能提供支持。它为 AI 驱动的开发工作流、项目管理、用户认证、支付处理和第三方集成提供了统一、可扩展的 API 接口。
 
 ## ✨ 核心特性
 
@@ -284,5 +284,5 @@ bun run format-and-lint
 ---
 
 <div align="center">
-  <strong>由 Libra 团队用 ❤️ 构建</strong>
+  <strong>由 Zepid 团队用 ❤️ 构建</strong>
 </div>

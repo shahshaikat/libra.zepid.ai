@@ -439,7 +439,7 @@ export function isValidWorkerSubdomain(subdomain: string): ValidationResult {
 这是推荐的路由方式，提供最佳性能和用户体验：
 
 ```text
-# 标准 Libra 子域名
+# 标准 Zepid 子域名
 https://your-worker.zapid.dev/ → Worker "your-worker"
 https://vite-template.zapid.dev/about → Worker "vite-template" + /about 路径
 ```
@@ -522,7 +522,7 @@ export function isValidWorkerSubdomain(subdomain: string): { valid: boolean; err
 
 **域名处理策略**:
 
-1. **智能路由**: 自动检测 Libra 域名 vs 自定义域名
+1. **智能路由**: 自动检测 Zepid 域名 vs 自定义域名
 2. **数据库集成**: 自定义域名通过数据库查询关联项目
 3. **保留名称保护**: 防止使用系统保留的子域名
 4. **灵活配置**: 支持任意自定义域名绑定
@@ -596,7 +596,7 @@ GET /health
 {
   "status": "healthy",
   "timestamp": "2025-07-22T12:00:00.000Z",
-  "service": "Libra Dispatcher",
+  "service": "Zepid Dispatcher",
   "version": "0.0.0",
   "environment": "development"
 }
@@ -614,7 +614,7 @@ GET /health/detailed
 {
   "status": "healthy",
   "timestamp": "2025-07-22T12:00:00.000Z",
-  "service": "Libra Dispatcher",
+  "service": "Zepid Dispatcher",
   "version": "0.0.0",
   "environment": "development",
   "checks": {
@@ -642,7 +642,7 @@ GET /dispatch
 
 ```json
 {
-  "service": "Libra Dispatcher",
+  "service": "Zepid Dispatcher",
   "namespace": "zepid-dispatcher",
   "status": "available",
   "timestamp": "2025-07-22T12:00:00.000Z",

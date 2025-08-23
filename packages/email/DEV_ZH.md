@@ -1,6 +1,6 @@
-# Libra Email 包开发指南
+# Zepid Email 包开发指南
 
-Libra Email 是 Libra 平台的核心邮件系统，基于 **React Email** 和 **Resend** 构建的现代化邮件解决方案。该包提供完整的邮件模板系统、可重用的UI组件库以及类型安全的邮件发送API，支持多种业务场景的邮件通信需求。
+Zepid Email 是 Zepid 平台的核心邮件系统，基于 **React Email** 和 **Resend** 构建的现代化邮件解决方案。该包提供完整的邮件模板系统、可重用的UI组件库以及类型安全的邮件发送API，支持多种业务场景的邮件通信需求。
 
 ## 🎯 功能概览
 
@@ -109,7 +109,7 @@ interface EmailContainerProps {
 
 // 使用示例
 <EmailContainer 
-  title="欢迎使用 Libra" 
+  title="欢迎使用 Zepid" 
   previewText="开始您的 AI 开发之旅"
 >
   {/* 邮件内容 */}
@@ -278,7 +278,7 @@ await sendWelcomeEmail(userEmail: string, planName: string)
 await resend.emails.send({
   from: env.RESEND_FROM,
   to: [userEmail],
-  subject: `Welcome to the Libra ${planName} Plan`,
+  subject: `Welcome to the Zepid ${planName} Plan`,
   react: React.createElement(WelcomeEmailTemplate, { planName }),
 })
 ```
@@ -290,7 +290,7 @@ await resend.emails.send({
 await sendCancellationEmail(userEmail: string)
 
 // 实现细节
-- 使用预定义主题："Libra Subscription Cancelled"
+- 使用预定义主题："Zepid Subscription Cancelled"
 - 自动错误处理和日志记录
 ```
 
@@ -581,4 +581,4 @@ console.log(`[Email] Welcome email sent in ${duration}ms`)
 
 ---
 
-**Libra Email** - 现代化、类型安全的邮件解决方案 ✨
+**Zepid Email** - 现代化、类型安全的邮件解决方案 ✨

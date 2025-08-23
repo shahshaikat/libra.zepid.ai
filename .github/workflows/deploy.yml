@@ -1,4 +1,4 @@
-name: "Libra Deploy Service Deploy"
+name: "Zepid Deploy Service Deploy"
 
 on:
   workflow_dispatch:

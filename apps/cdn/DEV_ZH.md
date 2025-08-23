@@ -55,7 +55,7 @@
 |-----|------|----------|
 | **API 文档** | Scalar 交互式文档（OpenAPI 3.1） | `/docs` |
 | **Inspector** | 组件实时调试（仅开发环境） | `/inspector` |
-| **Badge.js** | "Made with Libra" 网站徽章 | `/badge.js` |
+| **Badge.js** | "Made with Zepid" 网站徽章 | `/badge.js` |
 | **OpenAPI** | API 规范导出 | `/openapi.json` |
 | **健康检查** | 服务状态监控 | `/` |
 | **静态资源** | 音效、脚本、图标 | `/public/inspect.js`等 |
@@ -364,7 +364,7 @@ app.route('/', openApiApp)
 app.get('/docs', Scalar({
     url: '/openapi.json',
     theme: 'default',
-    pageTitle: 'Libra CDN API Documentation',
+    pageTitle: 'Zepid CDN API Documentation',
     customCss: `
     .light-mode {
       --scalar-color-accent: #0099ff;
@@ -618,7 +618,7 @@ abc123def456789.jpg   // 返回生成的文件 key
 
 #### GET /badge.js
 
-获取 Libra Badge JavaScript 脚本。
+获取 Zepid Badge JavaScript 脚本。
 
 **认证**：不需要
 

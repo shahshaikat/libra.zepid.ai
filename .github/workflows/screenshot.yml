@@ -1,4 +1,4 @@
-name: "Libra Screenshot Service Deploy"
+name: "Zepid Screenshot Service Deploy"
 
 on:
   workflow_dispatch:

@@ -1,6 +1,6 @@
 # @libra/middleware
 
-Shared middleware package for Libra applications, providing consistent middleware implementations across all services.
+Shared middleware package for Zepid applications, providing consistent middleware implementations across all services.
 
 ## Features
 

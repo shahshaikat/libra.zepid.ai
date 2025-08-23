@@ -2,7 +2,7 @@
   "name": "@libra/email",
   "version": "1.0.3",
   "private": true,
-  "description": "Email templates and utilities for Libra",
+  "description": "Email templates and utilities for Zepid",
   "main": "index.ts",
   "types": "./index.ts",
   "type": "module",
