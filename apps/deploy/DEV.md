@@ -88,7 +88,7 @@ Last Updated: 2025-07-30
 
 ## Overview
 
-`@libra/deploy` is the core deployment service of the Libra AI platform, built on Cloudflare Workers queue architecture. It provides project deployment, state management, quota control, error handling, and other features, supporting asynchronous queue processing and intelligent retry strategies. Through a queue-driven architecture, it achieves a highly scalable and reliable deployment system.
+`@libra/deploy` is the core deployment service of the Zepid AI platform, built on Cloudflare Workers queue architecture. It provides project deployment, state management, quota control, error handling, and other features, supporting asynchronous queue processing and intelligent retry strategies. Through a queue-driven architecture, it achieves a highly scalable and reliable deployment system.
 
 ## Core Features
 

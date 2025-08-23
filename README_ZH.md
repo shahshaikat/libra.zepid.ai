@@ -1,4 +1,4 @@
-# Libra AI
+# Zepid AI
 
 <div align="center">
 
@@ -6,7 +6,7 @@
 
 **开源的 V0/Lovable 替代方案**
 
-**Libra AI：语言即应用**，一句话启动、迭代和部署您的下一个 Web 应用。
+**Zepid AI：语言即应用**，一句话启动、迭代和部署您的下一个 Web 应用。
 
 [![由 CLERK 赞助](https://img.shields.io/badge/SPONSORED%20BY-CLERK-6C47FF?style=for-the-badge)](https://clerk.com?utm_source=zepid.dev)
 [![由 E2B FOR STARTUPS 赞助](https://img.shields.io/badge/SPONSORED%20BY-E2B%20FOR%20STARTUPS-ff8800?style=for-the-badge)](https://e2b.dev/startups?utm_source=zepid.dev)
@@ -20,8 +20,8 @@
 
 </div>
 
-- [Libra AI](#libra-ai)
-  - [🚀 什么是 Libra AI？](#-什么是-libra-ai)
+- [Zepid AI](#libra-ai)
+  - [🚀 什么是 Zepid AI？](#-什么是-libra-ai)
     - [✨ 核心功能](#-核心功能)
       - [🤖 AI 智能编码](#-ai-智能编码)
       - [🛠️ 集成开发体验](#️-集成开发体验)
@@ -81,9 +81,9 @@
 
 ---
 
-## 🚀 什么是 Libra AI？
+## 🚀 什么是 Zepid AI？
 
-**Libra AI** 是一个面向生产环境的 AI 原生开发平台，通过自然语言交互实现 Web 应用的全生命周期管理。采用现代化技术架构，覆盖从快速原型设计到企业级生产部署的完整工程化流程。
+**Zepid AI** 是一个面向生产环境的 AI 原生开发平台，通过自然语言交互实现 Web 应用的全生命周期管理。采用现代化技术架构，覆盖从快速原型设计到企业级生产部署的完整工程化流程。
 
 正如 V0 深度集成 Vercel 生态，Libra 专为 Cloudflare Workers 架构设计，提供原生的 AI 开发体验。
 

@@ -24,7 +24,7 @@ import type * as React from "react";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
-import {cn} from "@libra/ui/lib/utils";
+import { cn } from "@libra/ui/lib/utils";
 import {
     NavigationMenu,
     NavigationMenuContent,
@@ -34,8 +34,8 @@ import {
     NavigationMenuTrigger,
     navigationMenuTriggerStyle,
 } from "./navigation-menu";
-import type {ReactNode} from "react";
-import {siteConfig} from "@/configs/site";
+import type { ReactNode } from "react";
+import { siteConfig } from "@/configs/site";
 import { Logo } from "@/components/common/logo/LogoImage";
 import * as m from '@/paraglide/messages';
 
@@ -68,14 +68,14 @@ interface NavigationProps {
 }
 
 export default function Navigation({
-                                       menuItems,
-                                       components = [
-                                       ],
-                                       logo = <Logo/>,
-                                       logoTitle,
-                                       logoDescription = m["nav.logo_description"](),
+    menuItems,
+    components = [
+    ],
+    logo = <Logo />,
+    logoTitle,
+    logoDescription = m["nav.logo_description"](),
 
-                                   }: NavigationProps) {
+}: NavigationProps) {
     const [isHydrated, setIsHydrated] = useState(false);
     const [localeReady, setLocaleReady] = useState(false);
 
@@ -131,11 +131,11 @@ export default function Navigation({
     const getLocalizedLogoTitle = (): string => {
         try {
             if (!isHydrated || !localeReady) {
-                return logoTitle || "Libra AI";
+                return logoTitle || "Zepid AI";
             }
             return logoTitle || m["nav.brand"]();
         } catch {
-            return logoTitle || "Libra AI";
+            return logoTitle || "Zepid AI";
         }
     };
 
@@ -168,71 +168,72 @@ export default function Navigation({
             <NavigationMenuList>
                 {finalMenuItems.map((item, index) => {
                     return (
-                    <NavigationMenuItem key={index}>
-                        {item.isLink ? (
-                            <NavigationMenuLink asChild>
-                                <Link href={item.href || ""} className={navigationMenuTriggerStyle()}>
-                                    {item.title}
-                                </Link>
-                            </NavigationMenuLink>
-                        ) : (
-                            <>
-                                <NavigationMenuTrigger>{item.title}</NavigationMenuTrigger>
-                                <NavigationMenuContent>
-                                    {item.content === "default" ? (
-                                        <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                                            <li className="row-span-3">
-                                                <div
-                                                    className="from-muted/30 to-muted/10 flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b p-6 no-underline outline-hidden select-none focus:shadow-md cursor-pointer"
-                                                    onClick={() => {
-                                                    }}
-                                                    onKeyDown={(e) => {
-                                                        if (e.key === 'Enter' || e.key === ' ') {
-                                                        }
-                                                    }}
-                                                >
-                                                    {logo}
-                                                    <div className="mt-4 mb-2 text-lg font-medium">
-                                                        {getLocalizedLogoTitle()}
+                        <NavigationMenuItem key={index}>
+                            {item.isLink ? (
+                                <NavigationMenuLink asChild>
+                                    <Link href={item.href || ""} className={navigationMenuTriggerStyle()}>
+                                        {item.title}
+                                    </Link>
+                                </NavigationMenuLink>
+                            ) : (
+                                <>
+                                    <NavigationMenuTrigger>{item.title}</NavigationMenuTrigger>
+                                    <NavigationMenuContent>
+                                        {item.content === "default" ? (
+                                            <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+                                                <li className="row-span-3">
+                                                    <div
+                                                        className="from-muted/30 to-muted/10 flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b p-6 no-underline outline-hidden select-none focus:shadow-md cursor-pointer"
+                                                        onClick={() => {
+                                                        }}
+                                                        onKeyDown={(e) => {
+                                                            if (e.key === 'Enter' || e.key === ' ') {
+                                                            }
+                                                        }}
+                                                    >
+                                                        {logo}
+                                                        <div className="mt-4 mb-2 text-lg font-medium">
+                                                            {getLocalizedLogoTitle()}
+                                                        </div>
+                                                        <p className="text-muted-foreground text-sm leading-tight">
+                                                            {logoDescription}
+                                                        </p>
                                                     </div>
-                                                    <p className="text-muted-foreground text-sm leading-tight">
-                                                        {logoDescription}
-                                                    </p>
-                                                </div>
-                                            </li>
+                                                </li>
 
-                                        </ul>
-                                    ) : item.content === "components" ? (
-                                        <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                                            {components.map((component) => (
-                                                <ListItem
-                                                    key={component.title}
-                                                    title={component.title}
-                                                    href={component.href}
-                                                >
-                                                    {component.description}
-                                                </ListItem>
-                                            ))}
-                                        </ul>
-                                    ) : (
-                                        item.content
-                                    )}
-                                </NavigationMenuContent>
-                            </>
-                        )}
-                    </NavigationMenuItem>
-                )})}
+                                            </ul>
+                                        ) : item.content === "components" ? (
+                                            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                                                {components.map((component) => (
+                                                    <ListItem
+                                                        key={component.title}
+                                                        title={component.title}
+                                                        href={component.href}
+                                                    >
+                                                        {component.description}
+                                                    </ListItem>
+                                                ))}
+                                            </ul>
+                                        ) : (
+                                            item.content
+                                        )}
+                                    </NavigationMenuContent>
+                                </>
+                            )}
+                        </NavigationMenuItem>
+                    )
+                })}
             </NavigationMenuList>
         </NavigationMenu>
     );
 }
 
 function ListItem({
-                      className,
-                      title,
-                      children,
-                      ...props
-                  }: React.ComponentProps<"a"> & { title: string }) {
+    className,
+    title,
+    children,
+    ...props
+}: React.ComponentProps<"a"> & { title: string }) {
     return (
         <li>
             <div

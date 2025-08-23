@@ -55,7 +55,7 @@ const LibraHeader = memo(({ formattedDate }: { formattedDate: string }) => {
       <div className='flex items-center gap-1'>
         <Logo />
         <div className='flex flex-col'>
-          <span className='text-accent text-accent-foreground'>Libra AI</span>
+          <span className='text-accent text-accent-foreground'>Zepid AI</span>
           {formattedDate && <span className='text-xs text-fg-subtle'>{formattedDate}</span>}
         </div>
       </div>

@@ -9,7 +9,7 @@
 
 ## 概述
 
-**@libra/cdn** 是基于 Cloudflare Workers 的无服务器 CDN 服务，为 Libra AI 应用提供安全的文件上传、边缘缓存、图片优化及截图存储能力。
+**@libra/cdn** 是基于 Cloudflare Workers 的无服务器 CDN 服务，为 Zepid AI 应用提供安全的文件上传、边缘缓存、图片优化及截图存储能力。
 
 * 边缘优先的无服务器架构，运行在 Cloudflare Workers
 * 使用 TypeScript 5.x + Hono v4.8+ 框架构建
@@ -156,4 +156,4 @@ wrangler route add "cdn.zepid.dev/*" libra-cdn
 
 ---
 
-© 2025 Libra AI. 使用 AGPL-3.0 许可证发布。 
+© 2025 Zepid AI. 使用 AGPL-3.0 许可证发布。 

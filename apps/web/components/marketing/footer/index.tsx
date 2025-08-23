@@ -49,7 +49,7 @@ interface FooterProps {
 
 export default function FooterSection({
   logo = <Logo />,
-  name = 'Libra AI',
+  name = 'Zepid AI',
   columns = [
     {
       id: 'product',

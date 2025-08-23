@@ -12,7 +12,7 @@
     "templates": "模板",
     "playground": "演练场",
     "start_coding": "开始编码",
-    "brand": "Libra AI",
+    "brand": "Zepid AI",
     "toggleNavigation": "切换导航菜单",
     "logo_description": "使用 React、Shadcn/ui 和 Tailwind 构建的着陆页模板，您可以复制/粘贴到您的项目中。"
   },
@@ -145,7 +145,7 @@
   },
   "faq": {
     "title": "常见问题",
-    "subtitle": "关于 Libra AI 平台的一切信息",
+    "subtitle": "关于 Zepid AI 平台的一切信息",
     "q1": "Libra 是开源的吗？",
     "a1": "是的，这是与其他 AI 构建工具最大的不同。Libra 核心代码开源，代码透明，社区驱动，没有供应商锁定。",
     "q2": "什么是 Libra？",
@@ -679,10 +679,10 @@
         },
         "close": "关闭对话框",
         "share_text": {
-          "twitter": "看看我用 Libra AI 构建的项目！",
-          "linkedin_title": "我用 Libra AI 构建的项目",
-          "linkedin_summary": "看看我使用 Libra AI 构建的这个精彩项目！",
-          "reddit_title": "看看我用 Libra AI 构建的项目！"
+          "twitter": "看看我用 Zepid AI 构建的项目！",
+          "linkedin_title": "我用 Zepid AI 构建的项目",
+          "linkedin_summary": "看看我使用 Zepid AI 构建的这个精彩项目！",
+          "reddit_title": "看看我用 Zepid AI 构建的项目！"
         }
       }
     },
@@ -1184,7 +1184,7 @@
       "downloadAriaLabel": "下载沙盒文件",
       "downloading": "下载中...",
       "downloadFailed": "下载失败，请重试。",
-      "brand": "Libra AI Web Coding",
+      "brand": "Zepid AI Web Coding",
       "search": "搜索",
       "switchToPreview": "切换到预览模式",
       "switchToCode": "切换到代码模式",
@@ -2163,7 +2163,7 @@
     "lastUpdated": "最后更新：{date}",
     "agreement": {
       "title": "同意我们的法律条款",
-      "description": "我们是 Libra AI，提供 AI 开发工具和服务。",
+      "description": "我们是 Zepid AI，提供 AI 开发工具和服务。",
       "serviceDescription": "我们运营网站 {websiteUrl}，以及任何其他引用或链接到这些法律条款的相关产品和服务。",
       "warning": "如果您不同意所有这些法律条款，则明确禁止您使用服务，您必须立即停止使用。"
     },
@@ -2369,7 +2369,7 @@
     "contact": {
       "title": "联系我们",
       "description": "为了解决有关服务的投诉或获取有关服务使用的更多信息，请通过以下方式联系我们：",
-      "companyName": "Libra AI"
+      "companyName": "Zepid AI"
     }
   },
   "hero_examples_title": "应用示例",

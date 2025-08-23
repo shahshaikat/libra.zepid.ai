@@ -19,7 +19,7 @@
  */
 
 export const siteConfig = {
-  name: 'Libra AI',
+  name: 'Zepid AI',
   url: process.env.NEXT_PUBLIC_APP_URL || 'https://zepid.dev',
   getStartedUrl: 'https://zepid.dev',
   ogImage: 'https://zepid.dev/opengraph-image.png',

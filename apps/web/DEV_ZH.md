@@ -5,7 +5,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-3178c6.svg)](https://www.typescriptlang.org/)
 [![Cloudflare](https://img.shields.io/badge/Cloudflare-Workers-orange.svg)](https://workers.cloudflare.com/)
 
-> **Libra AI 驱动的 Web 应用 - AI 原生的开发体验**
+> **Zepid AI 驱动的 Web 应用 - AI 原生的开发体验**
 
 Libra Web 应用基于 Next.js 15 和 React 19 构建的现代 AI 原生开发体验平台，提供类似 IDE 的界面和体验，集成 AI 助手、GitHub 集成、团队协作等功能，打造 Libra 生态系统的核心应用。
 

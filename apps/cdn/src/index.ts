@@ -41,22 +41,22 @@ app.use('*', createLoggingMiddleware({ service: 'cdn', level: 'info' }))
 // even if the global CORS middleware somehow doesn't catch it perfectly for this specific case.
 // Or if more specific headers are needed for this route.
 app.options('/upload', (c) => {
-    // The global CORS middleware should ideally handle this,
-    // but an explicit OPTIONS handler can provide more control or act as a fallback.
-    // Ensure headers set here are compatible with the global CORS policy.
-    // If global cors() is working as expected, this explicit handler might not be strictly necessary
-    // but can be useful for debugging or very specific overrides.
+  // The global CORS middleware should ideally handle this,
+  // but an explicit OPTIONS handler can provide more control or act as a fallback.
+  // Ensure headers set here are compatible with the global CORS policy.
+  // If global cors() is working as expected, this explicit handler might not be strictly necessary
+  // but can be useful for debugging or very specific overrides.
 
-    // Minimal response for preflight, actual CORS headers are often best managed by the main cors() middleware.
-    // If the global cors middleware is applied correctly, it should automatically handle OPTIONS requests.
-    // This explicit handler is more of a belt-and-suspenders approach or for very custom needs.
-    return c.newResponse(null, 204) // No Content - Corrected way to send 204
+  // Minimal response for preflight, actual CORS headers are often best managed by the main cors() middleware.
+  // If the global cors middleware is applied correctly, it should automatically handle OPTIONS requests.
+  // This explicit handler is more of a belt-and-suspenders approach or for very custom needs.
+  return c.newResponse(null, 204) // No Content - Corrected way to send 204
 })
 // --- END CORS Configuration ---
 
 
 app.get('/', async (c) => {
-    return c.text('Hello Libra AI!')
+  return c.text('Hello Zepid AI!')
 })
 
 
@@ -70,12 +70,12 @@ app.route('/', openApiApp)
 
 // Add Scalar API documentation route
 app.get(
-    '/docs',
-    Scalar({
-        url: '/openapi.json',
-        theme: 'default',
-        pageTitle: 'Libra CDN API Documentation',
-        customCss: `
+  '/docs',
+  Scalar({
+    url: '/openapi.json',
+    theme: 'default',
+    pageTitle: 'Libra CDN API Documentation',
+    customCss: `
     .light-mode {
       --scalar-color-accent: #0099ff;
     }
@@ -83,7 +83,7 @@ app.get(
       --scalar-color-accent: #e36002;
     }
   `,
-    })
+  })
 )
 
 export default app

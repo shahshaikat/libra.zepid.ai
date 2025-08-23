@@ -72,7 +72,7 @@ Last Updated: 2025-07-30
 
 ## Overview
 
-`@libra/screenshot` is the core screenshot service of the Libra AI platform, built on Cloudflare Workers and Queues. It implements an asynchronous queue processing architecture that solves the 30-second timeout limitation of synchronous screenshots, supports high concurrency and reliable project preview screenshot generation, and is deeply integrated with sandbox services and CDN services.
+`@libra/screenshot` is the core screenshot service of the Zepid AI platform, built on Cloudflare Workers and Queues. It implements an asynchronous queue processing architecture that solves the 30-second timeout limitation of synchronous screenshots, supports high concurrency and reliable project preview screenshot generation, and is deeply integrated with sandbox services and CDN services.
 
 ## Core Features
 

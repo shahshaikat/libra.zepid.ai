@@ -1,11 +1,11 @@
 ---
-title: "Libra AI 开发文档：Better-auth + Stripe 集成指南"
+title: "Zepid AI 开发文档：Better-auth + Stripe 集成指南"
 description: "详细的中文开发文档，涵盖 Libra 项目中 better-auth 与 Stripe 支付集成的完整实现模式"
 version: "1.0"
 lastUpdated: "2025-07-30"
 ---
 
-# Libra AI 开发文档：Better-auth + Stripe 集成指南
+# Zepid AI 开发文档：Better-auth + Stripe 集成指南
 
 这是一份详细的中文开发文档，涵盖了 Libra 项目中 better-auth 与 Stripe 支付集成的完整实现模式。
 

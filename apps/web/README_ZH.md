@@ -12,7 +12,7 @@
 
 ## 概述
 
-**@libra/web** 是 Libra AI 生态系统的核心 Web 应用程序 - 一个基于 Next.js 15 和 React 19 构建的现代 AI 原生开发平台。它提供类似 IDE 的界面和体验，集成多个 AI 助手、GitHub 集成、团队协作和智能代码生成，创造了一个全面的开发环境。
+**@libra/web** 是 Zepid AI 生态系统的核心 Web 应用程序 - 一个基于 Next.js 15 和 React 19 构建的现代 AI 原生开发平台。它提供类似 IDE 的界面和体验，集成多个 AI 助手、GitHub 集成、团队协作和智能代码生成，创造了一个全面的开发环境。
 
 * **AI 原生体验**：深度集成多个 AI 模型（Anthropic Claude、Azure OpenAI、XAI）
 * **现代化架构**：基于 Next.js 15 App Router 和 React 19 Server Components 构建
@@ -404,4 +404,4 @@ bun dev --port 3001
 
 ---
 
-© 2025 Libra AI. Licensed under AGPL-3.0.
+© 2025 Zepid AI. Licensed under AGPL-3.0.

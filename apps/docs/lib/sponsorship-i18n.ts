@@ -111,7 +111,7 @@ export const sponsorshipTexts: Record<string, SponsorshipTexts> = {
     },
     gold: {
       title: "🥇 GOLD SPONSORS",
-      description: "Join our Gold tier sponsors and showcase your company to thousands of developers using Libra AI. Featured logo placement with company description and direct website link.",
+      description: "Join our Gold tier sponsors and showcase your company to thousands of developers using Zepid AI. Featured logo placement with company description and direct website link.",
       buttonText: "Become a Gold Sponsor",
       benefits: {
         title: "Gold Tier Benefits",
@@ -197,7 +197,7 @@ export const sponsorshipTexts: Record<string, SponsorshipTexts> = {
     },
     gold: {
       title: "🥇 黄金级赞助商",
-      description: "加入我们的黄金级赞助商，向数千名使用 Libra AI 的开发者展示您的企业。享受特色logo展示位置，包含企业介绍和官网直链。",
+      description: "加入我们的黄金级赞助商，向数千名使用 Zepid AI 的开发者展示您的企业。享受特色logo展示位置，包含企业介绍和官网直链。",
       buttonText: "成为黄金级赞助商",
       benefits: {
         title: "黄金级权益",

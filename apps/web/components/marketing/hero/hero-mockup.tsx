@@ -37,7 +37,7 @@ const defaultMockup = (
   <Screenshot
     srcLight='/app-light.png'
     srcDark='/app-dark.png'
-    alt='Libra AI  UI  screenshot'
+    alt='Zepid AI  UI  screenshot'
     width={1248}
     height={765}
     className='w-full'

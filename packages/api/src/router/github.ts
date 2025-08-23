@@ -1203,7 +1203,7 @@ export const githubRouter = createTRPCRouter({
           body: JSON.stringify({
             name: repoName,
             description:
-              input.description || `Repository for ${projectData.name} - Created with Libra AI`,
+              input.description || `Repository for ${projectData.name} - Created with Zepid AI`,
             private: input.private,
             auto_init: true,
             gitignore_template: 'Node',

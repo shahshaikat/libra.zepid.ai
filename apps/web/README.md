@@ -10,7 +10,7 @@
 
 ## Overview
 
-**@libra/web** is the core web application of the Libra AI ecosystem - a modern AI-native development platform built on Next.js 15 and React 19. It provides an IDE-like interface and experience, integrating multiple AI assistants, GitHub integration, team collaboration, and intelligent code generation to create a comprehensive development environment.
+**@libra/web** is the core web application of the Zepid AI ecosystem - a modern AI-native development platform built on Next.js 15 and React 19. It provides an IDE-like interface and experience, integrating multiple AI assistants, GitHub integration, team collaboration, and intelligent code generation to create a comprehensive development environment.
 
 * **AI-Native Experience**: Deep integration with multiple AI models (Anthropic Claude, Azure OpenAI, XAI)
 * **Modern Architecture**: Built on Next.js 15 App Router and React 19 Server Components
@@ -402,4 +402,4 @@ bun dev --port 3001
 
 ---
 
-© 2025 Libra AI. Licensed under AGPL-3.0.
+© 2025 Zepid AI. Licensed under AGPL-3.0.

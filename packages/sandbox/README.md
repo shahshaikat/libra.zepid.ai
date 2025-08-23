@@ -1,6 +1,6 @@
 # @libra/sandbox
 
-A unified sandbox abstraction layer for Libra AI, supporting multiple sandbox providers (E2B, Daytona) with a consistent interface.
+A unified sandbox abstraction layer for Zepid AI, supporting multiple sandbox providers (E2B, Daytona) with a consistent interface.
 
 ## Features
 

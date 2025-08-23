@@ -1,10 +1,10 @@
-# Libra AI Development Guidelines
+# Zepid AI Development Guidelines
 
 *Generated on 2025-07-26 22:35, reviewed and updated on 2025-07-26 22:43, final review completed on 2025-07-26 22:46*
 
 ## Overview
 
-Libra AI is a modern open-source AI-driven development platform built on **Turborepo Monorepo** architecture. This document provides essential development guidelines for advanced developers working on this project.
+Zepid AI is a modern open-source AI-driven development platform built on **Turborepo Monorepo** architecture. This document provides essential development guidelines for advanced developers working on this project.
 
 ## Build/Configuration Instructions
 
@@ -292,4 +292,4 @@ All source files must include SPDX license headers:
 5. **Build Verification**: Ensure `bun run build` succeeds
 6. **Documentation**: Update relevant documentation
 
-This document provides the essential information for advanced developers to effectively work with the Libra AI codebase. For additional details, refer to the comprehensive cursor rules in `.cursor/rules/` and individual package documentation.
+This document provides the essential information for advanced developers to effectively work with the Zepid AI codebase. For additional details, refer to the comprehensive cursor rules in `.cursor/rules/` and individual package documentation.

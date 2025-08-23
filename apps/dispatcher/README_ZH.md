@@ -237,4 +237,4 @@ wrangler whoami
 
 ---
 
-2025 Libra AI. 遵循 AGPL-3.0 许可。
+2025 Zepid AI. 遵循 AGPL-3.0 许可。

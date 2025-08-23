@@ -3,7 +3,7 @@
 [![License](https://img.shields.io/badge/license-AGPL--3.0-blue.svg)](../../LICENSE)
 [![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue.svg)](https://www.typescriptlang.org/)
 
-Libra AI 平台的共享工具、类型和实用程序的综合集合。此包为 Libra 应用程序中的文件操作、数据处理、日志记录、错误处理和类型安全提供了基本构建块。
+Zepid AI 平台的共享工具、类型和实用程序的综合集合。此包为 Libra 应用程序中的文件操作、数据处理、日志记录、错误处理和类型安全提供了基本构建块。
 
 ## 📋 目录
 
@@ -859,7 +859,7 @@ expect(fileMap['src/index.ts']).toBe('export * from "./utils"')
 
 ## 🤝 贡献
 
-此包是 Libra AI 平台的一部分。请参考主仓库的贡献指南。
+此包是 Zepid AI 平台的一部分。请参考主仓库的贡献指南。
 
 ## 📄 许可证
 

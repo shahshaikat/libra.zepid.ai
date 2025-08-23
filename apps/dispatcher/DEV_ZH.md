@@ -20,7 +20,7 @@
 
 ## 概述
 
-`@libra/dispatcher` 是 Libra AI 平台的核心请求分发服务，基于 Cloudflare Workers 边缘计算架构构建。它实现了智能路由系统，支持通配符子域名、自定义域名，能够将用户请求高效分发到对应的 Worker 脚本，提供全球化的高性能、低延迟分发服务。
+`@libra/dispatcher` 是 Zepid AI 平台的核心请求分发服务，基于 Cloudflare Workers 边缘计算架构构建。它实现了智能路由系统，支持通配符子域名、自定义域名，能够将用户请求高效分发到对应的 Worker 脚本，提供全球化的高性能、低延迟分发服务。
 
 ## 核心功能
 

@@ -5,7 +5,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-3178c6.svg)](https://www.typescriptlang.org/)
 [![Cloudflare](https://img.shields.io/badge/Cloudflare-Workers-orange.svg)](https://workers.cloudflare.com/)
 
-> **Libra AI-Powered Web Application - AI-Native Development Experience**
+> **Zepid AI-Powered Web Application - AI-Native Development Experience**
 
 Libra Web application is a modern AI-native development experience platform built on Next.js 15 and React 19, providing IDE-like interface and experience, integrating AI assistants, GitHub integration, team collaboration, and other features to create the core application of the Libra ecosystem.
 

@@ -961,4 +961,4 @@ bun test
 
 ---
 
-由 [Libra AI](https://github.com/libra-ai) 团队用 ❤️ 为边缘而构建。
+由 [Zepid AI](https://github.com/libra-ai) 团队用 ❤️ 为边缘而构建。

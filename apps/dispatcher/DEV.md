@@ -85,7 +85,7 @@ Last Updated: 2025-07-30
 
 ## Overview
 
-`@libra/dispatcher` is the core request dispatch service of the Libra AI platform, built on Cloudflare Workers edge computing architecture. It implements an intelligent routing system that supports wildcard subdomains and custom domains, efficiently distributing user requests to corresponding Worker scripts, providing global high-performance, low-latency distribution services.
+`@libra/dispatcher` is the core request dispatch service of the Zepid AI platform, built on Cloudflare Workers edge computing architecture. It implements an intelligent routing system that supports wildcard subdomains and custom domains, efficiently distributing user requests to corresponding Worker scripts, providing global high-performance, low-latency distribution services.
 
 ## Core Features
 

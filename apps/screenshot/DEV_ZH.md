@@ -20,7 +20,7 @@
 
 ## 概述
 
-`@libra/screenshot` 是 Libra AI 平台的核心截图服务，基于 Cloudflare Workers 和 Queues 构建。它实现了异步队列处理架构，解决了同步截图的 30 秒超时限制，支持高并发、可靠的项目预览截图生成，并与沙箱服务和 CDN 服务深度集成。
+`@libra/screenshot` 是 Zepid AI 平台的核心截图服务，基于 Cloudflare Workers 和 Queues 构建。它实现了异步队列处理架构，解决了同步截图的 30 秒超时限制，支持高并发、可靠的项目预览截图生成，并与沙箱服务和 CDN 服务深度集成。
 
 ## 核心功能
 

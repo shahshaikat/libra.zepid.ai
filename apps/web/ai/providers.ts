@@ -70,7 +70,7 @@ const openrouterConfig = {
   apiKey: env.OPENROUTER_API_KEY || '',
   headers: {
     'HTTP-Referer': 'https://zepid.dev',
-    'X-Title': 'Libra AI',
+    'X-Title': 'Zepid AI',
   },
 }
 

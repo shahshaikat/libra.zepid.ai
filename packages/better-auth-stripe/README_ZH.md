@@ -7,7 +7,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue.svg)](https://www.typescriptlang.org/)
 [![Private Package](https://img.shields.io/badge/package-private-red.svg)](#)
 
-一个为 Better Auth 提供的全面 Stripe 集成插件，为 SaaS 应用程序提供完整的订阅管理、客户处理和支付处理功能。此包是 Libra AI 平台单体仓库的一部分，专为 Libra 的订阅和配额管理系统设计。
+一个为 Better Auth 提供的全面 Stripe 集成插件，为 SaaS 应用程序提供完整的订阅管理、客户处理和支付处理功能。此包是 Zepid AI 平台单体仓库的一部分，专为 Libra 的订阅和配额管理系统设计。
 
 ## 🚀 功能特性
 

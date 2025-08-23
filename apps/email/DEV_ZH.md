@@ -211,7 +211,7 @@ import { SignInTemplate } from '@libra/email/templates/emails/sign-in'
 export async function sendSignInEmail(email: string, otp: string) {
   return await sendEmail({
     to: email,
-    subject: '登录验证码 - Libra AI',
+    subject: '登录验证码 - Zepid AI',
     react: SignInTemplate({ 
       otp,
       userEmail: email,
@@ -224,7 +224,7 @@ export async function sendSignInEmail(email: string, otp: string) {
 export async function sendWelcomeEmail(userName: string, userEmail: string) {
   return await sendEmail({
     to: userEmail,
-    subject: '欢迎加入 Libra AI',
+    subject: '欢迎加入 Zepid AI',
     react: WelcomeTemplate({
       userName,
       userEmail,

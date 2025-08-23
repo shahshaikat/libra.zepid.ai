@@ -9,7 +9,7 @@
 
 ## Overview
 
-**@libra/cdn** is a Cloudflare Workers-based Content Delivery Network that powers secure file uploads, edge caching, image optimization and screenshot storage for Libra AI applications.
+**@libra/cdn** is a Cloudflare Workers-based Content Delivery Network that powers secure file uploads, edge caching, image optimization and screenshot storage for Zepid AI applications.
 
 * Edge-first serverless architecture on Cloudflare Workers
 * Built with TypeScript 5.x and Hono v4.8+ framework
@@ -156,4 +156,4 @@ A powerful debugging tool available at `/inspector` during development:
 
 ---
 
-© 2025 Libra AI. Licensed under AGPL-3.0.
+© 2025 Zepid AI. Licensed under AGPL-3.0.

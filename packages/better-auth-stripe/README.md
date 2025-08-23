@@ -7,7 +7,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue.svg)](https://www.typescriptlang.org/)
 [![Private Package](https://img.shields.io/badge/package-private-red.svg)](#)
 
-A comprehensive Stripe integration plugin for Better Auth that provides complete subscription management, customer handling, and payment processing capabilities for SaaS applications. This package is part of the Libra AI platform monorepo and is specifically designed for Libra's subscription and quota management system.
+A comprehensive Stripe integration plugin for Better Auth that provides complete subscription management, customer handling, and payment processing capabilities for SaaS applications. This package is part of the Zepid AI platform monorepo and is specifically designed for Libra's subscription and quota management system.
 
 ## 🚀 Features
 

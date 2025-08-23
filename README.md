@@ -1,4 +1,4 @@
-# Libra AI
+# Zepid AI
 
 <div align="center">
 
@@ -6,7 +6,7 @@
 
 **Open Source Alternative to V0/Lovable**
 
-**Libra AI: Language as Application** - Launch, iterate, and deploy your next web application with a single sentence.
+**Zepid AI: Language as Application** - Launch, iterate, and deploy your next web application with a single sentence.
 
 [![SPONSORED BY CLERK](https://img.shields.io/badge/SPONSORED%20BY-CLERK-6C47FF?style=for-the-badge)](https://clerk.com?utm_source=zepid.dev)
 [![SPONSORED BY E2B FOR STARTUPS](https://img.shields.io/badge/SPONSORED%20BY-E2B%20FOR%20STARTUPS-ff8800?style=for-the-badge)](https://e2b.dev/startups?utm_source=zepid.dev)
@@ -22,8 +22,8 @@
 
 </div>
 
-- [Libra AI](#libra-ai)
-  - [🚀 What is Libra AI?](#-what-is-libra-ai)
+- [Zepid AI](#libra-ai)
+  - [🚀 What is Zepid AI?](#-what-is-libra-ai)
     - [✨ Core Features](#-core-features)
       - [🤖 AI-Powered Coding](#-ai-powered-coding)
       - [🛠️ Integrated Development Experience](#️-integrated-development-experience)
@@ -83,9 +83,9 @@
 
 ---
 
-## 🚀 What is Libra AI?
+## 🚀 What is Zepid AI?
 
-**Libra AI** is a production-ready AI-native development platform that enables full lifecycle management of web applications through natural language interaction. Built with modern technology architecture, it covers the complete engineering process from rapid prototyping to enterprise-grade production deployment.
+**Zepid AI** is a production-ready AI-native development platform that enables full lifecycle management of web applications through natural language interaction. Built with modern technology architecture, it covers the complete engineering process from rapid prototyping to enterprise-grade production deployment.
 
 Just as V0 is deeply integrated with the Vercel ecosystem, Libra is specifically designed for the Cloudflare Workers architecture, providing a native AI development experience.
 

@@ -20,7 +20,7 @@
 
 ## 概述
 
-`@libra/cdn` 是 Libra AI 平台的核心存储服务，基于 Cloudflare Workers 边缘计算架构构建。提供文件上传、图片处理、截图管理、配额控制等功能，支持全球分布式部署和智能缓存策略。通过与 better-auth 深度集成，实现了完善的认证和授权体系。
+`@libra/cdn` 是 Zepid AI 平台的核心存储服务，基于 Cloudflare Workers 边缘计算架构构建。提供文件上传、图片处理、截图管理、配额控制等功能，支持全球分布式部署和智能缓存策略。通过与 better-auth 深度集成，实现了完善的认证和授权体系。
 
 ## 核心功能
 
@@ -351,7 +351,7 @@ app.options('/upload', (c) => {
 
 // 根路径
 app.get('/', async (c) => {
-    return c.text('Hello Libra AI!')
+    return c.text('Hello Zepid AI!')
 })
 
 // 注册 Inspector 路由（仅开发环境）

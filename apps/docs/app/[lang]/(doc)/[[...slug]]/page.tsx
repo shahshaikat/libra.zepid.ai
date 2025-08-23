@@ -143,7 +143,7 @@ export async function generateMetadata(props: {
     if (!page) notFound();
 
     const rootTitle = page.data.title ?? "Home";
-    const title = `${rootTitle} | Libra AI`;
+    const title = `${rootTitle} | Zepid AI`;
     const description = page.data.description;
     return {
         title,

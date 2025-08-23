@@ -1,6 +1,6 @@
 # @libra/sandbox
 
-Libra AI 的统一沙箱抽象层，支持多个沙箱提供商（E2B、Daytona），提供一致的接口。
+Zepid AI 的统一沙箱抽象层，支持多个沙箱提供商（E2B、Daytona），提供一致的接口。
 
 ## 功能特性
 

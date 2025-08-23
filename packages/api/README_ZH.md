@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/badge/license-AGPL--3.0-blue.svg)](https://github.com/libra-ai/libra/blob/main/LICENSE)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-blue.svg)](https://www.typescriptlang.org/)
 
-> **Libra AI 平台的企业级类型安全 API 层**
+> **Zepid AI 平台的企业级类型安全 API 层**
 
 `@libra/api` 是一个基于 tRPC 构建的全面、类型安全的后端服务，为 Libra 平台的核心业务功能提供支持。它为 AI 驱动的开发工作流、项目管理、用户认证、支付处理和第三方集成提供了统一、可扩展的 API 接口。
 

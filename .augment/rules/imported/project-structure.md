@@ -2,11 +2,11 @@
 type: "always_apply"
 ---
 
-# Libra AI Project Structure Guidelines
+# Zepid AI Project Structure Guidelines
 
 ## Overview
 
-Libra AI is a modern open-source AI-driven development platform built on **Turborepo Monorepo** architecture. This document defines the project structure rules, naming conventions, and organizational patterns that must be followed when working with the codebase.
+Zepid AI is a modern open-source AI-driven development platform built on **Turborepo Monorepo** architecture. This document defines the project structure rules, naming conventions, and organizational patterns that must be followed when working with the codebase.
 
 ## Core Architecture Principles
 
@@ -528,6 +528,6 @@ bun migration:local      # Run local migrations
 
 **Last Updated**: 2025-07-30
 **Version**: 1.0
-**Maintainers**: Libra AI Team
+**Maintainers**: Zepid AI Team
 
-This document is the authoritative source for project structure rules and must be followed by all contributors to maintain consistency and quality across the Libra AI codebase.
+This document is the authoritative source for project structure rules and must be followed by all contributors to maintain consistency and quality across the Zepid AI codebase.

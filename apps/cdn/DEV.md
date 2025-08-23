@@ -83,7 +83,7 @@ Last Updated: 2025-07-30
 
 ## Overview
 
-`@libra/cdn` is the core storage service of the Libra AI platform, built on Cloudflare Workers edge computing architecture. It provides file upload, image processing, screenshot management, quota control and other functions, supporting global distributed deployment and intelligent caching strategies. Through deep integration with better-auth, it implements a comprehensive authentication and authorization system.
+`@libra/cdn` is the core storage service of the Zepid AI platform, built on Cloudflare Workers edge computing architecture. It provides file upload, image processing, screenshot management, quota control and other functions, supporting global distributed deployment and intelligent caching strategies. Through deep integration with better-auth, it implements a comprehensive authentication and authorization system.
 
 ## Core Features
 
@@ -414,7 +414,7 @@ app.options('/upload', (c) => {
 
 // Root path
 app.get('/', async (c) => {
-    return c.text('Hello Libra AI!')
+    return c.text('Hello Zepid AI!')
 })
 
 // Register Inspector routes (development only)

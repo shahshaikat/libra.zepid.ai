@@ -12,7 +12,7 @@
     "templates": "Templates",
     "playground": "Playground",
     "start_coding": "Start Building",
-    "brand": "Libra AI",
+    "brand": "Zepid AI",
     "toggleNavigation": "Toggle navigation menu",
     "logo_description": "Landing page template built with React, Shadcn/ui and Tailwind that you can copy/paste into your project."
   },
@@ -146,7 +146,7 @@
   },
   "faq": {
     "title": "Frequently Asked Questions",
-    "subtitle": "Everything you need to know about the Libra AI platform",
+    "subtitle": "Everything you need to know about the Zepid AI platform",
     "q1": "Is Libra open source?",
     "a1": "Yes, this is the biggest difference from other AI building tools. Libra is core open source with transparent code, community-driven development, and no vendor lock-in.",
     "q2": "What is Libra?",
@@ -680,10 +680,10 @@
         },
         "close": "Close dialog",
         "share_text": {
-          "twitter": "Check out my project built with Libra AI!",
-          "linkedin_title": "My Project built with Libra AI",
-          "linkedin_summary": "Check out this amazing project I built using Libra AI!",
-          "reddit_title": "Check out my project built with Libra AI!"
+          "twitter": "Check out my project built with Zepid AI!",
+          "linkedin_title": "My Project built with Zepid AI",
+          "linkedin_summary": "Check out this amazing project I built using Zepid AI!",
+          "reddit_title": "Check out my project built with Zepid AI!"
         }
       }
     },
@@ -1185,7 +1185,7 @@
       "downloadAriaLabel": "Download the sandbox files",
       "downloading": "Downloading...",
       "downloadFailed": "Download failed. Please try again.",
-      "brand": "Libra AI Web Coding",
+      "brand": "Zepid AI Web Coding",
       "search": "Search",
       "switchToPreview": "Switch to preview mode",
       "switchToCode": "Switch to code mode",
@@ -2176,7 +2176,7 @@
     "lastUpdated": "Last updated: {date}",
     "agreement": {
       "title": "Agreement to Our Legal Terms",
-      "description": "We are Libra AI, providing AI development tools and services.",
+      "description": "We are Zepid AI, providing AI development tools and services.",
       "serviceDescription": "We operate the website {websiteUrl}, as well as any other related products and services that refer or link to these legal terms.",
       "warning": "If you do not agree with all of these legal terms, then you are expressly prohibited from using the services and you must discontinue use immediately."
     },
@@ -2382,7 +2382,7 @@
     "contact": {
       "title": "Contact Us",
       "description": "In order to resolve a complaint regarding the Services or to receive further information regarding use of the Services, please contact us at:",
-      "companyName": "Libra AI"
+      "companyName": "Zepid AI"
     }
   },
   "hero_examples_title": "App Ideas Examples",

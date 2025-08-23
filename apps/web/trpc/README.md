@@ -7,7 +7,7 @@
 ![React Query](https://img.shields.io/badge/React_Query-FF4154?style=for-the-badge&logo=react-query&logoColor=white)
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)
 
-**Type-safe API layer for Libra AI with full-stack TypeScript**
+**Type-safe API layer for Zepid AI with full-stack TypeScript**
 
 [📖 Official tRPC Docs](https://trpc.io) • [🔧 React Query Integration](https://trpc.io/docs/client/react) • [⚡ Next.js Setup](https://trpc.io/docs/nextjs)
 
@@ -36,7 +36,7 @@
 
 ## 🎯 Overview
 
-This tRPC configuration provides a type-safe, full-stack TypeScript API layer for Libra AI, enabling seamless communication between client and server components with automatic type inference and validation.
+This tRPC configuration provides a type-safe, full-stack TypeScript API layer for Zepid AI, enabling seamless communication between client and server components with automatic type inference and validation.
 
 ### ✨ Key Features
 

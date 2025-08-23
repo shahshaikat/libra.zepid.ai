@@ -188,4 +188,4 @@ wrangler whoami
 
 ---
 
-© 2025 Libra AI. Licensed under AGPL-3.0.
+© 2025 Zepid AI. Licensed under AGPL-3.0.

@@ -19,7 +19,7 @@
  */
 
 /**
- * Centralized logging utility for Libra AI platform
+ * Centralized logging utility for Zepid AI platform
  * Provides structured logging with consistent formatting across all components
  */
 
@@ -76,7 +76,7 @@ class Logger {
     const timestamp = new Date().toISOString()
     const contextStr = context ? ` | ${JSON.stringify(context)}` : ''
     const errorStr = error ? ` | ERROR: ${error.message} | STACK: ${error.stack}` : ''
-    
+
     return `[${timestamp}] [${level}] ${message}${contextStr}${errorStr}`
   }
 
@@ -186,25 +186,25 @@ export const log = {
   info: (message: string, context?: LogContext) => logger.info(message, context),
   warn: (message: string, context?: LogContext, error?: Error) => logger.warn(message, context, error),
   error: (message: string, context?: LogContext, error?: Error) => logger.error(message, context, error),
-  
+
   // Component-specific loggers
-  auth: (level: 'info' | 'warn' | 'error', message: string, context?: LogContext, error?: Error) => 
+  auth: (level: 'info' | 'warn' | 'error', message: string, context?: LogContext, error?: Error) =>
     logger.auth(level, message, context, error),
-  api: (level: 'info' | 'warn' | 'error', message: string, context?: LogContext, error?: Error) => 
+  api: (level: 'info' | 'warn' | 'error', message: string, context?: LogContext, error?: Error) =>
     logger.api(level, message, context, error),
-  db: (level: 'info' | 'warn' | 'error', message: string, context?: LogContext, error?: Error) => 
+  db: (level: 'info' | 'warn' | 'error', message: string, context?: LogContext, error?: Error) =>
     logger.db(level, message, context, error),
-  ai: (level: 'info' | 'warn' | 'error', message: string, context?: LogContext, error?: Error) => 
+  ai: (level: 'info' | 'warn' | 'error', message: string, context?: LogContext, error?: Error) =>
     logger.ai(level, message, context, error),
-  cdn: (level: 'info' | 'warn' | 'error', message: string, context?: LogContext, error?: Error) => 
+  cdn: (level: 'info' | 'warn' | 'error', message: string, context?: LogContext, error?: Error) =>
     logger.cdn(level, message, context, error),
-  dispatcher: (level: 'info' | 'warn' | 'error', message: string, context?: LogContext, error?: Error) => 
+  dispatcher: (level: 'info' | 'warn' | 'error', message: string, context?: LogContext, error?: Error) =>
     logger.dispatcher(level, message, context, error),
-  project: (level: 'info' | 'warn' | 'error', message: string, context?: LogContext, error?: Error) => 
+  project: (level: 'info' | 'warn' | 'error', message: string, context?: LogContext, error?: Error) =>
     logger.project(level, message, context, error),
-  subscription: (level: 'info' | 'warn' | 'error', message: string, context?: LogContext, error?: Error) => 
+  subscription: (level: 'info' | 'warn' | 'error', message: string, context?: LogContext, error?: Error) =>
     logger.subscription(level, message, context, error),
-  github: (level: 'info' | 'warn' | 'error', message: string, context?: LogContext, error?: Error) => 
+  github: (level: 'info' | 'warn' | 'error', message: string, context?: LogContext, error?: Error) =>
     logger.github(level, message, context, error),
   deployment: (level: 'info' | 'warn' | 'error', message: string, context?: LogContext, error?: Error) =>
     logger.deployment(level, message, context, error),

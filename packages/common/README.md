@@ -3,7 +3,7 @@
 [![License](https://img.shields.io/badge/license-AGPL--3.0-blue.svg)](../../LICENSE)
 [![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue.svg)](https://www.typescriptlang.org/)
 
-A comprehensive collection of shared utilities, types, and tools for the Libra AI platform. This package provides essential building blocks for file manipulation, data processing, logging, error handling, and type safety across all Libra applications.
+A comprehensive collection of shared utilities, types, and tools for the Zepid AI platform. This package provides essential building blocks for file manipulation, data processing, logging, error handling, and type safety across all Libra applications.
 
 ## 📋 Table of Contents
 
@@ -859,7 +859,7 @@ For detailed API reference and usage examples, please refer to the source code a
 
 ## 🤝 Contributing
 
-This package is part of the Libra AI platform. Please refer to the main repository's contributing guidelines.
+This package is part of the Zepid AI platform. Please refer to the main repository's contributing guidelines.
 
 ## 📄 License
 

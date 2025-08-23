@@ -223,7 +223,7 @@ import { SignInTemplate } from '@libra/email/templates/emails/sign-in'
 export async function sendSignInEmail(email: string, otp: string) {
   return await sendEmail({
     to: email,
-    subject: 'Login Verification Code - Libra AI',
+    subject: 'Login Verification Code - Zepid AI',
     react: SignInTemplate({
       otp,
       userEmail: email,
@@ -236,7 +236,7 @@ export async function sendSignInEmail(email: string, otp: string) {
 export async function sendWelcomeEmail(userName: string, userEmail: string) {
   return await sendEmail({
     to: userEmail,
-    subject: 'Welcome to Libra AI',
+    subject: 'Welcome to Zepid AI',
     react: WelcomeTemplate({
       userName,
       userEmail,

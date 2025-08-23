@@ -1,11 +1,11 @@
 ---
-title: "Libra AI Development Documentation: Better-auth + Stripe Integration Guide"
+title: "Zepid AI Development Documentation: Better-auth + Stripe Integration Guide"
 description: "Comprehensive development documentation covering the complete implementation patterns of better-auth and Stripe payment integration in the Libra project"
 version: "1.0"
 lastUpdated: "2025-07-30"
 ---
 
-# Libra AI Development Documentation: Better-auth + Stripe Integration Guide
+# Zepid AI Development Documentation: Better-auth + Stripe Integration Guide
 
 This is a comprehensive development documentation covering the complete implementation patterns of better-auth and Stripe payment integration in the Libra project.
 
@@ -19,7 +19,7 @@ This is a comprehensive development documentation covering the complete implemen
 
 ## Table of Contents
 
-- [Libra AI Development Documentation: Better-auth + Stripe Integration Guide](#libra-ai-development-documentation-better-auth--stripe-integration-guide)
+- [Zepid AI Development Documentation: Better-auth + Stripe Integration Guide](#libra-ai-development-documentation-better-auth--stripe-integration-guide)
   - [Quick Navigation](#quick-navigation)
   - [Table of Contents](#table-of-contents)
   - [Related Documentation](#related-documentation)

@@ -214,7 +214,7 @@ export default function GitHubModal({ open, onClose, projectId }: GitHubModalPro
     try {
       const result = await createProjectRepository({
         projectId,
-        description: `Repository for ${projectRepoInfo.projectName} - Created with Libra AI`,
+        description: `Repository for ${projectRepoInfo.projectName} - Created with Zepid AI`,
         private: true
       })
 
@@ -329,7 +329,7 @@ export default function GitHubModal({ open, onClose, projectId }: GitHubModalPro
     const success = await pushToRepository({
       repository: targetRepository,
       projectId, // Pass project ID, let backend handle file retrieval
-      commitMessage: 'Sync files from Libra AI Web Coding',
+      commitMessage: 'Sync files from Zepid AI Web Coding',
       forcePush: true // Force push to ensure local changes override remote repository state
     })
 
@@ -432,9 +432,9 @@ export default function GitHubModal({ open, onClose, projectId }: GitHubModalPro
 
   const canGoBack = () => {
     return currentStep !== 'install' &&
-           currentStep !== 'success' &&
-           currentStep !== 'oauth' &&
-           currentStep !== null
+      currentStep !== 'success' &&
+      currentStep !== 'oauth' &&
+      currentStep !== null
   }
 
   const handleBackNavigation = () => {

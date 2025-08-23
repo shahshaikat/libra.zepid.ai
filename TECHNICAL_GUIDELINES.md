@@ -1,5 +1,5 @@
 ---
-description: Libra AI Project Technical Development Guidelines - Complete Technical Guide Based on Actual Code Implementation (Latest Update July 2025)
+description: Zepid AI Project Technical Development Guidelines - Complete Technical Guide Based on Actual Code Implementation (Latest Update July 2025)
 globs:
   - "**/*"
 alwaysApply: true
@@ -7,11 +7,11 @@ lastUpdated: 2025-07-30
 version: "1.0"
 ---
 
-# Libra AI Technical Development Guidelines
+# Zepid AI Technical Development Guidelines
 
 ## Table of Contents
 
-- [Libra AI Technical Development Guidelines](#libra-ai-technical-development-guidelines)
+- [Zepid AI Technical Development Guidelines](#libra-ai-technical-development-guidelines)
   - [Table of Contents](#table-of-contents)
   - [1. Project Overview](#1-project-overview)
     - [1.1 Core Features](#11-core-features)
@@ -143,7 +143,7 @@ version: "1.0"
 
 ## 1. Project Overview
 
-**Libra AI** is a modern open-source AI-driven development platform that provides intelligent code generation and project building capabilities similar to V0/Lovable. The project is built on a **Turborepo Monorepo** architecture using the latest web technology stack, offering developers a powerful AI-assisted development experience.
+**Zepid AI** is a modern open-source AI-driven development platform that provides intelligent code generation and project building capabilities similar to V0/Lovable. The project is built on a **Turborepo Monorepo** architecture using the latest web technology stack, offering developers a powerful AI-assisted development experience.
 
 ### 1.1 Core Features
 
@@ -1822,7 +1822,7 @@ export async function checkAndUpdateAIMessageUsage(orgId: string): Promise<boole
 
 ---
 
-**Note**: This is a comprehensive technical guidelines document covering the core architecture, technology stack, and development patterns of the Libra AI project. The document provides detailed implementation examples and best practices for developers working on the project.
+**Note**: This is a comprehensive technical guidelines document covering the core architecture, technology stack, and development patterns of the Zepid AI project. The document provides detailed implementation examples and best practices for developers working on the project.
 
 ## 9. State Management Patterns
 
@@ -1995,19 +1995,19 @@ interface WelcomeEmailProps {
 export const WelcomeEmail = ({ username, loginUrl }: WelcomeEmailProps) => (
   <Html>
     <Head />
-    <Preview>Welcome to Libra AI - Start building with AI</Preview>
+    <Preview>Welcome to Zepid AI - Start building with AI</Preview>
     <Body style={main}>
       <Container style={container}>
         <Img
           src="https://zepid.dev/logo.png"
           width="170"
           height="50"
-          alt="Libra AI"
+          alt="Zepid AI"
           style={logo}
         />
-        <Heading style={h1}>Welcome to Libra AI, {username}!</Heading>
+        <Heading style={h1}>Welcome to Zepid AI, {username}!</Heading>
         <Text style={text}>
-          Thank you for joining Libra AI. You can now start building amazing projects with AI assistance.
+          Thank you for joining Zepid AI. You can now start building amazing projects with AI assistance.
         </Text>
         <Link href={loginUrl} style={button}>
           Get Started
@@ -2096,7 +2096,7 @@ export async function sendEmail({
 }) {
   try {
     const { data, error } = await resend.emails.send({
-      from: 'Libra AI <noreply@zepid.dev>',
+      from: 'Zepid AI <noreply@zepid.dev>',
       to,
       subject,
       react: template,
@@ -2464,7 +2464,7 @@ export const config = {
 ```typescript
 // messages/en.json
 {
-  "welcome": "Welcome to Libra AI",
+  "welcome": "Welcome to Zepid AI",
   "project": {
     "create": "Create Project",
     "name": "Project Name",
@@ -2480,7 +2480,7 @@ export const config = {
 
 // messages/zh.json
 {
-  "welcome": "欢迎使用 Libra AI",
+  "welcome": "欢迎使用 Zepid AI",
   "project": {
     "create": "创建项目",
     "name": "项目名称",
@@ -4497,7 +4497,7 @@ export class ProjectSyncService {
             repoName,
             file.path,
             file.content,
-            `Update ${file.path} via Libra AI`,
+            `Update ${file.path} via Zepid AI`,
             file.sha
           )
 
@@ -4612,7 +4612,7 @@ export class ProjectSyncService {
 
 ## Conclusion
 
-This comprehensive technical guidelines document provides a complete reference for developing with the Libra AI platform. It covers:
+This comprehensive technical guidelines document provides a complete reference for developing with the Zepid AI platform. It covers:
 
 ### 🏗️ Architecture & Design
 
@@ -4660,7 +4660,7 @@ This comprehensive technical guidelines document provides a complete reference f
 - **Deployment**: OpenNext.js + Cloudflare Workers with CI/CD automation
 - **Testing**: Comprehensive testing strategies and quality assurance
 
-This document serves as both a learning resource for new developers and a reference guide for experienced team members, ensuring consistency and quality across the entire Libra AI codebase.
+This document serves as both a learning resource for new developers and a reference guide for experienced team members, ensuring consistency and quality across the entire Zepid AI codebase.
 
 ### 📚 Additional Resources
 

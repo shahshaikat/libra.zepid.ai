@@ -195,7 +195,7 @@ export const useFileTreeStore = create<FileTreeState>((set, get) => ({
         // Create sample files for testing if no files exist
         const sampleFileMap: FileContentMap = {
           'README.md': {
-            content: '# Libra Project\n\nThis is a sample project created by Libra AI.\n\n## Features\n\n- File tree management\n- Code editing\n- Project download\n',
+            content: '# Libra Project\n\nThis is a sample project created by Zepid AI.\n\n## Features\n\n- File tree management\n- Code editing\n- Project download\n',
             isBinary: false,
             type: 'file',
             parentPath: null
@@ -213,7 +213,7 @@ export const useFileTreeStore = create<FileTreeState>((set, get) => ({
             parentPath: 'src'
           },
           'package.json': {
-            content: '{\n  "name": "libra-sample-project",\n  "version": "1.0.0",\n  "description": "A sample project created by Libra AI",\n  "main": "src/index.js",\n  "scripts": {\n    "start": "node src/index.js"\n  },\n  "keywords": ["libra", "ai", "sample"],\n  "author": "Libra AI",\n  "license": "MIT"\n}\n',
+            content: '{\n  "name": "libra-sample-project",\n  "version": "1.0.0",\n  "description": "A sample project created by Zepid AI",\n  "main": "src/index.js",\n  "scripts": {\n    "start": "node src/index.js"\n  },\n  "keywords": ["libra", "ai", "sample"],\n  "author": "Zepid AI",\n  "license": "MIT"\n}\n',
             isBinary: false,
             type: 'file',
             parentPath: null

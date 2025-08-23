@@ -1,5 +1,5 @@
 ---
-description: Libra AI 项目技术开发规范 - 基于实际代码实现的完整技术指南 (最新更新 2025年7月)
+description: Zepid AI 项目技术开发规范 - 基于实际代码实现的完整技术指南 (最新更新 2025年7月)
 globs:
   - "**/*"
 alwaysApply: true
@@ -7,11 +7,11 @@ lastUpdated: 2025-07-30
 version: "1.0"
 ---
 
-# Libra AI 技术开发规范
+# Zepid AI 技术开发规范
 
 ## 目录
 
-- [Libra AI 技术开发规范](#libra-ai-技术开发规范)
+- [Zepid AI 技术开发规范](#libra-ai-技术开发规范)
   - [目录](#目录)
   - [1. 项目概述](#1-项目概述)
     - [1.1 核心功能](#11-核心功能)
@@ -175,7 +175,7 @@ version: "1.0"
 
 ## 1. 项目概述
 
-**Libra AI** 是一个现代化的开源 AI 驱动开发平台，提供类似 V0/Lovable 的智能代码生成和项目构建能力。该项目基于 **Turborepo Monorepo** 架构构建，采用最新的 Web 技术栈，为开发者提供强大的 AI 辅助开发体验。
+**Zepid AI** 是一个现代化的开源 AI 驱动开发平台，提供类似 V0/Lovable 的智能代码生成和项目构建能力。该项目基于 **Turborepo Monorepo** 架构构建，采用最新的 Web 技术栈，为开发者提供强大的 AI 辅助开发体验。
 
 ### 1.1 核心功能
 
@@ -4721,7 +4721,7 @@ export async function syncProjectToGitHub(
   // 添加 README
   filesToCommit.push({
     path: 'README.md',
-    content: `# ${project.name}\n\n${project.description || ''}【\n\nCreated with [Libra AI](https://zepid.dev)`,
+    content: `# ${project.name}\n\n${project.description || ''}【\n\nCreated with [Zepid AI](https://zepid.dev)`,
   })
 
   // 提交到 GitHub

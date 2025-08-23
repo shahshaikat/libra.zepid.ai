@@ -1158,4 +1158,4 @@ Special thanks to:
 
 ---
 
-Built with ❤️ for the edge by the [Libra AI](https://github.com/libra-ai) team.
+Built with ❤️ for the edge by the [Zepid AI](https://github.com/libra-ai) team.

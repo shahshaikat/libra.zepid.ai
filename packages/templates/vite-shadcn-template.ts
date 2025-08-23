@@ -38,7 +38,7 @@ export const fileStructure = {
   "index.html": {
     "type": "file",
     "isBinary": false,
-    "content": "<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Libra AI</title>\n  </head>\n  <body>\n    <div id=\"root\"></div>\n    <script type=\"module\">\n      const inspectorHost = import.meta.env.VITE_INSPECTOR_HOST || 'localhost';\n      const inspectorPort = import.meta.env.VITE_INSPECTOR_PORT || '3004';\n      const inspectorUrl = import.meta.env.VITE_INSPECTOR_URL;\n      const script = document.createElement('script');\n      script.src = inspectorUrl ?\n        `${inspectorUrl}/inspect.js` :\n        `http://${inspectorHost}:${inspectorPort}/inspect.js`;\n      document.body.appendChild(script);\n    </script>\n    <script type=\"module\" src=\"/src/main.tsx\"></script>\n  </body>\n</html>\n"
+    "content": "<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Zepid AI</title>\n  </head>\n  <body>\n    <div id=\"root\"></div>\n    <script type=\"module\">\n      const inspectorHost = import.meta.env.VITE_INSPECTOR_HOST || 'localhost';\n      const inspectorPort = import.meta.env.VITE_INSPECTOR_PORT || '3004';\n      const inspectorUrl = import.meta.env.VITE_INSPECTOR_URL;\n      const script = document.createElement('script');\n      script.src = inspectorUrl ?\n        `${inspectorUrl}/inspect.js` :\n        `http://${inspectorHost}:${inspectorPort}/inspect.js`;\n      document.body.appendChild(script);\n    </script>\n    <script type=\"module\" src=\"/src/main.tsx\"></script>\n  </body>\n</html>\n"
   },
   "tsconfig.app.json": {
     "type": "file",
@@ -379,7 +379,7 @@ export const fileStructure = {
           "src/pages/Index.tsx": {
             "type": "file",
             "isBinary": false,
-            "content": "const Index = () => {\n  return (\n    <div className='min-h-screen bg-white'>\n      <div className='text-2xl font-bold'>Libra AI</div>\n      {/* Navbar Section */}\n\n      {/* Hero Section */}\n\n      {/* Features Section */}\n\n      {/* Community Section */}\n\n      {/* Integration Section */}\n\n      {/* Team Section */}\n\n      {/* Footer */}\n    </div>\n  )\n}\n\nexport default Index\n"
+            "content": "const Index = () => {\n  return (\n    <div className='min-h-screen bg-white'>\n      <div className='text-2xl font-bold'>Zepid AI</div>\n      {/* Navbar Section */}\n\n      {/* Hero Section */}\n\n      {/* Features Section */}\n\n      {/* Community Section */}\n\n      {/* Integration Section */}\n\n      {/* Team Section */}\n\n      {/* Footer */}\n    </div>\n  )\n}\n\nexport default Index\n"
           }
         }
       },

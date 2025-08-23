@@ -55,7 +55,7 @@ function ChatIllustration() {
         </div>
         <div className='group-hover:animate-hover relative z-10'>
           <div className='border-border/80 bg-foreground text-primary-foreground flex -translate-x-24 rounded-lg border px-2 py-0.5'>
-            Libra AI.
+            Zepid AI.
             <div className='absolute -top-6 -left-3'>
               <svg
                 width='18'
