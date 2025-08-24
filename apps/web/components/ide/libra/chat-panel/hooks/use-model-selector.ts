@@ -45,7 +45,7 @@ export const useModelSelector = ({
   const isUsageError = false
 
   // Get user's current plan
-  const userPlan = usageData?.plan || 'libra free'
+  const userPlan = usageData?.plan || 'zepid free'
 
   // Get available models based on user's plan
   const availableModels = getAvailableModels(userPlan)

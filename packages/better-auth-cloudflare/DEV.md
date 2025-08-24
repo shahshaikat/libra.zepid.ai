@@ -4,7 +4,7 @@
 
 ## Overview
 
-`@libra/better-auth-cloudflare` is a Better Auth integration plugin specifically designed for Cloudflare Workers environment, providing Cloudflare D1 database and KV storage support. This plugin fully leverages Cloudflare's edge computing capabilities to provide high-performance, low-latency authentication services for the libra project.
+`@libra/better-auth-cloudflare` is a Better Auth integration plugin specifically designed for Cloudflare Workers environment, providing Cloudflare D1 database and KV storage support. This plugin fully leverages Cloudflare's edge computing capabilities to provide high-performance, low-latency authentication services for the zepid project.
 
 ### Core Features
 

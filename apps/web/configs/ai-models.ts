@@ -23,9 +23,9 @@ type AIModelProvider = 'anthropic' | 'openai' | 'google'
 
 // Plan types for subscription requirements
 export const PLAN_TYPES = {
-  FREE: 'libra free',
-  PRO: 'libra pro',
-  MAX: 'libra max',
+  FREE: 'zepid free',
+  PRO: 'zepid pro',
+  MAX: 'zepid max',
 } as const
 
 export type PlanType = (typeof PLAN_TYPES)[keyof typeof PLAN_TYPES]

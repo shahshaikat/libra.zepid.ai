@@ -252,9 +252,9 @@ async function authBuilder() {
 // packages/auth/utils/subscription-limits/types.ts
 
 export const PLAN_TYPES = {
-  FREE: 'libra free',
-  PRO: 'libra pro',  
-  MAX: 'libra max'
+  FREE: 'zepid free',
+  PRO: 'zepid pro',  
+  MAX: 'zepid max'
 } as const
 
 export type PlanType = typeof PLAN_TYPES[keyof typeof PLAN_TYPES]
@@ -1169,7 +1169,7 @@ describe('Stripe Integration', () => {
 
     // 验证订阅限制是否创建
     const limits = await getSubscriptionUsage(organization.id)
-    expect(limits.plan).not.toBe('libra free')
+    expect(limits.plan).not.toBe('zepid free')
     expect(limits.aiNums).toBeGreaterThan(50) // 付费计划配额更高
   })
 
@@ -1180,7 +1180,7 @@ describe('Stripe Integration', () => {
     await createOrUpdateSubscriptionLimit(
       organization.id,
       'cus_test123',
-      'libra pro',
+      'zepid pro',
       new Date(),
       new Date(Date.now() + 30 * 24 * 60 * 60 * 1000), // 30天后
       { aiNums: 100, seats: 5, projectNums: 10 }
@@ -1203,7 +1203,7 @@ describe('Stripe Integration', () => {
     await createOrUpdateSubscriptionLimit(
       organization.id,
       null,
-      'libra free',
+      'zepid free',
       pastDate,
       new Date(Date.now() - 5 * 24 * 60 * 60 * 1000), // 5天前过期
       { aiNums: 0, seats: 1, projectNums: 1 }

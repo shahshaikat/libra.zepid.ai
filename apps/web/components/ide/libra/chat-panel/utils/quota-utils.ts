@@ -83,7 +83,7 @@ export function isFreePlan(usageData: UsageData | null | undefined): boolean {
     return true // Default to free plan if no data
   }
 
-  return usageData.plan === 'libra free' || usageData.plan.toLowerCase().includes('free')
+  return usageData.plan === 'zepid free' || usageData.plan.toLowerCase().includes('free')
 }
 
 /**

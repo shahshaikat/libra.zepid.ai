@@ -2443,9 +2443,9 @@ export const stripePlugin = stripeClient
 ```typescript
 // packages/auth/utils/subscription-limits/types.ts
 export const PLAN_TYPES = {
-  FREE: 'libra free',
-  PRO: 'libra pro',
-  MAX: 'libra max'
+  FREE: 'zepid free',
+  PRO: 'zepid pro',
+  MAX: 'zepid max'
 } as const
 
 export interface PlanLimits {
@@ -2500,9 +2500,9 @@ export async function handleSubscriptionDeleted(event: Stripe.Event) {
 ```typescript
 // apps/web/configs/ai-models.ts
 export const PLAN_TYPES = {
-  FREE: 'libra free',
-  PRO: 'libra pro',
-  MAX: 'libra max',
+  FREE: 'zepid free',
+  PRO: 'zepid pro',
+  MAX: 'zepid max',
 } as const
 
 export type AIModel = {

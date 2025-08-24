@@ -82,7 +82,7 @@ export const getUserPlan = async (organizationId: string): Promise<string> => {
     }
     throw usageError
   }
-  return usageData?.plan || 'libra free'
+  return usageData?.plan || 'zepid free'
 }
 
 /**

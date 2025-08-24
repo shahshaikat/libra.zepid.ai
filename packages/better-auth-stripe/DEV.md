@@ -1112,7 +1112,7 @@ describe('Subscription Limits', () => {
     await createOrUpdateSubscriptionLimit(
       testOrganizationId,
       null,
-      'libra pro',
+      'zepid pro',
       new Date(),
       new Date(Date.now() + 30 * 24 * 60 * 60 * 1000), // 30 days from now
       { aiNums: 100, seats: 1, projectNums: 5 }
@@ -1132,7 +1132,7 @@ describe('Subscription Limits', () => {
     await createOrUpdateSubscriptionLimit(
       testOrganizationId,
       null,
-      'libra pro',
+      'zepid pro',
       new Date(),
       new Date(Date.now() + 30 * 24 * 60 * 60 * 1000),
       { aiNums: 0, seats: 1, projectNums: 5 }
@@ -1149,7 +1149,7 @@ describe('Subscription Limits', () => {
     await createOrUpdateSubscriptionLimit(
       testOrganizationId,
       null,
-      'libra free',
+      'zepid free',
       pastDate,
       new Date(Date.now() - 5 * 24 * 60 * 60 * 1000), // 5 days ago
       { aiNums: 0, seats: 1, projectNums: 1 }
@@ -1169,7 +1169,7 @@ describe('Subscription Limits', () => {
     await createOrUpdateSubscriptionLimit(
       testOrganizationId,
       null,
-      'libra pro',
+      'zepid pro',
       new Date(),
       new Date(Date.now() + 30 * 24 * 60 * 60 * 1000),
       { aiNums: 5, seats: 1, projectNums: 5 }

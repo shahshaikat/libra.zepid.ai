@@ -275,9 +275,9 @@ export function AppSidebar({
 
       if (subscription && subscription.status === 'active') {
         const subscriptionPlan = subscription.plan
-        if (subscriptionPlan === 'libra pro') {
+        if (subscriptionPlan === 'zepid pro') {
           plan = 'PRO'
-        } else if (subscriptionPlan === 'libra max') {
+        } else if (subscriptionPlan === 'zepid max') {
           plan = 'MAX'
         }
       }

@@ -18,16 +18,16 @@
  *
  */
 
- // Unified plan type constants to avoid magic strings
+// Unified plan type constants to avoid magic strings
 export const PLAN_TYPES = {
-  FREE: 'libra free',
-  PRO: 'libra pro',
-  MAX: 'libra max'
+  FREE: 'zepid free',
+  PRO: 'zepid pro',
+  MAX: 'zepid max'
 } as const
 
 export type PlanType = typeof PLAN_TYPES[keyof typeof PLAN_TYPES]
 
- // Plan limits interface definition
+// Plan limits interface definition
 export interface PlanLimits {
   aiNums: number
   seats: number
@@ -36,7 +36,7 @@ export interface PlanLimits {
   deployLimit?: number
 }
 
- // Subscription limit record interface
+// Subscription limit record interface
 export interface SubscriptionLimitRecord {
   id: string
   organizationId: string
@@ -56,7 +56,7 @@ export interface SubscriptionLimitRecord {
   updatedAt: string
 }
 
- // Plan details interface
+// Plan details interface
 export interface PlanDetails {
   aiNums: number
   aiNumsLimit: number
@@ -69,7 +69,7 @@ export interface PlanDetails {
   source: 'DB' | 'CONST' // Indicates data source
 }
 
- // Usage return interface
+// Usage return interface
 export interface SubscriptionUsage {
   aiNums: number
   aiNumsLimit: number

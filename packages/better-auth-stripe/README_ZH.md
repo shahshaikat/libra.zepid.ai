@@ -79,12 +79,12 @@ export const auth = betterAuth({
         enabled: true,
         plans: [
           {
-            name: "libra pro",
+            name: "zepid pro",
             priceId: "price_pro_monthly",
             limits: { aiNums: 1000, seats: 5, projectNums: 10 },
           },
           {
-            name: "libra max",
+            name: "zepid max",
             priceId: "price_max_monthly",
             limits: { aiNums: 5000, seats: 20, projectNums: 50 },
           },
@@ -260,7 +260,7 @@ stripe({
 
 ```typescript
 {
-  name: "libra pro",
+  name: "zepid pro",
   priceId: "price_pro",
   freeTrial: {
     days: 14,

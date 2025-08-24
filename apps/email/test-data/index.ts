@@ -25,17 +25,17 @@
 
 // Welcome email test data - Free plan
 export const welcomeEmailFreeTestData = {
-  planName: "libra free"
+  planName: "zepid free"
 };
 
 // Welcome email test data - Pro plan
 export const welcomeEmailProTestData = {
-  planName: "libra pro"
+  planName: "zepid pro"
 };
 
 // Welcome email test data - Max plan
 export const welcomeEmailMaxTestData = {
-  planName: "libra max"
+  planName: "zepid max"
 };
 
 // Backward compatible default test data

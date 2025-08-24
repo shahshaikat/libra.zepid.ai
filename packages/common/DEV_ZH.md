@@ -142,7 +142,7 @@ export const organization = sqliteTable("organization", {
 // Subscription Table - Stripe 订阅数据表
 export const subscription = sqliteTable("subscription", {
   id: text('id').primaryKey(),                          // Subscription unique identifier
-  plan: text('plan').notNull(),                         // Plan name (e.g., "libra pro")
+  plan: text('plan').notNull(),                         // Plan name (e.g., "zepid pro")
   referenceId: text('reference_id').notNull(),          // Organization ID reference
   stripeCustomerId: text('stripe_customer_id'),         // Stripe customer ID
   stripeSubscriptionId: text('stripe_subscription_id'), // Stripe subscription ID
@@ -166,7 +166,7 @@ export const subscriptionLimit = pgTable('subscription_limit', {
   id: text('id').primaryKey(),                        // Unique identifier
   organizationId: text('organization_id').notNull(),  // Organization reference
   stripeCustomerId: text('stripe_customer_id'),       // Stripe customer ID
-  planName: text('plan_name').notNull(),              // Plan name (e.g., "libra pro")
+  planName: text('plan_name').notNull(),              // Plan name (e.g., "zepid pro")
   planId: text('plan_id').notNull(),                  // Plan identifier
 
   // Quota Fields - 配额字段
@@ -299,9 +299,9 @@ async function authBuilder() {
 
 // Plan Types - 计划类型常量定义
 export const PLAN_TYPES = {
-  FREE: 'libra free',    // Free plan for basic usage
-  PRO: 'libra pro',      // Professional plan for teams
-  MAX: 'libra max'       // Maximum plan for enterprises
+  FREE: 'zepid free',    // Free plan for basic usage
+  PRO: 'zepid pro',      // Professional plan for teams
+  MAX: 'zepid max'       // Maximum plan for enterprises
 } as const
 
 // Plan Type Union - 计划类型联合类型
@@ -1264,7 +1264,7 @@ describe('Stripe Integration', () => {
 
     // 验证订阅限制是否创建
     const limits = await getSubscriptionUsage(organization.id)
-    expect(limits.plan).not.toBe('libra free')
+    expect(limits.plan).not.toBe('zepid free')
     expect(limits.aiNums).toBeGreaterThan(50) // 付费计划配额更高
   })
 
@@ -1275,7 +1275,7 @@ describe('Stripe Integration', () => {
     await createOrUpdateSubscriptionLimit(
       organization.id,
       'cus_test123',
-      'libra pro',
+      'zepid pro',
       new Date(),
       new Date(Date.now() + 30 * 24 * 60 * 60 * 1000), // 30天后
       { aiNums: 100, seats: 5, projectNums: 10 }
@@ -1298,7 +1298,7 @@ describe('Stripe Integration', () => {
     await createOrUpdateSubscriptionLimit(
       organization.id,
       null,
-      'libra free',
+      'zepid free',
       pastDate,
       new Date(Date.now() - 5 * 24 * 60 * 60 * 1000), // 5天前过期
       { aiNums: 0, seats: 1, projectNums: 1 }

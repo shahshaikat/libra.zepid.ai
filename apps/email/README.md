@@ -18,7 +18,7 @@ This application provides email template previews for the Zepid platform.
 The welcome email template has been optimized to show personalized content based on the user's subscription plan:
 
 #### 📧 **welcomeEmailFree.tsx**
-- **Plan**: libra free ($0/month)
+- **Plan**: zepid free ($0/month)
 - **Features**: 
   - Up to 1 project
   - 10 AI messages per month
@@ -27,7 +27,7 @@ The welcome email template has been optimized to show personalized content based
   - Self-hosting capabilities
 
 #### 📧 **welcomeEmailPro.tsx**
-- **Plan**: libra pro ($20/month)
+- **Plan**: zepid pro ($15/month)
 - **Features**:
   - Up to 3 projects
   - 100 AI messages per month
@@ -38,7 +38,7 @@ The welcome email template has been optimized to show personalized content based
   - Email support
 
 #### 📧 **welcomeEmailMax.tsx**
-- **Plan**: libra max ($40/month)
+- **Plan**: zepid max ($30/month)
 - **Features**:
   - Up to 6 projects
   - 250 AI messages per month
