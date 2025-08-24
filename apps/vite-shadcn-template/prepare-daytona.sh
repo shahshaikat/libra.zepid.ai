@@ -15,7 +15,7 @@ function ping_server() {
 	echo "Daytona server is ready!"
 }
 
-cd /home/user/vite-shadcn-template-libra
+cd /home/user/vite-shadcn-template-zepid
 
 ping_server &
 

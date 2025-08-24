@@ -211,7 +211,7 @@ export class DeploymentWorkflow extends WorkflowEntrypoint<Bindings, DeploymentP
             const filesToWrite = Object.entries(fileMap)
                 .filter(([path]) => !isExcludedFile(path))
                 .map(([path, fileInfo]) => ({
-                    path: `/home/user/vite-shadcn-template-zepid/${path}`,
+                    path: `/home/user/vite-shadcn-template-builder-zepid/${path}`,
                     data:
                         fileInfo.type === 'file' && !fileInfo.isBinary
                             ? fileInfo.content

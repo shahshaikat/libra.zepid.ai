@@ -8,8 +8,8 @@ RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/* \
 COPY prepare-daytona.sh /prepare-daytona.sh
 RUN chmod +x /prepare-daytona.sh
 
-RUN mkdir -p /home/user/vite-shadcn-template-libra
-WORKDIR /home/user/vite-shadcn-template-libra
+RUN mkdir -p /home/user/vite-shadcn-template-zepid
+WORKDIR /home/user/vite-shadcn-template-zepid
 
 ENV VITE_INSPECTOR_URL=https://cdn.zepid.dev
 

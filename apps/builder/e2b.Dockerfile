@@ -3,7 +3,7 @@
 FROM oven/bun:slim AS base
 
 # Create and set working directory
-WORKDIR /home/user/vite-shadcn-template-zepid
+WORKDIR /home/user/vite-shadcn-template-builder-zepid
 
 
 # Copy everything from the current directory into working directory
@@ -16,7 +16,7 @@ RUN bun install
 # Create .wrangler directory and set proper permissions
 RUN mkdir -p .wrangler/tmp && \
     chmod -R 777 .wrangler && \
-    chmod -R 755 /home/user/vite-shadcn-template-zepid || true
+    chmod -R 755 /home/user/vite-shadcn-template-builder-zepid || true
 
 # Run the development server
 CMD ["bun", "run", "dev"]

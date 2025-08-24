@@ -356,7 +356,7 @@ async function syncFilesToContainer(container: ISandbox, messageHistory: string)
     const filesToWrite = Object.entries(fileMap)
       .filter(([path]) => !isExcludedFile(path))
       .map(([path, fileInfo]) => ({
-        path: `/home/user/vite-shadcn-template-libra/${path}`,
+        path: `/home/user/vite-shadcn-template-zepid/${path}`,
         data:
           fileInfo.type === 'file' && !fileInfo.isBinary
             ? fileInfo.content
@@ -614,49 +614,49 @@ export const handleAsyncScreenshot = async (
   previewInfo: any
 ) => {
   if (!previewInfo?.url) {
-      throw new Error('Failed to get preview URL from prepared container')
+    throw new Error('Failed to get preview URL from prepared container')
   }
   const screenshotPromise = (async () => {
-      try {
-          // Prepare request headers for authentication
-          const requestHeaders: HeadersInit = {}
+    try {
+      // Prepare request headers for authentication
+      const requestHeaders: HeadersInit = {}
 
-          if (ctx.headers) {
-              const cookieHeader = ctx.headers.get('cookie')
-              if (cookieHeader) {
-                  (requestHeaders as Record<string, string>).cookie = cookieHeader
-              }
+      if (ctx.headers) {
+        const cookieHeader = ctx.headers.get('cookie')
+        if (cookieHeader) {
+          (requestHeaders as Record<string, string>).cookie = cookieHeader
+        }
 
-              const authHeader = ctx.headers.get('authorization')
-              if (authHeader) {
-                  (requestHeaders as Record<string, string>).authorization = authHeader
-              }
-          }
-
-          // Call screenshot service with prepared preview URL
-          return await captureAndStoreScreenshot({
-              projectId,
-              planId,
-              userId: ctx.session.user.id,
-              organizationId: organizationId,
-              requestHeaders,
-              previewUrl: previewInfo.url
-          })
-      } catch (error) {
-          throw error
+        const authHeader = ctx.headers.get('authorization')
+        if (authHeader) {
+          (requestHeaders as Record<string, string>).authorization = authHeader
+        }
       }
+
+      // Call screenshot service with prepared preview URL
+      return await captureAndStoreScreenshot({
+        projectId,
+        planId,
+        userId: ctx.session.user.id,
+        organizationId: organizationId,
+        requestHeaders,
+        previewUrl: previewInfo.url
+      })
+    } catch (error) {
+      throw error
+    }
   })
 
   try {
-      // Try to use Cloudflare Workers waitUntil
-      const cloudflareContext = await getCloudflareContext({async: true})
-      const executionContext = cloudflareContext.ctx
+    // Try to use Cloudflare Workers waitUntil
+    const cloudflareContext = await getCloudflareContext({ async: true })
+    const executionContext = cloudflareContext.ctx
 
-      if (executionContext?.waitUntil) {
-          executionContext.waitUntil(screenshotPromise())
-          return
-      }
+    if (executionContext?.waitUntil) {
+      executionContext.waitUntil(screenshotPromise())
+      return
+    }
   } catch (contextError) {
-      // Cloudflare context not available, using Promise fallback
+    // Cloudflare context not available, using Promise fallback
   }
 }

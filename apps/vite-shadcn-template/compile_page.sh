@@ -37,4 +37,4 @@ function ping_server() {
 }
 
 ping_server &
-cd /home/user/vite-shadcn-template-libra && bun dev
+cd /home/user/vite-shadcn-template-zepid && bun dev

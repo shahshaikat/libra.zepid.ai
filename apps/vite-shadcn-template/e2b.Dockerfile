@@ -9,8 +9,8 @@ COPY compile_page.sh /compile_page.sh
 RUN chmod +x /compile_page.sh
 
 # Create and set working directory
-RUN mkdir -p /home/user/vite-shadcn-template-libra
-WORKDIR /home/user/vite-shadcn-template-libra
+RUN mkdir -p /home/user/vite-shadcn-template-zepid
+WORKDIR /home/user/vite-shadcn-template-zepid
 
 ENV VITE_INSPECTOR_URL=https://cdn.zepid.dev
 

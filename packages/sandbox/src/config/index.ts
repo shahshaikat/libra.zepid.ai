@@ -46,14 +46,14 @@ export const DEPLOYMENT_CONFIG = {
   /** Template configurations for different providers */
   TEMPLATES: {
     /** E2B template identifier */
-    E2B: 'vite-shadcn-template-zepid',
+    E2B: 'vite-shadcn-template-builder-zepid',
     /** Daytona template identifier with version */
-    DAYTONA: 'vite-shadcn-template-zepid:1.0.0',
+    DAYTONA: 'vite-shadcn-template-builder-zepid:1.0.0',
   },
   /** Default deployment timeout (10 minutes) */
   TIMEOUT: 10 * 60_000,
   /** Project path inside the sandbox container */
-  PROJECT_PATH: '/home/user/vite-shadcn-template-zepid',
+  PROJECT_PATH: '/home/user/vite-shadcn-template-builder-zepid',
   /** File patterns to exclude during deployment */
   EXCLUDED_PATTERNS: [
     'node_modules/',
@@ -88,8 +88,8 @@ export const TEMPLATE_MAPPINGS = {
         : DEPLOYMENT_CONFIG.TEMPLATES.DAYTONA
     }
     return provider === 'e2b'
-      ? 'vite-shadcn-template-libra'
-      : 'vite-shadcn-template-libra:1.0.0'
+      ? 'vite-shadcn-template-zepid'
+      : 'vite-shadcn-template-zepid:1.0.0'
   },
 } as const
 
@@ -98,8 +98,8 @@ export const TEMPLATE_MAPPINGS = {
  * Now using centralized timeout configurations
  */
 export const DEFAULT_SANDBOX_CONFIGS: Record<string, Partial<SandboxConfig>> = {
-  'vite-shadcn-template-libra': {
-    template: 'vite-shadcn-template-libra',
+  'vite-shadcn-template-zepid': {
+    template: 'vite-shadcn-template-zepid',
     timeoutMs: CONTAINER_TIMEOUTS.FREE,
     resources: {
       memory: 1024, // MB
@@ -112,8 +112,8 @@ export const DEFAULT_SANDBOX_CONFIGS: Record<string, Partial<SandboxConfig>> = {
       blockedPorts: [22, 3306, 5432],
     },
   },
-  'vite-shadcn-template-zepid': {
-    template: 'vite-shadcn-template-zepid',
+  'vite-shadcn-template-builder-zepid': {
+    template: 'vite-shadcn-template-builder-zepid',
     timeoutMs: CONTAINER_TIMEOUTS.FREE,
     resources: {
       memory: 2048, // MB
