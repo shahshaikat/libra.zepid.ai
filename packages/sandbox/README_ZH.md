@@ -39,7 +39,7 @@ await initializeSandboxFactory(config);
 // 创建沙箱
 const sandbox = await createSandbox({
   provider: 'e2b',
-  template: 'vite-shadcn-template-libra',
+  template: 'vite-shadcn-template-zepid',
   timeoutMs: 10 * 60_000,
   env: {
     NODE_ENV: 'development'
@@ -99,7 +99,7 @@ await factory.initialize();
 // 使用特定提供商
 const e2bSandbox = await factory.createSandbox({
   provider: 'e2b',
-  template: 'vite-shadcn-template-libra'
+  template: 'vite-shadcn-template-zepid'
 });
 
 const daytonaSandbox = await factory.createSandbox({

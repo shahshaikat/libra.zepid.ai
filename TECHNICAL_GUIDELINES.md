@@ -3553,8 +3553,8 @@ The project integrates **E2B** to provide secure code execution environments, su
 import { SandboxConfig } from '../types'
 
 export const DEFAULT_SANDBOX_CONFIGS: Record<string, Partial<SandboxConfig>> = {
-  'vite-shadcn-template-libra': {
-    template: 'vite-shadcn-template-libra',
+  'vite-shadcn-template-zepid': {
+    template: 'vite-shadcn-template-zepid',
     timeoutMs: 300000, // 5 minutes
     resources: {
       memory: 1024, // MB

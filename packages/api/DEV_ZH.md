@@ -1740,7 +1740,7 @@ export async function prepareContainer(
   projectId: string,
   projectData: { containerId?: string; messageHistory: string }
 ): Promise<any> {
-  const TEMPLATE = 'vite-shadcn-template-libra'
+  const TEMPLATE = 'vite-shadcn-template-zepid'
   const TIMEOUT_MS = 10 * 60_000
   await requireOrgAndUser(ctx)
   const db = await getBusinessDb()
@@ -1868,7 +1868,7 @@ async function syncFilesToContainer(container: any, messageHistory: string): Pro
     const filesToWrite = Object.entries(fileMap)
       .filter(([path]) => !isExcludedFile(path))
       .map(([path, fileInfo]) => ({
-        path: `/home/user/vite-shadcn-template-libra/${path}`,
+        path: `/home/user/vite-shadcn-template-zepid/${path}`,
         data:
           fileInfo.type === 'file' && !fileInfo.isBinary
             ? fileInfo.content

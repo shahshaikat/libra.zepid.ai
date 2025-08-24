@@ -62,7 +62,7 @@ The Docker image will then be converted into a micro VM that can be launched as 
 
 ```bash
 
-e2b template build --cpu-count 2 -n "vite-shadcn-template-libra" --memory-mb 1024 -c "/compile_page.sh"
+e2b template build --cpu-count 2 -n "vite-shadcn-template-zepid" --memory-mb 1024 -c "/compile_page.sh"
 
 ```
 
@@ -104,7 +104,7 @@ console.log(execution.stdout)
 
 ```bash
 
-docker buildx build --platform linux/amd64 -t vite-shadcn-template-libra:1.0.0 -f ./daytona.Dockerfile .
+docker buildx build --platform linux/amd64 -t vite-shadcn-template-zepid:1.0.0 -f ./daytona.Dockerfile .
 
 ```
 
@@ -112,13 +112,13 @@ docker buildx build --platform linux/amd64 -t vite-shadcn-template-libra:1.0.0 -
 
 <!-- ```bash
 
-daytona snapshot create vite-shadcn-template-libra-debug --dockerfile ./daytona.Dockerfile
+daytona snapshot create vite-shadcn-template-zepid-debug --dockerfile ./daytona.Dockerfile
 
 ``` -->
 
 ### Using Daytona Snapshot Push Command
 
-daytona snapshot push vite-shadcn-template-libra:1.0.0 --entrypoint "bun run dev --host 0.0.0.0" --name vite-shadcn-template-libra:1.0.0 --cpu 1 --memory 1 --disk 1
+daytona snapshot push vite-shadcn-template-zepid:1.0.0 --entrypoint "bun run dev --host 0.0.0.0" --name vite-shadcn-template-zepid:1.0.0 --cpu 1 --memory 1 --disk 1
 
 ```
 

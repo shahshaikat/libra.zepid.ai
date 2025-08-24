@@ -2778,8 +2778,8 @@ ${item.content}
 import { SandboxConfig } from '../types'
 
 export const DEFAULT_SANDBOX_CONFIGS: Record<string, Partial<SandboxConfig>> = {
-  'vite-shadcn-template-libra': {
-    template: 'vite-shadcn-template-libra',
+  'vite-shadcn-template-zepid': {
+    template: 'vite-shadcn-template-zepid',
     timeoutMs: 300000, // 5 分钟
     resources: {
       memory: 1024, // MB

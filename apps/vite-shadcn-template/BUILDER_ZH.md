@@ -55,7 +55,7 @@ E2B CLI 将调用 Docker 构建镜像，然后将其推送到 E2B 云。
 然后，我们将 Docker 镜像转换为微型 VM，可以通过 SDK 作为沙盒启动。
 
 ```bash
-e2b template build --cpu-count 2 -n "vite-shadcn-template-libra" --memory-mb 1024 -c "/compile_page.sh"
+e2b template build --cpu-count 2 -n "vite-shadcn-template-zepid" --memory-mb 1024 -c "/compile_page.sh"
 ```
 
 此过程需要一些时间。最后，您将看到创建的模板 ID，您需要使用此 ID 通过 SDK 创建沙盒。
@@ -86,16 +86,16 @@ console.log(execution.stdout)
 
 ### Docker 构建命令
 ```bash
-docker buildx build --platform linux/amd64 -t vite-shadcn-template-libra:1.0.0 -f ./daytona.Dockerfile .
+docker buildx build --platform linux/amd64 -t vite-shadcn-template-zepid:1.0.0 -f ./daytona.Dockerfile .
 ```
 
 ### Daytona 快照创建命令
 <!-- ```bash
-daytona snapshot create vite-shadcn-template-libra-debug --dockerfile ./daytona.Dockerfile
+daytona snapshot create vite-shadcn-template-zepid-debug --dockerfile ./daytona.Dockerfile
 ``` -->
 
 ### 使用 Daytona snapshot push 命令
-daytona snapshot push vite-shadcn-template-libra:1.0.0 --entrypoint "bun run dev --host 0.0.0.0" --name vite-shadcn-template-libra:1.0.0 --cpu 1 --memory 1 --disk 1
+daytona snapshot push vite-shadcn-template-zepid:1.0.0 --entrypoint "bun run dev --host 0.0.0.0" --name vite-shadcn-template-zepid:1.0.0 --cpu 1 --memory 1 --disk 1
 ```
 # 文件结构
 

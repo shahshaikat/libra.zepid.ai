@@ -1,4 +1,4 @@
-# vite-shadcn-template-libra
+# vite-shadcn-template-zepid
 
 ## 1.0.0
 
