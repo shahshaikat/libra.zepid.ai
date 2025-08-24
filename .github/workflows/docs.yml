@@ -156,12 +156,12 @@ jobs:
           export LIBRA_GITHUB_TOKEN="${{ secrets.LIBRA_GITHUB_TOKEN }}"
           export LIBRA_GITHUB_OWNER="${{ secrets.LIBRA_GITHUB_OWNER }}"
           export LIBRA_GITHUB_REPO="${{ secrets.LIBRA_GITHUB_REPO }}"
-          export GITHUB_APP_SLUG="${{ secrets.GITHUB_APP_SLUG }}"
-          export GITHUB_APP_ID="${{ secrets.GITHUB_APP_ID }}"
-          export GITHUB_APP_PRIVATE_KEY="${{ secrets.GITHUB_APP_PRIVATE_KEY }}"
-          export GITHUB_APP_CLIENT_ID="${{ secrets.GITHUB_APP_CLIENT_ID }}"
-          export GITHUB_APP_CLIENT_SECRET="${{ secrets.GITHUB_APP_CLIENT_SECRET }}"
-          export GITHUB_WEBHOOK_SECRET="${{ secrets.GITHUB_WEBHOOK_SECRET }}"
+          export GITHUB_APP_SLUG="${{ secrets.NEXT_PUBLIC_GITHUB_APP_SLUG }}"
+          export GITHUB_APP_ID="${{ secrets.NEXT_PUBLIC_GITHUB_APP_ID }}"
+          export GITHUB_APP_PRIVATE_KEY="${{ secrets.NEXT_PUBLIC_GITHUB_APP_PRIVATE_KEY }}"
+          export GITHUB_APP_CLIENT_ID="${{ secrets.NEXT_PUBLIC_GITHUB_APP_CLIENT_ID }}"
+          export GITHUB_APP_CLIENT_SECRET="${{ secrets.NEXT_PUBLIC_GITHUB_APP_CLIENT_SECRET }}"
+          export GITHUB_WEBHOOK_SECRET="${{ secrets.NEXT_PUBLIC_GITHUB_WEBHOOK_SECRET }}"
 
           # Feature flags
           export ENHANCED_PROMPT="${{ secrets.ENHANCED_PROMPT }}"

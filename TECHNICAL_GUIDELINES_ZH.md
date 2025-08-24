@@ -2792,8 +2792,8 @@ export const DEFAULT_SANDBOX_CONFIGS: Record<string, Partial<SandboxConfig>> = {
       blockedPorts: [22, 3306, 5432],
     },
   },
-  'vite-shadcn-template-builder-libra': {
-    template: 'vite-shadcn-template-builder-libra',
+  'vite-shadcn-template-zepid': {
+    template: 'vite-shadcn-template-zepid',
     timeoutMs: 300000, // 5 分钟
     resources: {
       memory: 2048, // MB

@@ -46,14 +46,14 @@ export const DEPLOYMENT_CONFIG = {
   /** Template configurations for different providers */
   TEMPLATES: {
     /** E2B template identifier */
-    E2B: 'vite-shadcn-template-builder-libra',
+    E2B: 'vite-shadcn-template-zepid',
     /** Daytona template identifier with version */
-    DAYTONA: 'vite-shadcn-template-builder-libra:1.0.0',
+    DAYTONA: 'vite-shadcn-template-zepid:1.0.0',
   },
   /** Default deployment timeout (10 minutes) */
   TIMEOUT: 10 * 60_000,
   /** Project path inside the sandbox container */
-  PROJECT_PATH: '/home/user/vite-shadcn-template-builder-libra',
+  PROJECT_PATH: '/home/user/vite-shadcn-template-zepid',
   /** File patterns to exclude during deployment */
   EXCLUDED_PATTERNS: [
     'node_modules/',
@@ -112,8 +112,8 @@ export const DEFAULT_SANDBOX_CONFIGS: Record<string, Partial<SandboxConfig>> = {
       blockedPorts: [22, 3306, 5432],
     },
   },
-  'vite-shadcn-template-builder-libra': {
-    template: 'vite-shadcn-template-builder-libra',
+  'vite-shadcn-template-zepid': {
+    template: 'vite-shadcn-template-zepid',
     timeoutMs: CONTAINER_TIMEOUTS.FREE,
     resources: {
       memory: 2048, // MB
@@ -208,7 +208,7 @@ export class SandboxConfigBuilder {
    */
   fromEnvironment(): this {
     // Set default provider from environment
-    const defaultProvider = process.env.NEXT_PUBLIC_SANDBOX_DEFAULT_PROVIDER as SandboxProviderType
+    const defaultProvider = process.env.NEXT_PUBLIC_SANDBOX_BUILDER_DEFAULT_PROVIDER as SandboxProviderType
     if (defaultProvider) {
       this.setDefaultProvider(defaultProvider)
     }
@@ -393,7 +393,7 @@ export function validateFactoryConfig(config: SandboxFactoryConfig): void {
 /**
  * Get timeout for user tier
  */
-export function getTimeoutForUserTier(tier: 'FREE' | 'PAID' ): number {
+export function getTimeoutForUserTier(tier: 'FREE' | 'PAID'): number {
   switch (tier) {
     case 'FREE':
       return CONTAINER_TIMEOUTS.FREE

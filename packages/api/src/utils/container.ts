@@ -41,7 +41,7 @@ import { isExcludedFile } from './excludedFiles'
 import { getBusinessDb, parseMessageHistory, requireOrgAndUser } from './project'
 import { getCloudflareContext } from '@opennextjs/cloudflare'
 import { captureAndStoreScreenshot } from './screenshot-service'
-import {env} from "../../env.mjs";
+import { env } from "../../env.mjs";
 
 /**
  * Sandbox cleanup result interface
