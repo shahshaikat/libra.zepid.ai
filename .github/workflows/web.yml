@@ -133,6 +133,21 @@ jobs:
         env:
           # Provide all vars that appear in wrangler.jsonc so substitution works
           ENVIRONMENT: ${{ secrets.ENVIRONMENT }}
+
+          # AI Services
+
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
+          CUSTOM_API_KEY: ${{ secrets.CUSTOM_API_KEY }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
+          DATABRICKS_BASE_URL: ${{ secrets.DATABRICKS_BASE_URL }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+
+
+          NEXT_PUBLIC_GA_ID: ${{ secrets.NEXT_PUBLIC_GA_ID }}
           NEXT_PUBLIC_APP_URL: ${{ secrets.NEXT_PUBLIC_APP_URL }}
           NEXT_PUBLIC_CDN_URL: ${{ secrets.NEXT_PUBLIC_CDN_URL }}
           BETTER_AUTH_SECRET: ${{ secrets.BETTER_AUTH_SECRET }}
@@ -206,6 +221,17 @@ jobs:
           export POSTGRES_URL="${{ secrets.POSTGRES_URL }}"
           export DATABASE_ID="${{ secrets.DATABASE_ID }}"
 
+          # AI providers
+          export ANTHROPIC_API_KEY="${{ secrets.ANTHROPIC_API_KEY }}"
+          export OPENAI_API_KEY="${{ secrets.OPENAI_API_KEY }}"
+          export GEMINI_API_KEY="${{ secrets.GEMINI_API_KEY }}"
+          export XAI_API_KEY="${{ secrets.XAI_API_KEY }}"
+          export CUSTOM_API_KEY="${{ secrets.CUSTOM_API_KEY }}"
+          export DEEPSEEK_API_KEY="${{ secrets.DEEPSEEK_API_KEY }}"
+          export DATABRICKS_TOKEN="${{ secrets.DATABRICKS_TOKEN }}"
+          export DATABRICKS_BASE_URL="${{ secrets.DATABRICKS_BASE_URL }}"
+          export OPENROUTER_API_KEY="${{ secrets.OPENROUTER_API_KEY }}"
+
           # Azure AI secrets
           export AZURE_DEPLOYMENT_NAME="${{ secrets.AZURE_DEPLOYMENT_NAME }}"
           export AZURE_RESOURCE_NAME="${{ secrets.AZURE_RESOURCE_NAME }}"
@@ -213,7 +239,6 @@ jobs:
           export AZURE_BASE_URL="${{ secrets.AZURE_BASE_URL }}"
 
           # API Keys
-          export OPENROUTER_API_KEY="${{ secrets.OPENROUTER_API_KEY }}"
           export RESEND_API_KEY="${{ secrets.RESEND_API_KEY }}"
           export RESEND_FROM="${{ secrets.RESEND_FROM }}"
           export E2B_API_KEY="${{ secrets.E2B_API_KEY }}"
@@ -251,6 +276,9 @@ jobs:
           export DEPLOY_VERSION="${{ steps.version.outputs.version }}"
           export NEXT_TELEMETRY_DISABLED=1
           export NODE_OPTIONS="--max_old_space_size=16384"
+
+          # Client extras
+          export NEXT_PUBLIC_GA_ID="${{ secrets.NEXT_PUBLIC_GA_ID }}"
 
           echo "Environment variables configured successfully"
 
