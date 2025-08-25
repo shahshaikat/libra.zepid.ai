@@ -69,7 +69,7 @@ export function logStep(stepName: string, message: string, data?: any): void {
  */
 function getDefaultSandboxProvider(): SandboxProviderType {
     // Use the builder default provider from environment variable
-    // This allows dynamic switching between e2b and daytona based on SANDBOX_BUILDER_DEFAULT_PROVIDER
+    // This allows dynamic switching between e2b and daytona based on NEXT_PUBLIC_SANDBOX_BUILDER_DEFAULT_PROVIDER
     return getBuilderDefaultProvider();
 }
 
@@ -205,9 +205,8 @@ export async function executeCommand(
         if (result.stdout) errorDetails.push(`STDOUT: ${result.stdout}`);
         if (result.stderr) errorDetails.push(`STDERR: ${result.stderr}`);
 
-        const errorMessage = `${stepName} failed with exit code ${result.exitCode}${
-            errorDetails.length > 0 ? `\n${errorDetails.join('\n')}` : ''
-        }`;
+        const errorMessage = `${stepName} failed with exit code ${result.exitCode}${errorDetails.length > 0 ? `\n${errorDetails.join('\n')}` : ''
+            }`;
 
         logStep(stepName, errorMessage);
         throw new Error(errorMessage);

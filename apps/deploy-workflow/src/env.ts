@@ -41,7 +41,7 @@ export const deployEnvSchema = z.object({
   // Sandbox provider configuration
   E2B_API_KEY: z.string().optional(),
   DAYTONA_API_KEY: z.string().optional(),
-  SANDBOX_BUILDER_DEFAULT_PROVIDER: z.string().optional(),
+  NEXT_PUBLIC_SANDBOX_BUILDER_DEFAULT_PROVIDER: z.string().optional(),
 
   // Optional variables
   STRIPE_SECRET_KEY: z.string().optional(),
@@ -79,7 +79,7 @@ export function getDeployEnv(c: any): DeployEnv {
     NEXT_PUBLIC_DISPATCHER_URL: c.env.NEXT_PUBLIC_DISPATCHER_URL,
     E2B_API_KEY: c.env.E2B_API_KEY,
     DAYTONA_API_KEY: c.env.DAYTONA_API_KEY,
-    SANDBOX_BUILDER_DEFAULT_PROVIDER: c.env.SANDBOX_BUILDER_DEFAULT_PROVIDER,
+    NEXT_PUBLIC_SANDBOX_BUILDER_DEFAULT_PROVIDER: c.env.NEXT_PUBLIC_SANDBOX_BUILDER_DEFAULT_PROVIDER,
     STRIPE_SECRET_KEY: c.env.STRIPE_SECRET_KEY,
     STRIPE_WEBHOOK_SECRET: c.env.STRIPE_WEBHOOK_SECRET,
     LOG_LEVEL: c.env.LOG_LEVEL,

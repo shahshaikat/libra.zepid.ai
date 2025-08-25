@@ -254,7 +254,7 @@ BETTER_GITHUB_CLIENT_SECRET="your_github_client_secret"
 # Sandbox service configuration
 E2B_API_KEY="your_e2b_api_key"
 DAYTONA_API_KEY="your_daytona_api_key"
-SANDBOX_BUILDER_DEFAULT_PROVIDER="daytona"
+NEXT_PUBLIC_SANDBOX_BUILDER_DEFAULT_PROVIDER="daytona"
 
 # Application configuration
 NEXT_PUBLIC_DISPATCHER_URL="https://zapid.dev"

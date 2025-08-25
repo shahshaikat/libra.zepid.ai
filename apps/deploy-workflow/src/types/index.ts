@@ -59,7 +59,7 @@ export interface Bindings {
   // Sandbox provider configuration
   E2B_API_KEY?: string
   DAYTONA_API_KEY?: string
-  SANDBOX_BUILDER_DEFAULT_PROVIDER?: string
+  NEXT_PUBLIC_SANDBOX_BUILDER_DEFAULT_PROVIDER?: string
 
   // Environment variables
   LOG_LEVEL?: string

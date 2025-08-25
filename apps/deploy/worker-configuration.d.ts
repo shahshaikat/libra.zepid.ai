@@ -19,7 +19,7 @@ declare namespace Cloudflare {
         POSTGRES_URL: "postgresql://neondb_owner:npg_wzHG1pmd5bJO@ep-winter-forest-af1z8bii-pooler.c-2.us-west-2.aws.neon.tech/neondb?sslmode=require&channel_binding=require";
         E2B_API_KEY: "e2b_placeholder";
         DAYTONA_API_KEY: "dtn_placeholder";
-        SANDBOX_BUILDER_DEFAULT_PROVIDER: "daytona";
+        NEXT_PUBLIC_SANDBOX_BUILDER_DEFAULT_PROVIDER: "daytona";
         NEXT_PUBLIC_DISPATCHER_URL: "https://zapid.dev";
         DISPATCH_NAMESPACE_NAME: "zepid-dispatcher";
         DEPLOYMENT_QUEUE_NAME: "deployment-queue";
@@ -39,7 +39,7 @@ type StringifyValues<EnvType extends Record<string, unknown>> = {
     [Binding in keyof EnvType]: EnvType[Binding] extends string ? EnvType[Binding] : string;
 };
 declare namespace NodeJS {
-    interface ProcessEnv extends StringifyValues<Pick<Cloudflare.Env, "ENVIRONMENT" | "LOG_LEVEL" | "NODE_ENV" | "CLOUDFLARE_ACCOUNT_ID" | "CLOUDFLARE_API_TOKEN" | "CLOUDFLARE_ZONE_ID" | "CLOUDFLARE_AIGATEWAY_NAME" | "BETTER_GITHUB_CLIENT_ID" | "BETTER_GITHUB_CLIENT_SECRET" | "TURNSTILE_SECRET_KEY" | "STRIPE_SECRET_KEY" | "STRIPE_WEBHOOK_SECRET" | "DATABASE_ID" | "POSTGRES_URL" | "E2B_API_KEY" | "DAYTONA_API_KEY" | "SANDBOX_BUILDER_DEFAULT_PROVIDER" | "NEXT_PUBLIC_DISPATCHER_URL" | "DISPATCH_NAMESPACE_NAME" | "DEPLOYMENT_QUEUE_NAME" | "DEPLOYMENT_DLQ_NAME" | "MAX_DEPLOYMENT_TIMEOUT" | "MAX_CONCURRENT_DEPLOYMENTS">> { }
+    interface ProcessEnv extends StringifyValues<Pick<Cloudflare.Env, "ENVIRONMENT" | "LOG_LEVEL" | "NODE_ENV" | "CLOUDFLARE_ACCOUNT_ID" | "CLOUDFLARE_API_TOKEN" | "CLOUDFLARE_ZONE_ID" | "CLOUDFLARE_AIGATEWAY_NAME" | "BETTER_GITHUB_CLIENT_ID" | "BETTER_GITHUB_CLIENT_SECRET" | "TURNSTILE_SECRET_KEY" | "STRIPE_SECRET_KEY" | "STRIPE_WEBHOOK_SECRET" | "DATABASE_ID" | "POSTGRES_URL" | "E2B_API_KEY" | "DAYTONA_API_KEY" | "NEXT_PUBLIC_SANDBOX_BUILDER_DEFAULT_PROVIDER" | "NEXT_PUBLIC_DISPATCHER_URL" | "DISPATCH_NAMESPACE_NAME" | "DEPLOYMENT_QUEUE_NAME" | "DEPLOYMENT_DLQ_NAME" | "MAX_DEPLOYMENT_TIMEOUT" | "MAX_CONCURRENT_DEPLOYMENTS">> { }
 }
 
 // Begin runtime types

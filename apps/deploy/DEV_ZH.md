@@ -187,7 +187,7 @@ POSTGRES_URL=postgresql://user:password@host:port/database
 # 沙箱提供商配置
 E2B_API_KEY=your_e2b_api_key
 DAYTONA_API_KEY=your_daytona_api_key
-SANDBOX_BUILDER_DEFAULT_PROVIDER=daytona
+NEXT_PUBLIC_SANDBOX_BUILDER_DEFAULT_PROVIDER=daytona
 
 # 安全配置
 TURNSTILE_SECRET_KEY=your_turnstile_secret_key

@@ -423,7 +423,7 @@ export function getBuilderDefaultProvider(): SandboxProviderType {
 }
 
 /**
- * Get deployment template based on SANDBOX_BUILDER_DEFAULT_PROVIDER environment variable
+ * Get deployment template based on NEXT_PUBLIC_SANDBOX_BUILDER_DEFAULT_PROVIDER environment variable
  * This replaces the hardcoded DEPLOYMENT_CONFIG.TEMPLATE usage
  * @returns {string} The template name for the configured builder provider
  */

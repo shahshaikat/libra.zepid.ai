@@ -201,8 +201,8 @@ jobs:
           RESEND_FROM: ${{ secrets.RESEND_FROM }}
           E2B_API_KEY: ${{ secrets.E2B_API_KEY }}
           DAYTONA_API_KEY: ${{ secrets.DAYTONA_API_KEY }}
-          SANDBOX_DEFAULT_PROVIDER: ${{ secrets.SANDBOX_DEFAULT_PROVIDER }}
-          SANDBOX_BUILDER_DEFAULT_PROVIDER: ${{ secrets.SANDBOX_BUILDER_DEFAULT_PROVIDER }}
+          NEXT_PUBLIC_SANDBOX_DEFAULT_PROVIDER: ${{ secrets.NEXT_PUBLIC_SANDBOX_DEFAULT_PROVIDER }}
+          NEXT_PUBLIC_SANDBOX_BUILDER_DEFAULT_PROVIDER: ${{ secrets.NEXT_PUBLIC_SANDBOX_BUILDER_DEFAULT_PROVIDER }}
           NEXT_PUBLIC_POSTHOG_KEY: ${{ secrets.NEXT_PUBLIC_POSTHOG_KEY }}
           NEXT_PUBLIC_POSTHOG_HOST: ${{ secrets.NEXT_PUBLIC_POSTHOG_HOST }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
@@ -314,8 +314,8 @@ jobs:
           # Sandbox providers
           export E2B_API_KEY="${{ secrets.E2B_API_KEY }}"
           export DAYTONA_API_KEY="${{ secrets.DAYTONA_API_KEY }}"
-          export SANDBOX_DEFAULT_PROVIDER="${{ secrets.SANDBOX_DEFAULT_PROVIDER || 'e2b' }}"
-          export SANDBOX_BUILDER_DEFAULT_PROVIDER="${{ secrets.SANDBOX_BUILDER_DEFAULT_PROVIDER || 'e2b' }}"
+          export NEXT_PUBLIC_SANDBOX_DEFAULT_PROVIDER="${{ secrets.NEXT_PUBLIC_SANDBOX_DEFAULT_PROVIDER || 'e2b' }}"
+          export NEXT_PUBLIC_SANDBOX_BUILDER_DEFAULT_PROVIDER="${{ secrets.NEXT_PUBLIC_SANDBOX_BUILDER_DEFAULT_PROVIDER || 'e2b' }}"
 
           # Logging and monitoring
           export LOG_LEVEL="${{ secrets.LOG_LEVEL || 'info' }}"
