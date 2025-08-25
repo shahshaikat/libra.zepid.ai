@@ -145,6 +145,10 @@ jobs:
           DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
           DATABRICKS_BASE_URL: ${{ secrets.DATABRICKS_BASE_URL }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          AZURE_DEPLOYMENT_NAME: ${{ secrets.AZURE_DEPLOYMENT_NAME }}
+          AZURE_RESOURCE_NAME: ${{ secrets.AZURE_RESOURCE_NAME }}
+          AZURE_API_KEY: ${{ secrets.AZURE_API_KEY }}
+          AZURE_BASE_URL: ${{ secrets.AZURE_BASE_URL }}
 
           NEXT_PUBLIC_GA_ID: ${{ secrets.NEXT_PUBLIC_GA_ID }}
           NEXT_PUBLIC_APP_URL: ${{ secrets.NEXT_PUBLIC_APP_URL }}
@@ -235,6 +239,7 @@ jobs:
           export AZURE_RESOURCE_NAME="${{ secrets.AZURE_RESOURCE_NAME }}"
           export AZURE_API_KEY="${{ secrets.AZURE_API_KEY }}"
           export AZURE_BASE_URL="${{ secrets.AZURE_BASE_URL }}"
+
 
           # API Keys
           export RESEND_API_KEY="${{ secrets.RESEND_API_KEY }}"
