@@ -1,22 +1,15 @@
-# use the official Bun image
-# see all versions at https://hub.docker.com/r/oven/bun/tags
-FROM oven/bun:slim AS base
+# use the official Bun image (force amd64 to avoid exec format error on M1/M2 Mac)
+FROM --platform=linux/amd64 oven/bun:1.1.22-slim AS base
 
-# Create and set working directory
 WORKDIR /home/user/vite-shadcn-template-builder-zepid
 
+# Ensure .wrangler directory exists before install
+RUN mkdir -p /home/user/vite-shadcn-template-builder-zepid/.wrangler/tmp && \
+    chmod -R 777 /home/user/vite-shadcn-template-builder-zepid
 
-# Copy everything from the current directory into working directory
-COPY . .
-
-# Run bun install in the project directory
+COPY package*.json bun.lockb* ./
 RUN bun install
 
-# Fix permissions for Wrangler directory creation
-# Create .wrangler directory and set proper permissions
-RUN mkdir -p .wrangler/tmp && \
-    chmod -R 777 .wrangler && \
-    chmod -R 755 /home/user/vite-shadcn-template-builder-zepid || true
+COPY . .
 
-# Run the development server
 CMD ["bun", "run", "dev"]
